@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+        
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+
+
+
+
+    <header class="cabecalho">
+
+
+
+    </header>
+
+
+    <div class="container-maior">
+
+
+
+        <!----------Container direito--------->
+
+    <div class="container-esquerdo" style="width: 50%;">
+
+         <div class="formulario-cadastro">
+             <form action="">
+
+                <h1>Criar conta</h1>
+                <div class="social-container">
+                </div>
+                <input type="text" placeholder="Name" name="nome" id="idNome" onkeypress="verificar()" />
+
+                <input type="text" placeholder="Usuario" name="login" id="idUsuario" onkeypress="verificaUser()" />
+
+                <input type="password" placeholder="Digite sua senha" onkeyup="validarSenhaForca()" name="senha"
+                    id="idSenha" />
+
+                <input type="password" id="senha-reapet" placeholder="Repita sua senha" onkeyup="compara()" />
+
+                <!--Campo check mostrar senhas-->
+                <input type="checkbox" onclick="mostrarOcultarSenha()" id="revelarSenha" class="alinha check">
+                <p class="msgCheck">Mostrar senhas</p>
+
+                <button class="buttonForm btncadas" type="submit">Cadastre-se</button>
+
+
+             </form>
+         </div>
+    </div>
+
+
+     <!----------Container esquerdo--------->
+    <div class="container-direito" style="width: 50%;">
+
+
+
+    </div>
+
+  
+   </div>
+
+   
