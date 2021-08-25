@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+#servicos2 {
+    /* background-color: black; */
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    /* text-align: center; */
+}
+
+#img_caixa_servicos2 {
+    height: 700px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
