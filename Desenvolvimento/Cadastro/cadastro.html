@@ -30,28 +30,30 @@
 
         <!----------Container direito--------->
 
-    <div class="container-esquerdo" style="width: 50%;">
+    <div class="container-esquerdo" style="width: 60%;">
 
          <div class="formulario-cadastro">
              <form action="">
+                <h1 class="msg">Criar conta</h1>
 
-                <h1>Criar conta</h1>
                 <div class="social-container">
                 </div>
-                <input type="text" placeholder="Name" name="nome" id="idNome" onkeypress="verificar()" />
+                <input type="text" placeholder="Nome completo*" name="nome" id="idNome"/>
 
-                <input type="text" placeholder="Usuario" name="login" id="idUsuario" onkeypress="verificaUser()" />
+                <input type="text" placeholder="CNPJ*" name="login" id="idUsuario" onkeypress="verificaUser()" />
 
-                <input type="password" placeholder="Digite sua senha" onkeyup="validarSenhaForca()" name="senha"
-                    id="idSenha" />
+                <input type="password" placeholder="Email*"/>
 
-                <input type="password" id="senha-reapet" placeholder="Repita sua senha" onkeyup="compara()" />
+                <input type="text" placeholder="Confirmação do email*" onkeyup="compara()" />
+
+                <input type="text" placeholder="Telefone*"/>
+
 
                 <!--Campo check mostrar senhas-->
-                <input type="checkbox" onclick="mostrarOcultarSenha()" id="revelarSenha" class="alinha check">
-                <p class="msgCheck">Mostrar senhas</p>
+                <input type="checkbox" class="box-check">
+                <p class="msgCheck">Concordo com os termos de uso</p>
 
-                <button class="buttonForm btncadas" type="submit">Cadastre-se</button>
+                <button class="buttonForm-cadastro" type="submit">Cadastre-se</button>
 
 
              </form>
@@ -60,8 +62,8 @@
 
 
      <!----------Container esquerdo--------->
-    <div class="container-direito" style="width: 50%;">
-
+    <div class="container-direito" style="width: 40%;">
+ 
 
 
     </div>
