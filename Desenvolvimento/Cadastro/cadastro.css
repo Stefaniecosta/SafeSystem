@@ -2,9 +2,21 @@
     border: none;
     margin: 0ch;
     padding: 0ch;
+    box-sizing: border-box;
 }
 
 
+body {
+  background: #000000;
+ 
+  justify-content: center;
+  align-items: center;
+  
+  height: 89vh;
+  list-style: none;
+  margin: 0;
+  
+}
 
 .cabecalho {
     background-color: darkblue;
@@ -27,6 +39,7 @@
 /*************container filho esquerdo*********/
 
 
+
 .msg {
     color: rgb(248, 239, 239);
 }
@@ -39,15 +52,16 @@
 
 .msg {
     margin: 30px;
+    color: #ACFFC3;
 }
   
 /*caixa do formulario*/
   .formulario-cadastro {
     background-color: rgb(0, 0, 0);
     position: relative;
-    overflow: hidden;
-    height: 100%;
-    max-width: 100%;
+  
+    
+    height: 100% !important;
     min-height: 480px;
     margin-top: 0px;
     text-align: center;
@@ -82,7 +96,7 @@
   }
 
   input:focus {
-    width: 70%;
+    width: 65%;
     border-color: rgb(102, 230, 159);
   }
   
@@ -101,26 +115,106 @@
 
   .buttonForm-cadastro {
         border: 0;
-        background: none;
+        background-color: #5FC951;
         display: block;
         margin: 20px auto;
         text-align: center;
-        border: 2px solid #3498db;
+        border: 2px solid #5FC951;
         padding: 14px 10px;
         width: 25%;
-        outline: none;
-        color: white;
+       
+        color: rgb(0, 0, 0);
         border-radius: 24px;
         transition: 0.25s;
       }
   
-      .buttonForm:hover {
-        width: 30%;
-        border-color: rgb(3, 255, 200);
+      .buttonForm-cadastro:hover {
+        width: 28%;
+        background-color: #3d7737;
+        border-color: #3d7737;
       }
   
 
 
+
+
+
+
+
+
+
+      /* Hide the browser's default checkbox */
+
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  color: aliceblue;
+
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  height: 20px;
+    width: 23px;
+    position: absolute;
+    left: 70.18%;
+    right: 45.35%;
+    top: 73.99%;
+   
+
+ 
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+.texto-termosUso {
+  color: #f5f7f8;
+  position: relative;
+  right: 45.35%;
+  left: 27.15%;
+  font-size: 14px;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #5FC951;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 3px;
+  height: 5px;
+  border: solid rgb(255, 253, 253);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 
 
@@ -128,9 +222,14 @@
 /*************container filho direito*********/
 .container-direito {
     background-color: brown;
-    height: 100%;
-    right: 20px !important;
+    height: 550px;
+    
 
+}
+
+img {
+  width: 100%;
+  height: 550px !important;
 }
 
 
