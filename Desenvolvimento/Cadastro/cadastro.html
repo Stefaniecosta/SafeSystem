@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="cadastro.css">
-
-
   <title>Cadastro</title>
 </head>
 
@@ -17,11 +15,10 @@
   </header>
 
 
-  <div class="container-maior">
-
+  <div class="container-maior-cadastro">
 
     <!----------Container direito--------->
-    <div class="container-esquerdo" style="width: 60%;">
+    <div class="container-esquerdo-cadastro" style="width: 60%;">
       <div class="teste-a"></div>
       <div class="formulario-cadastro">
         <form action="">
@@ -47,38 +44,21 @@
           <input type="text" placeholder="Telefone*" />
           <div id="validacao_telefone" class="msgErro-cadastro">Telefone invãlido!</div>
 
-
-
-
           <!--Campo check mostrar senhas-->
 
           <label for="" class="label-cadastro" style="color: aliceblue;">
-
             <input type="checkbox">
             <span class="check-cadastro">Concordo com os termos de uso</span>
-
           </label>
-
-          <!-- <div class="box-checkbox" style="right: 100%;">
-            <label class="container">
-              <div class="texto-termosUso">Concordo com os termos de uso</div>
-              <input type="checkbox" checked="checked"> aaaaaaa
-              <span class="checkmark" style="color: aliceblue;">aaaaaaaaa</span>
-            </label>
-          </div> -->
-
           <button class="buttonForm-cadastro" type="submit">Confirme</button>
         </form>
       </div>
     </div>
 
-
     <!----------Container esquerdo--------->
 
-    <div class="container-direito">
-
+    <div class="container-direito-cadastro">
       <div class="img-cadastro">
-
         <img src="img/RItNMnb6q9s.png" class="img-cadastro" alt="" style="right: 100%;">
 
       </div>
@@ -88,7 +68,6 @@
 </body>
 
 </html>
-
 <script>
 
 
@@ -97,7 +76,7 @@
 
   function ValidarNome() {
 
-    var nome = document.getElementById('idNome');  
+    var nome = document.getElementById('idNome');
 
     if (nome.value.length < 8) {
       idNome.style.borderColor = 'red';
@@ -113,9 +92,9 @@
       idNome.style.borderColor = 'white';
       validacao_nome.style.visibility = 'hidden';
     }
-  
 
-}
+
+  }
 
 
 
@@ -193,13 +172,26 @@
 
   //função que compara
   function validarCNPJ(el) {
+
     if (!_cnpj(el.value)) {
 
-      alert("CNPJ é inválido!<br>" + el.value);
-
+      idCnpj.style.borderColor = 'red';
+      validacao_CNPJ.style.visibility = 'visible';
+    } else {
       // apaga o valor
-      el.value = "";
+      //  el.value = "";
+      idCnpj.style.borderColor = 'white';
+      validacao_CNPJ.style.visibility = 'hidden';
     }
+
+
+
+    // sumir mensagem ao apagar
+    if (idCnpj.value == '') {
+      idCnpj.style.borderColor = 'white';
+      validacao_CNPJ.style.visibility = 'hidden';
+    }
+
   }
 
 
