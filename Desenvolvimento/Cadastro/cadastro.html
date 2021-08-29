@@ -19,30 +19,53 @@
 
   <div class="container-maior">
 
+
     <!----------Container direito--------->
     <div class="container-esquerdo" style="width: 60%;">
-
+      <div class="teste-a"></div>
       <div class="formulario-cadastro">
         <form action="">
           <h1 class="msg">Preencha seus dados</h1>
           <div class="social-container">
           </div>
-          <input type="text" placeholder="Nome completo*" name="nome" id="idNome" />
+          <input type="text" placeholder="Nome completo*" name="nome" id="idNome" onkeyup="ValidarNome()" />
+          <div id="validacao_nome" class="msgErro-cadastro">Insira seu nome completo</div>
+
+
           <input type="text" placeholder="CNPJ*" onblur="validarCNPJ(this)" onkeypress="mascaraCnpj()" id="idCnpj"
             maxlength="18" />
-          <input type="password" placeholder="Email*" />
-          <input type="text" placeholder="Confirmação do email*" onkeyup="compara()" />
+          <div id="validacao_CNPJ" class="msgErro-cadastro">CNPJ inválido!</div>
+
+
+          <input type="email" placeholder="Email*" id="email" onblur="validarEmail()" />
+          <div id="div_msg1" class="msgErro-cadastro">Email inválido!</div>
+
+          <input type="text" placeholder="Confirmação do email*" onkeyup="compara()" id="comparaEmail" />
+          <div id="validacao_comparaEmail" class="msgErro-cadastro">Os email não confere!</div>
+
+
           <input type="text" placeholder="Telefone*" />
+          <div id="validacao_telefone" class="msgErro-cadastro">Telefone invãlido!</div>
+
+
 
 
           <!--Campo check mostrar senhas-->
-          <div class="box-checkbox" style="right: 100%;">
+
+          <label for="" class="label-cadastro" style="color: aliceblue;">
+
+            <input type="checkbox">
+            <span class="check-cadastro">Concordo com os termos de uso</span>
+
+          </label>
+
+          <!-- <div class="box-checkbox" style="right: 100%;">
             <label class="container">
               <div class="texto-termosUso">Concordo com os termos de uso</div>
-              <input type="checkbox" checked="checked">
-              <span class="checkmark"></span>
+              <input type="checkbox" checked="checked"> aaaaaaa
+              <span class="checkmark" style="color: aliceblue;">aaaaaaaaa</span>
             </label>
-          </div>
+          </div> -->
 
           <button class="buttonForm-cadastro" type="submit">Confirme</button>
         </form>
@@ -56,7 +79,7 @@
 
       <div class="img-cadastro">
 
-        <img src="img/RItNMnb6q9s.png" alt="" style="right: 100%;">
+        <img src="img/RItNMnb6q9s.png" class="img-cadastro" alt="" style="right: 100%;">
 
       </div>
     </div>
@@ -67,11 +90,86 @@
 </html>
 
 <script>
+
+
+  //----------------- validar nome ------------//
+
+
+  function ValidarNome() {
+
+    var nome = document.getElementById('idNome');  
+
+    if (nome.value.length < 8) {
+      idNome.style.borderColor = 'red';
+      validacao_nome.style.visibility = 'visible';
+
+    } else {
+      idNome.style.borderColor = 'white';
+      validacao_nome.style.visibility = 'hidden';
+    }
+
+    // sumir mensagem ao apagar
+    if (idNome.value == '') {
+      idNome.style.borderColor = 'white';
+      validacao_nome.style.visibility = 'hidden';
+    }
+  
+
+}
+
+
+
+  //----------------- comparar email´s ------------//
+
+  function compara() {
+
+    var primeiroEmail = document.getElementById('email');
+    var segundoEmail = document.getElementById('comparaEmail');
+
+    if (primeiroEmail.value != segundoEmail.value) {
+      comparaEmail.style.borderColor = 'red';
+      validacao_comparaEmail.style.visibility = 'visible';
+    } else {
+      comparaEmail.style.borderColor = 'white';
+      validacao_comparaEmail.style.visibility = 'hidden';
+    }
+
+
+    // sumir mensagem ao apagar
+    if (primeiroEmail.value == '' || segundoEmail.value == '') {
+      comparaEmail.style.borderColor = 'white';
+      validacao_comparaEmail.style.visibility = 'hidden';
+
+    }
+
+  }
+
+
+  //--------- validação do email ----------- //
+
+  function validarEmail() {
+
+    var email = document.querySelector('#email');
+
+    if (!email.checkValidity()) {
+      // alert("deu errado");
+      email.style.borderColor = 'red';
+      div_msg1.style.visibility = 'visible';
+    } else {
+      email.style.borderColor = 'white';
+      div_msg1.style.visibility = 'hidden';
+    }
+
+  }
+
+
+
+
+  //-------------------------------mascara CNPJ ---------------------- //
+
   // Ressaltando que a validação é realizada conforme o algoritmo do CNPJ, o que significa que
   // um número válido não necessariamente é um número existente e com situação cadastral 
   //regular perante a Receita Federal do Brasil.
-
-  //-------------------------------mascara CNPJ ---------------------- //
 
 
   function mascaraCnpj() {
