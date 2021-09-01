@@ -4,7 +4,7 @@ body{
 
 .cabecalho {
     background-color: darkblue;
-    height: 80px;
+    height: 50px;
 }
 
 #containerGeral_login{
@@ -18,12 +18,12 @@ body{
 #subcontainer01_login{
     width: 40%;
     height: 100%;
-    background-color: red;
+    /* background-color: red; */
 }
  .imagemPrincipal_login{
-     width: 100%;
-     /* height: auto; */
-
+    width: 100%;
+    height: 100% !important ;
+     object-fit: cover;
 
  }
  
@@ -45,7 +45,7 @@ body{
 #subcontainer02_login{
     width: 60%;
     height: 100%;
-    background-image: url(./Rectangle2.png);
+    /* background-image: url(./Rectangle2.png); */
     /* background-repeat: no-repeat; */
 /*     
     background-color: radial-gradient(112.52% 123.86% at 12.55% 86.48%, rgba(172, 255, 195, 0.26) 8.23%, rgba(172, 255, 195, 0) 76.21%, rgba(255, 255, 255, 0.05) 100%);
@@ -59,6 +59,12 @@ body{
     height: 100% !important;
     width: 100%;
     overflow: hidden;
+}
+
+#titulo{
+    font-family: po;
+    font-style: normal;
+    color: white;
 }
 
 #div_formulario{
@@ -100,4 +106,49 @@ form {
   input:focus {
     width: 50%;
     border-color: rgb(102, 230, 159);
+  }
+
+  #Click_esqueceu{
+      margin-block-start: 0;
+      margin-left: 20%;
+      font-size: 95%;
+      color: white;
+      text-decoration: underline;
+      cursor: pointer;
+  }
+
+  #Click_esqueceu:hover{
+    color: rgb(168, 167, 167);
+  }
+
+  .buttonForm-login {
+    border: 0;
+    background-color: #5FC951;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #5FC951;
+    padding: 14px 10px;
+    width: 25%;
+    margin-bottom: 50px;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+
+  .buttonForm-login:hover {
+    width: 28%;
+    background-color: #3d7737;
+    border-color: #3d7737;
+  }
+
+
+  @media only screen and (max-width: 1200px) {
+
+    .imagemPrincipal_login{
+        width: 100% !important;
+        height: 500px;
+     }
+
   }
