@@ -1,0 +1,309 @@
+/* Resetando os defaults - Homepage */
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: black;
+}
+
+/* Cabeçalho e navbar */
+header {
+    color: white;
+    margin-left: 170px;
+    position: absolute;
+    width: 61%;
+    display: inline-flexbox;
+    list-style: none;
+    white-space: nowrap;   /* Para quebrar os espaços e as palavras caberem na msm linha */
+}
+
+#retangulo {
+    position: relative;
+    z-index: -1;
+}
+
+.ret {
+    position: absolute; 
+    background-size: cover;
+    height: 5%;
+    right: 0;
+    
+    max-width: 100%;
+    z-index: -1;
+}
+
+/* Parte principal home */
+.container {
+    background-image: url(img/blur.svg), /* Luz verde em cima da camada preta  */
+                      url(img/grid.svg); /* Grid  */
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position:  right;
+    backface-visibility: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#safe-escudo {
+    width: 100px;
+    margin-right: 30px;
+}
+
+.login {
+    color: white;
+}
+
+.login {
+  display: inline-block;
+  width: 130px;
+  padding: 8px;
+  border-radius: 30px;
+  color: #fff;
+  background-color: rgba(60, 255, 76, 0.561);
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Ghost button */ 
+.cadastro {
+    display: inline-block;
+  width: 150px;
+  padding: 8px;
+  border-radius: 30px;
+  color: #fff;
+  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+
+
+/* Lista do nav bar */
+ul li {
+    font-size: 22px;
+    color: rgb(253, 253, 253);
+    display: unset;
+    margin-left: 3%;
+    padding-right: 7%;
+}
+
+/* login e cadastro em preto */
+li .login-cadastro {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    border-bottom: 2px solid rgba(95, 201, 81, 1);
+}
+
+strong a {
+    color: black;
+}
+
+.titulos {
+    color: #ACFFC3;
+    font-size: 4rem;
+    padding-top: 100px;
+    padding-left: 200px;
+    font-weight: 600;
+}
+
+#div-line {
+    background-color: #ACFFC3; 
+    height: 3px;
+}
+
+.seta{
+    text-align: center;
+    font-weight: 900;
+    height: 80px;
+    position:absolute; 
+    bottom:0; 
+    width:100%;
+}
+
+#clique{
+    color: white;
+    font-size: 15px;
+}
+
+.seta-h:hover{
+    width: 50px;
+}
+
+#caixa-eletronico-verde {
+    width: 250px;
+    float: right;
+    position: relative;
+    top: -418px;
+    right: 240px;
+}
+
+#info-slogan {
+    width: 30%;
+    font-size: 17px;
+    color: aliceblue;
+}
+
+#about {
+    display: flex;
+    margin-inline-start: 190px;
+}
+
+.sobre_info{
+    color: aliceblue;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.sobre_info-titulo{
+    font-size: 36px;
+    font-weight:900;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+}
+
+/* Serviços - 1 */ 
+#servico {
+    max-width: 80%;
+}
+
+.servico-container{
+    margin: auto;
+    max-width: 1300px;
+}
+
+.servico-texto{
+    font-size: 17px;
+    margin-bottom: 5%;
+    color:rgb(253, 253, 253);
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 20px;
+}
+
+.servico-box-item {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: inherit;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-right: auto;
+    align-content: space-around;
+    justify-content: flex-end;
+}
+
+.servico-item {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servico-item-txt {
+    color: #ACFFC3;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.servico-item-img {
+   margin-bottom: auto;
+   width: 200px;
+}
+/* Fim de serviços - 1*/ 
+
+/* Serviços - 2 */ 
+#servicos2 {
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+}
+
+#img_caixa_servicos2 {
+    margin-top: 10%;
+    height: 700px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/* Fim de serviços - 2 */ 
+
+/* Início contato */
+.caixa_contato {
+    margin-left: 10%;
+    margin-right: 60%;
+    background-color: #d9f1d8;
+    margin-bottom: 5%;
+    padding: 5%;
+    margin-top: 5%;
+}
+
+h1.title_contato {
+    color: #acffc3;
+    font-family: sans-serif;
+    margin: 3% 11%;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-top: 4%;
+}
+
+h2 {
+    color: black;
+    font-family: sans-serif;
+}
+
+.frase_contato {
+    color: #707070;
+    font-family: sans-serif;
+    font-size: smaller;
+    line-height: 15px;
+    margin-top: 15%;
+}
+
+.ipt_contato {
+    display: flex;
+    margin: 2%;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 7% #707070;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 5%;
+    padding-right: 30%;
+}
+
+.btn_contato {
+    background-color: #61dd50;
+    border-radius: 50px;
+    padding: 4% 38%;
+    margin-top: 15%;
+    border: 1px rgb(104, 104, 104);
+}
+
+.img_contato {
+    float: right;
+    margin-right: 20%;
+    width: 30%;
+}
+ /* Fim de contato */
+

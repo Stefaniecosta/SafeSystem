@@ -3,6 +3,7 @@
     border: 0;
     margin: 0;
     padding: 0;
+    background: black;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -12,7 +13,6 @@ html {
 
 /* Parte principal home */
 .container {
-    background: black;
     background-image: url(img/retangulo-linear.png),  /* Retângulo verde  */
     url(img/blur.svg), /* Luz verde em cima da camada preta  */
     url(img/grid.svg); /* Grid  */
@@ -118,7 +118,7 @@ strong a {
 
 .sobre_info{
     color: aliceblue;
-    display: flex;
+    display: flex;  
     text-align: center;
     justify-content: space-around;
 }
