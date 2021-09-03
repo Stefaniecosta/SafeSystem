@@ -5,62 +5,62 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="cadastro.css">
+  <link rel="stylesheet" href="cadastro2.css">
   <title>Cadastro</title>
 </head>
 
 <body>
+  <section id="section-cadastro">
+    <div class="container-maior-cadastro">
 
-  <div class="container-maior-cadastro">
+      <!----------Container direito--------->
+      <div class="container-esquerdo-cadastro" >
 
-    <!----------Container direito--------->
-    <div class="container-esquerdo-cadastro" style="width: 60%;">
-      <div class="teste-a"></div>
-      <div class="formulario-cadastro">
-        <form action="">
-          <h1 class="msg">Preencha seus dados</h1>
-          <div class="social-container">
-          </div>
-          <input type="text" placeholder="Nome completo*" name="nome" id="idNome" onkeyup="ValidarNome()" />
-          <div id="validacao_nome" class="msgErro-cadastro">Insira seu nome completo</div>
-
-
-          <input type="text" placeholder="CNPJ*" onblur="validarCNPJ(this)" onkeypress="mascaraCnpj()" id="idCnpj"
-            maxlength="18" />
-          <div id="validacao_CNPJ" class="msgErro-cadastro">CNPJ inválido!</div>
+        <div class="formulario-cadastro">
+          <form action="">
+            <h1 class="msg">Preencha seus dados</h1>
+            <div class="social-container">
+            </div>
+            <input type="text" placeholder="Nome completo*" name="nome" id="idNome" onkeyup="ValidarNome()" />
+            <div id="validacao_nome" class="msgErro-cadastro">Insira seu nome completo</div>
 
 
-          <input type="email" placeholder="Email*" id="email" onblur="validarEmail()" />
-          <div id="div_msg1" class="msgErro-cadastro">Email inválido!</div>
-
-          <input type="text" placeholder="Confirmação do email*" onkeyup="compara()" id="comparaEmail" />
-          <div id="validacao_comparaEmail" class="msgErro-cadastro">Os email não confere!</div>
+            <input type="text" placeholder="CNPJ*" onblur="validarCNPJ(this)" onkeypress="mascaraCnpj()" id="idCnpj"
+              maxlength="18" />
+            <div id="validacao_CNPJ" class="msgErro-cadastro">CNPJ inválido!</div>
 
 
-          <input type="text" placeholder="Telefone*" />
-          <div id="validacao_telefone" class="msgErro-cadastro">Telefone invãlido!</div>
+            <input type="email" placeholder="Email*" id="email" onblur="validarEmail()" />
+            <div id="div_msg1" class="msgErro-cadastro">Email inválido!</div>
 
-          <!--Campo check mostrar senhas-->
+            <input type="text" placeholder="Confirmação do email*" onkeyup="compara()" id="comparaEmail" />
+            <div id="validacao_comparaEmail" class="msgErro-cadastro">Os email não confere!</div>
 
-          <div for="" class="label-cadastro" style="color: aliceblue;">
-            <input type="checkbox">
-            <span class="check-cadastro">Concordo com os termos de uso</span>
-          </div>
-          <button class="buttonForm-cadastro" type="submit">Confirme</button>
-        </form>
+
+            <input type="text" placeholder="Telefone*" />
+            <div id="validacao_telefone" class="msgErro-cadastro">Telefone invãlido!</div>
+
+            <!--Campo check mostrar senhas-->
+
+            <div for="" class="label-cadastro" style="color: aliceblue;">
+              <span class="check-cadastro">Concordo com os termos de uso</span>
+              <input type="checkbox">
+            </div>
+            <button class="buttonForm-cadastro" type="submit">Confirme</button>
+          </form>
+        </div>
       </div>
-    </div>
 
-    <!----------Container esquerdo--------->
+      <!----------Container esquerdo--------->
 
-    <div class="container-direito-cadastro">
-      <div class="img-cadastro">
+      <div class="container-direito-cadastro">
+        <div class="img-cadastro">
         <img src="img/RItNMnb6q9s.png" class="img-cadastro" alt="" style="right: 100%;">
 
+        </div>
       </div>
     </div>
-  </div>
-
+</section>
 </body>
 
 </html>
@@ -74,7 +74,7 @@
 
     var nome = document.getElementById('idNome');
 
-    if (nome.value.length < 8) {
+    if (nome.value.length < 18) {
       idNome.style.borderColor = 'red';
       validacao_nome.style.visibility = 'visible';
 
