@@ -18,12 +18,17 @@ html {
 /* Cabeçalho e navbar */
 header {
     color: white;
-    margin-left: 10px;
+    /* margin-left: 170px !important; */
     position: absolute;
-    width: 61%;
-    display: inline-flexbox;
+    /* width: 68%; */
+    /* display: inline-flexbox; */
     list-style: none;
     white-space: nowrap;   /* Para quebrar os espaços e as palavras caberem na msm linha */
+}
+
+#respiro {
+    max-width: 85%;
+    margin: 0 auto;
 }
 
 #retangulo {
@@ -43,9 +48,10 @@ header {
 
 
 #logo-img {
+    height: 50px;
+    padding-left: 0px;
     position: relative;
-    top: 50px;
-    padding-left: 1px;
+    top: 10px;
 }
 
 /* Parte principal home */
@@ -56,8 +62,8 @@ header {
     background-position:  right;
     backface-visibility: hidden;
     position: relative;
-    width: 100%;
-    height: 100vh;
+    /* width: 100%; */
+    height: 800px;
     z-index: 1;
     background-size: cover;
 }
@@ -102,7 +108,7 @@ header {
     font-size: 22px;
     color: rgb(253, 253, 253);
     display: unset;
-    margin-left: 3%;
+    /* margin-left: 3%; */
     padding-right: 7%;
 }
 
@@ -128,7 +134,15 @@ header {
     color: #ACFFC3;
     font-size: 4rem;
     padding-top: 100px;
-    padding-left: 200px;
+    padding-left: 50px;
+    font-weight: 600;
+}
+
+.titulo_home {
+    color: #ACFFC3;
+    font-size: 4rem;
+    padding-top: 100px;
+    /* padding-left: 200px; */
     font-weight: 600;
 }
 
@@ -156,22 +170,24 @@ header {
 }
 
 #caixa-eletronico-verde {
+    margin: 100px 50px 0 0;
+    /* width: 25%; */
     width: 250px;
     float: right;
-    position: relative;
+    /* position: relative;
     top: -418px;
-    right: 240px;
+    right: 240px; */
 }
 
 #info-slogan {
-    width: 30%;
+    width: 70%;
     font-size: 17px;
     color: aliceblue;
 }
 
 #about {
     display: flex;
-    margin-inline-start: 190px;
+    /* margin-inline-start: 190px; */
 }
 
 .sobre_info{
@@ -191,7 +207,10 @@ header {
 
 /* Serviços - 1 */ 
 #servico {
-    max-width: 80%;
+    max-width: 100%;
+    margin: auto;
+    /* height: 700px; */
+    
 }
 
 .servico-container{
@@ -203,23 +222,19 @@ header {
     font-size: 17px;
     margin-bottom: 5%;
     color:rgb(253, 253, 253);
-    text-align: center;
-    margin-left: 15%;
+    padding-left: 50px;
     margin-top: 20px;
 }
 
-.servico-box-item {
+.servico-box-item{
+    margin-top: 50px;
     display: flex;
-    flex-wrap: nowrap;
-    align-items: inherit;
+    justify-content: space-around;
     flex-wrap: wrap;
-    flex-direction: row;
-    margin-right: auto;
-    align-content: space-around;
-    justify-content: flex-end;
+    /* align-items: center; */
 }
-
-.servico-item {
+.servico-item{
+    margin-top: 20px;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -245,14 +260,13 @@ header {
     background-color: black;
     background-position: center;
     background-repeat: no-repeat;
-    height: 1000px;
+    height: 100vh;
     position: relative;
     background-size: cover;
 }
 
 #img_caixa_servicos2 {
-    margin-top: 10%;
-    height: 700px;
+    height: 75%;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -263,13 +277,17 @@ header {
 /* Fim de serviços - 2 */ 
 
 /* Início contato */
-body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    overflow-x: hidden;
-    background-color: rgb(0, 0, 0);
+
+#contato {
+    max-width: 100%;
+    margin: auto;
 }
+
+.container_contato {
+    width: 100%;
+     margin: auto;
+     
+ }
 
 .caixa_contato {
     margin-left: 10%;
@@ -286,7 +304,6 @@ h1.title_contato {
     margin: 3% 11%;
     margin-block-end: 0;
     margin-block-start: 0;
-    padding-top: 4%;
 }
 
 h2 {
@@ -334,11 +351,7 @@ h2 {
 
 /* RODAPÉ */
 
-.container_contato {
-   width: 100%;
-    margin: auto;
-    
-}
+
 
 .row {
     display: flex;
@@ -426,6 +439,62 @@ ul {
 
 
 /*RESPONSIVIDADE*/
+
+@media screen and (max-width: 875px){
+    .ul-header{
+        padding-right: 3%;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .login{
+        width: 100px;
+    }
+    #caixa-eletronico-verde {
+        margin: 100px 0px 0 0;
+    }
+}
+
+@media screen and (max-width: 710px){
+    .cadastro{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .ul-header{
+        font-size: 18px;
+    }
+    #info-slogan {
+        width: 45%;
+    }
+    .sobre_info-titulo {
+        font-size: 31px;
+    }
+    #caixa-eletronico-verde {
+        margin: 100px 0px 0 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .seta{
+        height: 50px;
+    }
+    #caixa-eletronico-verde {
+        margin: 100px -50px 0 0;
+    }
+
+}
+
+@media screen and (max-width: 520px){
+    #caixa-eletronico-verde {
+        width: 20%;
+    }
+    #info-slogan {
+        width: 100%;
+    }
+}
+
 
 
 
