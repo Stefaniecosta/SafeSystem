@@ -16,7 +16,7 @@ body {
 
 .container-maior-cadastro {
   width: 100%;
-  height: 89vh;
+  height: 100vh;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -118,23 +118,45 @@ body {
 .label-cadastro {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   cursor: pointer;
   left: 40px;
-  height: 30px;
+  height: 40px;
   width: 270px;
 }
 
-.label-cadastro input {
-  width: 50px;
-
+.custom-checkbox input,
+.custom-radio input{
+  display: none;
 }
 
-.check-cadastro {
-  font-size: 15px;
-  position: relative;
+.custom-checkbox input + label:before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid gray;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px;
 }
+
+.custom-checkbox input:checked + label:before {
+  background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: rgb(33, 95, 15);
+  background-position: center;
+  border: none;
+  padding: 1px;
+}
+
+
+
+
+
 
 /*Tirar fundo do autocomplete nos inputs do formulario*/
   input:-webkit-autofill {
@@ -169,6 +191,16 @@ select:-webkit-autofill:focus {
 
 /****************** Responsividade ******************/
 
+@media only screen and (min-width: 1200px) {
+ 
+  .msgErro-cadastro {
+    position: relative;
+    left: 3% !important;
+  }
+
+
+}
+
 @media only screen and (max-width: 800px) {
   .container-maior-cadastro {
     margin: auto;
@@ -180,4 +212,79 @@ select:-webkit-autofill:focus {
   .container-direito-cadastro{
     display: none;
   }
+
 }
+
+@media only screen and (min-width: 990px) {
+ 
+  .msgErro-cadastro {
+    position: relative;
+    right: 20px;
+  }
+
+
+}
+
+@media only screen and (max-width: 990px) {
+ 
+  .msgErro-cadastro {
+    position: relative;
+    right: 30px;
+  }
+
+
+}
+
+@media only screen and (max-width: 800px) {
+ 
+  .msgErro-cadastro {
+    position: relative;
+    left: 10%;
+  }
+
+
+}
+
+@media only screen and (max-width: 760px) {
+ 
+  .msgErro-cadastro {
+    position: relative;
+    left: 7% !important;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 660px) {
+ 
+  .msgErro-cadastro {
+    position: relative;
+    left: 3% !important;
+  }
+
+
+}
+
+@media only screen and (max-width: 580px) {
+  .msgErro-cadastro {
+    position: relative;
+    left: -3% !important;
+  }
+
+
+}
+
+@media only screen and (max-width: 480px) {
+ 
+  .msgErro-cadastro {
+    position: relative;
+    left: -7% !important;
+  }
+
+
+}
+
+
+
+
