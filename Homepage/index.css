@@ -209,13 +209,13 @@ header {
 #servico {
     max-width: 100%;
     margin: auto;
-    /* height: 700px; */
-    
+    /* height: 700px; */    
 }
 
 .servico-container{
     margin: auto;
     max-width: 1300px;
+    padding-bottom: 150px;
 }
 
 .servico-texto{
@@ -250,6 +250,46 @@ header {
 .servico-item-img {
    margin-bottom: auto;
    width: 200px;
+}
+
+.servico-infos-container{
+    padding: 50px;
+    margin-top: 50px;
+    margin: auto;
+    max-width: 1200px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.41) 50.81%, rgba(255, 255, 255, 0) 138.15%), #89D388;
+    border-radius: 50px;
+    text-align: left;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.servico-infos-box{
+    width: 325px;
+    margin-right: 50px;
+    margin-top: 50px;
+
+}
+.servicos-infos-img{
+    float: left;
+    width: 100px;
+}
+
+.servicos-infos-titulo{
+    padding-bottom: 20px;
+    width: 190px;
+    float: right;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.servicos-infos-txt{
+    width: 190px;
+    float: right;
+    font-size: 20px;
 }
 /* Fim de serviços - 1*/ 
 
