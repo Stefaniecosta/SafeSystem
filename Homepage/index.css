@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-
 * {
     border: 0;
     margin: 0;
@@ -18,10 +17,7 @@ html {
 /* Cabeçalho e navbar */
 header {
     color: white;
-    /* margin-left: 170px !important; */
-    position: absolute;
-    /* width: 68%; */
-    /* display: inline-flexbox; */
+    max-width: 85%;
     list-style: none;
     white-space: nowrap;   /* Para quebrar os espaços e as palavras caberem na msm linha */
 }
@@ -39,13 +35,9 @@ header {
 .ret {
     position: absolute; 
     background-size: cover;
-    height: 5%;
     right: 0;
-    
-    max-width: 100%;
     z-index: -1;
 }
-
 
 #logo-img {
     height: 50px;
@@ -62,7 +54,6 @@ header {
     background-position:  right;
     backface-visibility: hidden;
     position: relative;
-    /* width: 100%; */
     height: 800px;
     z-index: 1;
     background-size: cover;
@@ -91,25 +82,22 @@ header {
 
 /* Ghost button */ 
 .cadastro {
-    display: inline-block;
+  display: inline-block;
   width: 150px;
   padding: 8px;
   border-radius: 30px;
-  color: #fff;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid #000;
   text-align: center;
   outline: none;
   text-decoration: none;
 }
 
-
 /* Lista do nav bar */
 .ul-header {
     font-size: 22px;
     color: rgb(253, 253, 253);
-    display: unset;
-    /* margin-left: 3%; */
-    padding-right: 7%;
+    display: inline;
+    padding-right: 12%;
 }
 
 /* login e cadastro em preto */
@@ -141,53 +129,35 @@ header {
 .titulo_home {
     color: #ACFFC3;
     font-size: 4rem;
-    padding-top: 100px;
-    /* padding-left: 200px; */
+    position: relative;
+    top: 20px;
     font-weight: 600;
 }
 
+/* Linha verde que divide a info e os números*/
 #div-line {
     background-color: #ACFFC3; 
     height: 3px;
 }
 
-.seta{
-    text-align: center;
-    font-weight: 900;
-    height: 80px;
-    position:absolute; 
-    bottom:0; 
-    width:100%;
-}
-
-#clique{
-    color: white;
-    font-size: 15px;
-}
-
-.seta-h:hover{
-    width: 50px;
-}
-
+/* Imagem do caixa eletrônico da homepage */
 #caixa-eletronico-verde {
-    margin: 100px 50px 0 0;
-    /* width: 25%; */
-    width: 250px;
+    margin: 25px 96px 0 0;
+    width: 270px;
     float: right;
-    /* position: relative;
-    top: -418px;
-    right: 240px; */
 }
 
+/* O textinho apresentando a empresa */
 #info-slogan {
     width: 70%;
+    line-height: 30px;
     font-size: 17px;
     color: aliceblue;
 }
 
+/* A div inteira com a imagem do escudo e os textos juntos */
 #about {
     display: flex;
-    /* margin-inline-start: 190px; */
 }
 
 .sobre_info{
@@ -208,8 +178,7 @@ header {
 /* Serviços - 1 */ 
 #servico {
     max-width: 100%;
-    margin: auto;
-    /* height: 700px; */    
+    margin: auto;   
 }
 
 .servico-container {
@@ -231,7 +200,6 @@ header {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* align-items: center; */
 }
 .servico-item{
     margin-top: 20px;
@@ -260,7 +228,6 @@ header {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.41) 50.81%, rgba(255, 255, 255, 0) 138.15%), #89D388;
     border-radius: 50px;
     text-align: left;
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -327,7 +294,6 @@ header {
 .container_contato {
     width: 100%;
      margin: auto;
-     
  }
 
 .caixa_contato {
@@ -401,26 +367,22 @@ h2 {
 /* RODAPÉ */
 
 
-
 .row {
     width: 100%;
     /* flex-wrap: wrap; */
     display: flex !important;
     justify-content: space-evenly !important;
     padding-top: 40px;
-  
 }
 
 ul {
     list-style: none;
     margin: 0%;
-    
 }
 
 .footer {
     background-color: #89D388;
     padding: 20px 0;
-   
 }
 
 .footer img {
@@ -437,7 +399,6 @@ ul {
 
 .footer-col {
     width: 25%;
-   
 }
 
 .footer-col h4 {
@@ -463,7 +424,6 @@ ul {
     color: #000000;
     text-decoration: none;
     font-weight: 300;
-    color: #0f0f0f;
     display: block;
     padding: 4px;
     transition: all 0.3s ease;
@@ -655,8 +615,6 @@ ul {
         position: relative;
         left: 10%;
     }
-
-  
 }
 
 @media (max-width: 598px) {
