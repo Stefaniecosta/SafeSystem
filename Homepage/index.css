@@ -213,12 +213,12 @@ header {
     
 }
 
-.servico-container{
+.servico-container {
     margin: auto;
     max-width: 1300px;
 }
 
-.servico-texto{
+.servico-texto {
     font-size: 17px;
     margin-bottom: 5%;
     color:rgb(253, 253, 253);
@@ -281,6 +281,7 @@ header {
 #contato {
     max-width: 100%;
     margin: auto;
+    margin-bottom: 100px;
 }
 
 .container_contato {
@@ -296,6 +297,7 @@ header {
     margin-bottom: 5%;
     padding: 5%;
     margin-top: 5%;
+    font-size: 15px;
 }
 
 h1.title_contato {
@@ -314,16 +316,17 @@ h2 {
 .frase_contato {
     color: #707070;
     font-family: sans-serif;
-    font-size: smaller;
+    font-size: 30px;
     line-height: 15px;
     margin-top: 15%;
+    margin-bottom: 20px;
 }
 
 .ipt_contato {
     display: flex;
     margin: 2%;
     background-color: rgba(0, 0, 0, 0);
-    border-bottom: 7% #707070;
+    border-bottom: 2px solid #707070;
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -354,10 +357,11 @@ h2 {
 
 
 .row {
-    display: flex;
+    width: 100%;
     /* flex-wrap: wrap; */
-    display: flex;
-    justify-content: space-evenly;
+    display: flex !important;
+    justify-content: space-evenly !important;
+    padding-top: 40px;
   
 }
 
@@ -504,15 +508,10 @@ ul {
     }
 
     .footer-suporte-contato {
-        margin-left: 10px;
+        margin-left: 100px;
     }
 
-    .img_contato {
-        float: right;
-        margin-right: 10%;
-        width: 30%;
-        /* padding: 0% 0 10% 0; */
-    }
+    
 
     .caixa_contato {
         margin-left: 10%;
@@ -521,6 +520,12 @@ ul {
         margin-bottom: 5%;
         padding: 5%;
         margin-top: 5%;
+    }
+
+    .logo-footer-contato {
+        position: relative;
+        left: 24%;
+       
     }
 
     
@@ -562,12 +567,20 @@ ul {
         position: relative;
         left: 15%;
     }
+
+    .frase_contato {
+        font-size: 16px;
+    }
     
 }
 
 @media(min-width: 600px) {
     .redes-social-contato {
         margin-left: 120px;
+    }
+
+    .frase_contato {
+        font-size: 16px;
     }
 
 }
