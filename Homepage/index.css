@@ -365,16 +365,11 @@ h2 {
 .ipt_contato {
     display: flex;
     margin: 2%;
-<<<<<<< HEAD
     background-color: rgba(0, 0, 0, 0);
     border-bottom: 2px solid #707070;
     border-top: 0;
     border-left: 0;
     border-right: 0;
-=======
-    background-color: #d9f1d8;
-    border-bottom: 2px solid #707070;
->>>>>>> d3d155eab96643feb4b632b881ef289fe98a994f
     padding: 5%;
     padding-right: 30%;
     width: 60%;
