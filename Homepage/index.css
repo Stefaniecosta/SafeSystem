@@ -362,11 +362,8 @@ h2 {
 .ipt_contato {
     display: flex;
     margin: 2%;
-    background-color: rgba(0, 0, 0, 0);
-    border-bottom: 7% #707070;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+    background-color: #d9f1d8;
+    border-bottom: 2px solid #707070;
     padding: 5%;
     padding-right: 30%;
     width: 60%;
@@ -379,6 +376,12 @@ h2 {
     margin-top: 15%;
     border: 1px rgb(104, 104, 104);
     cursor: pointer;
+}
+
+.btn_contato:hover{
+    background-color: #464545;
+    color: #fff;
+    transition-duration: 0.5s;
 }
 
 .img_contato {
@@ -477,6 +480,11 @@ ul {
     transition: all 0.5s ease;
 }
 
+.footer-col .social-links a:hover {
+    background-color: #000000;
+    color: #89D388;
+    transition-duration: 0.5s;
+}
 
 /*RESPONSIVIDADE*/
 
