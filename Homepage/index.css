@@ -209,13 +209,13 @@ header {
 #servico {
     max-width: 100%;
     margin: auto;
-    /* height: 700px; */
-    
+    /* height: 700px; */    
 }
 
 .servico-container {
     margin: auto;
     max-width: 1300px;
+    padding-bottom: 150px;
 }
 
 .servico-texto {
@@ -250,6 +250,46 @@ header {
 .servico-item-img {
    margin-bottom: auto;
    width: 200px;
+}
+
+.servico-infos-container{
+    padding: 50px;
+    margin-top: 50px;
+    margin: auto;
+    max-width: 1200px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.41) 50.81%, rgba(255, 255, 255, 0) 138.15%), #89D388;
+    border-radius: 50px;
+    text-align: left;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.servico-infos-box{
+    width: 325px;
+    margin-right: 50px;
+    margin-top: 50px;
+
+}
+.servicos-infos-img{
+    float: left;
+    width: 100px;
+}
+
+.servicos-infos-titulo{
+    padding-bottom: 20px;
+    width: 190px;
+    float: right;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.servicos-infos-txt{
+    width: 190px;
+    float: right;
+    font-size: 20px;
 }
 /* Fim de serviços - 1*/ 
 
@@ -325,11 +365,16 @@ h2 {
 .ipt_contato {
     display: flex;
     margin: 2%;
+<<<<<<< HEAD
     background-color: rgba(0, 0, 0, 0);
     border-bottom: 2px solid #707070;
     border-top: 0;
     border-left: 0;
     border-right: 0;
+=======
+    background-color: #d9f1d8;
+    border-bottom: 2px solid #707070;
+>>>>>>> d3d155eab96643feb4b632b881ef289fe98a994f
     padding: 5%;
     padding-right: 30%;
     width: 60%;
@@ -342,6 +387,12 @@ h2 {
     margin-top: 15%;
     border: 1px rgb(104, 104, 104);
     cursor: pointer;
+}
+
+.btn_contato:hover{
+    background-color: #464545;
+    color: #fff;
+    transition-duration: 0.5s;
 }
 
 .img_contato {
@@ -441,6 +492,11 @@ ul {
     transition: all 0.5s ease;
 }
 
+.footer-col .social-links a:hover {
+    background-color: #000000;
+    color: #89D388;
+    transition-duration: 0.5s;
+}
 
 /*RESPONSIVIDADE*/
 
