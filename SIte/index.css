@@ -74,7 +74,8 @@ header {
   padding: 8px;
   border-radius: 30px;
   color: #fff;
-  background-color: rgba(60, 255, 76, 0.561);
+  border: 1px solid rgb(255, 255, 255);
+  
   text-align: center;
   outline: none;
   text-decoration: none;
@@ -86,7 +87,7 @@ header {
   width: 150px;
   padding: 8px;
   border-radius: 30px;
-  border: 1px solid #000;
+  background-color: rgba(60, 255, 76, 0.561);
   text-align: center;
   outline: none;
   text-decoration: none;
