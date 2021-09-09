@@ -5,6 +5,12 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+#botaVoltar{
+  width: 8%; 
+  margin-left: -60%; 
+  cursor: pointer;
+}
+
 .cabecalho {
     background-color: darkblue;
     height: 50px;
@@ -71,6 +77,7 @@ body{
 }
 
 #div_formulario{
+    
     position: relative;
     overflow: hidden;
     height: 100%;
@@ -83,11 +90,11 @@ body{
 form {
     /* background-color: #000000; */
     display: flex;
-    
+    margin-top: -5%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 50px;
+    /* padding: 0 50px; */
     height: 100%;
     text-align: center;
   }

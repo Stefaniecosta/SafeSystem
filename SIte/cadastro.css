@@ -14,6 +14,13 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+#botaVoltar{
+  width: 12%; 
+  margin-left: -90%; 
+  cursor: pointer;
+}
+
+
 /************ container pai ************/
 
 .container-maior-cadastro {
@@ -47,7 +54,7 @@ body {
   height: 89vh;
   height: 100% !important;
   min-height: 480px;
-  margin-top: 0px;
+  margin-top: -px;
   text-align: center;
 }
 
