@@ -10,9 +10,34 @@
 }
 
 html {
-    scroll-behavior: smooth;
     background: black;
 }
+
+/* Barra de progresso lateral */
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  
+  #progressBarContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(9, 255, 0, 0);
+  }
+
+  #progressBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, rgb(255, 0, 255), rgb(76, 0, 255));
+    height: 0;
+    opacity: 0;
+  }
+/* Fim - progressBar */
 
 /* Cabeçalho e navbar */
 header {
@@ -23,7 +48,7 @@ header {
 }
 
 #respiro {
-    max-width: 85%;
+    max-width: 75%;
     margin: 0 auto;
 }
 
@@ -526,12 +551,10 @@ ul {
     
 
     .caixa_contato {
-        margin-left: 10%;
-        margin-right: 60%;
-        background-color: #d9f1d8;
-        margin-bottom: 5%;
-        padding: 5%;
-        margin-top: 5%;
+    background-color: #d9f1d8;
+    margin-bottom: 5%;
+    padding: 5%;
+    margin-top: 5%;
     }
 
     .logo-footer-contato {

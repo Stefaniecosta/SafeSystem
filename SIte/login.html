@@ -23,21 +23,9 @@
         <div id="subcontainer02_login">
 
 
-<<<<<<< HEAD
             <div id="div_formulario">
 
                 <form action="">
-=======
-            <a href="index.html">
-            <img src="./img/iconSeta.png" id="botaVoltar"  onclick="voltar()" >
-          </a>
-
-                <form action="">
-                    
-                    <h2 id="titulo">LOGIN</h2>
-                    <input type="text" placeholder="CNPJ*" onblur="validarCNPJ(this)" onkeypress="mascaraCnpj()" 
-                    id="idCnpj" maxlength="18"/>
->>>>>>> 29f09f5c0468006e1a4737ad87799a1c11fb721f
 
                     <h1 class="titulos">Login</h1>
 
@@ -49,7 +37,6 @@
 
                     <button class="buttonForm-login" type="submit">Confirmar</button>
 
-<<<<<<< HEAD
                     <div class="container">
                     <div class="option">Ou logar com</div>
                     <hr>
@@ -61,11 +48,6 @@
                     </div>
                 </div>
 
-=======
-                    <!-- <a href="" style="text-decoration: none;">
-                      <h4>OU CADASTRE-SE</h4>
-                    </a> -->
->>>>>>> 29f09f5c0468006e1a4737ad87799a1c11fb721f
                 </form>
             </div>
         </div>
@@ -73,116 +55,5 @@
 
     </div>
 </body>
-<<<<<<< HEAD
 
 </html>
-=======
-</html>
-
-<script>
-
-function mascaraCnpj() {
-
-
-var cnpj = document.getElementById('idCnpj');
-
-
-if (cnpj.value.length == 2 || cnpj.value.length == 6) {
-  cnpj.value += ".";
-
-} else if (cnpj.value.length == 10) {
-  cnpj.value += "/";
-
-} else if (cnpj.value.length == 15) {
-  cnpj.value += "-";
-}
-
-
-}
-
-//função que compara
-function validarCNPJ(el) {
-
-if (!_cnpj(el.value)) {
-
-  idCnpj.style.borderColor = 'red';
-  validacao_CNPJ.style.visibility = 'visible';
-} else {
-  // apaga o valor
-  //  el.value = "";
-  idCnpj.style.borderColor = 'white';
-  validacao_CNPJ.style.visibility = 'hidden';
-}
-
-
-
-// sumir mensagem ao apagar
-if (idCnpj.value == '') {
-  idCnpj.style.borderColor = 'white';
-  validacao_CNPJ.style.visibility = 'hidden';
-}
-
-}
-
-
-//------------------------------- função da validação do CNPJ ---------------------- //
-
-function _cnpj(cnpj) {
-
-
-cnpj = cnpj.replace(/[^\d]+/g, '');
-
-if (cnpj == '') return false; //se cnpj for igual a nada, retorna fals0
-
-if (cnpj.length != 14)
-  return false; // se o tamanho for diferente de 14 retorna zero
-
-
-if (cnpj == "00000000000000" ||
-  cnpj == "11111111111111" ||
-  cnpj == "22222222222222" ||
-  cnpj == "33333333333333" ||
-  cnpj == "44444444444444" ||
-  cnpj == "55555555555555" ||
-  cnpj == "66666666666666" ||
-  cnpj == "77777777777777" ||
-  cnpj == "88888888888888" ||
-  cnpj == "99999999999999")
-  return false;  // eliminando numeros invalidos conhecidos 
-
-//valida dvs
-tamanho = cnpj.length - 2
-numeros = cnpj.substring(0, tamanho);
-digitos = cnpj.substring(tamanho);
-soma = 0;
-pos = tamanho - 7;
-
-for (i = tamanho; i >= 1; i--) {
-  soma += numeros.charAt(tamanho - i) * pos--;
-  if (pos < 2)
-    pos = 9;
-}
-
-resultado = soma % 11 < 2 ? 0 : 11 - soma % 11; 
-
-//segundo numero do dvs
-if (resultado != digitos.charAt(0)) return false;
-tamanho = tamanho + 1;
-numeros = cnpj.substring(0, tamanho);
-soma = 0;
-pos = tamanho - 7;
-for (i = tamanho; i >= 1; i--) {
-  soma += numeros.charAt(tamanho - i) * pos--;
-  if (pos < 2)
-    pos = 9;
-}
-resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
-if (resultado != digitos.charAt(1))
-  return false;
-
-return true;
-
-}
-
-</script>
->>>>>>> 29f09f5c0468006e1a4737ad87799a1c11fb721f
