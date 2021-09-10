@@ -48,8 +48,8 @@ header {
 
 /* Parte principal home */
 .container {
-    background-image: url(img/blur.svg), /* Luz verde em cima da camada preta  */
-                      url(img/grid.svg); /* Grid  */
+    background-image: url(../assets/img/blur.svg), /* Luz verde em cima da camada preta  */
+                      url(../assets/img/grid.svg); /* Grid  */
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position:  right;
     backface-visibility: hidden;
@@ -121,8 +121,7 @@ header {
 .titulos {
     color: #ACFFC3;
     font-size: 4rem;
-    padding-top: 100px;
-    padding-left: 50px;
+    padding-top: 197px;
     font-weight: 600;
 }
 
@@ -131,7 +130,6 @@ header {
     font-size: 4rem;
     position: relative;
     top: 20px;
-    font-weight: 600;
 }
 
 /* Linha verde que divide a info e os números*/
@@ -142,7 +140,7 @@ header {
 
 /* Imagem do caixa eletrônico da homepage */
 #caixa-eletronico-verde {
-    margin: 25px 96px 0 0;
+    margin: 20px 113px 0 0;
     width: 270px;
     float: right;
 }
@@ -190,9 +188,10 @@ header {
 .servico-texto {
     font-size: 17px;
     margin-bottom: 5%;
-    color:rgb(253, 253, 253);
-    padding-left: 50px;
-    margin-top: 20px;
+    width: 70%;
+    line-height: 30px;
+    color: aliceblue;
+    margin-top: 2%;
 }
 
 .servico-box-item{
@@ -276,12 +275,11 @@ header {
 }
 
 #img_caixa_servicos2 {
-    height: 75%;
+    height: 100%;
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
 
 /* Fim de serviços - 2 */ 
@@ -294,20 +292,25 @@ header {
     margin-bottom: 100px;
 }
 
+.ipt_contato::placeholder{
+    font-size: 15px;
+    color: rgb(25, 37, 25);
+}
+
 .container_contato {
     width: 100%;
      margin: auto;
  }
 
 .caixa_contato {
-    margin-left: 10%;
-    margin-right: 60%;
-    background-color: #d9f1d8;
-    margin-bottom: 5%;
-    padding: 5%;
-    margin-top: 5%;
     font-size: 15px;
 }
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
 
 h1.title_contato {
     color: #acffc3;
@@ -326,9 +329,8 @@ h2 {
     color: #707070;
     font-family: sans-serif;
     font-size: 30px;
-    line-height: 15px;
-    margin-top: 15%;
-    margin-bottom: 20px;
+    line-height: 20px;
+    margin-top: 15px;
 }
 
 .ipt_contato {
@@ -347,9 +349,11 @@ h2 {
 .btn_contato {
     background-color: #5fc951;
     border-radius: 50px;
-    padding: 4% 38%;
-    margin-top: 15%;
-    border: 1px rgb(104, 104, 104);
+    margin-top: 10%;
+    width: 100%;
+    font-size: 17px;
+    height: 50px;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -360,19 +364,13 @@ h2 {
 }
 
 .img_contato {
-    float: right;
-    margin-right: 20%;
-    width: 30%;
     margin-top: 5%;
 }
 
-
 /* RODAPÉ */
-
 
 .row {
     width: 100%;
-    /* flex-wrap: wrap; */
     display: flex !important;
     justify-content: space-evenly !important;
     padding-top: 40px;
@@ -389,7 +387,6 @@ ul {
 }
 
 .footer img {
-    height: 80px;
     margin-top: 40px;
     margin-left: 20%;
     float: right 20px;
@@ -552,9 +549,8 @@ ul {
 
     .img_contato {
         float: right;
-        margin-right: 10%;
         width: 30%;
-        /* padding: 0% 0 10% 0; */
+        
     }
 
     .caixa_contato {

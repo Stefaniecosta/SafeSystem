@@ -1,44 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="styles/login.css">
 </head>
+
 <body>
     <!-- <header class="cabecalho">
 
     </header> -->
     <div id="containerGeral_login">
-       <div id="subcontainer01_login">
+        <div id="subcontainer01_login">
 
-            <img src="img/fundoPrincipal.png" alt="" class="imagemPrincipal_login" style="right: 100%;">
+            <img src="assets/img/fundoPrincipal.png" alt="" class="imagemPrincipal_login">
 
-       </div>
-       <div id="subcontainer02_login">
+        </div>
+        <div id="subcontainer02_login">
 
-    
-           <div id="div_formulario">
 
-            
+            <div id="div_formulario">
 
                 <form action="">
-                    
-                    <h2 id="titulo">LOGIN</h2>
-                    <input type="text" placeholder="CNPJ*"  />
 
-                    <input type="password" placeholder="Senha*"/>
+                    <h1 class="titulos">Login</h1>
 
-                    <p id="Click_esqueceu">Esqueci a senha</p>
+                    <input type="text" placeholder="CNPJ*" />
+
+                    <input type="password" placeholder="Senha*" />
+
+                    <p id="Click_esqueceu">Esqueceu a senha?</p>
 
                     <button class="buttonForm-login" type="submit">Confirmar</button>
-                </form>
-           </div>
 
-    </div>
+                    <div class="container">
+                    <div class="option">Ou logar com</div>
+                    <hr>
+                    <div class="twitter">
+                      <a href="#"><i class="fab fa-twitter"></i> <b>Twitter</b> </a>
+                    </div>
+                    <div class="facebook">
+                      <a href="#"><i class="fab fa-facebook-f"></i> <b>Facebook</b></a>
+                    </div>
+                </div>
+
+                </form>
+            </div>
+        </div>
+
 
     </div>
 </body>
+
 </html>
