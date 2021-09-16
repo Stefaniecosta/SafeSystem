@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Homepage - Safe System</title>
-    <script src="/scripts/progressBar.js"></script>
+    <script type="text/javascript" src="/scripts/menuHome.js" async></script>
 </head>
 
 <body>
@@ -22,35 +23,32 @@
             </article>
         </div>
 
-        <div id="progressBar"></div>
-        <div id="progressBarContainer"></div>
-        
         <!-- Container "respiro"-->
         <div id="respiro">
 
             <!-- Cabeçalho -->
-            <header class="header-principal">
-                <nav>
-                    <ul class="ul-header">
-                        <li class="ul-header"> <img id="logo-img" src="assets/img/logoss.svg" alt=""></li>
-                        <li class="ul-header"><a href="#">home</a></li>
-                        <li class="ul-header"><a href="#servico">serviços</a></li>
-                        <li class="ul-header"><a href="#contato">contato</a></li>
-
-                        <strong>
-                            <li class="login"><a style="color: rgb(255, 255, 255);" href="login.html">login</a></li>
-                        </strong>
-
-                        <strong>
-                            <li class="cadastro"><a style="color: rgb(0, 0, 0);" href="cadastro.html">cadastro</a></li>
-                        </strong>
-
+            <header>
+                <a href="/index.html">
+                    <img id="logo-img" src="assets/img/logoss.svg" alt="Logotipo Safe System">
+                </a>
+                <nav id="nav">
+                    <button aria-label="Abrir Menu " id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                        aria-expanded="false">
+                        <span id="hamburger"></span>
+                    </button>
+                    <ul id="menu" role="menu">
+                        <li><a href="/index.html">home</a></li>
+                        <li><a href="#servico">serviços</a></li>
+                        <li><a href="#contato">contato</a></li>
+                        <li><a id="txt-login" href="/pages/login.html">login</a></li>
+                        <li><a id="txt-cadastro" href="/pages/cadastro.html">cadastro</a></li>
                     </ul>
                 </nav>
             </header>
 
             <!-- Caixa eletronico verde-->
-            <img id="caixa-eletronico-verde" src="assets/img/CaixaEletronico-verde.png" alt="Caixa eletrÔnico verde ilustrativo" srcset="">
+            <img id="caixa-eletronico-verde" src="assets/img/CaixaEletronico-verde.png"
+                alt="Caixa eletrÔnico verde ilustrativo" srcset="">
             <!-- Título e info -->
             <h1 class="titulo_home">Safe <br> System</h1> <br> <br>
 
@@ -81,112 +79,114 @@
                         </div>
                 </article>
             </div>
-        
-        
-        <!-- Fim da Homepage -->
-        
-        <!-- Serviços - 1 -->
-        <section id="servico">
-            <div class="servico-container">
-                <p class="titulos">Serviços</p>
-                <p class="servico-texto">
-                    A Safe System é uma empresa de monitoramento
-                    totalmente focada em garantir e preservar a integridade
-                    e segurança dos caixas eletronicos.
-                </p>
-                <div class="servico-box-item">
-                    <div class="servico-item">
-                        <img class="servico-item-img" src="assets/img/Credit_card_perspective_matte.png"
-                            alt="cartão de crédito">
-                        <p class="servico-item-txt">MONITORAMENTO DE DADOS POR DASHBOARDS</p>
-                    </div>
-                    <div class="servico-item">
-                        <img class="servico-item-img" src="assets/img/Shield_perspective_matte.png"
-                            alt="sacola de dinheiro">
-                        <p class="servico-item-txt">MONITORAMENTO EM TEMPO REAL</p>
-                    </div>
-                    <div class="servico-item">
-                        <img class="servico-item-img" src="assets/img/Money_bag_matte.png" alt="escudo de segurança">
-                        <p class="servico-item-txt">SEGURANÇA E PROTEÇÃO DE DADOS</p>
-                    </div>
-                </div>
-            </div>
-            <div class="servico-infos-container">
-                <div class="servico-infos">
-                    <div class="servico-infos-box">
-                        <img class="servicos-infos-img" src="assets/img/monitor.svg">
-                        <span class="servicos-infos-titulo">Monitoramento seguro</span>
-                        <span class="servicos-infos-txt">Conosco seus dados então seguros e todos seus acessos restritos
-                            e
-                            protegidos.</span>
-                    </div>
-                    <div class="servico-infos-box">
-                        <img class="servicos-infos-img" src="assets/img/heart.svg">
-                        <span class="servicos-infos-titulo">Foco nos clientes</span>
-                        <span class="servicos-infos-txt">Transparência nas relações e uma comunicação aberta e
-                            verdadeira
-                            com todos os nossos clientes.</span>
-                    </div>
-                    <div class="servico-infos-box">
-                        <img class="servicos-infos-img" src="assets/img/smile.svg">
-                        <span class="servicos-infos-titulo">Análise constantes</span>
-                        <span class="servicos-infos-txt">Analise de falhas e de possiveis fraudes constantes.</span>
-                    </div>
-                    <div class="servico-infos-box">
-                        <img class="servicos-infos-img" src="assets/img/file-text.svg">
-                        <span class="servicos-infos-titulo">Relatórios diários</span>
-                        <span class="servicos-infos-txt">Históricos detalhados das suas ATM’s</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Fim de Serviços - 1 -->
 
-        <!-- Serviços 2 -->
-        <section id="servicos2">
-            <img id="img_caixa_servicos2" src="assets/img/caixa_servicos2.png" alt="">
-        </section>
-        <!-- Fim de Serviços - 2 -->
+            <!-- Fim da Homepage -->
 
-        <!-- Contato -->
-        <!-- MEIO CONTATO -->
-        <h1 class="titulo_home">Contate-nos</h1> <br> <br>
-        <section id="contato">
-
-            <div class="container_contato">
-
-                <!-- <h1 class="titulos">Contato</h1> -->
-
-                <div style="display: block;" class="imagem_contato">
-                    <img class="img_contato" src="assets/img/image 12.png" alt="">
-                </div>
-
-                <div class="caixa_contato">
-
-                    <h2 class="title_contato">Preencha para informações:</h2>
-
-                    <p class="frase_contato">Alguma dúvida? nos contate pelo email.</p>
-
-                    <input type="text" class="ipt_contato" placeholder="Nome completo *">
-
-                    <input type="text" class="ipt_contato" placeholder="CPF *">
-
-                    <input type="text" class="ipt_contato" placeholder="E-mail *">
-
-                    <input type="text" class="ipt_contato" placeholder="Confirmar E-mail *">
-
-                    <button class="btn_contato">Confirmar</button>
-
-                    <p class="frase_contato">Ao continuar, você permite que a Safe System
-                        entre em contato com você pelos canais de informações.
+            <!-- Serviços - 1 -->
+            <section id="servico">
+                <div class="servico-container">
+                    <p class="titulo_home">Serviços</p>
+                    <p class="servico-texto">
+                        A Safe System é uma empresa de monitoramento
+                        totalmente focada em garantir e preservar a integridade
+                        e segurança dos caixas eletronicos.
                     </p>
-
+                    <div class="servico-box-item">
+                        <div class="servico-item">
+                            <img class="servico-item-img" src="assets/img/Credit_card_perspective_matte.png"
+                                alt="cartão de crédito">
+                            <p class="servico-item-txt">MONITORAMENTO DE DADOS POR DASHBOARDS</p>
+                        </div>
+                        <div class="servico-item">
+                            <img class="servico-item-img" src="assets/img/Shield_perspective_matte.png"
+                                alt="sacola de dinheiro">
+                            <p class="servico-item-txt">MONITORAMENTO EM TEMPO REAL</p>
+                        </div>
+                        <div class="servico-item">
+                            <img class="servico-item-img" src="assets/img/Money_bag_matte.png"
+                                alt="escudo de segurança">
+                            <p class="servico-item-txt">SEGURANÇA E PROTEÇÃO DE DADOS</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="servico-infos-container">
+                    <div class="servico-infos">
+                        <div class="servico-infos-box">
+                            <img class="servicos-infos-img" src="assets/img/monitor.svg">
+                            <span class="servicos-infos-titulo">Monitoramento seguro</span>
+                            <span class="servicos-infos-txt">Conosco seus dados então seguros e todos seus acessos
+                                restritos
+                                e
+                                protegidos.</span>
+                        </div>
+                        <div class="servico-infos-box">
+                            <img class="servicos-infos-img" src="assets/img/heart.svg">
+                            <span class="servicos-infos-titulo">Foco nos clientes</span>
+                            <span class="servicos-infos-txt">Transparência nas relações e uma comunicação aberta e
+                                verdadeira
+                                com todos os nossos clientes.</span>
+                        </div>
+                        <div class="servico-infos-box">
+                            <img class="servicos-infos-img" src="assets/img/smile.svg">
+                            <span class="servicos-infos-titulo">Análise constantes</span>
+                            <span class="servicos-infos-txt">Analise de falhas e de possiveis fraudes constantes.</span>
+                        </div>
+                        <div class="servico-infos-box">
+                            <img class="servicos-infos-img" src="assets/img/file-text.svg">
+                            <span class="servicos-infos-titulo">Relatórios diários</span>
+                            <span class="servicos-infos-txt">Históricos detalhados das suas ATM’s</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Fim de Serviços - 1 -->
 
-        </section>
-<!-- Fim da div respiro (container)-->
-</div>
+            <!-- Serviços 2 -->
+            <section id="servicos2">
+                <img id="img_caixa_servicos2" src="assets/img/caixa_servicos2.png" alt="">
+                <br>
+            </section>
+            <!-- Fim de Serviços - 2 -->
+
+            <!-- Contato -->
+            <!-- MEIO CONTATO -->
+            <h1 class="titulo_home">Contate-nos</h1> <br> <br>
+            <section id="contato">
+
+                <div class="container_contato">
+
+                    <!-- <h1 class="titulos">Contato</h1> -->
+
+                    <div style="display: block;" class="imagem_contato">
+                        <img class="img_contato" src="assets/img/image 12.png" alt="">
+                    </div>
+
+                    <div class="caixa_contato">
+
+                        <h2 class="title_contato">Preencha para informações:</h2>
+
+                        <p class="frase_contato">Alguma dúvida? nos contate pelo email.</p>
+
+                        <input type="text" class="ipt_contato" placeholder="Nome completo *">
+
+                        <input type="text" class="ipt_contato" placeholder="CPF *">
+
+                        <input type="text" class="ipt_contato" placeholder="E-mail *">
+
+                        <input type="text" class="ipt_contato" placeholder="Confirmar E-mail *">
+
+                        <button class="btn_contato">Confirmar</button>
+
+                        <p class="frase_contato">Ao continuar, você permite que a Safe System
+                            entre em contato com você pelos canais de informações.
+                        </p>
+
+                    </div>
+                </div>
+
+            </section>
+            <!-- Fim da div respiro (container)-->
+        </div>
 
         <!-- RODAPÉ -->
         <!-- inicio do footer -->
@@ -228,11 +228,11 @@
                 </div>
             </div>
 
-            
-        <!-- Fim de contato-->
-    </footer>
 
-    
+            <!-- Fim de contato-->
+        </footer>
+
+
 </body>
 
 </html>
