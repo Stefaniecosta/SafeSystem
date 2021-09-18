@@ -2,10 +2,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-body, ul  {
+body, ul, ::before , ::after  {
     border: 0;
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -69,7 +70,8 @@ header strong a {
     display: none;
 }
 
-#respiro {
+/* Container de respiro para centralizar o site */
+.respiro {
     max-width: 75%;
     margin: 0 auto;
 }
@@ -184,17 +186,13 @@ header strong a {
 
 .servico-container {
     margin: auto;
-    margin-top: 10%;
-    padding-bottom: 150px;
 }
 
 .servico-texto {
     font-size: 17px;
-    margin-bottom: 5%;
-    width: 70%;
     line-height: 30px;
     color: aliceblue;
-    margin-top: 2%;
+    margin-top: 10%;
 }
 
 .servico-box-item{
@@ -225,14 +223,11 @@ header strong a {
 .servico-infos-container{
     padding: 50px;
     margin-top: 50px;
-    margin: auto;
-    max-width: 80%;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.41) 50.81%, rgba(255, 255, 255, 0) 138.15%), #89D388;
     border-radius: 50px;
     text-align: left;
-
-
 }
+
 .servico-infos{
     max-width: 1200px;
     display: flex;
@@ -537,7 +532,8 @@ h2 {
     }
 
     #caixa-eletronico-verde {
-        width: 50%;
+        width: 200px !important;
+        margin: 0px 0px 34px 56px;
         position: absolute;
         float: left;
         left: 41px;
@@ -565,7 +561,6 @@ h2 {
 
 
 
-
 @media screen and (max-width: 875px){
     #menu {
         padding-right: 3%;
@@ -578,6 +573,7 @@ h2 {
     }
     #caixa-eletronico-verde {
         margin: 40px 0px 0 0;
+        width: 200px !important;
     }
 }
 
@@ -599,6 +595,7 @@ h2 {
     }
     #caixa-eletronico-verde {
         margin: 100px 0px 0 0;
+        width: 200px !important;
     }
 }
 
@@ -608,12 +605,13 @@ h2 {
     }
     #caixa-eletronico-verde {
         margin: 100px -50px 0 0;
+        width: 200px !important;
     }
 }
 
 @media screen and (max-width: 520px){
     #caixa-eletronico-verde {
-        width: 40%;
+        width: 200px !important;
     }
     #info-slogan {
         width: 100%;
