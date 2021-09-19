@@ -445,7 +445,7 @@ h2 {
 
 /*RESPONSIVIDADE*/
 /* Responsividade home */
-@media (max-width: 1200px)  {
+@media (max-width: 955px)  {
     #btn-mobile {
         display: block;
     }
@@ -519,19 +519,19 @@ h2 {
         top: -7px;
     }
 
-    #about {
+    /* #about {
         display: none;
     }
 
     .titulo_home {
         font-size: 3rem;
-    }
+    } */
 
-    #retangulo {
+    /* #retangulo {
         width: 147%;
-    }
+    } */
 
-    #caixa-eletronico-verde {
+    /* #caixa-eletronico-verde {
         width: 200px !important;
         margin: 0px 0px 34px 56px;
         position: absolute;
@@ -551,11 +551,12 @@ h2 {
         border-radius: none!;
         float: left;
     }
+    */
 
     #img_caixa_servicos2 {
         width: 100%;
         height: 80%;
-    }
+    } 
 }
   /* Final tela home */
 
@@ -565,16 +566,33 @@ h2 {
     #menu {
         padding-right: 3%;
     }
+
+    #caixa-eletronico-verde {
+        width: 270px;
+        float: right;
+        position: relative;
+        top: 20px;
+        margin-left: -40px;
+    }
 }
+
+@media screen and (max-width: 820px){
+    
+
+    #caixa-eletronico-verde {
+        display: none;
+    }
+}
+
 
 @media screen and (max-width: 750px){
     .login{
         width: 100px;
     }
-    #caixa-eletronico-verde {
+    /* #caixa-eletronico-verde {
         margin: 40px 0px 0 0;
         width: 200px !important;
-    }
+    } */
 }
 
 @media screen and (max-width: 710px){
@@ -584,19 +602,11 @@ h2 {
 }
 
 @media screen and (max-width: 650px){
-    #menu {
-        font-size: 18px;
-    }
-    #info-slogan {
-        width: 45%;
-    }
-    .sobre_info-titulo {
-        font-size: 31px;
-    }
-    #caixa-eletronico-verde {
+    
+    /* #caixa-eletronico-verde {
         margin: 100px 0px 0 0;
         width: 200px !important;
-    }
+    } */
 }
 
 @media screen and (max-width: 600px){
@@ -609,7 +619,7 @@ h2 {
     }
 }
 
-@media screen and (max-width: 520px){
+/* @media screen and (max-width: 520px){
     #caixa-eletronico-verde {
         width: 200px !important;
     }
@@ -619,7 +629,18 @@ h2 {
     .servico-container {
         margin-top: 100%;
     }
+} */
+
+@media screen and (max-width: 511px){
+    #safe-escudo {
+        display: none;
+    }
+
+    #info-slogan {
+        width: 100%;
+    }
 }
+
 
 
 
