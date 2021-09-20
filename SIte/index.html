@@ -6,14 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Homepage - Safe System</title>
-    <script src="/scripts/progressBar.js"></script>
+    <script type="text/javascript" src="/scripts/menuHome.js" async></script>
 </head>
 
 <body>
+
     <!-- Homepage -->
-    <div class="container">
+    <main class="container">
 
         <!-- Retângulo verde da homepage-->
         <div id="retangulo">
@@ -22,35 +24,32 @@
             </article>
         </div>
 
-        <div id="progressBar"></div>
-        <div id="progressBarContainer"></div>
-        
         <!-- Container "respiro"-->
-        <div id="respiro">
+        <div class="respiro">
 
             <!-- Cabeçalho -->
-            <header class="header-principal">
-                <nav>
-                    <ul class="ul-header">
-                        <li class="ul-header"> <img id="logo-img" src="assets/img/logoss.svg" alt=""></li>
-                        <li class="ul-header"><a href="#">home</a></li>
-                        <li class="ul-header"><a href="#servico">serviços</a></li>
-                        <li class="ul-header"><a href="#contato">contato</a></li>
-
-                        <strong>
-                            <li class="login"><a style="color: rgb(255, 255, 255);" href="login.html">login</a></li>
-                        </strong>
-
-                        <strong>
-                            <li class="cadastro"><a style="color: rgb(0, 0, 0);" href="cadastro.html">cadastro</a></li>
-                        </strong>
-
+            <header>
+                <a href="/index.html">
+                    <img id="logo-img" src="assets/img/logoss.svg" alt="Logotipo Safe System">
+                </a>
+                <nav id="nav">
+                    <button aria-label="Abrir Menu " id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                        aria-expanded="false">
+                        <span id="hamburger"></span>
+                    </button>
+                    <ul id="menu" role="menu">
+                        <li><a href="/index.html">home</a></li>
+                        <li><a href="#servico">serviços</a></li>
+                        <li><a href="#contato">contato</a></li>
+                        <li><a id="txt-login" href="/pages/login.html">login</a></li>
+                        <li><a id="txt-cadastro" href="/pages/cadastro.html">cadastro</a></li>
                     </ul>
                 </nav>
             </header>
 
             <!-- Caixa eletronico verde-->
-            <img id="caixa-eletronico-verde" src="assets/img/CaixaEletronico-verde.png" alt="Caixa eletrÔnico verde ilustrativo" srcset="">
+            <img id="caixa-eletronico-verde" src="assets/img/CaixaEletronico-verde.png"
+                alt="Caixa eletrÔnico verde ilustrativo" srcset="">
             <!-- Título e info -->
             <h1 class="titulo_home">Safe <br> System</h1> <br> <br>
 
@@ -63,36 +62,39 @@
                 <article id="info-slogan">
                     <p> Somos uma empresa que entrega soluções
                         de monitoramento de caixas eletrônicos, visando a segurança, análises constantes e agilidade
-                        para suas agencias.</p> <br>
+                        para suas agências.</p> <br>
                     <div id="div-line"></div> <br>
 
                     <!-- Números-->
                     <div class="sobre_dados">
                         <div class="sobre_info">
                             <div>
-                                <span class="sobre_info-titulo">$08 +</span> <br>
+                                <span class="sobre_info-titulo">$ 08 +</span> <br>
                                 <span class="sobre_info">Agências <br> cadastradas </span>
                             </div>
 
                             <div>
-                                <span class="sobre_info-titulo">$10000 +</span> <br>
+                                <span class="sobre_info-titulo">$ 10000 +</span> <br>
                                 <span class="sobre_info">Usuários <br> com acesso</span>
                             </div>
                         </div>
                 </article>
             </div>
-        
-        
-        <!-- Fim da Homepage -->
-        
-        <!-- Serviços - 1 -->
+        </div>
+       
+    </main>
+    <!-- Fim da Homepage -->
+
+    <!-- Serviços - 1 -->
+    <!-- Container "respiro"-->
+    <div class="respiro">
         <section id="servico">
             <div class="servico-container">
-                <p class="titulos">Serviços</p>
+                <p class="titulo_home">Serviços</p>
                 <p class="servico-texto">
                     A Safe System é uma empresa de monitoramento
                     totalmente focada em garantir e preservar a integridade
-                    e segurança dos caixas eletronicos.
+                    e segurança dos caixas eletrônicos.
                 </p>
                 <div class="servico-box-item">
                     <div class="servico-item">
@@ -116,26 +118,27 @@
                     <div class="servico-infos-box">
                         <img class="servicos-infos-img" src="assets/img/monitor.svg">
                         <span class="servicos-infos-titulo">Monitoramento seguro</span>
-                        <span class="servicos-infos-txt">Conosco seus dados então seguros e todos seus acessos restritos
+                        <span class="servicos-infos-txt">Conosco, seus dados então seguros, e todos seus acessos
+                            restritos
                             e
                             protegidos.</span>
                     </div>
                     <div class="servico-infos-box">
                         <img class="servicos-infos-img" src="assets/img/heart.svg">
                         <span class="servicos-infos-titulo">Foco nos clientes</span>
-                        <span class="servicos-infos-txt">Transparência nas relações e uma comunicação aberta e
+                        <span class="servicos-infos-txt">Transparência nas relações, e uma comunicação aberta e
                             verdadeira
                             com todos os nossos clientes.</span>
                     </div>
                     <div class="servico-infos-box">
                         <img class="servicos-infos-img" src="assets/img/smile.svg">
-                        <span class="servicos-infos-titulo">Análise constantes</span>
-                        <span class="servicos-infos-txt">Analise de falhas e de possiveis fraudes constantes.</span>
+                        <span class="servicos-infos-titulo">Análises constantes</span>
+                        <span class="servicos-infos-txt">Análise diária de falhas e de possíveis fraudes.</span>
                     </div>
                     <div class="servico-infos-box">
                         <img class="servicos-infos-img" src="assets/img/file-text.svg">
                         <span class="servicos-infos-titulo">Relatórios diários</span>
-                        <span class="servicos-infos-txt">Históricos detalhados das suas ATM’s</span>
+                        <span class="servicos-infos-txt">Históricos detalhados das suas ATM’s.</span>
                     </div>
                 </div>
             </div>
@@ -145,6 +148,7 @@
         <!-- Serviços 2 -->
         <section id="servicos2">
             <img id="img_caixa_servicos2" src="assets/img/caixa_servicos2.png" alt="">
+            <br>
         </section>
         <!-- Fim de Serviços - 2 -->
 
@@ -165,7 +169,7 @@
 
                     <h2 class="title_contato">Preencha para informações:</h2>
 
-                    <p class="frase_contato">Alguma dúvida? nos contate pelo email.</p>
+                    <p class="frase_contato">Alguma dúvida? Contate-nos por email.</p>
 
                     <input type="text" class="ipt_contato" placeholder="Nome completo *">
 
@@ -178,61 +182,60 @@
                     <button class="btn_contato">Confirmar</button>
 
                     <p class="frase_contato">Ao continuar, você permite que a Safe System
-                        entre em contato com você pelos canais de informações.
+                        entre em contato pelos nossos canais de informações.
                     </p>
 
                 </div>
             </div>
 
         </section>
-<!-- Fim da div respiro (container)-->
-</div>
+        <!-- Fim da div respiro (container)-->
+    </div>
 
-        <!-- RODAPÉ -->
-        <!-- inicio do footer -->
-        <footer class="footer">
-            <div class="container_contato">
+    <!-- RODAPÉ -->
+    <!-- inicio do footer -->
+    <footer class="footer">
+        <div class="container_contato">
 
-                <div class="row">
+            <div class="row">
 
-                    <div class="footer-col">
-                        <ul>
-                            <img class="logo-footer-contato" src="assets/img/logo-contato.png" alt="">
-                        </ul>
-                    </div>
+                <div class="footer-col">
+                    <ul>
+                        <img class="logo-footer-contato" src="assets/img/logo-contato.png" alt="">
+                    </ul>
+                </div>
 
-                    <div class="footer-col footer-suporte-contato">
-                        <h4 class="suporte-contato">Suporte</h4>
-                        <ul>
-                            <li><a target="blank"
-                                    href="https://newaccount1622834162538.freshdesk.com/support/tickets/new">FAQ</a>
-                            </li>
-                            <li><a target="blank"
-                                    href="https://newaccount1622834162538.freshdesk.com/support/tickets/new">Central de
-                                    Atendimento</a></li>
-                            <li><a target="blank"
-                                    href="https://newaccount1622834162538.freshdesk.com/support/tickets/new">0800 275
-                                    6398</a></li>
-                            <li><a target="blank" href="#"></a></li>
-                        </ul>
-                    </div>
+                <div class="footer-col footer-suporte-contato">
+                    <h4 class="suporte-contato">Suporte</h4>
+                    <ul>
+                        <li><a target="blank"
+                                href="https://newaccount1622834162538.freshdesk.com/support/tickets/new">FAQ</a>
+                        </li>
+                        <li><a target="blank"
+                                href="https://newaccount1622834162538.freshdesk.com/support/tickets/new">Central de
+                                Atendimento</a></li>
+                        <li><a target="blank"
+                                href="https://newaccount1622834162538.freshdesk.com/support/tickets/new">0800 275
+                                6398</a></li>
+                        <!-- <li><a target="blank" href="#"></a></li>-->
+                    </ul>
+                </div>
 
-                    <div class="footer-col redes-social-contato">
-                        <h4>Nossas Redes Sociais</h4>
-                        <div class="social-links">
-                            <a href="#"><i class="fab fa-github"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
+                <div class="footer-col redes-social-contato">
+                    <h4>Nossas Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            
+
         <!-- Fim de contato-->
     </footer>
 
-    
 </body>
 
 </html>

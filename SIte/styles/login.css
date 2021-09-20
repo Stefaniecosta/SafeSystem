@@ -16,9 +16,8 @@ body{
 }
 
 #subcontainer01_login{
-    width: 40%;
+    width: 60%;
     height: 100%;
-    /* background-color: red; */
 }
  .imagemPrincipal_login{
     width: 100%;
@@ -40,7 +39,6 @@ body{
 #subcontainer02_login{
     width: 60%;
     height: 100% !important;
-    background-image: url(img/Rectangle2.png);
     object-fit: cover;
     background-repeat: no-repeat;
 }
@@ -121,7 +119,6 @@ form {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* padding: 0 50px; */
     height: 100%;
     text-align: center;
   }
