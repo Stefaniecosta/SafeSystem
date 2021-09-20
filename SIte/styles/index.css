@@ -210,9 +210,10 @@ header strong a {
 }
 .servico-item-txt {
     color: #ACFFC3;
-    font-size: 20px;
-    font-weight: 600;
+    font-weight: bold;
     text-align: center;
+    font-family: system-ui;
+    font-size: large;
 }
 
 .servico-item-img {
@@ -233,7 +234,10 @@ header strong a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    column-gap: 30px;
+    grid-row-gap: 40px;
 }
+
 .servico-infos-box{
     width: 325px;
     margin-right: 50px;
@@ -256,7 +260,7 @@ header strong a {
 .servicos-infos-txt{
     width: 190px;
     float: right;
-    font-size: 20px;
+    font-size: 17px;
 }
 /* Fim de serviços - 1*/ 
 
@@ -489,7 +493,7 @@ h2 {
     }
 
     #hamburger {
-        color: rgb(191 255 213);
+        color: black;
         width: 20px;
         border-top: 2px solid;
     }
@@ -502,7 +506,7 @@ h2 {
         height: 2px;
         background: currentColor;
         margin-top: 5px;
-        transition: .3s;
+        transition: .2s;
     }
 
     #nav.active #hamburger {
@@ -518,40 +522,6 @@ h2 {
         position: relative;
         top: -7px;
     }
-
-    /* #about {
-        display: none;
-    }
-
-    .titulo_home {
-        font-size: 3rem;
-    } */
-
-    /* #retangulo {
-        width: 147%;
-    } */
-
-    /* #caixa-eletronico-verde {
-        width: 200px !important;
-        margin: 0px 0px 34px 56px;
-        position: absolute;
-        float: left;
-        left: 41px;
-        top: 147px;
-    }
-
-    #txt-cadastro {
-        font-weight: bold;
-        background-color: none;
-        float: right;
-    }
-    
-    #txt-login {
-        border: none;
-        border-radius: none!;
-        float: left;
-    }
-    */
 
     #img_caixa_servicos2 {
         width: 100%;
@@ -601,12 +571,23 @@ h2 {
     }
 }
 
-@media screen and (max-width: 650px){
-    
-    /* #caixa-eletronico-verde {
-        margin: 100px 0px 0 0;
-        width: 200px !important;
-    } */
+@media screen and (max-width: 653px){
+    #info-slogan {
+        width: 100%;
+        color: black;
+    }
+
+    .titulo_home {
+       color: rgb(112 138 111);
+    }
+
+    .sobre_info {
+        color: black;
+    }
+
+    .sobre_info-titulo {
+        color: black;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -638,6 +619,19 @@ h2 {
 
     #info-slogan {
         width: 100%;
+        color: black;
+    }
+
+    .titulo_home {
+       color: rgb(105 158 104);
+    }
+
+    .sobre_info {
+        color: black;
+    }
+
+    .sobre_info-titulo {
+        color: black;
     }
 }
 
