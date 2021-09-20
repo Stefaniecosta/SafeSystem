@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <script src="../scripts/validacaoCadastro.js"></script>
+
 </head>
 
 <body>
@@ -17,7 +19,7 @@
     <div id="containerGeral_login">
         <div id="subcontainer01_login">
 
-            <img src="/assets/img/image 15.svg" alt="" class="imagemPrincipal_login">
+            <img src="../assets/img/image 15.svg" alt="" class="imagemPrincipal_login">
 
         </div>
         <div id="subcontainer02_login">
@@ -29,7 +31,8 @@
 
                     <h1 class="titulos">Login</h1>
 
-                    <input type="text" placeholder="CNPJ*" />
+                    <input type="text" placeholder="CNPJ*" onblur="validarCNPJ(this)" onkeypress="mascaraCnpj()" id="idCnpj"
+                    maxlength="18"/>
 
                     <input type="password" placeholder="Senha*" />
 
@@ -37,7 +40,7 @@
 
                     <button class="buttonForm-login" type="submit">Confirmar</button>
 
-                    <div class="container">
+                    <!-- <div class="container">
                     <div class="option">Ou logar com</div>
                     <hr>
                     <div class="twitter">
@@ -46,7 +49,7 @@
                     <div class="facebook">
                       <a href="#"><i class="fab fa-facebook-f"></i> <b>Facebook</b></a>
                     </div>
-                </div>
+                </div> -->
 
                 </form>
             </div>
