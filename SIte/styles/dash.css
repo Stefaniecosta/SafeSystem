@@ -143,14 +143,20 @@ main {
 }
 
 .main__title > img {
-  max-height: 100px;
+  max-height: 50px;
   object-fit: contain;
   margin-right: 20px;
 }
 
+/* Linha que separa os caixas no sidebar */
+.line {
+  width: 245;
+  color: greenyellow;
+}
+
 .main__greeting > h1 {
   font-size: 28px;
-  color: #3b9668;
+  color: #befdde;
   font-weight: bolder;
   margin-bottom: 5px;
 }
@@ -175,8 +181,9 @@ main {
   height: 70px;
   padding: 25px;
   border-radius: 5px;
-  background: #e6f3e6;
-  box-shadow: 0px -1px 1px #ededed, -1px -1px 14px #89D388;
+  background: #a8ff78; /* fallback for old browsers */
+  background: linear-gradient(to right, #ffffffd9, #a3ffe3);
+  box-shadow: 0px 0px 0px #ededed, 0px 0px 62px #000000;
 }
 
 .card_inner {
@@ -199,8 +206,9 @@ main {
 .charts__left {
   padding: 25px;
   border-radius: 5px;
-  background: #e6f3e6;
-  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  background: #a8ff78; /* fallback for old browsers */
+  background: linear-gradient(to right, #ffffffd9, #a3ffe3);
+  box-shadow: 0px 0px 0px #ededed, 0px 0px 62px #000000;
 }
 
 .charts__left__title {
@@ -235,8 +243,9 @@ main {
 .charts__right {
   padding: 25px;
   border-radius: 5px;
-  background: #e6f3e6;
-  box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #ffffff;
+  background: #a8ff78; /* fallback for old browsers */
+  background: linear-gradient(to right, #ffffffd9, #a3ffe3);
+  box-shadow: 0px 0px 0px #ededed, 0px 0px 62px #000000;
 }
 
 .charts__right__title {
@@ -314,7 +323,7 @@ main {
 /*  Sidebar começa aqui (barra de navegação)  */
 
 #sidebar {
-  background: #020509;
+  background: linear-gradient(to right, #060e06, #000000);
   grid-area: sidebar;
   overflow-y: auto;
   padding: 20px;
@@ -344,7 +353,7 @@ main {
 }
 
 .sidebar__title > div > h1 {
-  font-size: 18px;
+  font-size: 28px;
   display: inline;
 }
 
