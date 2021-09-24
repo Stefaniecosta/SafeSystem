@@ -45,7 +45,7 @@ section{
 section.cover_side{
     width: 70vw;
     height: 100vh;
-    background-image: url(/assets/img/Frame\ 104.svg);
+    background-image: url(../assets/img/Frame\ 104.svg);
     background-size: cover;
     background-repeat: no-repeat;
 }
