@@ -49,6 +49,11 @@ body{
     overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 #titulo{
     font-style: normal;
     color: white;
