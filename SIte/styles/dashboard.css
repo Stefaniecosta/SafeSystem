@@ -37,16 +37,16 @@ body
 /* barra de rolagem, scroll */
 
 ::-webkit-scrollbar { 
-    background-color: #E16666;
+    background-color: #e1666600;
     width: 6px;/* 1 */ }
 ::-webkit-scrollbar-button { /* 2 */ }
 ::-webkit-scrollbar-track{ /* 3*/ 
-background-color: rgb(250, 250, 250);
+background-color: rgba(250, 250, 250, 0);
 }
 ::-webkit-scrollbar-track-piece { /* 4 */ }
 
 ::-webkit-scrollbar-thumb {
-    background-color: aqua; /* 5 */ }
+    background-color: #ACFFC3; /* 5 */ }
 ::-webkit-scrollbar-corner { /* 6 */ }
 ::-webkit-resizer{ /* 7 */ }
 
