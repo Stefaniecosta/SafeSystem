@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,118 +9,123 @@
     <link rel="stylesheet" href="../styles/dashperfil.css">
     <title>Perfil de usuario</title>
 </head>
+
 <body>
-        <div id="content">
-            <img id="logoName" src="/Site/assets/img/safeLogo2.png" alt="">
-            <div id="options">
-                <div class="item">
-                    <strong>
-                        Caixas
-                    </strong>
-                </div>
-                <hr>
-                <div class="item">
-                    <div>
-                        <img src="/Site/assets/img/visaoGeralImg.png" alt="">
-                    </div>
-                    <span >VISÃO GERAL</span>
-                </div>
-                <hr>
-                <div class="item">
-                    <img src="/Site/assets/img/caixaIcon.png" alt="">
-                    <span>CAIXA <strong>01</strong></span>
-                </div>
-                <hr>
-                <div class="item">
-                    <img src="/Site/assets/img/caixaIcon.png" alt="">
-                    <span>CAIXA <strong>02</strong></span>
-                </div>
-                <hr>
-                <div class="item">
-                    <img src="/Site/assets/img/caixaIcon.png" alt="">
-                    <span>CAIXA <strong>03</strong></span>
-                </div>
-                <hr>
-                <div class="item">
-                    <span>
-                        Agência
-                    </span>
-                    <br>
-                    <strong>
-                        0222
-                    </strong>
-                </div>
-                <hr>
+    <div id="content">
+        <img id="logoName" src="/Site/assets/img/safeLogo2.png" alt="">
+        <div id="options">
+            <div class="item">
+                <strong>
+                    Caixas
+                </strong>
             </div>
-            <div id="logout">
-                <img id="logoutIcon" src="/Site/assets/img/logoutIcon.png" alt="">
+            <hr>
+            <div class="item">
+                <div>
+                    <img src="/Site/assets/img/visaoGeralImg.png" alt="">
+                </div>
+                <span>VISÃO GERAL</span>
             </div>
+            <hr>
+            <div class="item">
+                <img src="/Site/assets/img/caixaIcon.png" alt="">
+                <span>CAIXA <strong>01</strong></span>
+            </div>
+            <hr>
+            <div class="item">
+                <img src="/Site/assets/img/caixaIcon.png" alt="">
+                <span>CAIXA <strong>02</strong></span>
+            </div>
+            <hr>
+            <div class="item">
+                <img src="/Site/assets/img/caixaIcon.png" alt="">
+                <span>CAIXA <strong>03</strong></span>
+            </div>
+            <hr>
+            <div class="item">
+                <span>
+                    Agência
+                </span>
+                <br>
+                <strong>
+                    0222
+                </strong>
+            </div>
+            <hr>
         </div>
-        <div id="informations">
-            <div class="header">
-                <img src="/SIte/assets/img/logossBranco.png" alt="">
-                <strong>Dashboard</strong>
-                <img id="user" src="/SIte/assets/img/user.png" alt="">
-                <button id="repError">REPORTAR ERRO</button>
-            </div>
+        <div id="logout">
+            <img id="logoutIcon" src="/Site/assets/img/logoutIcon.png" alt="">
+        </div>
+    </div>
+    <div id="informations">
+        <div class="header">
+            <img src="/SIte/assets/img/logossBranco.png" alt="">
+            <strong>Dashboard</strong>
+            <a href="../pages/dashboardPefil.html"><img id="user" src="/SIte/assets/img/user.png" alt="">
+            </a>
+            <button id="repError">REPORTAR ERRO</button>
+        </div>
         <!-------------------------- Container do perfil ---------------------------------->
 
-            <div class="container-perfil">
-                <div class="caixa-card">
-                    <h2>Foto do perfil</h2>
-                    <img class="section-img profile" src="../assets/img/avatar.svg" />
-                    <p>O administrador escolhido é o único responsável pelo perfil da empresa.</p>
-                    <a href="#" class="info-link">Leia mais sobre nossa politica...</a>
-                </div>
+        <div class="container-perfil">
+            <div class="caixa-card">
+                <h2>Foto do perfil</h2>
+                <img class="section-img profile" src="../assets/img/avatar.svg" />
+                <p>O administrador escolhido é o único responsável pelo perfil da empresa.</p>
+                <a href="#" class="info-link">Leia mais sobre nossa politica...</a>
+            </div>
 
-                <div class="caixa-input">
+            <div class="caixa-input">
+                <form>
+                    <p>Nome do usuario responsável:</p>
+                    <input id="ipt_nome" class="inp" type="text" class="input" name="nome" placeholder="John dee">
+                    <p>Email de acesso:</p>
+                    <input id="ipt_email" class="inp" type="text" class="input" name="email"
+                        placeholder="johndee@safesystem.com">
+                    <p>Agencia cadastrada:</p>
+                    <input id="ipt_foto" name="fotoPerfil" class="inp" type="text" class="input" placeholder="0222">
+                    <input style="display: none;" id="ipt_idUsuario" name="idUsuario" class="inp" type="text"
+                        class="input">
+                </form>
+            </div>
+        </div>
+        <!-------------------------- /Container do perfil ---------------------------------->
+
+        <!----------------------------Container mudar senha--------------------->
+
+        <div class="container-senha">
+            <div class="caixa-titulo">
+                <h2 class="subtitulo-padrao alinha">Mudar senha</h2>
+            </div>
+            <div class="caixa-senha">
+                <!--inputs do formulario-->
+                <div class="senhas">
                     <form>
-                        <p>Nome do usuario responsável:</p>
-                        <input id="ipt_nome" class="inp" type="text" class="input" name="nome" placeholder="John dee">
-                        <p>Email de acesso:</p>
-                        <input id="ipt_email" class="inp" type="text" class="input" name="email" placeholder="johndee@safesystem.com">
-                        <p>Agencia cadastrada:</p>
-                        <input id="ipt_foto" name="fotoPerfil" class="inp" type="text" class="input" placeholder="0222">
-                        <input style="display: none;" id="ipt_idUsuario" name="idUsuario" class="inp" type="text" class="input">
-                    </form>
+                        <div class="senha-antiga">
+                            <input class="inp-repeat" name="senha_antiga" type="password" class="input"
+                                placeholder="Senha antiga" id="senhaAntiga">
+                        </div>
+                        <input style="display: none;" id="ipt_idUsuario2" name="idUsuario" class="inp" type="text"
+                            class="input">
+                        <input class="inp-senha" type="password" class="input" placeholder="Senha nova" required
+                            id="idSenha" maxlength="40" onkeyup="validarSenhaForca()">
+                        <input type="password" name="senha_nova" class="inp-senha" id="senha-reapet"
+                            placeholder="Repita a nova senha" onkeyup="compara()">
                 </div>
+                <!--Campo check mostrar senhas-->
+                <input type="checkbox" onclick="mostrarOcultarSenha()" id="revelarSenha" class="alinha check"
+                    style="background-color: rgb(151, 151, 38);"> <span class="msgCheck">Mostrar senhas</span>
+                <!--Mensagens sobre a senha-->
+                <div class="msg-valida">
+                    <div id="dicaSenha" class="senha"></div>
+                    <div id="erroSenhaForca" class="senha1"></div>
+                    <div id="impForcaSenha" class="senhaSumir"></div>
+                </div>
+                <!-- /Mensagens sobre a senha-->
+                <div class="alinha">
+                    <button type="submit" class="buttonSenha alinha">Confirmar </button>
+                </div>
+                </form>
             </div>
-            <!-------------------------- /Container do perfil ---------------------------------->
-
-            <!----------------------------Container mudar senha--------------------->
-
-            <div class="container-senha">
-                <div class="caixa-titulo">
-                    <h2 class="subtitulo-padrao alinha">Mudar senha</h2>
-                </div>
-                <div class="caixa-senha">
-                    <!--inputs do formulario-->
-                    <div class="senhas">
-                        <form>
-                            <div class="senha-antiga">
-                                <input class="inp-repeat" name="senha_antiga" type="password" class="input" placeholder="Senha antiga"
-                                    id="senhaAntiga">
-                            </div>
-                            <input style="display: none;" id="ipt_idUsuario2" name="idUsuario" class="inp" type="text" class="input">
-                            <input class="inp-senha" type="password" class="input" placeholder="Senha nova" required
-                                id="idSenha" maxlength="40" onkeyup="validarSenhaForca()">
-                            <input type="password" name="senha_nova" class="inp-senha" id="senha-reapet" placeholder="Repita a nova senha"
-                                onkeyup="compara()">
-                    </div>
-                    <!--Campo check mostrar senhas-->
-                    <input type="checkbox" onclick="mostrarOcultarSenha()" id="revelarSenha" class="alinha check"
-                        style="background-color: rgb(151, 151, 38);"> <span class="msgCheck">Mostrar senhas</span>
-                    <!--Mensagens sobre a senha-->
-                    <div class="msg-valida">
-                        <div id="dicaSenha" class="senha"></div>
-                        <div id="erroSenhaForca" class="senha1"></div>
-                        <div id="impForcaSenha" class="senhaSumir"></div>
-                    </div>
-                    <!-- /Mensagens sobre a senha-->
-                    <div class="alinha">
-                        <button type="submit" class="buttonSenha alinha">Confirmar </button>
-                    </div>
-                    </form>
-                </div>
-            </div>
-            <!-------------------------------------/Container mudar senha----------------------------->
+        </div>
+        <!-------------------------------------/Container mudar senha----------------------------->
