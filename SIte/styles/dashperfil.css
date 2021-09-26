@@ -1,5 +1,3 @@
-/* header e lateral */
-
 
 
 /*************** responsividade *****************/
@@ -349,14 +347,11 @@
 
 
 
-/* inicio da padronização de subtitulos (ex: missão, visão e valores) */
 .subtitulo-padrao{
     color: #fff;
     font-family: 'Roboto', sans-serif;
     font-size: 2rem;
 }
-
-/* fim da padronização de subtitulos (ex: missão, visão e valores) */
 
 /*reponsividade*/
 @media (min-width: 620px) {
