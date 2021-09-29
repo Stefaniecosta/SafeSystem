@@ -34,6 +34,7 @@ body
 ::-webkit-scrollbar { 
     background-color: #e1666600;
     width: 6px;/* 1 */ }
+    
 ::-webkit-scrollbar-button { /* 2 */ }
 ::-webkit-scrollbar-track{ /* 3*/ 
 background-color: rgba(250, 250, 250, 0);
@@ -48,8 +49,7 @@ background-color: rgba(250, 250, 250, 0);
 
 
 /*menu de opçoes lateral */
-#content
-{
+#content {
     height: 100vh;
     /* background-color: blue; */
     width: 12%;
@@ -63,53 +63,41 @@ background-color: rgba(250, 250, 250, 0);
 }
 
 
-#options 
-{
+#options {
     overflow: auto;
     height: 80vh;
 }
 
-/* ::-webkit-scrollbar 
-{
-    display: none;
-} */
-
-#logoName
-{
+#logoName {
     width: 80%;
     padding: 20px 0px 10px 0;
 }
 
-.item
-{
+.item {
     padding: 15px 0 15px 0;
     text-align: center;
     cursor: pointer;
     color: white;
 }
 
-hr
-{
+hr {
     border: none;
     background-color: #A8D5A7;
     height: 2px;
     width: 100%;
 }
 
-.item img
-{
+.item img {
     width: 20px;
     
 }
 
-#logout
-{
+#logout {
     text-align: center;   
     
 }
 
-#logout img
-{
+#logout img {
     padding: 10px 0 10px 0;
     width: 40px;
     cursor: pointer;
@@ -126,22 +114,19 @@ hr
     margin-bottom: 30px;
 }
 
-.header img 
-{
+.header img {
     width: 50px;
     margin-right: 10px;
     /* float: left; */
 }
 
-.header strong 
-{
+.header strong {
     font-size: 35px;
     color: white;
     /* float: left; */
 }
 
-#repError
-{
+#repError {
     background-color: transparent;
     border:2px #E16666 solid;
     border-radius: 8px;
@@ -152,8 +137,7 @@ hr
     margin-top: 20px;
 }
 
-#user
-{
+#user {
     float: right;
     width: 140px;
     padding-left: 20px;
