@@ -10,10 +10,10 @@
   --first-color: black;
   --first-color-light: #ACFAFF;
   --white-color: #ecf0ed;
-  background-color:rgb(36, 46, 35);
-
+  background: url(/Site/assets/img/blur.svg) no-repeat ;
+  background-color: black;
   /*===== Font and typography =====*/
-  --body-font: 'Nunito', sans-serif;
+  --body-font: 'Montserrat', sans-serif;
   --normal-font-size: 1rem;
   
   /*===== z index =====*/
@@ -39,6 +39,10 @@ a{
 }
 
 /*===== HEADER =====*/
+.bx-menu:before {
+  justify-content:flex-start;
+}
+
 .header{
   width: 100%;
   height: var(--header-height);
@@ -47,9 +51,9 @@ a{
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0 1rem;
-  background-color: var(--white-color);
+  background-color: #87ffa582;
   z-index: var(--z-fixed);
   transition: .5s;
 }
@@ -241,7 +245,6 @@ a{
       position: relative;
       left: -200px !important;
   }
-  
 
 }
 
@@ -249,8 +252,6 @@ a{
 
 
 /************* primeiro container, do perfil*************/
-
-
 .titulo {
   margin-top: 100px;
    position: relative;
@@ -261,20 +262,28 @@ a{
 }
 
 .container-perfil {
-  height: 500px;
+  height: 90vh;
   margin: 0;
+  max-width: 100%;
   border-bottom-color: 50px solid black;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-right: 100px;
-  padding-left: 100px;
 }
+
 
 .container-perfil h2 {
   display: flex;
   justify-content: center;
   color: #fff;
+}
+
+
+#user {
+  float: right;
+  width: 140px;
+  padding-left: 20px;
+  margin: 10px 0 0 0;
 }
 
 /*campos do input*/
@@ -293,8 +302,6 @@ a{
   width: 300px;
   margin: 0 0 20px;
   padding: 0.8em;
-  border: 2px solid #ccc;
-  border-radius: 1.5em;
   resize: none;
   outline: none;
   background-color: transparent;
@@ -309,21 +316,17 @@ a{
 /**card do perfil**/
 .caixa-card {
   width: 320px;
-  height: 420px;
   border-top: 3px solid var(--red);
   border-radius: 3px;
   overflow: hidden;
-  color: rgba(0, 0, 0, 0.678);
+  color: rgba(228, 216, 216, 0.835);
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
-
 }
-
 
 .caixa-card p {
   color: rgba(255, 255, 255, 0.883);
   position: relative;
-  bottom: 40px;
   padding: 0 10px;
   margin-left: 5px;
   font-size: 13px;
@@ -337,7 +340,6 @@ a{
   padding: 0 10px;
   margin-left: 5px;
   position: relative;
-  bottom: 40px;
 }
 
 /* /card do perfil*/
@@ -352,22 +354,15 @@ a{
   width: 100px;
 }
 
-
 .profile {
   width: 60%;
   height: 60%;
   border-radius: 50%;
   margin-bottom: 10px;
   position: relative;
-  bottom: 10px;
 }
 
 /* /imagem no card*/
-
-.container-perfil h2 {
- padding-top: 30px;
- 
-}
 
 h2 {
     padding: 10px;
@@ -390,75 +385,18 @@ p {
 }
 /* /alinhamento*/
 
-
-
-/********************** segundo container trocar senha ******************/
-
-.container-senha{
-  height: 450px;
-  width: 100%;
-  
- 
-}
-
-.caixa-titulo {
-  height: 100px;
-  display: block;
-}
-
-.senhas {
-  max-width: 100%;
-  height: 150px;
-  grid-template-columns: repeat(3, 1fr); 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-/*inputs campos trocar senha*/
-
-.inp-senha {
-
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  width: 250px;
-  margin: 0 0 20px;
-  padding: 0.8em;
-  border: 2px solid  #0fac31;
-  border-radius: 1.5em;
-  resize: none;
-  outline: none;
-  border-color: 0;
+/* / Botão de reportar erro */
+#repError {
   background-color: transparent;
-
+  border:2px #E16666 solid;
+  border-radius: 8px;
+  padding: 0.7% 1.4%;
+  color: white;
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
 }
 
-
-/*****senha antiga*****/
-
-.senha-antiga {
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-}
-
-
-.inp-repeat {
-  display: block;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  width: 250px;
-  margin: 0 0 20px;
-  padding: 0.8em;
-  border: 2px solid #0fac31;
-  border-radius: 1.5em;
-  background-color: transparent;
-  resize: none;
-  outline: none;
-  border-color: 0;
- 
-}
 
 .inp-repeat::placeholder,
 .inp-senha::placeholder {
@@ -467,74 +405,6 @@ p {
 }
 
 /* / inputs campos*/
-
-
-
-/*** checkbox mostrar as senha ***/
-
-.check {
-  width: 300px;
-}
-
-.msgCheck {
-  position: relative;
-  right: 140px;
-  color: #fff;
-
-}
-
-/* /checkbox mostrar as senha*/
-
-
-/***mensagem da validação***/
-
-
-.msg-valida {
- margin-top: 10px;
-  height: 90px; 
-  max-width: 80%; 
-  display: flex; 
-  justify-content: center; 
-  margin-left: 90px;
-  font-size: 12px;
-}
-
-.senha1 {
-
-margin-left: 20px;
- 
-}
-
-/*  /mensagem da validação*/
-
-
-/*botao confirme*/
-
-.buttonSenha {
-  border: 0;
-  background-color: #5FC951;
-  display: block;
-  margin: 20px auto;
-  text-align: center;
-  border: 2px solid #5FC951;
-  padding: 14px 10px;
-  width: 150px;
-  position: relative;
-  bottom: 40px;
-  font-size: 17px;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-  border-radius: 24px;
-  transition: 0.25s;
-  cursor: pointer;
-}
-
-.buttonSenha:hover {
-  background-color: #3d7737;
-  border-color: #3d7737;
-}
-
-
 
 .subtitulo-padrao{
   color: #fff;
@@ -548,7 +418,6 @@ margin-left: 20px;
     font-size: 1.4em;
   }
 }
-
 
 @media (max-width: 100% - 100px) {
   .caixa-card {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,12 @@
                 <i class='bx bx-menu' id="header-toggle"></i>
             </div>
 
-            <div class="header__img">
-                <img src="assets/img/perfil.jpg" alt="">
+            <button id="repError">REPORTAR ERRO</button>
+
+            <div>
+                <a href="#">
+                    <img id="user" src="/Site/assets/img/user.png" alt="">
+                </a>
             </div>
         </header>
 
@@ -53,9 +57,9 @@
                             <span class="nav__name">Favorites</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Site/pages/esqueciSenha.html" class="nav__link">
                             <i class='bx bx-folder nav__icon' ></i>
-                            <span class="nav__name">Data</span>
+                            <span class="nav__name">Mudar senha</span>
                         </a>
 
                         <a href="#" class="nav__link">
@@ -75,18 +79,18 @@
 
 
         <!-- Começa aqui o código do conteúdo-->
-        <h1>Perfil</h1>
-
-        <a href="../pages/dashboardPefil.html"><img id="user" src="/SIte/assets/img/user.png" alt="">
-        </a>
-        <button id="repError">REPORTAR ERRO</button>
-    </div>
+       
     <!-------------------------- Container do perfil ---------------------------------->
 
     <div class="container-perfil">
+       
+
         <div class="caixa-card">
+            <h1>Perfil</h1>
+            <article> lorem ipsum dolor sit amet </article>
+
             <h2>Foto do perfil</h2>
-            <img class="section-img profile" src="../assets/img/avatar.svg" />
+            <img class="section-img profile" src="../assets/img/Ellipse 55.svg" />
             <p>O administrador escolhido é o único responsável pelo perfil da empresa.</p>
             <a href="#" class="info-link">Leia mais sobre nossa politica...</a>
         </div>
@@ -107,61 +111,7 @@
     </div>
     <!-------------------------- /Container do perfil ---------------------------------->
 
-    <!----------------------------Container mudar senha--------------------->
-
-    <div class="container-senha">
-        <div class="caixa-titulo">
-            <h2 class="subtitulo-padrao alinha">Mudar senha</h2>
-        </div>
-        <div class="caixa-senha">
-            <!--inputs do formulario-->
-            <div class="senhas">
-                <form>
-                    <div class="senha-antiga">
-                        <input class="inp-repeat" name="senha_antiga" type="password" class="input"
-                            placeholder="Senha antiga" id="senhaAntiga">
-                    </div>
-                    <input style="display: none;" id="ipt_idUsuario2" name="idUsuario" class="inp" type="text"
-                        class="input">
-                    <input class="inp-senha" type="password" class="input" placeholder="Senha nova" required
-                        id="idSenha" maxlength="40" onkeyup="validarSenhaForca()">
-                    <input type="password" name="senha_nova" class="inp-senha" id="senha-reapet"
-                        placeholder="Repita a nova senha" onkeyup="compara()">
-            </div>
-            <!--Campo check mostrar senhas-->
-            <input type="checkbox" onclick="mostrarOcultarSenha()" id="revelarSenha" class="alinha check"
-                style="background-color: rgb(151, 151, 38);"> <span class="msgCheck">Mostrar senhas</span>
-            <!--Mensagens sobre a senha-->
-            <div class="msg-valida">
-                <div id="dicaSenha" class="senha"></div>
-                <div id="erroSenhaForca" class="senha1"></div>
-                <div id="impForcaSenha" class="senhaSumir"></div>
-            </div>
-            <!-- /Mensagens sobre a senha-->
-            <div class="alinha">
-                <button type="submit" class="buttonSenha alinha">Confirmar </button>
-            </div>
-            </form>
-        </div>
-    </div>
-    <!-------------------------------------/Container mudar senha----------------------------->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!--===== MAIN JS =====-->
+        <!-- Script que faz o hamburguer abrir e fechar -->
         <script src="/Site/scripts/hambPerfil.js"></script>
     </body>
 </html>

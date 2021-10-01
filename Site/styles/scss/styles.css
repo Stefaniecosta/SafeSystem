@@ -8,8 +8,10 @@
   --first-color: #dedbe7;
   --first-color-light: #AFA5D9;
   --white-color: #F7F6FB;
+  /*===== Font and typography =====*/
   --body-font: 'Nunito', sans-serif;
   --normal-font-size: 1rem;
+  /*===== z index =====*/
   --z-fixed: 100;
 }
 

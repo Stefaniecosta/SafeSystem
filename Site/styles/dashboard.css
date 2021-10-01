@@ -149,8 +149,8 @@ hr {
 
 
 /*Container de informações*/
-#infoBoxes
-{    width: 100%;
+#infoBoxes {
+    width: 100%;
     height: 80%;
     overflow: auto;
     display: flex;
@@ -158,8 +158,7 @@ hr {
     padding-left: 50px;
 }
 
-.box
-{
+.box {
     background: linear-gradient(133.84deg, #4E4E4E -16.04%, #333333 9.33%, #1A1A1A 32.02%, #1A1A1A 62.06%, #262626 87.42%, #4E4E4E 112.12%);
     border: 3px solid #ACFFC3;
     border-radius: 16px;
@@ -186,7 +185,6 @@ hr {
     max-width: 95%;
     margin: 0 auto;
     height: 90%;
-   
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: space-evenly;
