@@ -69,11 +69,6 @@ background-color: rgba(250, 250, 250, 0);
     height: 80vh;
 }
 
-/* ::-webkit-scrollbar 
-{
-    display: none;
-} */
-
 #logoName
 {
     width: 80%;
@@ -228,48 +223,71 @@ hr
 /*------/Container de informações*/
 
 
-/* #infoBoxes
-{
-    color: white;
+
+/*Container de informações*/
+#infoBoxes2
+{    width: 100%;
+    height: 400px;
+    overflow: auto;
+    display: flex;
     flex-wrap: wrap;
-    box-sizing: border-box;
-    display: flex
-    height: 1000px;
-    overflow-y: auto;
-    justify-content: space-between;
+    padding-left: 50px;
+    background-color: #E16666;
 }
 
-
-
-.box
+.box2
 {
     background: linear-gradient(133.84deg, #4E4E4E -16.04%, #333333 9.33%, #1A1A1A 32.02%, #1A1A1A 62.06%, #262626 87.42%, #4E4E4E 112.12%);
     border: 3px solid #ACFFC3;
     border-radius: 16px;
     box-shadow: 2px 6px 15px 2px rgba(12, 10, 11, 0.8);
     margin: 1.5%;
-    display: flex;
-    flex-wrap: wrap;
+}
+
+#primeirobox
+{
+    width: 45%;
+    height: 280px;
+}
+
+#segundobox
+{
+    width: 45%;
+    height: 280px;
+    display: block;
+    /* flex-direction: column; */
 }
 
 .boxContent
 {
-    padding: 20px;
+    max-width: 95%;
+    margin: 0 auto;
+    height: 90%;
+   
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    /* text-align: center; */
 }
 
 .boxContent strong
 {
-    float: left;
+    color: white;
+    margin: 10px 10px 0 0;
+    /* float: left; */
 }
 
 .icon
 {
-    float: right;
     width: 50px;
+    height: 50px;
+    padding-top: 15px;
+    float: right;
 }
 
-.graph
-{
-    width: auto;
-} */
+
+/*------/Container de informações*/
+
+
+
 
