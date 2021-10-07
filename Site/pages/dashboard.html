@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/dashboard.css">
+   
+
     <title>Área do Cliente</title>
 </head>
 <body>
         <div id="content">
-            <img id="logoName" src="/Site/assets/img/safeLogo2.png" alt="">
+            <img id="logoName" src="../assets/img/safeLogo2.png" alt="">
             <div id="options">
                 <div class="item">
                     <strong>
@@ -51,116 +53,120 @@
                 <hr>
             </div>
             <div id="logout">
-                <img id="logoutIcon" src="/Site/assets/img/logoutIcon.png" alt="">
+                <img id="logoutIcon" src="../assets/img/logoutIcon.png" alt="">
             </div>
         </div>
         <div id="informations">
             <div class="header">
-                <img src="/SIte/assets/img/logossBranco.png" alt="">
+                <img src="../assets/img/logossBranco.png" alt="">
                 <strong>Dashboard</strong>
-                <img id="user" src="/SIte/assets/img/user.png" alt="">
+                <img id="user" src="../assets/img/user.png" alt="">
                 <button id="repError">REPORTAR ERRO</button>
             </div>
+
+
             <div id="infoBoxes">
-                <div id="ram" class="box">
+                <div id="box1ram" class="box">
                     <div class="boxContent">
                         <strong>
-                            RAM
+                          <img id="iconesBox" src="../assets/img/dashboard-img/ram-icone.png" alt="" >  RAM
                         </strong>
-                        <img style="width: 400px;" src="/SIte/assets/img/ramGraph.png" alt="">
-                        <img class="icon" src="/SIte/assets/img/ramIcon.png" alt="">
+                        
+                        <section style="width: 270px; height: 80%;">
+                            <canvas id="myChart"></canvas>
+                            <section>
                     </div>
                 </div>
-                <div id="temp" class="box">
+
+                <div id="box2disco" class="box">
+                    <div class="boxContent">
+                        <strong>
+                            <img id="iconesBox" src="../assets/img/dashboard-img/disco-icone.png" alt="" > 
+                            Disco
+                        </strong>
+                    </div>
+                </div>
+           
+                <div id="box3Conexao" class="box">
+                    <div class="boxContent">
+                        <strong>
+                            <img id="iconesBox" src="../assets/img/dashboard-img/conexao-icone.png" alt="" > 
+
+                            Dispositivos conectados
+                        </strong>
+                    </div>
+                </div>
+
+                <div id="box4Temperatura" class="box">
                     <div  class="boxContent">
                         <strong>
-                            TEMPERATURA
+                            <img id="iconesBox" src="../assets/img/dashboard-img/temp-icon.png" alt="" >  
+
+                            Temperatura
+                        </strong>
+                    </div>
+                </div>
+
+                <div id="box5Visaogeral" class="box2">
+                    <div  class="boxContent">
+                         <img id="atmVisaogeral" src="../assets/img/dashboard-img/seta-caixa.png" alt="">
+
+                    </div>
+                </div>
+
+                <div id="box6CPU" class="box">
+                    <div  class="boxContent">
+                        <strong>
+                            <img id="iconesBox" src="../assets/img/dashboard-img/cpu-icone.png" alt="" >
+
+                            CPU
                         </strong>
                     </div>
                 </div>
             </div>
 
-
-            <div id="infoBoxes">
-                <div id="ram" class="box">
-                    <div class="boxContent">
-                        <strong>
-                            RAM
-                        </strong>
-                        <img style="width: 400px;" src="/SIte/assets/img/ramGraph.png" alt="">
-                        <img class="icon" src="/SIte/assets/img/ramIcon.png" alt="">
-                    </div>
-                </div>
-                <div id="temp" class="box">
-                    <div  class="boxContent">
-                        <strong>
-                            TEMPERATURA
-                        </strong>
-                    </div>
-                </div>
-            </div>
-
-            <div id="infoBoxes">
-                <div id="ram" class="box">
-                    <div class="boxContent">
-                        <strong>
-                            RAM
-                        </strong>
-                        <img style="width: 400px;" src="/SIte/assets/img/ramGraph.png" alt="">
-                        <img class="icon" src="/SIte/assets/img/ramIcon.png" alt="">
-                    </div>
-                </div>
-                <div id="temp" class="box">
-                    <div  class="boxContent">
-                        <strong>
-                            TEMPERATURA
-                        </strong>
-                    </div>
-                </div>
-            </div>
-
-
-            <div id="infoBoxes">
-                <div id="ram" class="box">
-                    <div class="boxContent">
-                        <strong>
-                            RAM
-                        </strong>
-                        <img style="width: 400px;" src="/SIte/assets/img/ramGraph.png" alt="">
-                        <img class="icon" src="/SIte/assets/img/ramIcon.png" alt="">
-                    </div>
-                </div>
-                <div id="temp" class="box">
-                    <div  class="boxContent">
-                        <strong>
-                            TEMPERATURA
-                        </strong>
-                    </div>
-                </div>
-            </div>
-
-
-            <footer style="height: 100px;">
-
-            </footer>
-            <!-- <div class="infoBoxes">
-                <div class="box">
-                    <div class="boxContent">
-                        <strong>RAM</strong>
-                        <img class="graph" src="/SIte/assets/img/ramGraph.png" alt="">
-                        <img class="icon" src="/SIte/assets/img/ramIcon.png" alt="">
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="boxContent">
-                        <strong>TEMPERATURA</strong>
-                        <div style="float: left;">
-                            <img class="graph" src="/SIte/assets/img/tempGraph.png" alt="">
-    
-                        </div>
-                        <img class="icon" src="/SIte/assets/img/tempIcon.png" alt="">
-                    </div>
-                </div>
-            </div> -->
         </div>
 </body>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+var ctx = document.getElementById('myChart').getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'polarArea',
+    data: {
+        labels: [
+    'Nao utilizado',
+    'utilizado',
+    'nao utilizado'
+  ],
+  datasets: [{
+      
+    label: 'My First Dataset',
+    data: [11, 11, 11, 11, 12],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(75, 192, 192)',
+      'rgb(255, 205, 86)',
+      'rgb(201, 203, 207)',
+      'rgb(54, 162, 235)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+   
+});
+</script>
+     
