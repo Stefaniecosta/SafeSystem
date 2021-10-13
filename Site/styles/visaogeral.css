@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-
 /*-----------body------------*/
 
 body {
@@ -10,7 +9,6 @@ body {
     background-color: rgba(12, 22, 17, 0.9);
     font-family: Poppins;
     overflow-x: hidden;
-
 }
 
 #informations {
@@ -60,9 +58,7 @@ body {
 /*menu de opçoes lateral */
 #content {
     height: 100vh;
-    /* background-color: blue; */
-    width: 12%;
-    padding: 0 0 0 2%;
+    width: 12%; 
     display: flex;
     flex-direction: column;
     border-right: 3px solid #A8D5A7;
@@ -109,7 +105,9 @@ hr {
 .item img {
     width: 20px;
 }
-
+.item-img {
+    width: 20px;
+}
 #logout {
     text-align: center;
 }
@@ -124,7 +122,7 @@ hr {
 
 /* ---header----*/
 .header {
-    padding: 20px 1.75% 0 1.75%;
+    padding: 20px 1.75% 0 3.75%;
     margin-bottom: 30px;
     display: flex;
     justify-content: space-between;
@@ -145,18 +143,21 @@ hr {
 
 .bottom {
     margin-top: 5px;
-    padding: 5px 0;
-    border-bottom: 3px solid #A8D5A7;
+    padding: 7px 0px 7px 14px;
+    width: 256px;
+    border-bottom: 1px solid #fdfdfd;
+    text-transform: uppercase;
 }
 
 #repError {
     background-color: transparent;
     border: 2px #E16666 solid;
     border-radius: 8px;
+    position: relative;
+    right: 25px;
     padding: 0.7% 1.4%;
     color: white;
     cursor: pointer;
-
 }
 
 #user {
@@ -194,11 +195,12 @@ hr {
     width: 270px;
     height: 200px;
     display: flex;
+    box-shadow: 2px 6px 15px 2px rgba(12, 10, 11, 0,8);
 }
 
 .icone {
     color: white;
-    margin-top: 10px;
+    text-align: center;
 }
 
 .icone i {
@@ -236,7 +238,6 @@ hr {
 
 .boxContent strong {
     color: white;
-    margin: 10px 10px 0 0;
     padding-right: 150px;
 }
 
