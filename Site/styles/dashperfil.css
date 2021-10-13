@@ -10,7 +10,7 @@
   --first-color: black;
   --first-color-light: #ACFAFF;
   --white-color: #ecf0ed;
-  background: url(/Site/assets/img/blur.svg) no-repeat ;
+  background: url(/assets/img/blur.svg) no-repeat ;
   background-color: black;
   /*===== Font and typography =====*/
   --body-font: 'Montserrat', sans-serif;

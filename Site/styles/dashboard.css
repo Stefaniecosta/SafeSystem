@@ -8,7 +8,8 @@ body
     margin: 0;
     border: 0;
     padding: 0;
-    background-color: rgba(12, 22, 17, 0.9);
+    background-image: url(/assets/img/blur.svg);
+    background-color: black;
     font-family: Poppins;
     overflow-x: hidden;
     
@@ -169,25 +170,22 @@ hr {
     margin: 1.3%;
 }
 
-.boxContent
-{
+.boxContent {
     max-width: 100%;
     margin: 0 auto;
     height: 100%;
-  
+    background-color: black;
     justify-content: space-evenly;
-
+    border-radius: 18px;
 }
 
-.boxContent strong
-{
+.boxContent strong {
     color: white;
    width: 100%;
    height: 30px;
    display: flex;
    flex-direction: row;
    padding-top: 2px;
-
 }
 
 .iconesBox
@@ -287,11 +285,11 @@ hr {
 }
 
 #atmVisaogeral {
-   
-    height: 280px;
-    width: 100%
-   
-
+    height: 235px;
+    width: 100%;
+    position: relative;
+    top: 43px;
+    border-radius: 10px;
 }
 
 #box6CPU {
