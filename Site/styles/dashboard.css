@@ -162,7 +162,7 @@ hr {
 }
 
 .box {
-    background: linear-gradient(133.84deg, #4E4E4E -16.04%, #333333 9.33%, #1A1A1A 32.02%, #1A1A1A 62.06%, #262626 87.42%, #4E4E4E 112.12%);
+    background-color: linear-gradient(133.84deg, #4E4E4E -16.04%, #333333 9.33%, #1A1A1A 32.02%, #1A1A1A 62.06%, #262626 87.42%, #4E4E4E 112.12%);
     border: 3px solid #ACFFC3;
     border-radius: 16px;
     box-shadow: 2px 6px 15px 2px rgba(12, 10, 11, 0.8);
@@ -171,10 +171,10 @@ hr {
 
 .boxContent
 {
-    max-width: 95%;
+    max-width: 100%;
     margin: 0 auto;
-    height: 90%;
-    display: flex;
+    height: 100%;
+  
     justify-content: space-evenly;
 
 }
@@ -218,7 +218,7 @@ hr {
 {
     width: 45%;
     height: 280px;
-    display: block;
+   
     /* flex-direction: column; */
 }
 
@@ -229,11 +229,55 @@ hr {
     height: 280px;
 }
 
+ a {
+            text-decoration: none !important;
+            color: aliceblue;
+
+        }
+
+        .text-redBox3 a {
+            color: #E16666;
+        }
+.text-box3Conexao {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+    display: block;
+    font-size: 20px;
+    color: antiquewhite;
+}
+
+
+.iconeBox3Conex {
+    height: 25px;
+}
+
 #box4Temperatura
 {
     width: 22%;
     height: 280px;
     display: block;
+}
+
+.text-box4temp {
+    font-weight: 900;
+    font-size: 40px;
+    color: #6CF6FF;
+}
+
+.text-box4temp a{
+    color: #6CF6FF;
+}
+
+.iconeBox4Temp  {
+    width: 50px;
+   
+}
+
+.divIMGtemp {
+   
+    text-align: center;
 }
 
 #box5Visaogeral {
@@ -252,7 +296,7 @@ hr {
 
 #box6CPU {
     width: 95%;
-    height: 400px;
+    height: 590px;
    
 }
 
