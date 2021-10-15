@@ -18,11 +18,15 @@ body{
 #subcontainer01_login{
     width: 60%;
     height: 100%;
+    background-image: url("../assets/img/image 15.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
- .imagemPrincipal_login{
-    width: 100%;
-    height: 100% !important ;
-    object-fit: cover;
+
+ #logo {
+   margin: 20px 0 0 20px;
+   cursor: pointer;
  }
 
  #div_fundo{
@@ -166,6 +170,11 @@ form {
       align-items: center;
       width: 100%;
     }
+
+    #logo2 {
+      display: block;
+    }
+
     #subcontainer01_login{
       display: none;
       width: 100%;
