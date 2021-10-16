@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,595 +11,494 @@
 
     <title>Área do Cliente</title>
 </head>
+
 <body>
-        <div id="content">
-            <img id="logoName" src="../assets/img/safeLogo2.png" alt="">
-            <div id="options">
-                <div class="item">
-                    <strong>
-                        Caixas
-                    </strong>
-                </div>
-                <hr>
-                <div class="item">
-                    <div>
-                        <img src="/Site/assets/img/visaoGeralImg.png" alt="">
-                    </div>
-                    <span >VISÃO GERAL</span>
-                </div>
-                <hr>
-                <div class="item">
-                    <img src="/Site/assets/img/caixaIcon.png" alt="">
-                    <span>CAIXA <strong>01</strong></span>
-                </div>
-                <hr>
-                <div class="item">
-                    <img src="/Site/assets/img/caixaIcon.png" alt="">
-                    <span>CAIXA <strong>02</strong></span>
-                </div>
-                <hr>
-                <div class="item">
-                    <img src="/Site/assets/img/caixaIcon.png" alt="">
-                    <span>CAIXA <strong>03</strong></span>
-                </div>
-                <hr>
-                <div class="item">
-                    <span>
-                        Agência
-                    </span>
-                    <br>
-                    <strong>
-                        0222
-                    </strong>
-                </div>
-                <hr>
+    <div id="content">
+        <img id="logoName" src="../assets/img/safeLogo2.png" alt="">
+        <div id="options">
+            <div class="item">
+                <strong>
+                    Caixas
+                </strong>
             </div>
-            <div id="logout">
-                <img id="logoutIcon" src="../assets/img/logoutIcon.png" alt="">
+            <hr>
+            <div class="item">
+                <div>
+                    <img src="/Site/assets/img/visaoGeralImg.png" alt="">
+                </div>
+                <span>VISÃO GERAL</span>
             </div>
+            <hr>
+            <div class="item">
+                <img src="/Site/assets/img/caixaIcon.png" alt="">
+                <button onclick="chamarGraf1()"><span>CAIXA <strong>01</strong></span></button>
+            </div>
+            <hr>
+            <div class="item">
+                <img src="/Site/assets/img/caixaIcon.png" alt="">
+                <button onclick="chamarGraf2()"><span>CAIXA <strong>02</strong></span></button>
+            </div>
+            <hr>
+            <div class="item" id="divCaixa2">
+                <img src="/Site/assets/img/caixaIcon.png" alt="">
+                <button onclick="chamarGraf3()"><span>CAIXA <strong>03</strong></span></button>
+
+            </div>
+            <hr>
+            <div class="item">
+                <img src="/Site/assets/img/caixaIcon.png" alt="">
+                <button onclick="chamarGraf4()"><span>CAIXA <strong>04</strong></span></button>
+
+            </div>
+            <hr>
+            <div class="item">
+                <img src="/Site/assets/img/caixaIcon.png" alt="">
+                <button onclick="chamarGraf5()"><span>CAIXA <strong>05</strong></span></button>
+
+            </div>
+            <hr>
+            <div class="item">
+                <img src="/Site/assets/img/caixaIcon.png" alt="">
+                <button onclick="chamarGraf6()"><span>CAIXA <strong>06</strong></span></button>
+
+            </div>
+            <hr>
+            <div class="item">
+                <span>
+                    Agência
+                </span>
+                <br>
+                <strong>
+                    0222
+                </strong>
+            </div>
+            <hr>
         </div>
-        <div id="informations">
-            <div class="header">
-                <img src="../assets/img/logossBranco.png" alt="">
-                <strong>Dashboard</strong>
-                <img id="user" src="../assets/img/user.png" alt="">
-                <button id="repError">REPORTAR ERRO</button>
+        <div id="logout">
+            <img id="logoutIcon" src="../assets/img/logoutIcon.png" alt="">
+        </div>
+    </div>
+    <div id="informations">
+        <div class="header">
+            <img src="../assets/img/logossBranco.png" alt="">
+            <strong>Dashboard</strong>
+            <img id="user" src="../assets/img/user.png" alt="">
+            <button id="repError">REPORTAR ERRO</button>
+        </div>
+
+
+        <div id="infoBoxes">
+
+
+            <div id="box1ram" class="box">
+                <div class="boxContent">
+                    <strong>
+                        <img id="iconesBox" src="../assets/img/dashboard-img/ram-icone.png" alt=""> RAM
+                    </strong>
+                    <div id="chartRAM1" style="display: block;"></div>
+                    <div id="chartRAM2" style="display: none;"></div>
+                    <div id="chartRAM3" style="display: none;"></div>
+                    <div id="chartRAM4" style="display: none;"></div>
+                    <div id="chartRAM5" style="display: none;"></div>
+                    <div id="chartRAM6" style="display: none;"></div>
+                </div>
             </div>
 
+            <div id="box2disco" class="box">
+                <div class="boxContent">
+                    <strong>
+                        <img id="iconesBox" src="../assets/img/dashboard-img/disco-icone.png" alt="">
+                        Disco
+                    </strong>
+                    <div class="BoxTextdisco">
+                        <div class="textoDisco">
+                            <a href="">Armazenamento: 500GB</a>
 
-            <div id="infoBoxes">
-                <div id="box1ram" class="box">
-                    <div class="boxContent">
-                        <strong>
-                          <img id="iconesBox" src="../assets/img/dashboard-img/ram-icone.png" alt="" >  RAM
-                        </strong>
-                        
-                        
-                        <div id="chartdiv"></div>
-                    </div>
-                </div>
-
-                <div id="box2disco" class="box">
-                    <div class="boxContent">
-                        <strong>
-                            <img id="iconesBox" src="../assets/img/dashboard-img/disco-icone.png" alt="" > 
-                            Disco
-                        </strong>
-                        <div class="testedisco"></div>
-                        <div id="chartdivd"></div>
-
-                    </div>
-                </div>
-           
-                <div id="box3Conexao" class="box">
-                    <div class="boxContent">
-                        <strong>
-                            <img id="iconesBox" src="../assets/img/dashboard-img/conexao-icone.png" alt="" > 
-
-                            Dispositivos conectados
-                        </strong>
-                       <div class="text-box3Conexao">
-                           <a href="">5 Conectados</a>
-                           <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">
-                       </div>
-                       <div class="text-box3Conexao text-redBox3"> 
-                       <a href="">3 Estranhos</a>
-                       <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">
-
-                    </div>
-                    </div>
-                </div>
-
-                <div id="box4Temperatura" class="box">
-                    <div  class="boxContent">
-                        <strong>
-                            <img id="iconesBox" src="../assets/img/dashboard-img/temp-icon.png" alt="" >  
-
-                            Temperatura
-                        </strong>
-                        <div class="text-box3Conexao text-box4temp">
-                            <a href="">5°C</a>
-                           
-                        </div>
-                        <div class="divIMGtemp">
-                              <img class="iconeBox4Temp" src="../assets/img/dashboard-img/Cold.svg" alt="">
                         </div>
                     </div>
+                    <div id="chartdivDisco1" style="display: block;"></div>
+                    <div id="chartdivDisco2" style="display: none;"></div>
+                    <div id="chartdivDisco3" style="display: none;"></div>
+                    <div id="chartdivDisco4" style="display: none;"></div>
+                    <div id="chartdivDisco5" style="display: none;"></div>
+                    <div id="chartdivDisco6" style="display: none;"></div>
                 </div>
+            </div>
 
-                <div id="box5Visaogeral" class="box2">
-                    <div  class="boxContent">
-                        <div> </div>
-                         <img id="atmVisaogeral" src="../assets/img/dashboard-img/seta-caixa.png" alt="">
+            <div id="box3Conexao" class="box">
+                <div class="boxContent">
+                    <strong>
+                        <img id="iconesBox" src="../assets/img/dashboard-img/conexao-icone.png" alt="">
 
+                        Dispositivos conectados
+                    </strong>
+                    <div class="text-box3Conexao">
+                        <a href="">5 Conectados</a>
+                        <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">
                     </div>
-                </div>
+                    <div class="text-box3Conexao text-redBox3">
+                        <a href="">3 Estranhos</a>
+                        <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">
 
-                <div id="box6CPU" class="box">
-                    <div  class="boxContent">
-                        <strong>
-                            <img id="iconesBox" src="../assets/img/dashboard-img/cpu-icone.png" alt="" >
-
-                            CPU
-                        </strong>
-                        <div id="myChart" class="chart--container">
-                            
-                          </div>
-
-                        
                     </div>
                 </div>
             </div>
 
+            <!-- <div id="box4Temperatura" class="box">
+                <div class="boxContent">
+                    <strong>
+            <img id="iconesBox" src="../assets/img/dashboard-img/temp-icon.png" alt="">
+
+            Temperatura
+          </strong>
+                    <div class="text-box3Conexao text-box4temp">
+                        <a href="">5°C</a>
+
+                    </div>
+                    <div class="divIMGtemp">
+                        <img class="iconeBox4Temp" src="../assets/img/dashboard-img/Cold.svg" alt="">
+                    </div>
+                </div>
+            </div> -->
+
+            <div id="box5Visaogeral" class="box2">
+                <div class="boxContent">
+                    <div> </div>
+                    <img id="atmVisaogeral" src="../assets/img/dashboard-img/seta-caixa.png" alt="">
+
+                </div>
+            </div>
+
+
+            <div id="box6CPU" class="box">
+                <div class="boxContent">
+                    <strong>
+                        <img id="iconesBox" src="../assets/img/dashboard-img/cpu-icone.png" alt="">
+
+                        CPU
+                    </strong>
+                    <div id="myChart" class="chart--container">
+
+                    </div>
+
+
+                </div>
+            </div>
         </div>
+
+    </div>
 </body>
 
 
-    
-  
-
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js">
+</script>
+<script src="../scripts/graficosDashboard/graficosDisco.js"></script>
+<script src="../scripts/graficosDashboard/graficosRam.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-<style>
-    .chart--container {
-      width: 100%;
-      min-height: 530px;  
-    }
 
-    #chartdiv {
-      width: 100%;
-      height: 248px;
-      background-color: black;
-    }
-
-    #chartdivd {
-      width: 60%;
-      height: 280px;
-      background-color: rgb(0, 0, 0);
-     
-    }
-
-    .testedisco {
-        width: 40%;
-        height: 50px;
-        background-color: brown;
-    }
-
-  </style>
 </head>
 ​
+<style>
+    button {
+        background-color: transparent;
+        color: aliceblue;
+        outline: none !important;
+        outline-color: transparent;
+        pointer-events: visible;
+
+    }
+
+    #chartRAM1 {
+        width: 100%;
+        height: 200px;
+        font-size: 13px;
+    }
+
+    #chartRAM2 {
+        width: 100%;
+        height: 200px;
+        font-size: 13px;
+    }
+
+    #chartRAM3 {
+        width: 100%;
+        height: 200px;
+        font-size: 13px;
+    }
+
+    #chartRAM4 {
+        width: 100%;
+        height: 200px;
+        font-size: 13px;
+    }
+
+    #chartRAM5 {
+        width: 100%;
+        height: 200px;
+        font-size: 13px;
+    }
+
+    #chartRAM6 {
+        width: 100%;
+        height: 200px;
+        font-size: 13px;
+    }
+
+    #chartdivDisco1 {
+        width: 60%;
+        height: 260px;
+        float: right !important;
+        margin: 0ch;
+        position: relative;
+        bottom: 80.5%;
+    }
 
 
-  ​
- 
+    #chartdivDisco2 {
+        width: 60%;
+        height: 260px;
+        float: right !important;
+        margin: 0ch;
+        position: relative;
+        bottom: 80.5%;
+    }
+
+
+    #chartdivDisco3 {
+        width: 60%;
+        height: 260px;
+        float: right !important;
+        margin: 0ch;
+        position: relative;
+        bottom: 80.5%;
+    }
+
+    #chartdivDisco4 {
+        width: 60%;
+        height: 260px;
+        float: right !important;
+        margin: 0ch;
+        position: relative;
+        bottom: 80.5%;
+    }
+
+    #chartdivDisco5 {
+        width: 60%;
+        height: 260px;
+        float: right !important;
+        margin: 0ch;
+        position: relative;
+        bottom: 80.5%;
+    }
+
+    #chartdivDisco6 {
+        width: 60%;
+        height: 260px;
+        float: right !important;
+        margin: 0ch;
+        position: relative;
+        bottom: 80.5%;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
 <script>
+    //----------------------------------- Chart code CPU  --------------------------------------->
 
-// GRafico CPU
     ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // DEFINE DATA
     // -----------------------------
     let chartData = [{
         text: 'Pricing',
         values: [149.2, 174.3, 187.7, 147.1, 129.6, 189.6, 230, 164.5, 171.7, 163.4, 194.5, 200.1, 193.4, 254.4, 287.8, 246, 199.9, 218.3, 244, 312.2, 284.5, 249.2, 305.2, 286.1, 347.7, 278, 240.3, 212.4, 237.1, 253.2, 186.1, 153.6, 168.5, 140.9, 86.9, 49.4, 24.7, 64.8, 114.4, 137.4],
         legendMarker: {
-          type: 'circle',
-          backgroundColor: '#007790',
-          borderColor: '#69dbf1',
-          borderWidth: '1px',
-          shadow: false,
-          size: '5px'
+            type: 'circle',
+            backgroundColor: '#007790',
+            borderColor: '#69dbf1',
+            borderWidth: '1px',
+            shadow: false,
+            size: '5px'
         },
         lineColor: '#007790',
         marker: {
-          backgroundColor: '#007790',
-          borderColor: '#69dbf1',
-          borderWidth: '1px',
-          shadow: false
+            backgroundColor: '#007790',
+            borderColor: '#69dbf1',
+            borderWidth: '1px',
+            shadow: false
         }
-      },
-      {
+    }, {
         text: 'Documentation',
         values: [714.6, 656.3, 660.6, 729.8, 731.6, 682.3, 654.6, 673.5, 700.6, 755.2, 817.8, 809.1, 815.2, 836.6, 897.3, 896.9, 866.5, 835.8, 797.9, 784.7, 802.8, 749.3, 722.1, 688.1, 730.4, 661.5, 609.7, 630.2, 633, 604.2, 558.1, 581.4, 511.5, 556.5, 542.1, 599.7, 664.8, 725.3, 694.2, 690.5],
         legendMarker: {
-          type: 'circle',
-          backgroundColor: '#009872',
-          borderColor: '#69f2d0',
-          borderWidth: '1px',
-          shadow: false,
-          size: '5px'
+            type: 'circle',
+            backgroundColor: '#009872',
+            borderColor: '#69f2d0',
+            borderWidth: '1px',
+            shadow: false,
+            size: '5px'
         },
         lineColor: '#009872',
         marker: {
-          backgroundColor: '#009872',
-          borderColor: '#69f2d0',
-          borderWidth: '1px',
-          shadow: false
+            backgroundColor: '#009872',
+            borderColor: '#69f2d0',
+            borderWidth: '1px',
+            shadow: false
         }
-      },
-      {
+    }, {
         text: 'Support',
         values: [536.9, 576.4, 639.3, 669.4, 708.7, 691.5, 681.7, 673, 701.8, 636.4, 637.8, 640.5, 653.1, 613.7, 583.4, 538, 506.7, 563.1, 541.4, 489.3, 434.7, 442.1, 482.3, 495.4, 556.1, 505.4, 463.8, 434.7, 377.4, 325.4, 351.7, 343.5, 333.2, 332, 378.9, 415.4, 385, 412.6, 445.9, 441.5],
         legendMarker: {
-          type: 'circle',
-          backgroundColor: '#da534d',
-          borderColor: '#faa39f',
-          borderWidth: '1px',
-          shadow: false,
-          size: '5px'
+            type: 'circle',
+            backgroundColor: '#da534d',
+            borderColor: '#faa39f',
+            borderWidth: '1px',
+            shadow: false,
+            size: '5px'
         },
         lineColor: '#da534d',
         marker: {
-          backgroundColor: '#da534d',
-          borderColor: '#faa39f',
-          borderWidth: '1px',
-          shadow: false
+            backgroundColor: '#da534d',
+            borderColor: '#faa39f',
+            borderWidth: '1px',
+            shadow: false
         }
-      }
-    ];
+    }];
 
     // CHART CONFIG
     // -----------------------------
     let chartConfig = {
-      type: 'line',
-      theme: 'classic',
-      backgroundColor: '#000000',
-      utc: true,
-      title: {
-        text: 'uso da cpu',
+        type: 'line',
+        theme: 'classic',
         backgroundColor: '#000000',
-        fontColor: 'white',
-        fontSize: '24px',
-        height: '25px',
-        y: '7px'
-      },
-      legend: {
-        align: 'center',
-        backgroundColor: 'none',
-        borderWidth: '0px',
-        item: {
-          fontColor: '#f6f7f8',
-          fontSize: '14px'
+        utc: true,
+        title: {
+            text: 'uso da cpu',
+            backgroundColor: '#000000',
+            fontColor: 'white',
+            fontSize: '24px',
+            height: '25px',
+            y: '7px'
         },
-        layout: 'float',
-        offsetY: '35px',
-        shadow: false,
-        textAlign: 'middle'
-      },
-      plot: {
-        hoverMarker: {
-          type: 'circle',
-          borderWidth: '1px',
-          size: '4px'
+        legend: {
+            align: 'center',
+            backgroundColor: 'none',
+            borderWidth: '0px',
+            item: {
+                fontColor: '#f6f7f8',
+                fontSize: '14px'
+            },
+            layout: 'float',
+            offsetY: '35px',
+            shadow: false,
+            textAlign: 'middle'
         },
-        lineWidth: '3px',
-        marker: {
-          type: 'circle',
-          size: '3px'
+        plot: {
+            hoverMarker: {
+                type: 'circle',
+                borderWidth: '1px',
+                size: '4px'
+            },
+            lineWidth: '3px',
+            marker: {
+                type: 'circle',
+                size: '3px'
+            },
+            shadow: false,
+            tooltipText: '%t views: %v<br>%k'
         },
-        shadow: false,
-        tooltipText: '%t views: %v<br>%k'
-      },
-      plotarea: {
-        margin: '20% 8% 14% 12%',
-        backgroundColor: '#00FFFFFF'
-      },
-      scaleX: {
-        guide: {
-          lineColor: '#f6f7f8'
+        plotarea: {
+            margin: '20% 8% 14% 12%',
+            backgroundColor: '#00FFFFFF'
         },
-        item: {
-          fontColor: '#f6f7f8'
+        scaleX: {
+            guide: {
+                lineColor: '#f6f7f8'
+            },
+            item: {
+                fontColor: '#f6f7f8'
+            },
+            label: {
+                visible: false
+            },
+            lineColor: '#f6f7f8',
+            minorTicks: 0,
+            minValue: 1383292800000,
+            shadow: false,
+            step: 3600000,
+            tick: {
+                lineColor: '#f6f7f8'
+            },
+            transform: {
+                type: 'date',
+                all: '%D, %d %M<br />%h:%i %A',
+                guide: {
+                    visible: false
+                },
+                item: {
+                    visible: false
+                }
+            }
         },
-        label: {
-          visible: false
+        scaleY: {
+            values: '0:1000:250',
+            guide: {
+                lineColor: '#f6f7f8',
+                lineStyle: 'dashed'
+            },
+            item: {
+                fontColor: '#f6f7f8'
+            },
+            label: {
+                text: 'Page Views',
+                fontColor: '#f6f7f8'
+            },
+            lineColor: '#f6f7f8',
+            minorTicks: 0,
+            shadow: false,
+            thousandsSeparator: ',',
+            tick: {
+                lineColor: '#f6f7f8'
+            }
         },
-        lineColor: '#f6f7f8',
-        minorTicks: 0,
-        minValue: 1383292800000,
-        shadow: false,
-        step: 3600000,
-        tick: {
-          lineColor: '#f6f7f8'
+        crosshairX: {
+            lineColor: '#f6f7f8',
+            plotLabel: {
+                padding: '10px',
+                borderColor: '#f6f7f8',
+                borderRadius: '5px',
+                borderWidth: '1px',
+                fontWeight: 'bold'
+            },
+            scaleLabel: {
+                backgroundColor: '#f6f7f8',
+                borderRadius: '50px',
+                fontColor: '#00baf0'
+            }
         },
-        transform: {
-          type: 'date',
-          all: '%D, %d %M<br />%h:%i %A',
-          guide: {
+        tooltip: {
             visible: false
-          },
-          item: {
-            visible: false
-          }
-        }
-      },
-      scaleY: {
-        values: '0:1000:250',
-        guide: {
-          lineColor: '#f6f7f8',
-          lineStyle: 'dashed'
         },
-        item: {
-          fontColor: '#f6f7f8'
-        },
-        label: {
-          text: 'Page Views',
-          fontColor: '#f6f7f8'
-        },
-        lineColor: '#f6f7f8',
-        minorTicks: 0,
-        shadow: false,
-        thousandsSeparator: ',',
-        tick: {
-          lineColor: '#f6f7f8'
-        }
-      },
-      crosshairX: {
-        lineColor: '#f6f7f8',
-        plotLabel: {
-          padding: '10px',
-          borderColor: '#f6f7f8',
-          borderRadius: '5px',
-          borderWidth: '1px',
-          fontWeight: 'bold'
-        },
-        scaleLabel: {
-          backgroundColor: '#f6f7f8',
-          borderRadius: '50px',
-          fontColor: '#00baf0'
-        }
-      },
-      tooltip: {
-        visible: false
-      },
-      series: chartData
+        series: chartData
     };
 
     // RENDER CHARTS
     // -----------------------------
     zingchart.render({
-      id: 'myChart',
-      data: chartConfig
+        id: 'myChart',
+        data: chartConfig
     });
-  
 </script>
-     
-
-
-
-
-  <!-- Resources -->
-  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-  <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-  <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
-  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-  
-  <!-- Chart code -->
-  <script>
-
-      //disco grafico
-  am4core.ready(function() {
-  
-  // Themes begin
-  am4core.useTheme(am4themes_dark);
-  am4core.useTheme(am4themes_animated);
-  // Themes end
-  
-  
-  
-  // Create chart instance
-  var chart = am4core.create("chartdiv", am4charts.RadarChart);
-  
-  // Add data
-  chart.data = [{
-    "category": "Research",
-    "value": 80,
-    "full": 100
-  }, {
-    "category": "Marketing",
-    "value": 35,
-    "full": 100
-  }, {
-    "category": "Distribution",
-    "value": 92,
-    "full": 100
-  }, {
-    "category": "Human Resources",
-    "value": 68,
-    "full": 100
-  }];
-  
-  // Make chart not full circle
-  chart.startAngle = -90;
-  chart.endAngle = 180;
-  chart.innerRadius = am4core.percent(20);
-  
-  // Set number format
-  chart.numberFormatter.numberFormat = "#.#'%'";
-  
-  // Create axes
-  var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
-  categoryAxis.dataFields.category = "category";
-  categoryAxis.renderer.grid.template.location = 0;
-  categoryAxis.renderer.grid.template.strokeOpacity = 0;
-  categoryAxis.renderer.labels.template.horizontalCenter = "right";
-  categoryAxis.renderer.labels.template.fontWeight = 500;
-  categoryAxis.renderer.labels.template.adapter.add("fill", function(fill, target) {
-    return (target.dataItem.index >= 0) ? chart.colors.getIndex(target.dataItem.index) : fill;
-  });
-  categoryAxis.renderer.minGridDistance = 10;
-  
-  var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
-  valueAxis.renderer.grid.template.strokeOpacity = 0;
-  valueAxis.min = 0;
-  valueAxis.max = 100;
-  valueAxis.strictMinMax = true;
-  
-  // Create series
-  var series1 = chart.series.push(new am4charts.RadarColumnSeries());
-  series1.dataFields.valueX = "full";
-  series1.dataFields.categoryY = "category";
-  series1.clustered = false;
-  series1.columns.template.fill = new am4core.InterfaceColorSet().getFor("alternativeBackground");
-  series1.columns.template.fillOpacity = 0.08;
-  series1.columns.template.cornerRadiusTopLeft = 20;
-  series1.columns.template.strokeWidth = 0;
-  series1.columns.template.radarColumn.cornerRadius = 20;
-  
-  var series2 = chart.series.push(new am4charts.RadarColumnSeries());
-  series2.dataFields.valueX = "value";
-  series2.dataFields.categoryY = "category";
-  series2.clustered = false;
-  series2.columns.template.strokeWidth = 0;
-  series2.columns.template.tooltipText = "{category}: [bold]{value}[/]";
-  series2.columns.template.radarColumn.cornerRadius = 20;
-  
-  series2.columns.template.adapter.add("fill", function(fill, target) {
-    return chart.colors.getIndex(target.dataItem.index);
-  });
-  
-  // Add cursor
-  chart.cursor = new am4charts.RadarCursor();
-  
-  }); // end am4core.ready()
-  </script>
-
-
-
-
-
-
-
- <!-- Resources -->
- <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
- <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
- <script src="https://cdn.amcharts.com/lib/4/themes/dark.js"></script>
- <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
- 
- <!-- Chart code -->
- <script>
- am4core.ready(function() {
- 
- // Themes begin
- am4core.useTheme(am4themes_dark);
- am4core.useTheme(am4themes_animated);
- // Themes end
- 
- // Create chart instance
- var chart = am4core.create("chartdivd", am4charts.PieChart);
- chart.startAngle = 160;
- chart.endAngle = 380;
- 
- // Let's cut a hole in our Pie chart the size of 40% the radius
- chart.innerRadius = am4core.percent(40);
- 
- // Add data
- chart.data = [{
-   "country": "Lithuania",
-   "litres": 501.9,
-   "bottles": 1500
- }, {
-   "country": "Czech Republic",
-   "litres": 301.9,
-   "bottles": 990
- }, {
-   "country": "Ireland",
-   "litres": 201.1,
-   "bottles": 785
- }, {
-   "country": "Germany",
-   "litres": 165.8,
-   "bottles": 255
- }, {
-   "country": "Australia",
-   "litres": 139.9,
-   "bottles": 452
- }, {
-   "country": "Austria",
-   "litres": 128.3,
-   "bottles": 332
- }, {
-   "country": "UK",
-   "litres": 99,
-   "bottles": 150
- }, {
-   "country": "Belgium",
-   "litres": 60,
-   "bottles": 178
- }, {
-   "country": "The Netherlands",
-   "litres": 50,
-   "bottles": 50
- }];
- 
- // Add and configure Series
- var pieSeries = chart.series.push(new am4charts.PieSeries());
- pieSeries.dataFields.value = "litres";
- pieSeries.dataFields.category = "country";
- pieSeries.slices.template.stroke = new am4core.InterfaceColorSet().getFor("background");
- pieSeries.slices.template.strokeWidth = 1;
- pieSeries.slices.template.strokeOpacity = 1;
- 
- // Disabling labels and ticks on inner circle
- pieSeries.labels.template.disabled = true;
- pieSeries.ticks.template.disabled = true;
- 
- // Disable sliding out of slices
- pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0;
- pieSeries.slices.template.states.getKey("hover").properties.scale = 1;
- pieSeries.radius = am4core.percent(40);
- pieSeries.innerRadius = am4core.percent(30);
- 
- var cs = pieSeries.colors;
- cs.list = [am4core.color(new am4core.ColorSet().getIndex(0))];
- 
- cs.stepOptions = {
-   lightness: -0.05,
-   hue: 0
- };
- cs.wrap = false;
- 
- 
- // Add second series
- var pieSeries2 = chart.series.push(new am4charts.PieSeries());
- pieSeries2.dataFields.value = "bottles";
- pieSeries2.dataFields.category = "country";
- pieSeries2.slices.template.stroke = new am4core.InterfaceColorSet().getFor("background");
- pieSeries2.slices.template.strokeWidth = 1;
- pieSeries2.slices.template.strokeOpacity = 1;
- pieSeries2.slices.template.states.getKey("hover").properties.shiftRadius = 0.05;
- pieSeries2.slices.template.states.getKey("hover").properties.scale = 1;
- 
- pieSeries2.labels.template.disabled = true;
- pieSeries2.ticks.template.disabled = true;
- 
- 
- var label = chart.seriesContainer.createChild(am4core.Label);
- label.textAlign = "middle";
- label.horizontalCenter = "middle";
- label.verticalCenter = "middle";
- label.adapter.add("text", function(text, target){
-   return "[font-size:18px]total[/]:\n[bold font-size:30px]" + pieSeries.dataItem.values.value.sum + "[/]";
- })
- 
- }); // end am4core.ready()
- </script>
