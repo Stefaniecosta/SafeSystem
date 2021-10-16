@@ -5,27 +5,49 @@
  */
 package br.com.bandtec.safesystem.src;
 
-
 public class Usuario {
-    private final String login;
-    private final String senha;
+    
+    private Integer id;
+    private String login;
+    private String senha;
+    private Integer agencia;
 
-    public Usuario() {
-        this.login = "1234";
-        this.senha = "1234";
+    public Integer getId() {
+        return id;
     }
 
-    private String getLogin() {
+    public String getLogin() {
         return login;
     }
 
-    private String getSenha() {
+    public String getSenha() {
         return senha;
     }
-    
-    public Boolean getUsuario(String loginForm, String senhaForm){
-        
-        return login.equals(loginForm) && senha.equals(senhaForm);
+
+    public Integer getAgencia() {
+        return agencia;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public void setAgencia(Integer agencia) {
+        this.agencia = agencia;
+    }
+    
+
+    @Override
+    public String toString() {
+        return String.format("\nID: %d\nLOGIN: %s\nSENHA: %s\n",
+                this.id, this.login, this.senha);
+    }
 }
