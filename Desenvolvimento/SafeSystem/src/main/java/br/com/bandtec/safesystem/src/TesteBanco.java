@@ -53,7 +53,7 @@ public class TesteBanco {
         con.update("INSERT INTO caixa VALUES (?, ?)", null, 2);
 
         con.update("INSERT INTO usuario VALUES (?, ?, ?, ?)", null, "login", "1234", "1");
-        con.update("INSERT INTO usuario VALUES (?, ?, ?, ?)", null, "login", "123", "1");
+        con.update("INSERT INTO usuario VALUES (?, ?, ?, ?)", null, "login", "123", "2");
         con.update("INSERT INTO usuario VALUES (?, ?, ?, ?)", null, "login", "12", "1");
         con.update("INSERT INTO usuario VALUES (?, ?, ?, ?)", null, "login", "1", "2");
         
