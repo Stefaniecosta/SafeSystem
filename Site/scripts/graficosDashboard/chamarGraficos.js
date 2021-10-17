@@ -63,7 +63,7 @@ function chamarGraf3() {
     textCaixas.innerHTML = "<b>Caixa: <span>03</span></b>"
     textoDisco.innerHTML = "<a>Armazenamento: 520GB</a>"
     TextdispConect.innerHTML = '<a>5 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
-    TextdispEstranhos.innerHTML = ' <a>1 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
+    TextdispEstranhos.innerHTML = ' <a>0 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
 
     chartRAM1.style.display = 'none';
     chartRAM2.style.display = 'none';
@@ -93,8 +93,8 @@ function chamarGraf4() {
     textCaixas.innerHTML = "<b>Caixa: <span>04</span></b>"
     textoDisco.innerHTML = "<a>Armazenamento: 1TB</a>"
 
-    TextdispConect.innerHTML = '<a>2 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
-    TextdispEstranhos.innerHTML = ' <a>0 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
+    TextdispConect.innerHTML = '<a>4 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
+    TextdispEstranhos.innerHTML = ' <a>1 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
 
     chartRAM1.style.display = 'none';
     chartRAM2.style.display = 'none';

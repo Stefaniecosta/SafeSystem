@@ -16,7 +16,7 @@ am4core.ready(function () {
     // Set data
     var selected;
     var types = [{
-        type: "Quantidade livre",
+        type: "Utilizado",
         percent: 70,
         color: chart.colors.getIndex(0),
         // subs: [{
@@ -30,7 +30,7 @@ am4core.ready(function () {
         //     percent: 20
         // }]
     }, {
-        type: "Utilizado",
+        type: "Disponivel",
         percent: 30,
         color: chart.colors.getIndex(1),
         // subs: [{
@@ -124,7 +124,7 @@ am4core.ready(function () {
         //     percent: 20
         // }]
     }, {
-        type: "Quantidade livre",
+        type: "Disponivel",
         percent: 10,
         color: chart.colors.getIndex(1),
         // subs: [{
@@ -217,7 +217,7 @@ am4core.ready(function () {
         //     percent: 20
         // }]
     }, {
-        type: "Quantidade livre",
+        type: "Disponivel",
         percent: 80,
         color: chart.colors.getIndex(1),
         // subs: [{
@@ -309,7 +309,7 @@ am4core.ready(function () {
         //     percent: 20
         // }]
     }, {
-        type: "Quantidade livre",
+        type: "Disponivel",
         percent: 70,
         color: chart.colors.getIndex(1),
         // subs: [{
@@ -388,7 +388,7 @@ am4core.ready(function () {
     var selected;
     var types = [{
         type: "Utilizado",
-        percent: 60,
+        percent: 91,
         color: chart.colors.getIndex(0),
         // subs: [{
         //     type: "Oil",
@@ -401,8 +401,8 @@ am4core.ready(function () {
         //     percent: 20
         // }]
     }, {
-        type: "Quantidade livre",
-        percent: 40,
+        type: "Disponivel",
+        percent: 9,
         color: chart.colors.getIndex(1),
         // subs: [{
         //     type: "Hydro",
@@ -495,7 +495,7 @@ am4core.ready(function () {
         //     percent: 20
         // }]
     }, {
-        type: "Quantidade livre",
+        type: "Disponivel",
         percent: 50,
         color: chart.colors.getIndex(1),
         // subs: [{

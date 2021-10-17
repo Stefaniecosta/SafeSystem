@@ -134,8 +134,8 @@ am4core.ready(function () {
     chart.data = [
         {
             "country": "Livre",
-            "litres": 300,
-            "bottles": 300
+            "litres": 100,
+            "bottles": 100
         },
 
         //   {  "country": "Ireland",
@@ -148,8 +148,8 @@ am4core.ready(function () {
         // 
         {
             "country": "Em uso",
-            "litres": 200,
-            "bottles": 200
+            "litres": 400,
+            "bottles": 400
         }
         // , {
         //     "country": "Austria",
@@ -471,8 +471,8 @@ am4core.ready(function () {
     chart.data = [
         {
             "country": "Livre",
-            "litres": 200,
-            "bottles": 200
+            "litres": 70,
+            "bottles": 70
         },
 
         //   {  "country": "Ireland",
@@ -485,8 +485,8 @@ am4core.ready(function () {
         // 
         {
             "country": "Em uso",
-            "litres": 300,
-            "bottles": 300
+            "litres": 430,
+            "bottles": 430
         }
         // , {
         //     "country": "Austria",
