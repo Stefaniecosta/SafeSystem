@@ -6,7 +6,9 @@ body {
     margin: 0;
     border: 0;
     padding: 0;
-    background-color: rgba(12, 22, 17, 0.9);
+    background-image: url(../assets/img/blur.svg);
+    background-size: cover;
+    background-color: rgb(2, 2, 2);
     font-family: Poppins;
     overflow-x: hidden;
 }
@@ -65,7 +67,7 @@ body {
 .font_tamanho {
     font-style: normal;
     font-weight: 600;
-    font-size: 34px;
+    font-size: 25px;
 }
 
 .item {
@@ -169,11 +171,12 @@ hr {
 }
 
 .box {
-    background: linear-gradient(133.84deg, #4E4E4E -16.04%, #333333 9.33%, #1A1A1A 32.02%, #1A1A1A 62.06%, #262626 87.42%, #4E4E4E 112.12%);
+    /* background: linear-gradient(133.84deg, #4E4E4E -16.04%, #333333 9.33%, #1A1A1A 32.02%, #1A1A1A 62.06%, #262626 87.42%, #4E4E4E 112.12%); */
     border: 3px solid #ACFFC3;
     border-radius: 16px;
     box-shadow: 2px 6px 15px 2px rgba(12, 10, 11, 0.8);
     margin: 20px;
+    background-color: black;
 }
 
 #caixa {

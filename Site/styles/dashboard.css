@@ -70,6 +70,12 @@ body {
     margin-left: 20px;
 }
 
+.font_tamanho {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+}
+
 .item {
     padding: 15px 0 15px 0;
     text-align: center;
@@ -115,7 +121,7 @@ hr {
 }
 
 .header img {
-    width: 50px;
+    width: 35px;
     margin-right: 10px;
 }
 
