@@ -49,7 +49,10 @@ public class TesteLooca
                 "\n\nRodando método getVolumes: " +
                 getInfo.getGrupoDeDiscos().getVolumes() +
                 "\n\nRodando método getTamanhoTotal: " +
-                getInfo.getGrupoDeDiscos().getTamanhoTotal()
+                getInfo.getGrupoDeDiscos().getTamanhoTotal() +
+                 "\n\nRodando método total de threads: " +
+                        getInfo.getGrupoDeProcessos().getTotalThreads() 
+               
         );
     }
 }
