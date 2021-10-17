@@ -21,6 +21,59 @@ body {
     box-sizing: border-box;
 }
 
+/* Começo do menu dropdown */
+.dropbtn {
+    background-color: #4caf4f00;
+    color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    float: right;
+    cursor: pointer;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 200;
+    background-color: #f9f9f96c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.842);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: rgb(137, 235, 58)}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e4100;
+    position: relative;
+    top: 10;
+  }
+
+/* Fim do dropdown */
+
+.labelCPU {
+    width: 50%; 
+    margin-left: 200px; 
+    height: 50px;
+}
+
 .container-caixas {
     background-color: #ACFFC3;
     height: 2000px;
@@ -65,9 +118,10 @@ body {
 }
 
 #logoName {
-    width: 70%;
+    width: 30%;
     padding: 20px 0px 10px 0;
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto; 
 }
 
 .font_tamanho {
@@ -80,7 +134,11 @@ body {
     padding: 15px 0 15px 0;
     text-align: center;
     cursor: pointer;
-    color: white;;
+    margin-left: 27px;
+    margin-right: auto;
+    display: flex;
+    align-items: stretch;
+    color: white;
 }
 
 .item_color {
@@ -116,7 +174,8 @@ hr {
 /* ---header----*/
 
 .header {
-    padding: 20px 1.75% 0 1.75%;
+    padding: 20px 0.75% 0px 4.75%;
+    max-width: 90%;
     margin-bottom: 30px;
 }
 
@@ -128,6 +187,7 @@ hr {
 .header strong {
     font-size: 35px;
     color: white;
+    position: absolute;
 }
 
 #repError {
@@ -143,14 +203,12 @@ hr {
 
 #user {
     float: right;
+    display: flex;
     width: 140px;
     padding-left: 20px;
-    margin: 10px 0 0 0;
 }
 
-
 /* --- /header----*/
-
 
 /*Container de informações*/
 
@@ -158,9 +216,7 @@ hr {
     height: 50px;
     width: 90%;
     color: aliceblue;
-
 }
-
 
 #identCaixas #textCaixas {
     margin-left: 30px;
@@ -202,7 +258,8 @@ hr {
     height: 30px;
     display: flex;
     flex-direction: row;
-    padding-top: 2px;
+    padding-top: 10px;
+    align-items: center;
 }
 
 .iconesBox {
@@ -325,7 +382,6 @@ a {
     background-color: rgb(0, 0, 0);
     position: relative;
     bottom: 20px;
-
 }
 
 .esconderCPU {
@@ -335,9 +391,7 @@ a {
     background-color: rgb(0, 0, 0);
     position: relative;
     bottom: 30px;
-
 }
-
 
 .esconderDisco {
     z-index: 1000;
@@ -348,16 +402,14 @@ a {
     bottom: 0px;
     margin: 0%;
     left: 190px;
-
 } 
 
 button {
     background-color: transparent;
     color: aliceblue;
-    outline: none !important;
-    outline-color: transparent;
+    font-size: 0.99rem;
     pointer-events: visible;
-
+    border: none;
 }
 
 footer {
