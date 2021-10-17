@@ -6,7 +6,7 @@
 package br.com.bandtec.safesystem.view;
 
 import com.github.britooo.looca.api.core.Looca;
-import java.awt.Color;
+
 
 
 public class TelaDeRelatorio extends javax.swing.JFrame {
