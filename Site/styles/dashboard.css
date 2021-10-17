@@ -109,6 +109,7 @@ body {
     border-right: 3px solid #A8D5A7;
     float: left;
     background-color: black;
+    background: linear-gradient(180deg, #ACFFC3 0%, rgba(131, 187, 144, 0.38) 0.01%, rgba(22, 9, 9, 0) 100%),linear-gradient(0deg, #000000, #000000);
     position: fixed;
 }
 
@@ -131,12 +132,10 @@ body {
 }
 
 .item {
-    padding: 15px 0 15px 0;
+    padding: 15px 0 16px 0px;
     text-align: center;
     cursor: pointer;
-    margin-left: 27px;
-    margin-right: auto;
-    display: flex;
+    margin-left: auto;
     align-items: stretch;
     color: white;
 }
