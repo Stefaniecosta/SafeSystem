@@ -109,7 +109,7 @@ body {
     border-right: 3px solid #A8D5A7;
     float: left;
     background-color: black;
-    background: linear-gradient(180deg, #ACFFC3 0%, rgba(131, 187, 144, 0.38) 0.01%, rgba(22, 9, 9, 0) 100%),linear-gradient(0deg, #000000, #000000);
+    /* background: linear-gradient(180deg, #ACFFC3 0%, rgba(131, 187, 144, 0.38) 0.01%, rgba(22, 9, 9, 0) 100%),linear-gradient(0deg, #000000, #000000); */
     position: fixed;
 }
 
@@ -249,6 +249,7 @@ hr {
     background-color: black;
     justify-content: space-evenly;
     border-radius: 18px;
+   
 }
 
 .boxContent strong {
@@ -279,11 +280,11 @@ hr {
     height: 280px;
 }
 
+ 
+
 #box2disco {
     width: 45%;
     height: 280px;
-    display: inline-block !important;
-    background-color: #6CF6FF;
 }
 
 #textoDisco a {
@@ -349,6 +350,13 @@ a {
     width: 95%;
     height: 500px;
 }
+
+#box6CPU .boxContent {
+   display: inline-block;
+   width: 100%;
+}
+
+
 
 
 /*---------------- graficos ------------------*/
