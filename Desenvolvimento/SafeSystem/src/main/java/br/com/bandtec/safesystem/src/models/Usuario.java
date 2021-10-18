@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.bandtec.safesystem.src;
+package br.com.bandtec.safesystem.src.models;
 
 public class Usuario {
     

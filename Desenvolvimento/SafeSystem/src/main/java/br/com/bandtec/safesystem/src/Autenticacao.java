@@ -5,6 +5,8 @@
  */
 package br.com.bandtec.safesystem.src;
 
+import br.com.bandtec.safesystem.src.models.Usuario;
+import br.com.bandtec.safesystem.src.models.Caixa;
 import java.util.List;
 import java.util.Objects;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -52,14 +54,14 @@ public class Autenticacao {
 
     private Boolean VerificaCaixa(Integer agenciaUsuario) {
 
-        List<Caixa> caixaConsultaAgencia = con.query("SELECT * FROM caixa c WHERE c.id = ?", new BeanPropertyRowMapper(Caixa.class), codigoRecebido);
+        List<Caixa> caixaConsultaAgencia = con.query("SELECT * FROM maquina m WHERE c.id = ?", new BeanPropertyRowMapper(Caixa.class), codigoRecebido);
 
         // se a query retornar vazia, o acesso é negado (EX: se o caixa não existe no banco)
         if(caixaConsultaAgencia.isEmpty()){
             return false;
         }
         
-        Integer agenciaCaixa = caixaConsultaAgencia.get(0).getAgencia();     
+        Integer agenciaCaixa = caixaConsultaAgencia.get(0).getFkAgencia();     
         
         if(Objects.equals(agenciaCaixa, agenciaUsuario)){
            System.out.println("Caixa verificado com sucesso!");
