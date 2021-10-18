@@ -5,6 +5,7 @@ function chamarGraf1() {
     textoDisco.innerHTML = "<a>Armazenamento: 500GB</a>"
     TextdispConect.innerHTML = '<a>5 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>3 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
+    mudarInfo1.innerHTML = '<a>37%</a>'
 
     chartRAM1.style.display = 'block';
     chartRAM2.style.display = 'none';
@@ -35,6 +36,7 @@ function chamarGraf2() {
     textoDisco.innerHTML = "<a>Armazenamento: 520GB</a>"
     TextdispConect.innerHTML = '<a>5 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>0 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
+    mudarInfo1.innerHTML = '<a>50%</a>'
 
     chartRAM1.style.display = 'none';
     chartRAM2.style.display = 'block';
@@ -64,6 +66,7 @@ function chamarGraf3() {
     textoDisco.innerHTML = "<a>Armazenamento: 520GB</a>"
     TextdispConect.innerHTML = '<a>5 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>0 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
+    mudarInfo1.innerHTML = '<a>22%</a>'
 
     chartRAM1.style.display = 'none';
     chartRAM2.style.display = 'none';
@@ -95,6 +98,7 @@ function chamarGraf4() {
 
     TextdispConect.innerHTML = '<a>4 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>1 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
+    mudarInfo1.innerHTML = '<a>25%</a>'
 
     chartRAM1.style.display = 'none';
     chartRAM2.style.display = 'none';
@@ -124,6 +128,7 @@ function chamarGraf5() {
     textoDisco.innerHTML = "<a>Armazenamento: 500GB</a>"
     TextdispConect.innerHTML = '<a>6 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>0 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
+    mudarInfo1.innerHTML = '<a>60%</a>'
 
     chartRAM1.style.display = 'none';
     chartRAM2.style.display = 'none';
@@ -153,6 +158,8 @@ function chamarGraf6() {
     textoDisco.innerHTML = "<a>Armazenamento: 520GB</a>"
     TextdispConect.innerHTML = '<a>5 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>0 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
+    mudarInfo1.innerHTML = '<a>20%</a>'
+
 
     chartRAM1.style.display = 'none';
     chartRAM2.style.display = 'none';

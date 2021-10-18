@@ -228,6 +228,7 @@ am4core.ready(function () {
 //----------------------- CPU GRAFICO 2 -----------------
 
 
+
 am4core.ready(function () {
 
   // Themes begin
@@ -244,34 +245,34 @@ am4core.ready(function () {
     "value": 42
   }, {
     "date": "2021-09-02",
-    "value": 35
+    "value": 89
   }, {
     "date": "2021-09-03",
-    "value": 31
+    "value": 67
   }, {
     "date": "2021-09-04",
-    "value": 30
+    "value": 88
   }, {
     "date": "2021-09-05",
     "value": 52
   }, {
     "date": "2021-09-06",
-    "value": 80
+    "value": 46
   }, {
     "date": "2021-09-07",
-    "value": 41
+    "value": 89
   }, {
     "date": "2021-09-08",
     "value": 43
   }, {
     "date": "2021-09-09",
-    "value": 40
+    "value": 48
   }, {
     "date": "2021-09-10",
-    "value": 39
+    "value": 56
   }, {
     "date": "2021-09-11",
-    "value": 34
+    "value": 78
   }, {
     "date": "2021-09-12",
     "value": 29
@@ -280,34 +281,34 @@ am4core.ready(function () {
     "value": 34
   }, {
     "date": "2021-09-14",
-    "value": 37
+    "value": 99
   }, {
     "date": "2021-09-15",
-    "value": 42
+    "value": 78
   }, {
     "date": "2021-09-16",
     "value": 49
   }, {
     "date": "2021-09-17",
-    "value": 46
+    "value": 78
   }, {
     "date": "2021-09-18",
-    "value": 47
+    "value": 98
   }, {
     "date": "2021-09-19",
-    "value": 40
+    "value": 68
   }, {
     "date": "2021-09-20",
     "value": 59
   }, {
     "date": "2021-09-21",
-    "value": 20
+    "value": 58
   }, {
     "date": "2021-09-22",
     "value": 57
   }, {
     "date": "2021-09-23",
-    "value": 30
+    "value": 61
   }, {
     "date": "2021-09-24",
     "value": 59
@@ -334,25 +335,25 @@ am4core.ready(function () {
     "value": 67
   }, {
     "date": "2021-10-02",
-    "value": 42
+    "value": 63
   }, {
     "date": "2021-10-03",
     "value": 46
   }, {
     "date": "2021-10-04",
-    "value": 32
+    "value": 89
   }, {
     "date": "2021-10-05",
-    "value": 21
+    "value": 88
   }, {
     "date": "2021-10-06",
-    "value": 18
+    "value": 89
   }, {
     "date": "2021-10-07",
-    "value": 21
+    "value": 90
   }, {
     "date": "2021-10-08",
-    "value": 28
+    "value": 68
   }, {
     "date": "2021-10-09",
     "value": 27
@@ -370,16 +371,16 @@ am4core.ready(function () {
     "value": 30
   }, {
     "date": "2021-10-14",
-    "value": 34
+    "value": 67
   }, {
     "date": "2021-10-15",
-    "value": 38
+    "value": 75
   }, {
     "date": "2021-10-16",
-    "value": 37
+    "value": 88
   }, {
     "date": "2021-10-17",
-    "value": 44
+    "value": 89
   }, {
     "date": "2021-10-18",
     "value": 49
@@ -1187,25 +1188,25 @@ am4core.ready(function () {
     "value": 37
   }, {
     "date": "2021-09-15",
-    "value": 42
+    "value": 35
   }, {
     "date": "2021-09-16",
-    "value": 49
+    "value": 13
   }, {
     "date": "2021-09-17",
-    "value": 46
+    "value": 23
   }, {
     "date": "2021-09-18",
-    "value": 47
+    "value": 32
   }, {
     "date": "2021-09-19",
-    "value": 55
+    "value": 21
   }, {
     "date": "2021-09-20",
-    "value": 59
+    "value": 24
   }, {
     "date": "2021-09-21",
-    "value": 58
+    "value": 23
   }, {
     "date": "2021-09-22",
     "value": 57
@@ -1220,28 +1221,28 @@ am4core.ready(function () {
     "value": 67
   }, {
     "date": "2021-09-26",
-    "value": 65
+    "value": 34
   }, {
     "date": "2021-09-27",
-    "value": 61
+    "value": 23
   }, {
     "date": "2021-09-28",
-    "value": 66
+    "value": 34
   }, {
     "date": "2021-09-29",
-    "value": 69
+    "value": 23
   }, {
     "date": "2021-09-30",
-    "value": 71
+    "value": 34
   }, {
     "date": "2021-10-01",
-    "value": 67
+    "value": 34
   }, {
     "date": "2021-10-02",
-    "value": 63
+    "value": 23
   }, {
     "date": "2021-10-03",
-    "value": 46
+    "value": 23
   }, {
     "date": "2021-10-04",
     "value": 32
@@ -1289,13 +1290,13 @@ am4core.ready(function () {
     "value": 49
   }, {
     "date": "2021-10-19",
-    "value": 53
+    "value": 45
   }, {
     "date": "2021-10-20",
-    "value": 57
+    "value": 34
   }, {
     "date": "2021-10-21",
-    "value": 60
+    "value": 34
   }
   ];
 
