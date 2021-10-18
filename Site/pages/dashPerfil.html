@@ -12,20 +12,30 @@
 
         <title>Página de Perfil</title>
     </head>
+
     <body id="body-pd">
         <header class="header" id="header">
             <div class="header__toggle">
                 <i class='bx bx-menu' id="header-toggle"></i>
             </div>
 
-            <button id="repError">REPORTAR ERRO</button>
 
-            <div>
-                <a href="#">
-                    <img id="user" src="/Site/assets/img/user.png" alt="">
-                </a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <img id="user" src="../assets/img/user.png" alt="">
+                    <div class="dropdown-content">
+                        <a href="../pages/dashPerfil.html">Perfil</a>
+                        <a href="/Site/index.html">Homepage</a>
+                        <a href="../pages/visaogeral.html">Visão Geral</a>
+                    </div>
+                </button>
+                <button id="repError">REPORTAR ERRO</button>
             </div>
         </header>
+
+         
+            
+       
 
         <!-- Código do menu hamburguer -->
         <div class="l-navbar" id="nav-bar">
@@ -33,23 +43,18 @@
                 <div>
                     <a href="#" class="nav__logo">
                         <i class='bx bx-layer nav__logo-icon'></i>
-                        <span class="nav__logo-name">Safe SYstem</span>
+                        <span class="nav__logo-name">Safe System</span>
                     </a>
 
                     <div class="nav__list">
-                        <a href="#" class="nav__link active">
+                        <a href="/Site/pages/dashboard.html" class="nav__link active">
                         <i class='bx bx-grid-alt nav__icon' ></i>
                             <span class="nav__name">Dashboard</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Site/pages/dashPerfil.html" class="nav__link">
                             <i class='bx bx-user nav__icon' ></i>
                             <span class="nav__name">Meu perfil</span>
-                        </a>
-                        
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-message-square-detail nav__icon' ></i>
-                            <span class="nav__name">Messages</span>
                         </a>
 
                         <a href="#" class="nav__link">
@@ -62,7 +67,7 @@
                             <span class="nav__name">Mudar senha</span>
                         </a>
 
-                        <a href="#" class="nav__link">
+                        <a href="/Site/pages/visaogeral.html" class="nav__link">
                             <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
                             <span class="nav__name">Analytics</span>
                         </a>
@@ -112,6 +117,6 @@
     <!-------------------------- /Container do perfil ---------------------------------->
 
         <!-- Script que faz o hamburguer abrir e fechar -->
-        <script src="/scripts/hambPerfil.js"></script>
+        <script src="../scripts/hambPerfil.js"></script>
     </body>
 </html>
