@@ -14,6 +14,8 @@ import com.github.britooo.looca.api.group.processador.Processador;
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.github.britooo.looca.api.util.Conversor;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 
 public class EnviaDados {
@@ -22,8 +24,7 @@ public class EnviaDados {
     Memoria ram = new Memoria();
     Processador cpu = new Processador();
     DiscosGroup disco = new DiscosGroup();
-
-    private Integer idCaixa;
+    
 
     public void insereDados(Integer idCaixa) {
 
@@ -50,9 +51,12 @@ public class EnviaDados {
 
         Float floatTeste = Float.parseFloat("1.0");
 
-        con.update("INSERT INTO registroMaquina VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", null, ramTotal, ramUso, discoTotal, floatTeste, cpuNome, cpuUso, false, idCaixa);
+        con.update("INSERT INTO registroMaquina(totalRam, usoRam, totalDisco, usoDisco, dispositivoEstranho, dataHora, nomeCPU, usoCPU,fkMaquina) "
+                + "VALUES (?, ?, ?, ?, ?, GETDATE(), ?, ?, ?);", ramTotal, ramUso, discoTotal, floatTeste, 0,cpuNome, cpuUso, idCaixa);
         List<RegistroCaixa> registro = con.query("select * from registroMaquina", new BeanPropertyRowMapper(RegistroCaixa.class));
         System.out.println(registro);
+        
+        
 
     }
 

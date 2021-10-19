@@ -11,8 +11,9 @@ package br.com.bandtec.safesystem.src;
  */
 public class TesteLogin {
     public static void main(String[] args) {
-//        Autenticacao aut = new Autenticacao("login", "1234", "1");        
-//        aut.AutenticaUsuario();
+        //Autenticacao aut = new Autenticacao("5678", "123456789", "1");        
+        //aut.AutenticaAgencia();
+        
           
           EnviaDados env = new EnviaDados();        
           env.insereDados(1);

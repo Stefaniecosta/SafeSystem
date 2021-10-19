@@ -17,10 +17,18 @@ public class ConexaoBD {
 
     public ConexaoBD() {
         this.bancoDeDados = new BasicDataSource();
-        this.bancoDeDados.setDriverClassName("org.h2.Driver");
-        this.bancoDeDados.setUrl("jdbc:h2:file:./sfsy");
-        this.bancoDeDados.setUsername("sa");
-        this.bancoDeDados.setPassword("");
+        this.bancoDeDados.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        this.bancoDeDados.setUrl("jdbc:sqlserver://safesystem.database.windows.net:1433;database=safesystem;"
+                + "encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;"); // Link e porta do Azure
+        this.bancoDeDados.setUsername("safe");
+        this.bancoDeDados.setPassword("Senh@forte06");
+        
+//        this.bancoDeDados = new BasicDataSource();
+//        this.bancoDeDados.setDriverClassName("org.h2.Driver");
+//        this.bancoDeDados.setUrl("jdbc:h2:file:./sfsy");
+//        this.bancoDeDados.setUsername("sa");
+//        this.bancoDeDados.setPassword("");
+           
 //        this.bancoDeDados = new BasicDataSource();
 //        this.bancoDeDados.setDriverClassName("com.mysql.cj.jdbc.Driver");
 //        this.bancoDeDados.setUrl("jdbc:mysql://localhost:3306/sfsy");
@@ -31,7 +39,5 @@ public class ConexaoBD {
     public BasicDataSource getBancoDeDados() {
         return bancoDeDados;
     }
-    
-    
 
 }

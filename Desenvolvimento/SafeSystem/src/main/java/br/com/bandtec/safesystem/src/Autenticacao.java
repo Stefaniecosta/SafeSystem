@@ -5,6 +5,7 @@
  */
 package br.com.bandtec.safesystem.src;
 
+import br.com.bandtec.safesystem.src.models.Agencia;
 import br.com.bandtec.safesystem.src.models.Usuario;
 import br.com.bandtec.safesystem.src.models.Caixa;
 import java.util.List;
@@ -51,19 +52,35 @@ public class Autenticacao {
         return false;
 
     }
+    
+        public Boolean AutenticaAgencia() {
 
-    private Boolean VerificaCaixa(Integer agenciaUsuario) {
+        List<Agencia> agenciaAdvancedUse = con.query("SELECT * FROM  agencia WHERE codigoAgencia = ? AND senha = ?", new BeanPropertyRowMapper(Agencia.class), loginRecebido, senhaRecebida);
+        
+        // verifica se a query retorna algo. Se não ser vazio, o if é executado
+        if (!agenciaAdvancedUse.isEmpty()) {
+            Integer agencia = agenciaAdvancedUse.get(0).getIdAgencia();
+            System.out.println("verificaçõa de login funcionou...");
+            return VerificaCaixa(agencia);
+        }
+        System.out.println("verificaçõa de login falhou...");
+        return false;
+
+    }
+
+    private Boolean VerificaCaixa(Integer idAgencia) {
 
         List<Caixa> caixaConsultaAgencia = con.query("SELECT * FROM maquina m WHERE m.idMaquina = ?", new BeanPropertyRowMapper(Caixa.class), this.codigoRecebido);
 
         // se a query retornar vazia, o acesso é negado (EX: se o caixa não existe no banco)
         if(caixaConsultaAgencia.isEmpty()){
+            System.out.println("caixa não existe");
             return false;
         }
         
-        Integer agenciaCaixa = caixaConsultaAgencia.get(0).getFkAgencia();     
+        Integer agenciaDoCaixa = caixaConsultaAgencia.get(0).getFkAgencia();     
         
-        if(Objects.equals(agenciaCaixa, agenciaUsuario)){
+        if(Objects.equals(agenciaDoCaixa, idAgencia)){
            System.out.println("Caixa verificado com sucesso!");
            return true; 
         }
