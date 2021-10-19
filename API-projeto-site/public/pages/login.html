@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="../styles/login.css">
+    <script src="../scripts/validacaoCadastro.js"></script>
+
+</head>
+
+<body>
+    <!-- <header class="cabecalho">
+
+    </header> -->
+    <div id="containerGeral_login">
+        <div id="subcontainer01_login">
+            
+            <!-- <img src="../assets/img/image 15.svg" alt="" class="imagemPrincipal_login"> -->
+            <a href="../index.html">
+                <img src="../assets/img/logo-contato.png" id="logo" alt="">
+            </a>
+
+        </div>
+        <div id="subcontainer02_login">
+
+            <img style="display: none;" src="../assets/img/logo.png" id="logo2" alt="">
+
+            <div id="div_formulario">
+
+                <form action="">
+
+                    <h1 class="titulos">Login</h1>
+
+                    <input type="text" placeholder="CNPJ*" onblur="validarCNPJ(this)" onkeypress="mascaraCnpj()" id="idCnpj"
+                    maxlength="18"/>
+
+                    <input type="password" placeholder="Senha*" />
+
+                    <p id="Click_esqueceu"><a href="../pages/esqueciSenha.html">Esqueceu a senha?</a></p>
+
+                    <button class="buttonForm-login" type="submit">Confirmar</button>
+
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/visaogeral.css">
+    <script src="https://kit.fontawesome.com/6f2d70ffaf.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="funcoes.js"></script>
+    <title>Visão Geral</title>
+</head>
+
+<body>
+
+    <div id="content">
+        <img style="width: 50px; padding-left: 55px;" id="logoName" src="assets/img/logo.png" alt="">
+        <div id="options">
+            <div class="item">
+                <div class="font_tamanho">
+                    <strong>
+                        Caixas
+                    </strong>
+                </div>
+            </div>
+            <hr>
+            <div class="item">
+                <div>
+                    <img src="assets/img/visaoGeralImg.png" alt="">
+                </div>
+                <span>VISÃO GERAL</span>
+            </div>
+            <hr>
+            <div class="item">
+                <img src="assets/img/caixaIcon.png" alt="">
+                <span>CAIXA <strong>01</strong></span>
+            </div>
+            <hr>
+            <div class="item">
+                <img src="assets/img/caixaIcon.png" alt="">
+                <span>CAIXA <strong>02</strong></span>
+            </div>
+            <hr>
+            <div class="item">
+                <img src="assets/img/caixaIcon.png" alt="">
+                <span>CAIXA <strong>03</strong></span>
+            </div>
+            <hr>
+            <div class="item">
+                <div class="item_color">
+                    <span>
+                        Agência
+                    </span>
+                    <br>
+                    <strong>
+                        0222
+                    </strong>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div id="logout">
+            <img id="logoutIcon" onclick="logoff()" src="assets/img/logoutIcon.png" alt="">
+        </div>
+    </div>
+    <div id="informations">
+        <div class="header">
+            <strong>Visão Geral</strong>
+            <button id="repError">REPORTAR ERRO</button>
+        </div>
+        <div class="container-boxes">
+            <div class="aux-container-boxes">
+                <div id="caixa" class="box">
+                    <div class="boxContent">
+                        <div class="info_caixas">
+                            <div class="bottom">
+                               
+                                <strong>
+                                    <img class="item-img" src="assets/img/caixaIcon.png" alt="">     
+                                    Caixa 1
+                                </strong>
+                            </div>
+                            <br>
+                            <div class="icone">
+                                Status:
+                                <i class="fas fa-skull"></i> <b class="critico"> CRÍTICO</b>
+                            </div>
+                            <p style="color: rgba(255, 126, 120, 0.8);">DISPOSITIVO <br> ESTRANHO</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="caixa" class="box">
+                    <div class="boxContent">
+                        <div class="info_caixas">
+                            <div class="bottom">
+                                <img class="item-img" src="assets/img/caixaIcon.png" alt="">
+                                <strong>
+                                    Caixa 2
+                                </strong>
+                            </div>
+                            <br>
+                            <div id="iconeTwo" class="icone">
+                                Status:
+                                <i class="fas fa-exclamation-triangle"></i> <b class="alerta"> ALERTA</b>
+                            </div>
+                            <p style="color: rgba(244, 219, 87, 0.8);"> MUITOS COMPONENTES <br> LENTOS</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="caixa" class="box">
+                    <div class="boxContent">
+                        <div class="info_caixas">
+                            <div class="bottom">
+                                <img class="item-img" src="assets/img/caixaIcon.png" alt="">
+                                <strong>
+                                    Caixa 3
+                                </strong>
+                            </div>
+                            <br>
+                            <div class="icone">
+                                Status: <b class="ok"> OK</b>
+                            </div>
+                            <p style="color: rgba(107, 226, 190, 0.8);">ESTÁ TUDO CERTO</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="caixa" class="box">
+                    <div class="boxContent">
+                        <div class="info_caixas">
+                            <div class="bottom">
+                                <img class="item-img" src="assets/img/caixaIcon.png" alt="">
+                                <strong>
+                                    Caixa 4
+                                </strong>
+                            </div>
+                            <br>
+                            <div class="icone">
+                                Status:
+                                <i class="fas fa-skull"></i> <b class="critico"> CRÍTICO</b>
+                                <p style="color: rgba(255, 126, 120, 0.8);">DISPOSITIVO <br> ESTRANHO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="caixa" class="box">
+                    <div class="boxContent">
+                        <div class="info_caixas">
+                            <div class="bottom">
+                                <img class="item-img" src="assets/img/caixaIcon.png" alt="">
+                                <strong>
+                                    Caixa 5
+                                </strong>
+                            </div>
+                            <br>
+                            <div id="iconeTwo" class="icone">
+                                Status:
+                                <i class="fas fa-exclamation-triangle"></i> <b class="alerta"> ALERTA</b>
+                            </div>
+                            <p style="color: rgba(244, 219, 87, 0.8);"> MUITOS COMPONENTES <br> LENTOS</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="caixa" class="box">
+                    <div class="boxContent">
+                        <div class="info_caixas">
+                            <div class="bottom">
+                                <img class="item-img" src="assets/img/caixaIcon.png" alt="">
+                                <strong>
+                                    Caixa 6
+                                </strong>
+                            </div>
+                            <br>
+                            <div class="icone">
+                                Status: <b class="ok"> OK</b>
+                            </div>
+                            <p style="color: rgba(107, 226, 190, 0.8);">ESTÁ TUDO CERTO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
