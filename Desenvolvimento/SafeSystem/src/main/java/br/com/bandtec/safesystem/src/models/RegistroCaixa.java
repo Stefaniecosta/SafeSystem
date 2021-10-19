@@ -15,10 +15,9 @@ public class RegistroCaixa {
       private Float utilizandoRam;
       private Float totalDisco;
       private Float utilizandoDisco;
-      private String infoCPU;
+      private String nomeCPU;
+      private Integer utilizandoCPU;
       private Boolean dispositivoEstranho;
-      private String data;
-      private String hora;
       private Integer fkMaquina;
 
     public Integer getIdRegistro() {
@@ -61,12 +60,20 @@ public class RegistroCaixa {
         this.utilizandoDisco = utilizandoDisco;
     }
 
-    public String getInfoCPU() {
-        return infoCPU;
+    public String getNomeCPU() {
+        return nomeCPU;
     }
 
-    public void setInfoCPU(String infoCPU) {
-        this.infoCPU = infoCPU;
+    public void setNomeCPU(String nomeCPU) {
+        this.nomeCPU = nomeCPU;
+    }
+
+    public Integer getUtilizandoCPU() {
+        return utilizandoCPU;
+    }
+
+    public void setUtilizandoCPU(Integer utilizandoCPU) {
+        this.utilizandoCPU = utilizandoCPU;
     }
 
     public Boolean getDispositivoEstranho() {
@@ -77,22 +84,6 @@ public class RegistroCaixa {
         this.dispositivoEstranho = dispositivoEstranho;
     }
 
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
-
-    public String getHora() {
-        return hora;
-    }
-
-    public void setHora(String hora) {
-        this.hora = hora;
-    }
-
     public Integer getFkMaquina() {
         return fkMaquina;
     }
@@ -101,9 +92,10 @@ public class RegistroCaixa {
         this.fkMaquina = fkMaquina;
     }
 
+
     @Override
     public String toString() {
-        return "RegistroCaixa{\n" + "idRegistro: " + idRegistro + ",\ntotalRam: " + totalRam + ", \nutilizandoRam:" + utilizandoRam + ", \ntotalDisco:" + totalDisco + ", \nutilizandoDisco:" + utilizandoDisco + ", \ninfoCPU:" + infoCPU + ", \ndispositivoEstranho:" + dispositivoEstranho + ", \ndata:" + data + ", \nhora:" + hora + ", \nfkMaquina:" + fkMaquina + '}';
+        return "RegistroCaixa{\n" + "idRegistro: " + idRegistro + ",\ntotalRam: " + totalRam + ", \nutilizandoRam:" + utilizandoRam + ", \ntotalDisco:" + totalDisco + ", \nutilizandoDisco:" + utilizandoDisco + ", \nnomeCPU:" + nomeCPU +", \nusoCPU:"+ utilizandoCPU + ", \ndispositivoEstranho:" + dispositivoEstranho + ", \nfkMaquina:" + fkMaquina + '}';
     }
       
     

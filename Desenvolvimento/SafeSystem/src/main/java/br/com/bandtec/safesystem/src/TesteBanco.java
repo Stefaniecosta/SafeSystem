@@ -22,7 +22,6 @@ public class TesteBanco {
 
         ConexaoBD config = new ConexaoBD();
         JdbcTemplate con = new JdbcTemplate(config.getBancoDeDados());
-//
 
         con.execute("DROP TABLE IF EXISTS usuario");
         con.execute("DROP TABLE IF EXISTS registroMaquina");
@@ -54,10 +53,9 @@ public class TesteBanco {
                 + "utilizandoRam float,"
                 + "totalDisco float,"
                 + "utilizandoDisco float,"
-                + "infoCPU varchar(45),"
+                + "nomeCPU varchar(100),"
+                + "utilizandoCPU int,"
                 + "dispositivoEstranho bit,"
-                + "data Date,"
-                + "hora time,"
                 + "fkMaquina int,"
                 + "FOREIGN KEY (fkMaquina) REFERENCES maquina(idMaquina))";
 
@@ -77,6 +75,9 @@ public class TesteBanco {
         con.update("INSERT INTO usuario VALUES (?, ?, ?, ?)", null, "login", "123", "2");
         con.update("INSERT INTO usuario VALUES (?, ?, ?, ?)", null, "login", "12", "1");
         con.update("INSERT INTO usuario VALUES (?, ?, ?, ?)", null, "login", "1", "2");
+        
+        
+        con.update("insert into registroMaquina values (?, ?, ?, ?, ?, ?, ?, ?, ?)", null, 20.0, 20.0, 20.0, 20.0, "aaa", 1, false, 1);
 
         List<Usuario> usuarioAdvancedUse = con.query("SELECT * FROM  usuario WHERE login = ? AND senha = ?", new BeanPropertyRowMapper(Usuario.class), "login", "1234");
         System.out.println("select usuario teste " + usuarioAdvancedUse.get(0));
@@ -86,6 +87,8 @@ public class TesteBanco {
         
         List<RegistroCaixa> registro = con.query("select * from registroMaquina", new BeanPropertyRowMapper(RegistroCaixa.class));
         System.out.println(registro);
+        
+        
 
     }
 }
