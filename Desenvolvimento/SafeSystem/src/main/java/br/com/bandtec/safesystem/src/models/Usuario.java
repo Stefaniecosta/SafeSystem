@@ -10,39 +10,40 @@ public class Usuario {
     private Integer id;
     private String login;
     private String senha;
-    private Integer agencia;
+    private Integer fkAgencia;
 
     public Integer getId() {
         return id;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public Integer getAgencia() {
-        return agencia;
     }
 
     public void setId(Integer id) {
         this.id = id;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
     public void setLogin(String login) {
         this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
     }
 
     public void setSenha(String senha) {
         this.senha = senha;
     }
 
-    public void setAgencia(Integer agencia) {
-        this.agencia = agencia;
+    public Integer getFkAgencia() {
+        return fkAgencia;
     }
+
+    public void setFkAgencia(Integer fkAgencia) {
+        this.fkAgencia = fkAgencia;
+    }
+
     
 
     @Override

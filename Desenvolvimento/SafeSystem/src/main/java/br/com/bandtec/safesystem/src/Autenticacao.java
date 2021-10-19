@@ -43,7 +43,7 @@ public class Autenticacao {
         
         // verifica se a query retorna algo. Se não ser vazio, o if é executado
         if (!usuarioAdvancedUse.isEmpty()) {
-            Integer agencia = usuarioAdvancedUse.get(0).getAgencia();            
+            Integer agencia = usuarioAdvancedUse.get(0).getFkAgencia();
             // Chama um método para verificar se o caixa consiste com a agencia do usuario
             return VerificaCaixa(agencia);
         }
@@ -54,7 +54,7 @@ public class Autenticacao {
 
     private Boolean VerificaCaixa(Integer agenciaUsuario) {
 
-        List<Caixa> caixaConsultaAgencia = con.query("SELECT * FROM maquina m WHERE c.id = ?", new BeanPropertyRowMapper(Caixa.class), codigoRecebido);
+        List<Caixa> caixaConsultaAgencia = con.query("SELECT * FROM maquina m WHERE m.idMaquina = ?", new BeanPropertyRowMapper(Caixa.class), this.codigoRecebido);
 
         // se a query retornar vazia, o acesso é negado (EX: se o caixa não existe no banco)
         if(caixaConsultaAgencia.isEmpty()){
