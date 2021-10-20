@@ -8,12 +8,13 @@ package br.com.bandtec.safesystem.view;
 import br.com.bandtec.safesystem.src.Timer;
 import com.github.britooo.looca.api.core.Looca;
 import com.github.britooo.looca.api.util.Conversor;
-
-
+import java.util.TimerTask;
 
 public class TelaDeRelatorio extends javax.swing.JFrame {
-        Looca looca = new Looca();
-        Timer timer = new Timer();
+
+    Looca looca = new Looca();
+    Timer timer = new Timer();
+
     /**
      * Creates new form TelaDeRelatorio
      */
@@ -21,32 +22,41 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
         initComponents();
         // Inicia o looping de enviar dados
         timer.repeticao();
-        
+        plot();
+
+    }
+
+    public final void plot() {
+        new java.util.Timer().scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                String ramTaotal = Conversor.formatarBytes(looca.getMemoria().getTotal());
+                lblRamTotal.setText(ramTaotal);
+                String ramUso = Conversor.formatarBytes(looca.getMemoria().getEmUso());
+                lblRamUso.setText(ramUso);
+                lblProcessador.setText(looca.getProcessador().getNome());
+                String hdTrunc = Conversor.formatarBytes(looca.getGrupoDeDiscos().getTamanhoTotal());
+                lblHd.setText(String.format(hdTrunc));
+                lblCpuFisica.setText(looca.getProcessador().getNumeroCpusFisicas().toString());
+                lblCpuLogica.setText(looca.getProcessador().getNumeroCpusLogicas().toString());
+                String frequencia = Conversor.formatarBytes(looca.getProcessador().getFrequencia());
+                String auxFrequencia = frequencia.replace("GiB", "GHz");
+                String strFrequencia = String.format("%s", auxFrequencia);
+                lblFrequencia.setText(strFrequencia);
+                String so = looca.getSistema().getSistemaOperacional();
+                Integer arq = looca.getSistema().getArquitetura();
+                String fabricante = looca.getSistema().getFabricante();
+                lblSistemaOperacional.setText(String.format("%s %s %d bits", fabricante, so, arq));
+
+                //DADOS DE UTILIZAÇÃO
+                Double usoTrunc = (looca.getProcessador().getUso());
+                lblPorcentagemDeUso.setText(String.format("%.2f%%", usoTrunc));
+                lblNumeroProcessos.setText(looca.getGrupoDeProcessos().getTotalProcessos().toString());
+                lblThreads.setText(looca.getGrupoDeProcessos().getTotalProcessos().toString());
+            }
+        }, 0, 10000);
         //DADOS DA MÁQUINA
-        String ramTaotal = Conversor.formatarBytes(looca.getMemoria().getTotal());
-        lblRamTotal.setText(ramTaotal);
-        String ramUso = Conversor.formatarBytes(looca.getMemoria().getEmUso());
-        lblRamUso.setText(ramUso);
-        lblProcessador.setText(looca.getProcessador().getNome());
-        String hdTrunc = Conversor.formatarBytes(looca.getGrupoDeDiscos().getTamanhoTotal());
-        lblHd.setText(String.format(hdTrunc));
-        lblCpuFisica.setText(looca.getProcessador().getNumeroCpusFisicas().toString());
-        lblCpuLogica.setText(looca.getProcessador().getNumeroCpusLogicas().toString());
-        String frequencia = Conversor.formatarBytes(looca.getProcessador().getFrequencia());
-        String auxFrequencia = frequencia.replace("GiB", "GHz");
-        String strFrequencia = String.format("%s", auxFrequencia);
-        lblFrequencia.setText(strFrequencia);
-        String so = looca.getSistema().getSistemaOperacional();
-        Integer arq = looca.getSistema().getArquitetura();
-        String fabricante = looca.getSistema().getFabricante();
-        lblSistemaOperacional.setText(String.format("%s %s %d bits", fabricante, so,arq  ));
-        
-        //DADOS DE UTILIZAÇÃO
-        Double usoTrunc = (looca.getProcessador().getUso());
-        lblPorcentagemDeUso.setText(String.format("%.2f%%", usoTrunc));
-        lblNumeroProcessos.setText(looca.getGrupoDeProcessos().getTotalProcessos().toString());
-        lblThreads.setText(looca.getGrupoDeProcessos().getTotalProcessos().toString());
-        
+
     }
 
     /**
@@ -129,8 +139,6 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(175, 255, 195), 5));
         jPanel4.setForeground(new java.awt.Color(175, 255, 195));
 
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
-
         jLabel5.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -177,8 +185,6 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
         jPanel7.setBackground(new java.awt.Color(17, 17, 17));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(175, 255, 195), 5));
         jPanel7.setForeground(new java.awt.Color(175, 255, 195));
-
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel12.setFont(new java.awt.Font("URW Gothic", 1, 24)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -345,8 +351,6 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(175, 255, 195), 5));
         jPanel5.setForeground(new java.awt.Color(175, 255, 195));
 
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
-
         jLabel10.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -397,8 +401,6 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
         jPanel6.setBackground(new java.awt.Color(17, 17, 17));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(175, 255, 195), 5));
         jPanel6.setForeground(new java.awt.Color(175, 255, 195));
-
-        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel21.setFont(new java.awt.Font("URW Gothic", 1, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(255, 255, 255));
@@ -566,8 +568,7 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
                 new TelaDeRelatorio().setVisible(true);
             }
         });
-        
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
