@@ -16,12 +16,10 @@ public class Timer {
     EnviaDados env = new EnviaDados();
 
     public void repeticao() {
-        System.out.println("caioba");
+
         new java.util.Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                System.out.println("caiobaaa");
-
                 env.insereDados(1);
             }
         }, 0, 10000);
