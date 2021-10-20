@@ -1,5 +1,4 @@
-# SafeSystem 
-<img src="..Site/assets/img/logoVerde.jpg">
+# SafeSystem ![Alt text](/Site/assets/img/logoVerde.jpg?raw=true "Logotipo SafeSystem")
 
 Repositório destinado ao grupo de Pesquisa & Inovação - 2ADSB <br>
 Grupo 06
