@@ -1,6 +1,7 @@
-# SafeSystem
+# SafeSystem <img src="..Site/assets/img/logoVerde">
 
-Repositório destinado ao grupo de PI 2ADSB. Grupo 6. 
+Repositório destinado ao grupo de Pesquisa & Inovação - 2ADSB <br>
+Grupo 06
 
 ## Linguagens Utilizadas
 
