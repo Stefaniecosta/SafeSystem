@@ -54,7 +54,7 @@ public class EnviaDados {
         con.update("INSERT INTO registroMaquina(totalRam, usoRam, totalDisco, dispositivoEstranho, dataHora, nomeCPU, usoCPU,fkMaquina) "
                 + "VALUES (?, ?, ?, ?, GETDATE(), ?, ?, ?);", ramTotal, ramUso, discoTotal, 0,cpuNome, cpuUso, idCaixa);
         
-        List<RegistroCaixa> registro = con.query("select top 2 * from registroMaquina order by idRegistro desc", new BeanPropertyRowMapper(RegistroCaixa.class));
+        List<RegistroCaixa> registro = con.query("select top 1 * from registroMaquina order by idRegistro desc", new BeanPropertyRowMapper(RegistroCaixa.class));
         System.out.println(registro);
         
         

@@ -54,7 +54,7 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
                 lblNumeroProcessos.setText(looca.getGrupoDeProcessos().getTotalProcessos().toString());
                 lblThreads.setText(looca.getGrupoDeProcessos().getTotalProcessos().toString());
             }
-        }, 0, 10000);
+        }, 0, 2000);
         //DADOS DA MÁQUINA
 
     }
