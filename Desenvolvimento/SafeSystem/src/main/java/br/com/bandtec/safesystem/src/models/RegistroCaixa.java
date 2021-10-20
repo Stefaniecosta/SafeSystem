@@ -12,12 +12,12 @@ package br.com.bandtec.safesystem.src.models;
 public class RegistroCaixa {
       private Integer idRegistro;
       private Float totalRam;
-      private Float utilizandoRam;
+      private Float usoRam;
       private Float totalDisco;
-      private Float utilizandoDisco;
       private String nomeCPU;
-      private Integer utilizandoCPU;
+      private Integer usoCPU;
       private Boolean dispositivoEstranho;
+      private String dataHora;
       private Integer fkMaquina;
 
     public Integer getIdRegistro() {
@@ -36,12 +36,12 @@ public class RegistroCaixa {
         this.totalRam = totalRam;
     }
 
-    public Float getUtilizandoRam() {
-        return utilizandoRam;
+    public Float getUsoRam() {
+        return usoRam;
     }
 
-    public void setUtilizandoRam(Float utilizandoRam) {
-        this.utilizandoRam = utilizandoRam;
+    public void setUsoRam(Float usoRam) {
+        this.usoRam = usoRam;
     }
 
     public Float getTotalDisco() {
@@ -52,14 +52,6 @@ public class RegistroCaixa {
         this.totalDisco = totalDisco;
     }
 
-    public Float getUtilizandoDisco() {
-        return utilizandoDisco;
-    }
-
-    public void setUtilizandoDisco(Float utilizandoDisco) {
-        this.utilizandoDisco = utilizandoDisco;
-    }
-
     public String getNomeCPU() {
         return nomeCPU;
     }
@@ -68,12 +60,12 @@ public class RegistroCaixa {
         this.nomeCPU = nomeCPU;
     }
 
-    public Integer getUtilizandoCPU() {
-        return utilizandoCPU;
+    public Integer getUsoCPU() {
+        return usoCPU;
     }
 
-    public void setUtilizandoCPU(Integer utilizandoCPU) {
-        this.utilizandoCPU = utilizandoCPU;
+    public void setUsoCPU(Integer usoCPU) {
+        this.usoCPU = usoCPU;
     }
 
     public Boolean getDispositivoEstranho() {
@@ -84,6 +76,14 @@ public class RegistroCaixa {
         this.dispositivoEstranho = dispositivoEstranho;
     }
 
+    public String getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(String dataHora) {
+        this.dataHora = dataHora;
+    }
+
     public Integer getFkMaquina() {
         return fkMaquina;
     }
@@ -92,12 +92,12 @@ public class RegistroCaixa {
         this.fkMaquina = fkMaquina;
     }
 
-
     @Override
     public String toString() {
-        return "RegistroCaixa{\n" + "idRegistro: " + idRegistro + ",\ntotalRam: " + totalRam + ", \nutilizandoRam:" + utilizandoRam + ", \ntotalDisco:" + totalDisco + ", \nutilizandoDisco:" + utilizandoDisco + ", \nnomeCPU:" + nomeCPU +", \nusoCPU:"+ utilizandoCPU + ", \ndispositivoEstranho:" + dispositivoEstranho + ", \nfkMaquina:" + fkMaquina + '}';
+        return "RegistroCaixa{" + "idRegistro=" + idRegistro + ", totalRam=" + totalRam + ", usoRam=" + usoRam + ", totalDisco=" + totalDisco + ", nomeCPU=" + nomeCPU + ", usoCPU=" + usoCPU + ", dispositivoEstranho=" + dispositivoEstranho + ", dataHora=" + dataHora + ", fkMaquina=" + fkMaquina + '}';
     }
       
+    
     
       
 }

@@ -51,9 +51,10 @@ public class EnviaDados {
 
         Float floatTeste = Float.parseFloat("1.0");
 
-        con.update("INSERT INTO registroMaquina(totalRam, usoRam, totalDisco, usoDisco, dispositivoEstranho, dataHora, nomeCPU, usoCPU,fkMaquina) "
-                + "VALUES (?, ?, ?, ?, ?, GETDATE(), ?, ?, ?);", ramTotal, ramUso, discoTotal, floatTeste, 0,cpuNome, cpuUso, idCaixa);
-        List<RegistroCaixa> registro = con.query("select * from registroMaquina", new BeanPropertyRowMapper(RegistroCaixa.class));
+        con.update("INSERT INTO registroMaquina(totalRam, usoRam, totalDisco, dispositivoEstranho, dataHora, nomeCPU, usoCPU,fkMaquina) "
+                + "VALUES (?, ?, ?, ?, GETDATE(), ?, ?, ?);", ramTotal, ramUso, discoTotal, 0,cpuNome, cpuUso, idCaixa);
+        
+        List<RegistroCaixa> registro = con.query("select top 2 * from registroMaquina order by idRegistro desc", new BeanPropertyRowMapper(RegistroCaixa.class));
         System.out.println(registro);
         
         
