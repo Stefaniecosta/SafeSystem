@@ -11,7 +11,7 @@ body {
     background-color: rgb(2, 2, 2);
     font-family: Poppins;
     overflow-x: hidden;
-    
+
 }
 
 #informations {
@@ -19,6 +19,61 @@ body {
     padding: 0 1.75%;
     height: auto;
     box-sizing: border-box;
+}
+
+/* Começo do menu dropdown */
+.dropbtn {
+    background-color: #4caf4f00;
+    color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    float: right;
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 200;
+    background-color: #f9f9f96c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.842);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(137, 235, 58)
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e4100;
+    position: relative;
+    top: 10;
+}
+
+/* Fim do dropdown */
+
+.labelCPU {
+    width: 50%;
+    margin-left: 200px;
+    height: 50px;
 }
 
 .container-caixas {
@@ -50,12 +105,13 @@ body {
 
 #content {
     height: 100vh;
-    width: 12%; 
+    width: 12%;
     display: flex;
     flex-direction: column;
     border-right: 3px solid #A8D5A7;
     float: left;
     background-color: black;
+    /* background: linear-gradient(180deg, #ACFFC3 0%, rgba(131, 187, 144, 0.38) 0.01%, rgba(22, 9, 9, 0) 100%),linear-gradient(0deg, #000000, #000000); */
     position: fixed;
 }
 
@@ -65,9 +121,10 @@ body {
 }
 
 #logoName {
-    width: 70%;
+    width: 30%;
     padding: 20px 0px 10px 0;
-    margin-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .font_tamanho {
@@ -77,16 +134,18 @@ body {
 }
 
 .item {
-    padding: 15px 0 15px 0;
+    padding: 15px 0 16px 0px;
     text-align: center;
     cursor: pointer;
-    color: white;;
+    margin-left: auto;
+    align-items: stretch;
+    color: white;
 }
 
 .item_color {
     color: #ffffff;
     filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
-} 
+}
 
 hr {
     border: none;
@@ -116,7 +175,8 @@ hr {
 /* ---header----*/
 
 .header {
-    padding: 20px 1.75% 0 1.75%;
+    padding: 20px 0.75% 0px 4.75%;
+    max-width: 90%;
     margin-bottom: 30px;
 }
 
@@ -128,6 +188,7 @@ hr {
 .header strong {
     font-size: 35px;
     color: white;
+    position: absolute;
 }
 
 #repError {
@@ -143,14 +204,12 @@ hr {
 
 #user {
     float: right;
+    display: flex;
     width: 140px;
     padding-left: 20px;
-    margin: 10px 0 0 0;
 }
 
-
 /* --- /header----*/
-
 
 /*Container de informações*/
 
@@ -158,9 +217,7 @@ hr {
     height: 50px;
     width: 90%;
     color: aliceblue;
-
 }
-
 
 #identCaixas #textCaixas {
     margin-left: 30px;
@@ -177,6 +234,7 @@ hr {
     padding-left: 20px;
     box-sizing: border-box;
     flex-direction: row;
+    overflow-y: hidden;
 }
 
 .box {
@@ -194,6 +252,7 @@ hr {
     background-color: black;
     justify-content: space-evenly;
     border-radius: 18px;
+
 }
 
 .boxContent strong {
@@ -202,7 +261,8 @@ hr {
     height: 30px;
     display: flex;
     flex-direction: row;
-    padding-top: 2px;
+    padding-top: 10px;
+    align-items: center;
 }
 
 .iconesBox {
@@ -223,17 +283,17 @@ hr {
     height: 280px;
 }
 
+
+
 #box2disco {
     width: 45%;
     height: 280px;
-    display: inline-block !important;
-    background-color: #6CF6FF;
 }
 
 #textoDisco a {
     color: rgb(255, 0, 170);
     font-weight: 700;
-    font-size: 20px;
+    font-size: 40px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -241,6 +301,8 @@ hr {
     position: relative;
     top: 60px;
 }
+
+
 
 .BoxTextdisco {
     width: 40%;
@@ -292,14 +354,56 @@ a {
 #box6CPU {
     width: 95%;
     height: 500px;
+
 }
 
+#box6CPU .boxContent {
+    display: inline-block;
+    width: 100%;
+}
+
+.boxDivsgraf {
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+}
+
+.divGraficCPU {
+    height: 400px;
+    width: 100%;
+
+}
+
+.textInfosCPU {
+    height: 400px;
+    width: 100%;
+
+}
+
+.textCPU {
+    height: 100px;
+    width: 100%;
+    display: block;
+    text-align: center;
+
+}
+
+.tittleinfosCPU a {
+    width: 100%;
+    font-weight: 600;
+    color: rgb(9, 198, 245);
+
+
+}
 
 /*---------------- graficos ------------------*/
 
 .chart-cpu {
-    width: 70%;
+    width: 100%;
     height: 400px;
+
 }
 
 
@@ -309,7 +413,7 @@ a {
     font-size: 13px;
 }
 
-.chartDisco{
+.chartDisco {
     width: 60%;
     height: 260px;
     float: right !important;
@@ -318,6 +422,8 @@ a {
     bottom: 80.5%;
 }
 
+/*---------------- / graficos ------------------*/
+
 .esconderRam {
     z-index: 1000;
     height: 30px;
@@ -325,19 +431,16 @@ a {
     background-color: rgb(0, 0, 0);
     position: relative;
     bottom: 20px;
-
 }
 
 .esconderCPU {
     z-index: 1000;
     height: 30px;
-    width: 7%;
+    width: 10%;
     background-color: rgb(0, 0, 0);
     position: relative;
     bottom: 30px;
-
 }
-
 
 .esconderDisco {
     z-index: 1000;
@@ -348,16 +451,14 @@ a {
     bottom: 0px;
     margin: 0%;
     left: 190px;
-
-} 
+}
 
 button {
     background-color: transparent;
     color: aliceblue;
-    outline: none !important;
-    outline-color: transparent;
+    font-size: 0.99rem;
     pointer-events: visible;
-
+    border: none;
 }
 
 footer {
@@ -371,23 +472,28 @@ footer {
         width: 100%;
         height: 280px;
     }
+
     #box2disco {
         width: 100%;
         height: 280px;
         display: block;
     }
+
     #box3Conexao {
         width: 100%;
         height: 280px;
     }
+
     #box5Visaogeral {
         width: 100%;
         height: 280px;
     }
+
     #box6CPU {
         width: 100%;
         height: 520px;
     }
+
     #identCaixas #textCaixas {
         width: 15%;
     }
@@ -398,20 +504,23 @@ footer {
         width: 100%;
         height: 280px;
     }
+
     #box2disco {
         width: 100%;
         height: 280px;
         display: block;
     }
+
     #box3Conexao {
         width: 100%;
         height: 280px;
     }
- 
+
     #box5Visaogeral {
         width: 100%;
         height: 280px;
     }
+
     #box6CPU {
         width: 100%;
         height: 520px;

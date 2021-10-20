@@ -13,15 +13,77 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none !important;
+    color: aliceblue;
+}
+
+button {
+    background-color: transparent;
+    color: aliceblue;
+    font-size: 0.99rem;
+    pointer-events: visible;
+    border: none;
+    cursor: pointer;
+}
+
 #informations {
     margin-left: 13%;
     padding: 0 1.75%;
     height: auto;
-
+    box-sizing: border-box;
 }
 
-/*-----------body------------*/
+/* Começo do menu dropdown */
+.dropbtn {
+    background-color: #4caf4f00;
+    color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    float: right;
+    cursor: pointer;
+}
 
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 200;
+    background-color: #f9f9f96c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.842);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(137, 235, 58)
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e4100;
+    position: relative;
+    top: 10;
+}
+
+/* Fim do dropdown */
+
+/*-----------body------------*/
 
 /* barra de rolagem, scroll */
 
@@ -45,12 +107,13 @@ body {
 /*menu de opçoes lateral */
 #content {
     height: 100vh;
-    width: 12%; 
+    width: 12%;
     display: flex;
     flex-direction: column;
     border-right: 3px solid #A8D5A7;
     float: left;
     background-color: black;
+    /* background: linear-gradient(180deg, #ACFFC3 0%, rgba(131, 187, 144, 0.38) 0.01%, rgba(22, 9, 9, 0) 100%),linear-gradient(0deg, #000000, #000000); */
     position: fixed;
 }
 
@@ -60,8 +123,10 @@ body {
 }
 
 #logoName {
-    width: 80%;
+    width: 30%;
     padding: 20px 0px 10px 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .font_tamanho {
@@ -71,9 +136,11 @@ body {
 }
 
 .item {
-    padding: 15px 0 15px 0;
+    padding: 15px 0 16px 0px;
     text-align: center;
     cursor: pointer;
+    margin-left: auto;
+    align-items: stretch;
     color: white;
 }
 
@@ -92,9 +159,11 @@ hr {
 .item img {
     width: 20px;
 }
+
 .item-img {
     width: 20px;
 }
+
 #logout {
     text-align: center;
 }
@@ -109,41 +178,38 @@ hr {
 
 /* ---header----*/
 .header {
-    padding: 20px 1.75% 0 3.75%;
+    padding: 20px 0.75% 0px 4.75%;
+    max-width: 90%;
     margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
 }
 
 .header img {
-    width: 50px;
+    width: 35px;
     margin-right: 10px;
 }
 
 .header strong {
     font-size: 35px;
-    color: #ffffff;
-    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+    color: white;
+    position: absolute;
 }
 
 #repError {
     background-color: transparent;
     border: 2px #E16666 solid;
     border-radius: 8px;
-    position: relative;
-    right: 25px;
     padding: 0.7% 1.4%;
     color: white;
     cursor: pointer;
+    float: right;
+    margin-top: 20px;
 }
 
 #user {
     float: right;
+    display: flex;
     width: 140px;
     padding-left: 20px;
-    margin: 10px 0 0 0;
 }
 
 /* --- /header----*/
@@ -153,6 +219,7 @@ hr {
 .container-boxes {
     width: 100%;
     margin: auto;
+    padding-top: 70px;
 }
 
 .aux-container-boxes {
@@ -181,7 +248,7 @@ hr {
     width: 270px;
     height: 200px;
     display: flex;
-    box-shadow: 2px 6px 15px 2px rgba(12, 10, 11, 0,8);
+    box-shadow: 2px 6px 15px 2px rgba(12, 10, 11, 0, 8);
 }
 
 .icone {
@@ -240,4 +307,9 @@ hr {
     position: static;
     text-align: center;
     text-transform: uppercase;
+}
+
+footer {
+    height: 40px;
+    width: 100%;
 }
