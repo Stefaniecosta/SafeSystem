@@ -2,7 +2,7 @@
 function chamarGraf1() {
 
     textCaixas.innerHTML = "<b>Caixa: <span>01</span></b>"
-    textoDisco.innerHTML = "<a>Armazenamento: 500GB</a>"
+textoDisco.innerHTML = `<a>500 GB</a><a href="" style="font-size: 17px; color: white;">Armazenamento total</a>`
     TextdispConect.innerHTML = '<a>5 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>3 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
     mudarInfo1.innerHTML = '<a>37%</a>'
@@ -33,7 +33,7 @@ function chamarGraf1() {
 function chamarGraf2() {
 
     textCaixas.innerHTML = "<b>Caixa: <span>02</span></b>"
-    textoDisco.innerHTML = "<a>Armazenamento: 520GB</a>"
+    textoDisco.innerHTML = `<a>500 GB</a><a href="" style="font-size: 17px; color: white;">Armazenamento total</a>`
     TextdispConect.innerHTML = '<a>5 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>0 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
     mudarInfo1.innerHTML = '<a>50%</a>'
@@ -63,7 +63,7 @@ function chamarGraf2() {
 function chamarGraf3() {
 
     textCaixas.innerHTML = "<b>Caixa: <span>03</span></b>"
-    textoDisco.innerHTML = "<a>Armazenamento: 520GB</a>"
+    textoDisco.innerHTML = `<a>500 GB</a><a href="" style="font-size: 17px; color: white;">Armazenamento total</a>` 
     TextdispConect.innerHTML = '<a>5 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>0 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
     mudarInfo1.innerHTML = '<a>22%</a>'
@@ -94,7 +94,7 @@ function chamarGraf3() {
 function chamarGraf4() {
 
     textCaixas.innerHTML = "<b>Caixa: <span>04</span></b>"
-    textoDisco.innerHTML = "<a>Armazenamento: 1TB</a>"
+    textoDisco.innerHTML = `<a>900 GB</a><a href="" style="font-size: 17px; color: white;">Armazenamento total</a>`
 
     TextdispConect.innerHTML = '<a>4 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>1 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
@@ -125,7 +125,7 @@ function chamarGraf4() {
 function chamarGraf5() {
 
     textCaixas.innerHTML = "<b>Caixa: <span>05</span></b>"
-    textoDisco.innerHTML = "<a>Armazenamento: 500GB</a>"
+    textoDisco.innerHTML = `<a>500 GB</a><a href="" style="font-size: 17px; color: white;">Armazenamento total</a>` 
     TextdispConect.innerHTML = '<a>6 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>0 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
     mudarInfo1.innerHTML = '<a>60%</a>'
@@ -155,7 +155,7 @@ function chamarGraf5() {
 function chamarGraf6() {
 
     textCaixas.innerHTML = "<b>Caixa: <span>06</span></b>"
-    textoDisco.innerHTML = "<a>Armazenamento: 520GB</a>"
+    textoDisco.innerHTML = `<a>500 GB</a><a href="" style="font-size: 17px; color: white;">Armazenamento total</a>` 
     TextdispConect.innerHTML = '<a>5 Conectados</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">'
     TextdispEstranhos.innerHTML = ' <a>0 Estranhos</a> <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">'
     mudarInfo1.innerHTML = '<a>20%</a>'
