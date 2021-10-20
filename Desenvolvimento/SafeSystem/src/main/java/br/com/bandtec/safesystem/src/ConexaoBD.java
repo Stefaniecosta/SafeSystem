@@ -29,11 +29,7 @@ public class ConexaoBD {
 //        this.bancoDeDados.setUsername("sa");
 //        this.bancoDeDados.setPassword("");
            
-//        this.bancoDeDados = new BasicDataSource();
-//        this.bancoDeDados.setDriverClassName("com.mysql.cj.jdbc.Driver");
-//        this.bancoDeDados.setUrl("jdbc:mysql://localhost:3306/sfsy");
-//        this.bancoDeDados.setUsername("root");
-//        this.bancoDeDados.setPassword("senha");
+
     }
 
     public BasicDataSource getBancoDeDados() {

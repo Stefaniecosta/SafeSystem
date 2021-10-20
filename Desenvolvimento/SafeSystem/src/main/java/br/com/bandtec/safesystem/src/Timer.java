@@ -15,7 +15,7 @@ public class Timer {
 
     EnviaDados env = new EnviaDados();
 
-    public void caio() {
+    public void repeticao() {
         System.out.println("caioba");
         new java.util.Timer().scheduleAtFixedRate(new TimerTask() {
             @Override

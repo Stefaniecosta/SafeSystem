@@ -19,8 +19,8 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
      */
     public TelaDeRelatorio() {
         initComponents();
-        
-        timer.caio();
+        // Inicia o looping de enviar dados
+        timer.repeticao();
         
         //DADOS DA MÁQUINA
         String ramTaotal = Conversor.formatarBytes(looca.getMemoria().getTotal());
