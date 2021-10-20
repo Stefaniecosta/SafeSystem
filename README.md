@@ -1,4 +1,4 @@
-# ![Alt text](/Site/assets/img/SafeSystem.png?raw=true "Logotipo SafeSystem") ![Alt text](/Site/assets/img/logoVerde.png?raw=true "Logotipo SafeSystem")
+# ![Alt text](/Site/assets/img/SafeSystem.png?raw=true "Logotipo SafeSystem") {width=40px height=400px} 
 
 Repositório destinado ao grupo de Pesquisa & Inovação - 2ADSB <br>
 Grupo 06
@@ -14,7 +14,7 @@ Grupo 06
 
 - @BdFreitas77
 - @Brunozapa
-- @fernanda azevedo
+- @fernanda-azevedo
 - @guscaxile
 - @paulosantos071
 - @Stefaniecosta
