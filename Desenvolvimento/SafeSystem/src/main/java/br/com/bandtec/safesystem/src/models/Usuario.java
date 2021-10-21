@@ -7,25 +7,25 @@ package br.com.bandtec.safesystem.src.models;
 
 public class Usuario {
     
-    private Integer id;
-    private String login;
+    private Integer idUsuario;
+    private String email;
     private String senha;
     private Integer fkAgencia;
 
-    public Integer getId() {
-        return id;
+    public Integer getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdUsuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public String getLogin() {
-        return login;
+    public String getEmail() {
+        return email;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getSenha() {
@@ -44,11 +44,12 @@ public class Usuario {
         this.fkAgencia = fkAgencia;
     }
 
+
     
 
     @Override
     public String toString() {
-        return String.format("\nID: %d\nLOGIN: %s\nSENHA: %s\n",
-                this.id, this.login, this.senha);
+        return String.format("\nID: %d\nEMAIL: %s\nSENHA: %s\n",
+                this.idUsuario, this.email, this.senha);
     }
 }

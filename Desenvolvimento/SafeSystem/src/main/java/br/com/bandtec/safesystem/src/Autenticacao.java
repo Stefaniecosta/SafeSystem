@@ -37,7 +37,7 @@ public class Autenticacao {
      */
     public Boolean AutenticaUsuario() {
 
-        List<Usuario> usuarioAdvancedUse = con.query("SELECT * FROM  usuario WHERE login = ? AND senha = ?", new BeanPropertyRowMapper(Usuario.class), loginRecebido, senhaRecebida);
+        List<Usuario> usuarioAdvancedUse = con.query("SELECT * FROM  usuario WHERE email = ? AND senha = ?", new BeanPropertyRowMapper(Usuario.class), loginRecebido, senhaRecebida);
         
         // verifica se a query retorna algo. Se não ser vazio, o if é executado
         if (!usuarioAdvancedUse.isEmpty()) {
