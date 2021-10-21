@@ -7,10 +7,6 @@ package br.com.bandtec.safesystem.src;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
-/**
- *
- * @author Bruno
- */
 public class ConexaoBD {
 
     private final BasicDataSource bancoDeDados;

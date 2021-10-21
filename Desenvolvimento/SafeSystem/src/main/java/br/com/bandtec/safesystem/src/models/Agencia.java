@@ -5,10 +5,7 @@
  */
 package br.com.bandtec.safesystem.src.models;
 
-/**
- *
- * @author Bruno
- */
+
 public class Agencia {
     private Integer idAgencia;
     private String nomeAgencia;

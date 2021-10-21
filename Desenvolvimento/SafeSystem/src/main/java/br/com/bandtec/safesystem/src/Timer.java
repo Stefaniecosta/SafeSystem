@@ -7,10 +7,7 @@ package br.com.bandtec.safesystem.src;
 
 import java.util.TimerTask;
 
-/**
- *
- * @author Bruno
- */
+
 public class Timer {
 
     EnviaDados env = new EnviaDados();

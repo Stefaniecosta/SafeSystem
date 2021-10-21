@@ -5,10 +5,7 @@
  */
 package br.com.bandtec.safesystem.src;
 
-/**
- *
- * @author Bruno
- */
+
 public class TesteLogin {
     public static void main(String[] args) {
         //Autenticacao aut = new Autenticacao("5678", "123456789", "1");        

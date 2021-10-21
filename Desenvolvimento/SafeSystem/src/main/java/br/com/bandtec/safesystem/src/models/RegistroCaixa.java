@@ -5,10 +5,7 @@
  */
 package br.com.bandtec.safesystem.src.models;
 
-/**
- *
- * @author Bruno
- */
+
 public class RegistroCaixa {
       private Integer idRegistro;
       private Float totalRam;
@@ -94,7 +91,7 @@ public class RegistroCaixa {
 
     @Override
     public String toString() {
-        return "RegistroCaixa{" + "idRegistro=" + idRegistro + ", totalRam=" + totalRam + ", usoRam=" + usoRam + ", totalDisco=" + totalDisco + ", nomeCPU=" + nomeCPU + ", usoCPU=" + usoCPU + ", dispositivoEstranho=" + dispositivoEstranho + ", dataHora=" + dataHora + ", fkMaquina=" + fkMaquina + '}';
+        return "RegistroCaixa{" + "\nidRegistro: " + idRegistro + ", \ntotalRam: " + totalRam + ", \nusoRam: " + usoRam + ", \ntotalDisco: " + totalDisco + ", \nnomeCPU: " + nomeCPU + ", \nusoCPU: " + usoCPU + ", \ndispositivoEstranho: " + dispositivoEstranho + ", \ndataHora: " + dataHora + ", \nfkMaquina: " + fkMaquina + '}';
     }
       
     

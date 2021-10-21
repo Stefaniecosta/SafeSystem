@@ -10,10 +10,7 @@ import java.util.List;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-/**
- *
- * @author Bruno
- */
+
 public class TesteAzure {
 
     public static void main(String[] args) {

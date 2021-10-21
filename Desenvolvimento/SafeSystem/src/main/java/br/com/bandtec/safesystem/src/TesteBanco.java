@@ -14,10 +14,6 @@ import java.util.List;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-/**
- *
- * @author Bruno
- */
 public class TesteBanco {
 
     public static void main(String[] args) {
@@ -48,8 +44,8 @@ public class TesteBanco {
                 + ")";
 
         String tabelaUsuario = "CREATE TABLE usuario ("
-                + "id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,"
-                + "login VARCHAR(255),"
+                + "idUsuario INT PRIMARY KEY AUTO_INCREMENT NOT NULL,"
+                + "email VARCHAR(255),"
                 + "senha VARCHAR(255),"
                 + "fkAgencia INT,"
                 + "FOREIGN KEY (fkAgencia) REFERENCES agencia(idAgencia))";

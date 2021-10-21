@@ -13,10 +13,7 @@ import java.util.Objects;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-/**
- *
- * @author Bruno
- */
+
 public class Autenticacao {
 
     private final String loginRecebido;

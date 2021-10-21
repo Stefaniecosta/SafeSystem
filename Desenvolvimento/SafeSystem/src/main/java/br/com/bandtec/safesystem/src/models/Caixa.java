@@ -1,9 +1,6 @@
 package br.com.bandtec.safesystem.src.models;
 
-/**
- *
- * @author Bruno
- */
+
 public class Caixa {
     private Integer idMaquina;
     private String patrimonio;
