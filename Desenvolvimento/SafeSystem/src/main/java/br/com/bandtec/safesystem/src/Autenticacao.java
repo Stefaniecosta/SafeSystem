@@ -13,7 +13,6 @@ import java.util.Objects;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-
 public class Autenticacao {
 
     private final String loginRecebido;
@@ -35,25 +34,29 @@ public class Autenticacao {
      *
      * @return
      */
-    public Boolean AutenticaUsuario() {
+    public List<Usuario> AutenticaUsuario() {
 
         List<Usuario> usuarioAdvancedUse = con.query("SELECT * FROM  usuario WHERE email = ? AND senha = ?", new BeanPropertyRowMapper(Usuario.class), loginRecebido, senhaRecebida);
-        
+
         // verifica se a query retorna algo. Se não ser vazio, o if é executado
         if (!usuarioAdvancedUse.isEmpty()) {
             Integer agencia = usuarioAdvancedUse.get(0).getFkAgencia();
             // Chama um método para verificar se o caixa consiste com a agencia do usuario
-            return VerificaCaixa(agencia);
+             if(VerificaCaixa(agencia)){
+                 return usuarioAdvancedUse;
+             } else{
+                 usuarioAdvancedUse.clear();
+             }
         }
 
-        return false;
+        return usuarioAdvancedUse;
 
     }
-    
-        public Boolean AutenticaAgencia() {
+
+    public Boolean AutenticaAgencia() {
 
         List<Agencia> agenciaAdvancedUse = con.query("SELECT * FROM  agencia WHERE codigoAgencia = ? AND senha = ?", new BeanPropertyRowMapper(Agencia.class), loginRecebido, senhaRecebida);
-        
+
         // verifica se a query retorna algo. Se não ser vazio, o if é executado
         if (!agenciaAdvancedUse.isEmpty()) {
             Integer agencia = agenciaAdvancedUse.get(0).getIdAgencia();
@@ -70,16 +73,16 @@ public class Autenticacao {
         List<Caixa> caixaConsultaAgencia = con.query("SELECT * FROM maquina m WHERE m.idMaquina = ?", new BeanPropertyRowMapper(Caixa.class), this.codigoRecebido);
 
         // se a query retornar vazia, o acesso é negado (EX: se o caixa não existe no banco)
-        if(caixaConsultaAgencia.isEmpty()){
+        if (caixaConsultaAgencia.isEmpty()) {
             System.out.println("caixa não existe");
             return false;
         }
-        
-        Integer agenciaDoCaixa = caixaConsultaAgencia.get(0).getFkAgencia();     
-        
-        if(Objects.equals(agenciaDoCaixa, idAgencia)){
-           System.out.println("Caixa verificado com sucesso!");
-           return true; 
+
+        Integer agenciaDoCaixa = caixaConsultaAgencia.get(0).getFkAgencia();
+
+        if (Objects.equals(agenciaDoCaixa, idAgencia)) {
+            System.out.println("Caixa verificado com sucesso!");
+            return true;
         }
 
         System.out.println("Verificação do caixa falhou...");

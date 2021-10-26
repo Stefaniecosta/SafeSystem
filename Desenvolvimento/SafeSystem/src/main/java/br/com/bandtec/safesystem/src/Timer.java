@@ -12,12 +12,12 @@ public class Timer {
 
     EnviaDados env = new EnviaDados();
 
-    public void repeticao() {
+    public void repeticao(Integer idCaixa) {
 
         new java.util.Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-                env.insereDados(1);
+                env.insereDados(idCaixa);
             }
         }, 0, 10000);
     }

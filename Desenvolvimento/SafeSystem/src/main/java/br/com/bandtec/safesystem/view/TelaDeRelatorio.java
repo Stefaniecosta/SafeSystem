@@ -6,22 +6,32 @@
 package br.com.bandtec.safesystem.view;
 
 import br.com.bandtec.safesystem.src.Timer;
+import br.com.bandtec.safesystem.src.models.Usuario;
 import com.github.britooo.looca.api.core.Looca;
 import com.github.britooo.looca.api.util.Conversor;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.TimerTask;
 
 public class TelaDeRelatorio extends javax.swing.JFrame {
 
     Looca looca = new Looca();
     Timer timer = new Timer();
+    List<Usuario> listaInfos = new ArrayList();
 
     /**
      * Creates new form TelaDeRelatorio
+     * @param lista
      */
-    public TelaDeRelatorio() {
+    public TelaDeRelatorio(List<Usuario> lista) {
         initComponents();
+        
+        listaInfos.add(lista.get(0));
+        
+        System.out.println(listaInfos.get(0).getEmail());
+        
         // Inicia o looping de enviar dados
-        timer.repeticao();
+        timer.repeticao(listaInfos.get(0).getIdUsuario());
         plot();
 
     }
@@ -538,38 +548,6 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaDeRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaDeRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaDeRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaDeRelatorio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaDeRelatorio().setVisible(true);
-            }
-        });
-
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSair;

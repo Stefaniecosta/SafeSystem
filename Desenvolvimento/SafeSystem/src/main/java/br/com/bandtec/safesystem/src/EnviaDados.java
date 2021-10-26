@@ -5,15 +5,13 @@
  */
 package br.com.bandtec.safesystem.src;
 
-import br.com.bandtec.safesystem.src.models.RegistroCaixa;
 import com.github.britooo.looca.api.core.Looca;
 import com.github.britooo.looca.api.group.discos.DiscosGroup;
 import com.github.britooo.looca.api.group.memoria.Memoria;
 import com.github.britooo.looca.api.group.processador.Processador;
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.github.britooo.looca.api.util.Conversor;
-import java.util.List;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
+
 
 public class EnviaDados {
 
@@ -36,14 +34,9 @@ public class EnviaDados {
 
         Float discoTotal = LongParaFloat(looca.getGrupoDeDiscos().getDiscos().get(0).getTamanho());
 
-        Float floatTeste = Float.parseFloat("1.0");
-
         con.update("INSERT INTO registroMaquina(totalRam, usoRam, totalDisco, dispositivoEstranho, dataHora, nomeCPU, usoCPU,fkMaquina) "
                 + "VALUES (?, ?, ?, ?, GETDATE(), ?, ?, ?);", ramTotal, ramUso, discoTotal, 0,cpuNome, cpuUso, idCaixa);
-        
-        List<RegistroCaixa> registro = con.query("select top 1 * from registroMaquina order by idRegistro desc", new BeanPropertyRowMapper(RegistroCaixa.class));
-        System.out.println(registro);
-        
+             
     }
 
     public double LongParaDouble(Long valorLong) {

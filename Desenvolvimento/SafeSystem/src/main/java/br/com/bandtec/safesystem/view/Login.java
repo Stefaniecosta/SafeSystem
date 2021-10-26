@@ -7,6 +7,7 @@ package br.com.bandtec.safesystem.view;
 
 import br.com.bandtec.safesystem.src.Autenticacao;
 import java.awt.Color;
+import java.util.List;
 
 /**
  *
@@ -157,11 +158,12 @@ public class Login extends javax.swing.JFrame {
         String senha = PasswordField.getText();
         String caixa = CodeField.getText();
         
-        Autenticacao autenticacao = new Autenticacao(login, senha, caixa);
-        TelaDeRelatorio home = new TelaDeRelatorio();
         
-        if (autenticacao.AutenticaAgencia()) {
-            lblResultado.setText("CONECTADO!");            
+        Autenticacao autenticacao = new Autenticacao(login, senha, caixa);
+        List resultadoAutenticacao = autenticacao.AutenticaUsuario();
+        if (!resultadoAutenticacao.isEmpty()) {
+            lblResultado.setText("CONECTADO!");   
+            TelaDeRelatorio home = new TelaDeRelatorio(resultadoAutenticacao);
             home.setVisible(true);
             setVisible(false);
         } else {
