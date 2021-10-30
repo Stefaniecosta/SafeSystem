@@ -30,78 +30,9 @@
                 <a href="visaogeral.html"> VISÃO GERAL </a>
             </div>
 
-            <hr>
+            
 
-            <!-- CAIXA 1 -->
-            <div class="item"  onclick="chamarGraf1()">
-                <img src="../assets/img/caixaIcon.png" alt="">
-                <button >
-                    <span style="cursor: pointer;">CAIXA <strong>01</strong></span>
-                </button>
-            </div>
 
-            <hr>
-
-            <!-- CAIXA 2 -->
-            <div class="item" onclick="chamarGraf2()">
-                <img src="../assets/img/caixaIcon.png" alt="">
-                <button >
-                    <span style="cursor: pointer;">CAIXA <strong>02</strong></span>
-                </button>
-            </div>
-
-            <hr>
-
-            <!-- CAIXA 3 -->
-            <div class="item" onclick="chamarGraf3()" id="divCaixa2">
-                <img src="../assets/img/caixaIcon.png" alt="">
-                <button >
-                    <span style="cursor: pointer;">CAIXA <strong>03</strong></span>
-                </button>
-            </div>
-
-            <hr>
-
-            <!-- CAIXA 4 -->
-            <div class="item" onclick="chamarGraf4()">
-                <img src="../assets/img/caixaIcon.png" alt="">
-                <button >
-                    <span style="cursor: pointer;">CAIXA <strong>04</strong></span>
-                </button>
-            </div>
-
-            <hr>
-
-            <!-- CAIXA 5 -->
-            <div class="item" onclick="chamarGraf5()">
-                <img src="../assets/img/caixaIcon.png" alt="">
-                <button >
-                    <span style="cursor: pointer;">CAIXA <strong>05</strong></span>
-                </button>
-            </div>
-
-            <hr>
-
-            <!-- CAIXA 6 -->
-            <div class="item" onclick="chamarGraf6()">
-                <img src="../assets/img/caixaIcon.png" alt="">
-                <button>
-                    <span style="cursor: pointer;">CAIXA <strong>06</strong></span>
-                </button>
-            </div>
-
-            <hr>
-
-            <div class="item item_color">
-                <span>
-                    Agência
-                </span>
-                <br>
-                <strong>
-                    0222
-                </strong>
-            </div>
-            <hr>
         </div>
 
         <!-- Ícone de SAIR da dashboard -->
@@ -132,10 +63,12 @@
         </header>
 
 
+
+
         <div id="infoBoxes">
             <div id="identCaixas">
                 <div id="textCaixas">
-                    <b>Caixa: <span>01</span></b>
+                    <b>Caixa: <span id="numeroDoCaixa">01</span></b>
                 </div>
             </div>
             <div id="box1ram" class="box">
@@ -143,12 +76,7 @@
                     <strong>
                         <img id="iconesBox" src="../assets/img/dashboard-img/ram-icone.png" alt=""> RAM
                     </strong>
-                    <div id="chartRAM1" class="chartRAM" style="display: block;"></div>
-                    <div id="chartRAM2" class="chartRAM" style="display: none;"></div>
-                    <div id="chartRAM3" class="chartRAM" style="display: none;"></div>
-                    <div id="chartRAM4" class="chartRAM" style="display: none;"></div>
-                    <div id="chartRAM5" class="chartRAM" style="display: none;"></div>
-                    <div id="chartRAM6" class="chartRAM" style="display: none;"></div>
+                    <div id="chartRAM" class="chartRAM" style="display: block;"></div>
                     <div class="esconderRam"></div>
                 </div>
             </div>
@@ -167,12 +95,7 @@
 
                         </div>
                     </div>
-                    <div id="chartdivDisco1" class="chartDisco" style="display: block;"></div>
-                    <div id="chartdivDisco2" class="chartDisco" style="display: none;"></div>
-                    <div id="chartdivDisco3" class="chartDisco" style="display: none;"></div>
-                    <div id="chartdivDisco4" class="chartDisco" style="display: none;"></div>
-                    <div id="chartdivDisco5" class="chartDisco" style="display: none;"></div>
-                    <div id="chartdivDisco6" class="chartDisco" style="display: none;"></div>
+                    <div id="chartdivDisco" class="chartDisco" style="display: block;"></div>
                     <div class="esconderDisco"></div>
 
                 </div>
@@ -215,12 +138,7 @@
                     </div>
                     <div class="boxDivsgraf">
                         <div class="divGraficCPU">
-                            <div id="chartCPU1" class="chart-cpu" style="display: block;"> </div>
-                            <div id="chartCPU2" class="chart-cpu" style="display: none;"></div>
-                            <div id="chartCPU3" class="chart-cpu" style="display: none;"></div>
-                            <div id="chartCPU4" class="chart-cpu" style="display: none;"> </div>
-                            <div id="chartCPU5" class="chart-cpu" style="display: none;"> </div>
-                            <div id="chartCPU6" class="chart-cpu" style="display: none;"></div>
+                            <div id="chartCPU" class="chart-cpu" style="display: block;"> </div>
                             <div class="esconderCPU"></div>
                         </div>
                         <div class="textInfosCPU">
@@ -229,21 +147,22 @@
                                     <a>Utilização atual da cpu:</a>
                                 </div>
                                 <div id="mudarInfo1">
-                                    <a>37%</a>
+                                    <a id="usoDaCpu">37%</a>
+                                    
                                 </div>
                             </div>
                             <div class="textCPU">
                                 <div class="tittleinfosCPU">
                                     <a>Velocidade:</a>
                                 </div>
-                                <a>2.66 GHz</a>
+                                <a id="velocidadeDaCpu">2.66 GHz</a>
                             </div>
                             <div class="textCPU">
                                 <div class="tittleinfosCPU">
                                     <a>Threads:</a>
                                 </div>
                                 <div id="mudarInfo3">
-                                    <a>1200</a>
+                                    <a id="quantidadeDeThreads">1200</a>
                                 </div>
                             </div>
                             <div class="textCPU">
@@ -251,7 +170,7 @@
                                     <a>Processador:</a>
                                 </div>
                                 <div id="mudarInfo4">
-                                    <a>Ryzen i5 2500</a>
+                                    <a id="nomeProcessador">Ryzen i5 2500</a>
                                 </div>
                             </div>
                         </div>
@@ -269,9 +188,1117 @@
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js">
 </script>
 <script src="../scripts/graficosDashboard/chamarGraficos.js"></script>
-<script src="../scripts/graficosDashboard/graficosCpu.js"></script>
+<!-- <script src="../scripts/graficosDashboard/graficosCpu.js"></script>
 <script src="../scripts/graficosDashboard/graficosDisco.js"></script>
-<script src="../scripts/graficosDashboard/graficosRam.js"></script>
+<script src="../scripts/graficosDashboard/graficosRam.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
+<script>
+
+    function setNumeroCaixaAutomatico()
+    {
+        numeroDoCaixa.innerHTML = '0'+sessionStorage.getItem('idCaixaArmazenado');
+    }
+
+    setNumeroCaixaAutomatico();
+    
+    let quantidadeDeCaixas = 0;
+
+    let idDasMaquinas = [];
+
+    function setarNumeroCaixa(numero)
+    {
+        numeroDoCaixa.innerHTML = '0'+numero;
+    }
+
+    pegarQuantidadeCaixas()
+
+    function plotarCaixasNaTela()
+    {
+        options.innerHTML += `<hr>`;
+        for (let index = 0; index < quantidadeDeCaixas; index++) {
+            options.innerHTML +=
+            `
+
+            <div onclick="chamarGraf(${idDasMaquinas[index]}), setarNumeroCaixa(${index+1})" class="item" style="cursor: pointer;">
+                <img src="../assets/img/caixaIcon.png" alt="">
+                
+                    
+                       <span style="cursor: pointer;">CAIXA <strong id="numeroCaixa">${index+1}</strong></span> 
+                    </button>
+                
+            </div>
+
+            <hr>
+            `;
+        }
+        options.innerHTML +=
+        `
+        <div class="item item_color">
+                <span>
+                    Agência
+                </span>
+                <br>
+                <strong>
+                    0222
+                </strong>
+            </div>
+            <hr>
+        `;
+    }
+
+
+
+    function pegarQuantidadeCaixas() 
+    {
+
+        const idAgencia = sessionStorage.getItem('idAgencia');
+        
+            fetch(`/agencias/obterQuantidadeDeCaixas/${idAgencia}`, {
+                method: "post",
+            }).then(resposta => {
+    
+                if (resposta.ok) {
+    
+                    resposta.json().then(json => {
+
+                        console.log(`Quantidade de caixas: ${json.length}`);
+                        quantidadeDeCaixas = json.length;
+
+                        for (let index = 0; index < json.length; index++) {
+                            idDasMaquinas.push(json[index].idMaquina);
+                        }
+
+                        plotarCaixasNaTela();
+                    });
+    
+                } else {
+    
+                    console.log('Erro de login!');
+    
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        alert(texto);
+                    });
+                }
+            });
+            return false;
+       
+    }
+
+  
+    let totalRam;
+let usoRam;
+let totalDisco;
+let dispositivoEstranho;
+let nomeCpu;
+let usoCpu;
+
+
+function chamarGraf(idMaquina)
+{
+    zerarGraficoCpu();
+    zerarGraficoRam();
+    zerarGraficoDisco();
+    
+    clearInterval(timer);
+    timer = setInterval(() => {
+        fetch(`/agencias/obterRegistrosDasMaquinas/${idMaquina}`, {
+            method: "post",
+        }).then(resposta => {
+    
+            if (resposta.ok) {
+    
+              resposta.json().then(json => {
+    
+                    totalRam = json[0].totalRam;
+                    usoRam = json[0].usoRam;
+                    totalDisco = json[0].totalDisco;
+                    dispositivoEstranho = json[0].dispositivoEstranho;
+                    nomeCpu = json[0].nomeCPU;
+                    usoCpu = json[0].usoCPU;
+
+                    usoDaCpu.innerHTML = usoCpu;
+                    velocidadeDaCpu.innerHTML = "A definir";
+                    quantidadeDeThreads.innerHTML = "A definir";
+                    nomeProcessador.innerHTML = nomeCpu;
+
+                    plotarGraficoRam(); 
+                    plotarGraficoDisco();
+                    plotarGraficoCpu();
+
+                    console.log(json[0]);
+
+                    
+    
+                });
+    
+            } else {
+    
+                console.log('Erro ao obter registro');
+    
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    alert(texto);
+                    clearInterval(timer);
+                });
+            }
+        });
+        return false;
+    }, 5000);
+    
+}
+
+
+
+let idMaquinaPrimeiraVez = sessionStorage.getItem('idMaquina');
+
+let timer;
+
+function chamarGrafPelaPrimeiraVez(idMaquinaPrimeiraVez)
+{
+        fetch(`/agencias/obterRegistrosDasMaquinas/${idMaquinaPrimeiraVez}`, {
+            method: "post",
+        }).then(resposta => {
+    
+            if (resposta.ok) {
+    
+              resposta.json().then(json => {
+    
+                    // totalRam = json[0].totalRam;
+                    // usoRam = json[0].usoRam;
+                    // totalDisco = json[0].totalDisco;
+                    // dispositivoEstranho = json[0].dispositivoEstranho;
+                    // nomeCpu = json[0].nomeCPU;
+                    // usoCpu = json[0].usoCPU;
+
+                    // usoDaCpu.innerHTML = usoCpu;
+                    // velocidadeDaCpu.innerHTML = "A definir";
+                    // quantidadeDeThreads.innerHTML = "A definir";
+                    // nomeProcessador.innerHTML = nomeCpu;
+    
+                    // console.log(json[0]);
+
+                    
+                       chamarGraf(idMaquinaPrimeiraVez); 
+                   
+    
+                });
+    
+            } else {
+    
+                console.log('Erro ao obter registro');
+    
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    alert(texto);
+                });
+            }
+        });
+        return false;
+    
+}
+
+
+
+chamarGrafPelaPrimeiraVez(idMaquinaPrimeiraVez);
+
+setTimeout(() => {
+   plotarGraficoRam(); 
+   plotarGraficoDisco();
+   plotarGraficoCpu();
+}, 500);
+
+
+
+
+function plotarGraficoRam()
+{
+
+
+
+am4core.ready(function () {
+
+    // Themes begin
+    am4core.useTheme(am4themes_dark);
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    // Create chart instance
+
+
+    var chart = am4core.create("chartRAM", am4charts.PieChart);
+
+    // Set data
+    var selected;
+    var types = [{
+        type: "Utilizado",
+        percent: usoRam,
+        color: chart.colors.getIndex(0),
+        // subs: [{
+        //     type: "Oil",
+        //     percent: 15
+        // }, {
+        //     type: "Coal",
+        //     percent: 35
+        // }, {
+        //     type: "Nuclear",
+        //     percent: 20
+        // }]
+    }, {
+        type: "Disponivel",
+        percent: totalRam,
+        color: chart.colors.getIndex(1),
+        // subs: [{
+        //     type: "Hydro",
+        //     percent: 15
+        // }, {
+        //     type: "Wind",
+        //     percent: 10
+        // }, {
+        //     type: "Other",
+        //     percent: 5
+        // }]
+    }];
+
+    // Add data
+    chart.data = generateChartData();
+
+    // Add and configure Series
+    var pieSeries = chart.series.push(new am4charts.PieSeries());
+    pieSeries.dataFields.value = "percent";
+    pieSeries.dataFields.category = "type";
+    pieSeries.slices.template.propertyFields.fill = "color";
+    pieSeries.slices.template.propertyFields.isActive = "pulled";
+    pieSeries.slices.template.strokeWidth = 0;
+
+    function generateChartData() {
+        var chartData = [];
+        for (var i = 0; i < types.length; i++) {
+            if (i == selected) {
+                for (var x = 0; x < types[i].subs.length; x++) {
+                    chartData.push({
+                        type: types[i].subs[x].type,
+                        percent: types[i].subs[x].percent,
+                        color: types[i].color,
+                        pulled: true
+                    });
+                }
+            } else {
+                chartData.push({
+                    type: types[i].type,
+                    percent: types[i].percent,
+                    color: types[i].color,
+                    id: i
+                });
+            }
+        }
+        return chartData;
+    }
+
+    pieSeries.slices.template.events.on("hit", function (event) {
+        if (event.target.dataItem.dataContext.id != undefined) {
+            selected = event.target.dataItem.dataContext.id;
+        } else {
+            selected = undefined;
+        }
+        chart.data = generateChartData();
+    });
+
+}); // end am4core.ready()
+
+}
+
+
+function plotarGraficoDisco()
+{
+
+
+
+am4core.ready(function () {
+
+    // Themes begin
+    am4core.useTheme(am4themes_dark);
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    // Create chart instance
+    var chart = am4core.create("chartdivDisco", am4charts.PieChart);
+    chart.startAngle = 160;
+    chart.endAngle = 380;
+
+    // Let's cut a hole in our Pie chart the size of 40% the radius
+    chart.innerRadius = am4core.percent(40);
+
+    // Add data
+    chart.data = [
+        {
+            "country": "Livre",
+            "litres": 100,
+            "bottles": 100
+        },
+
+        //   {  "country": "Ireland",
+        //     "litres": 201.1,
+        //     "bottles": 785
+        // }, {
+        //     "country": "Germany",
+        //     "litres": 165.8,
+        //     "bottles": 255
+        // 
+        {
+            "country": "Em uso",
+            "litres": 400,
+            "bottles": 400
+        }
+        // , {
+        //     "country": "Austria",
+        //     "litres": 128.3,
+        //     "bottles": 332
+        // }, {
+        //     "country": "UK",
+        //     "litres": 99,
+        //     "bottles": 150
+        // }, {
+        //     "country": "Belgium",
+        //     "litres": 60,
+        //     "bottles": 178
+        // }, {
+        //     "country": "The Netherlands",
+        //     "litres": 50,
+        //     "bottles": 50
+        // }
+    ];
+
+    // Add and configure Series
+    var pieSeries = chart.series.push(new am4charts.PieSeries());
+    pieSeries.dataFields.value = "litres";
+    pieSeries.dataFields.category = "country";
+    pieSeries.slices.template.stroke = new am4core.InterfaceColorSet().getFor("background");
+    pieSeries.slices.template.strokeWidth = 1;
+    pieSeries.slices.template.strokeOpacity = 1;
+
+    // Disabling labels and ticks on inner circle
+    pieSeries.labels.template.disabled = true;
+    pieSeries.ticks.template.disabled = true;
+
+    // Disable sliding out of slices
+    pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0;
+    pieSeries.slices.template.states.getKey("hover").properties.scale = 1;
+    pieSeries.radius = am4core.percent(40);
+    pieSeries.innerRadius = am4core.percent(30);
+
+    var cs = pieSeries.colors;
+    cs.list = [am4core.color(new am4core.ColorSet().getIndex(0))];
+
+    cs.stepOptions = {
+        lightness: -0.05,
+        hue: 0
+    };
+    cs.wrap = false;
+
+
+    // Add second series
+    var pieSeries2 = chart.series.push(new am4charts.PieSeries());
+    pieSeries2.dataFields.value = "bottles";
+    pieSeries2.dataFields.category = "country";
+    pieSeries2.slices.template.stroke = new am4core.InterfaceColorSet().getFor("background");
+    pieSeries2.slices.template.strokeWidth = 1;
+    pieSeries2.slices.template.strokeOpacity = 1;
+    pieSeries2.slices.template.states.getKey("hover").properties.shiftRadius = 0.05;
+    pieSeries2.slices.template.states.getKey("hover").properties.scale = 1;
+
+    pieSeries2.labels.template.disabled = true;
+    pieSeries2.ticks.template.disabled = true;
+
+
+    var label = chart.seriesContainer.createChild(am4core.Label);
+    label.textAlign = "middle";
+    label.horizontalCenter = "middle";
+    label.verticalCenter = "middle";
+    label.adapter.add("text", function (text, target) {
+        return "[font-size:18px]total[/]:\n[bold font-size:30px]" + pieSeries.dataItem.values.value.sum + "[/]";
+    })
+
+}); // end am4core.ready()
+
+
+
+}
+
+function plotarGraficoCpu()
+{
+  
+
+
+am4core.ready(function () {
+
+  // Themes begin
+  am4core.useTheme(am4themes_dark);
+  am4core.useTheme(am4themes_animated);
+  // Themes end
+
+  // Create chart instance
+  var chart = am4core.create("chartCPU", am4charts.XYChart);
+
+  // Add data
+  chart.data = [{
+    "date": "2021-09-01",
+    "value": 42
+  }, {
+    "date": "2021-09-02",
+    "value": 35
+  }, {
+    "date": "2021-09-03",
+    "value": 31
+  }, {
+    "date": "2021-09-04",
+    "value": 47
+  }, {
+    "date": "2021-09-05",
+    "value": 52
+  }, {
+    "date": "2021-09-06",
+    "value": 46
+  }, {
+    "date": "2021-09-07",
+    "value": 41
+  }, {
+    "date": "2021-09-08",
+    "value": 43
+  }, {
+    "date": "2021-09-09",
+    "value": 40
+  }, {
+    "date": "2021-09-10",
+    "value": 39
+  }, {
+    "date": "2021-09-11",
+    "value": 34
+  }, {
+    "date": "2021-09-12",
+    "value": 29
+  }, {
+    "date": "2021-09-13",
+    "value": 34
+  }, {
+    "date": "2021-09-14",
+    "value": 37
+  }, {
+    "date": "2021-09-15",
+    "value": 42
+  }, {
+    "date": "2021-09-16",
+    "value": 49
+  }, {
+    "date": "2021-09-17",
+    "value": 46
+  }, {
+    "date": "2021-09-18",
+    "value": 47
+  }, {
+    "date": "2021-09-19",
+    "value": 55
+  }, {
+    "date": "2021-09-20",
+    "value": 59
+  }, {
+    "date": "2021-09-21",
+    "value": 58
+  }, {
+    "date": "2021-09-22",
+    "value": 57
+  }, {
+    "date": "2021-09-23",
+    "value": 61
+  }, {
+    "date": "2021-09-24",
+    "value": 59
+  }, {
+    "date": "2021-09-25",
+    "value": 67
+  }, {
+    "date": "2021-09-26",
+    "value": 65
+  }, {
+    "date": "2021-09-27",
+    "value": 61
+  }, {
+    "date": "2021-09-28",
+    "value": 66
+  }, {
+    "date": "2021-09-29",
+    "value": 69
+  }, {
+    "date": "2021-09-30",
+    "value": 71
+  }, {
+    "date": "2021-10-01",
+    "value": 67
+  }, {
+    "date": "2021-10-02",
+    "value": 63
+  }, {
+    "date": "2021-10-03",
+    "value": 46
+  }, {
+    "date": "2021-10-04",
+    "value": 32
+  }, {
+    "date": "2021-10-05",
+    "value": 21
+  }, {
+    "date": "2021-10-06",
+    "value": 18
+  }, {
+    "date": "2021-10-07",
+    "value": 21
+  }, {
+    "date": "2021-10-08",
+    "value": 28
+  }, {
+    "date": "2021-10-09",
+    "value": 27
+  }, {
+    "date": "2021-10-10",
+    "value": 36
+  }, {
+    "date": "2021-10-11",
+    "value": 33
+  }, {
+    "date": "2021-10-12",
+    "value": 31
+  }, {
+    "date": "2021-10-13",
+    "value": 30
+  }, {
+    "date": "2021-10-14",
+    "value": 34
+  }, {
+    "date": "2021-10-15",
+    "value": 38
+  }, {
+    "date": "2021-10-16",
+    "value": 37
+  }, {
+    "date": "2021-10-17",
+    "value": 44
+  }, {
+    "date": "2021-10-18",
+    "value": 49
+  }, {
+    "date": "2021-10-19",
+    "value": 53
+  }, {
+    "date": "2021-10-20",
+    "value": 57
+  }, {
+    "date": "2021-10-21",
+    "value": 60
+  }
+  ];
+
+  // Set input format for the dates
+  chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
+
+  // Create axes
+  var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+  var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+  // Create series
+  var series = chart.series.push(new am4charts.LineSeries());
+  series.dataFields.valueY = "value";
+  series.dataFields.dateX = "date";
+  series.tooltipText = "Uso da cpu: {value}%"
+  series.strokeWidth = 2;
+  series.minBulletDistance = 15;
+
+  // Drop-shaped tooltips
+  series.tooltip.background.cornerRadius = 20;
+  series.tooltip.background.strokeOpacity = 0;
+  series.tooltip.pointerOrientation = "vertical";
+  series.tooltip.label.minWidth = 40;
+  series.tooltip.label.minHeight = 20;
+  series.tooltip.label.textAlign = "middle";
+  series.tooltip.label.textValign = "middle";
+
+  // Make bullets grow on hover
+  var bullet = series.bullets.push(new am4charts.CircleBullet());
+  bullet.circle.strokeWidth = 2;
+  bullet.circle.radius = 4;
+  bullet.circle.fill = am4core.color("#fff");
+
+  var bullethover = bullet.states.create("hover");
+  bullethover.properties.scale = 1.3;
+
+  // Make a panning cursor
+  chart.cursor = new am4charts.XYCursor();
+  chart.cursor.behavior = "panXY";
+  chart.cursor.xAxis = dateAxis;
+  chart.cursor.snapToSeries = series;
+
+  // Create vertical scrollbar and place it before the value axis
+  chart.scrollbarY = new am4core.Scrollbar();
+  chart.scrollbarY.parent = chart.leftAxesContainer;
+  chart.scrollbarY.toBack();
+
+  // Create a horizontal scrollbar with previe and place it underneath the date axis
+  chart.scrollbarX = new am4charts.XYChartScrollbar();
+  chart.scrollbarX.series.push(series);
+  chart.scrollbarX.parent = chart.bottomAxesContainer;
+
+  dateAxis.start = 0.79;
+  dateAxis.keepSelection = true;
+
+
+}); // end am4core.ready()
+
+}
+
+function zerarGraficoCpu()
+{
+  
+
+
+am4core.ready(function () {
+
+  // Themes begin
+  am4core.useTheme(am4themes_dark);
+  am4core.useTheme(am4themes_animated);
+  // Themes end
+
+  // Create chart instance
+  var chart = am4core.create("chartCPU", am4charts.XYChart);
+
+  // Add data
+  chart.data = [{
+    "date": "2021-09-01",
+    "value": 42
+  }, {
+    "date": "2021-09-02",
+    "value": 35
+  }, {
+    "date": "2021-09-03",
+    "value": 31
+  }, {
+    "date": "2021-09-04",
+    "value": 47
+  }, {
+    "date": "2021-09-05",
+    "value": 52
+  }, {
+    "date": "2021-09-06",
+    "value": 46
+  }, {
+    "date": "2021-09-07",
+    "value": 41
+  }, {
+    "date": "2021-09-08",
+    "value": 43
+  }, {
+    "date": "2021-09-09",
+    "value": 40
+  }, {
+    "date": "2021-09-10",
+    "value": 39
+  }, {
+    "date": "2021-09-11",
+    "value": 34
+  }, {
+    "date": "2021-09-12",
+    "value": 29
+  }, {
+    "date": "2021-09-13",
+    "value": 34
+  }, {
+    "date": "2021-09-14",
+    "value": 37
+  }, {
+    "date": "2021-09-15",
+    "value": 42
+  }, {
+    "date": "2021-09-16",
+    "value": 49
+  }, {
+    "date": "2021-09-17",
+    "value": 46
+  }, {
+    "date": "2021-09-18",
+    "value": 47
+  }, {
+    "date": "2021-09-19",
+    "value": 55
+  }, {
+    "date": "2021-09-20",
+    "value": 59
+  }, {
+    "date": "2021-09-21",
+    "value": 58
+  }, {
+    "date": "2021-09-22",
+    "value": 57
+  }, {
+    "date": "2021-09-23",
+    "value": 61
+  }, {
+    "date": "2021-09-24",
+    "value": 59
+  }, {
+    "date": "2021-09-25",
+    "value": 67
+  }, {
+    "date": "2021-09-26",
+    "value": 65
+  }, {
+    "date": "2021-09-27",
+    "value": 61
+  }, {
+    "date": "2021-09-28",
+    "value": 66
+  }, {
+    "date": "2021-09-29",
+    "value": 69
+  }, {
+    "date": "2021-09-30",
+    "value": 71
+  }, {
+    "date": "2021-10-01",
+    "value": 67
+  }, {
+    "date": "2021-10-02",
+    "value": 63
+  }, {
+    "date": "2021-10-03",
+    "value": 46
+  }, {
+    "date": "2021-10-04",
+    "value": 32
+  }, {
+    "date": "2021-10-05",
+    "value": 21
+  }, {
+    "date": "2021-10-06",
+    "value": 18
+  }, {
+    "date": "2021-10-07",
+    "value": 21
+  }, {
+    "date": "2021-10-08",
+    "value": 28
+  }, {
+    "date": "2021-10-09",
+    "value": 27
+  }, {
+    "date": "2021-10-10",
+    "value": 36
+  }, {
+    "date": "2021-10-11",
+    "value": 33
+  }, {
+    "date": "2021-10-12",
+    "value": 31
+  }, {
+    "date": "2021-10-13",
+    "value": 30
+  }, {
+    "date": "2021-10-14",
+    "value": 34
+  }, {
+    "date": "2021-10-15",
+    "value": 38
+  }, {
+    "date": "2021-10-16",
+    "value": 37
+  }, {
+    "date": "2021-10-17",
+    "value": 44
+  }, {
+    "date": "2021-10-18",
+    "value": 49
+  }, {
+    "date": "2021-10-19",
+    "value": 53
+  }, {
+    "date": "2021-10-20",
+    "value": 57
+  }, {
+    "date": "2021-10-21",
+    "value": 60
+  }
+  ];
+
+  // Set input format for the dates
+  chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
+
+  // Create axes
+  var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+  var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+  // Create series
+  var series = chart.series.push(new am4charts.LineSeries());
+  series.dataFields.valueY = "value";
+  series.dataFields.dateX = "date";
+  series.tooltipText = "Uso da cpu: {value}%"
+  series.strokeWidth = 2;
+  series.minBulletDistance = 15;
+
+  // Drop-shaped tooltips
+  series.tooltip.background.cornerRadius = 20;
+  series.tooltip.background.strokeOpacity = 0;
+  series.tooltip.pointerOrientation = "vertical";
+  series.tooltip.label.minWidth = 40;
+  series.tooltip.label.minHeight = 20;
+  series.tooltip.label.textAlign = "middle";
+  series.tooltip.label.textValign = "middle";
+
+  // Make bullets grow on hover
+  var bullet = series.bullets.push(new am4charts.CircleBullet());
+  bullet.circle.strokeWidth = 2;
+  bullet.circle.radius = 4;
+  bullet.circle.fill = am4core.color("#fff");
+
+  var bullethover = bullet.states.create("hover");
+  bullethover.properties.scale = 1.3;
+
+  // Make a panning cursor
+  chart.cursor = new am4charts.XYCursor();
+  chart.cursor.behavior = "panXY";
+  chart.cursor.xAxis = dateAxis;
+  chart.cursor.snapToSeries = series;
+
+  // Create vertical scrollbar and place it before the value axis
+  chart.scrollbarY = new am4core.Scrollbar();
+  chart.scrollbarY.parent = chart.leftAxesContainer;
+  chart.scrollbarY.toBack();
+
+  // Create a horizontal scrollbar with previe and place it underneath the date axis
+  chart.scrollbarX = new am4charts.XYChartScrollbar();
+  chart.scrollbarX.series.push(series);
+  chart.scrollbarX.parent = chart.bottomAxesContainer;
+
+  dateAxis.start = 0.79;
+  dateAxis.keepSelection = true;
+
+
+}); // end am4core.ready()
+
+}
+
+function zerarGraficoDisco()
+{
+
+
+
+am4core.ready(function () {
+
+    // Themes begin
+    am4core.useTheme(am4themes_dark);
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    // Create chart instance
+    var chart = am4core.create("chartdivDisco", am4charts.PieChart);
+    chart.startAngle = 0;
+    chart.endAngle = 0;
+
+    // Let's cut a hole in our Pie chart the size of 40% the radius
+    chart.innerRadius = am4core.percent(40);
+
+    // Add data
+    chart.data = [
+        {
+            "country": "Livre",
+            "litres": 0,
+            "bottles": 0
+        },
+
+        //   {  "country": "Ireland",
+        //     "litres": 201.1,
+        //     "bottles": 785
+        // }, {
+        //     "country": "Germany",
+        //     "litres": 165.8,
+        //     "bottles": 255
+        // 
+        {
+            "country": "Em uso",
+            "litres": 400,
+            "bottles": 400
+        }
+        // , {
+        //     "country": "Austria",
+        //     "litres": 128.3,
+        //     "bottles": 332
+        // }, {
+        //     "country": "UK",
+        //     "litres": 99,
+        //     "bottles": 150
+        // }, {
+        //     "country": "Belgium",
+        //     "litres": 60,
+        //     "bottles": 178
+        // }, {
+        //     "country": "The Netherlands",
+        //     "litres": 50,
+        //     "bottles": 50
+        // }
+    ];
+
+    // Add and configure Series
+    var pieSeries = chart.series.push(new am4charts.PieSeries());
+    pieSeries.dataFields.value = "litres";
+    pieSeries.dataFields.category = "country";
+    pieSeries.slices.template.stroke = new am4core.InterfaceColorSet().getFor("background");
+    pieSeries.slices.template.strokeWidth = 1;
+    pieSeries.slices.template.strokeOpacity = 1;
+
+    // Disabling labels and ticks on inner circle
+    pieSeries.labels.template.disabled = true;
+    pieSeries.ticks.template.disabled = true;
+
+    // Disable sliding out of slices
+    pieSeries.slices.template.states.getKey("hover").properties.shiftRadius = 0;
+    pieSeries.slices.template.states.getKey("hover").properties.scale = 1;
+    pieSeries.radius = am4core.percent(40);
+    pieSeries.innerRadius = am4core.percent(30);
+
+    var cs = pieSeries.colors;
+    cs.list = [am4core.color(new am4core.ColorSet().getIndex(0))];
+
+    cs.stepOptions = {
+        lightness: -0.05,
+        hue: 0
+    };
+    cs.wrap = false;
+
+
+    // Add second series
+    var pieSeries2 = chart.series.push(new am4charts.PieSeries());
+    pieSeries2.dataFields.value = "bottles";
+    pieSeries2.dataFields.category = "country";
+    pieSeries2.slices.template.stroke = new am4core.InterfaceColorSet().getFor("background");
+    pieSeries2.slices.template.strokeWidth = 1;
+    pieSeries2.slices.template.strokeOpacity = 1;
+    pieSeries2.slices.template.states.getKey("hover").properties.shiftRadius = 0.05;
+    pieSeries2.slices.template.states.getKey("hover").properties.scale = 1;
+
+    pieSeries2.labels.template.disabled = true;
+    pieSeries2.ticks.template.disabled = true;
+
+
+    var label = chart.seriesContainer.createChild(am4core.Label);
+    label.textAlign = "middle";
+    label.horizontalCenter = "middle";
+    label.verticalCenter = "middle";
+    label.adapter.add("text", function (text, target) {
+        return "[font-size:18px]total[/]:\n[bold font-size:30px]" + pieSeries.dataItem.values.value.sum + "[/]";
+    })
+
+}); // end am4core.ready()
+
+
+
+}
+
+function zerarGraficoRam()
+{
+
+
+
+am4core.ready(function () {
+
+    // Themes begin
+    am4core.useTheme(am4themes_dark);
+    am4core.useTheme(am4themes_animated);
+    // Themes end
+
+    // Create chart instance
+
+
+    var chart = am4core.create("chartRAM", am4charts.PieChart);
+
+    // Set data
+    var selected;
+    var types = [{
+        type: "Utilizado",
+        percent: 0,
+        color: chart.colors.getIndex(0),
+        // subs: [{
+        //     type: "Oil",
+        //     percent: 15
+        // }, {
+        //     type: "Coal",
+        //     percent: 35
+        // }, {
+        //     type: "Nuclear",
+        //     percent: 20
+        // }]
+    }, {
+        type: "Disponivel",
+        percent: 0,
+        color: chart.colors.getIndex(1),
+        // subs: [{
+        //     type: "Hydro",
+        //     percent: 15
+        // }, {
+        //     type: "Wind",
+        //     percent: 10
+        // }, {
+        //     type: "Other",
+        //     percent: 5
+        // }]
+    }];
+
+    // Add data
+    chart.data = generateChartData();
+
+    // Add and configure Series
+    var pieSeries = chart.series.push(new am4charts.PieSeries());
+    pieSeries.dataFields.value = "percent";
+    pieSeries.dataFields.category = "type";
+    pieSeries.slices.template.propertyFields.fill = "color";
+    pieSeries.slices.template.propertyFields.isActive = "pulled";
+    pieSeries.slices.template.strokeWidth = 0;
+
+    function generateChartData() {
+        var chartData = [];
+        for (var i = 0; i < types.length; i++) {
+            if (i == selected) {
+                for (var x = 0; x < types[i].subs.length; x++) {
+                    chartData.push({
+                        type: types[i].subs[x].type,
+                        percent: types[i].subs[x].percent,
+                        color: types[i].color,
+                        pulled: true
+                    });
+                }
+            } else {
+                chartData.push({
+                    type: types[i].type,
+                    percent: types[i].percent,
+                    color: types[i].color,
+                    id: i
+                });
+            }
+        }
+        return chartData;
+    }
+
+    pieSeries.slices.template.events.on("hit", function (event) {
+        if (event.target.dataItem.dataContext.id != undefined) {
+            selected = event.target.dataItem.dataContext.id;
+        } else {
+            selected = undefined;
+        }
+        chart.data = generateChartData();
+    });
+
+}); // end am4core.ready()
+
+}
+
+
+
+</script>
 ​
