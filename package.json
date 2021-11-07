@@ -1,0 +1,10 @@
+{
+    "name": "pi-ads-2020-2",
+    "version": "0.0.1",
+    "private" :"true",
+    "scripts": {
+        "start": "node ./API-projeto-site/bin/www",
+        "postinstall": "cd API-projeto-site && npm install"
+
+    }
+}
