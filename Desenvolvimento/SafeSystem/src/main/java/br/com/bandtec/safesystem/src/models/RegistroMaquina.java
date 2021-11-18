@@ -6,7 +6,7 @@
 package br.com.bandtec.safesystem.src.models;
 
 
-public class RegistroCaixa {
+public class RegistroMaquina {
       private Integer idRegistro;
       private Float totalRam;
       private Float usoRam;

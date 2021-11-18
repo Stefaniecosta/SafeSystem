@@ -8,8 +8,8 @@ package br.com.bandtec.safesystem.src;
 import br.com.bandtec.safesystem.src.models.Banco;
 import br.com.bandtec.safesystem.src.models.Agencia;
 import br.com.bandtec.safesystem.src.models.Usuario;
-import br.com.bandtec.safesystem.src.models.Caixa;
-import br.com.bandtec.safesystem.src.models.RegistroCaixa;
+import br.com.bandtec.safesystem.src.models.Maquina;
+import br.com.bandtec.safesystem.src.models.RegistroMaquina;
 import java.util.List;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -101,10 +101,10 @@ public class TesteBanco {
         List<Usuario> usuarioAdvancedUse = con.query("SELECT * FROM  usuario WHERE login = ? AND senha = ?", new BeanPropertyRowMapper(Usuario.class), "login", "1234");
         System.out.println("select usuario teste " + usuarioAdvancedUse.get(0));
 
-        List<Caixa> caixaConsultaAgencia = con.query("SELECT * FROM maquina c WHERE c.fkAgencia = ?", new BeanPropertyRowMapper(Caixa.class), 100);
+        List<Maquina> caixaConsultaAgencia = con.query("SELECT * FROM maquina c WHERE c.fkAgencia = ?", new BeanPropertyRowMapper(Maquina.class), 100);
         System.out.println("select caixa teste" + caixaConsultaAgencia.get(0));
 
-        List<RegistroCaixa> registro = con.query("select * from registroMaquina", new BeanPropertyRowMapper(RegistroCaixa.class));
+        List<RegistroMaquina> registro = con.query("select * from registroMaquina", new BeanPropertyRowMapper(RegistroMaquina.class));
         System.out.println(registro);
 
     }
