@@ -67,6 +67,37 @@ router.post('/obterQuantidadeDeCaixas/:idAgencia', function(req, res, next) {
 	
 });
 
+/* Obter dados dos caixas visao geral*/
+router.post('/obterDados/:idAgencia', function(req, res, next) {
+
+	let idAgencia = req.params.idAgencia;
+	
+	console.log(`Obendo os registros da Agência ${idAgencia}`);
+
+	let instrucaoSql = `select * from maquina where fkAgencia = ${idAgencia}`;
+
+	console.log(instrucaoSql);
+	
+	sequelize.query(instrucaoSql, {
+		type: sequelize.QueryTypes.SELECT
+	}).then(resultado => {
+		console.log(`Resultado encontrado: ${resultado}`);
+
+			if (resultado.length > 0) {
+				res.json(resultado);
+			} else {
+				res.status(403).send('Erro ao obter os registros!');
+			}
+		
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+  	});
+	
+	
+});
+
+
 /* Obter registros das máquinas */
 router.post('/obterRegistrosDasMaquinas/:idMaquina', function(req, res, next) {
 
