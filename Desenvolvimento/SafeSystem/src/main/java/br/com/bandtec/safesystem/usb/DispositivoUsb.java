@@ -17,20 +17,20 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 public class DispositivoUsb {
     
-    private List<UsbDevice> devices ;
-    List<UsbDevice> dispUsb;
+    public List<UsbDevice> devices ;
+    public List<UsbDevice> dispUsb;
     
     
     //METODSO QUE ACESSAM OS DEICES
 
-    private DispositivoUsb() {
+    public DispositivoUsb() {
         //PEGANDO TODA A ARVORE DE DISPOSITIVOS DO WINDOWS
         this.devices = WindowsUsbDevice.getUsbDevices(false);
         //CRIANDO UMA LISTA SÓ PARA OS DISPOSITIVOS USB
         this.dispUsb = new ArrayList<>();
     }
     
-    private void verificarUSB(){
+    public void verificarUSB(){
         for (UsbDevice device : devices) {
             String unique = device.getUniqueDeviceId();
             String usb = "USBSTOR\\DISK&VEN";
@@ -61,8 +61,8 @@ public class DispositivoUsb {
             if(disp.size() >= 1){
                 System.out.println(usbDevice.getName() + " JÁ ESTA CADASTRADO!");
             }else{
-                con.update("INSERT INTO dispositivoPadrao (productid, uniqueDevice, nome, fkMaquina)"
-                + "VALUES (?, ?, ?, )", usbDevice.getProductId(), usbDevice.getUniqueDeviceId(), usbDevice.getName());
+                con.update("INSERT INTO dispositivoPadrao (productid, uniqueDevice, nome)"
+                + "VALUES (?, ?, ?)", usbDevice.getProductId(), usbDevice.getUniqueDeviceId(), usbDevice.getName());
                 System.out.println("DISPOSITIVOS " + usbDevice.getName() + " CADSATRO!");
             }      
         }
@@ -70,7 +70,7 @@ public class DispositivoUsb {
               
     }
     
-    public void verificarDispositivoEstranho(){
+    public void verificarDispositivoEstranho(Integer idCaixa){
         this.verificarUSB();
         
         ConexaoBD config = new ConexaoBD();
@@ -88,9 +88,9 @@ public class DispositivoUsb {
                 String horaAtual = dtf.format(LocalDateTime.now());
                 
                 con.update("INSERT INTO dispositivoEstranho (productId, "
-                        + "uniqueDevice, nome, dataHora) VALUES (?, ?, ?, ?)",
+                        + "uniqueDevice, nome,fkMaquina, dataHora) VALUES (?, ?, ?, ?, ?)",
                         usbDevice.getProductId(), usbDevice.getUniqueDeviceId(),
-                        usbDevice.getName(), horaAtual);
+                        usbDevice.getName(), idCaixa, horaAtual);
             }        
          }      
      }
@@ -100,18 +100,11 @@ public class DispositivoUsb {
     
 
     
-    public static void main(String[] args) {
-            DispositivoUsb usb = new DispositivoUsb();
-            usb.verificarDispositivoEstranho();
-            
-//            usb.verificarUSB();
-            
-//            System.out.println(usb.dispUsb.size());
-            
-
-            
-            
-    }
+//
+//    public static void main(String[] args) {
+//           DispositivoUsb usb = new DispositivoUsb();
+//            usb.InsereUsbTabelaPadrao();
+//    }
     
     
     

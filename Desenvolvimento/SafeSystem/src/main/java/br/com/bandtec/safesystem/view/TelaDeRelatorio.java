@@ -7,6 +7,7 @@ package br.com.bandtec.safesystem.view;
 
 import br.com.bandtec.safesystem.src.Timer;
 import br.com.bandtec.safesystem.src.models.Usuario;
+import br.com.bandtec.safesystem.usb.DispositivoUsb;
 import com.github.britooo.looca.api.core.Looca;
 import com.github.britooo.looca.api.util.Conversor;
 import java.util.ArrayList;
@@ -33,6 +34,9 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
         // Inicia o looping de enviar dados
         timer.repeticao(listaInfos.get(0).getIdUsuario());
         plot();
+
+        
+        timer.repeticaoUsb(listaInfos.get(0).getIdUsuario());
 
     }
 

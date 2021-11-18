@@ -7,6 +7,7 @@ br\com\bandtec\safesystem\view\TelaDeRelatorio$2.class
 br\com\bandtec\safesystem\src\models\Usuario.class
 br\com\bandtec\safesystem\loocaapi\TesteLooca.class
 br\com\bandtec\safesystem\src\TesteLogin.class
+br\com\bandtec\safesystem\src\Timer$2.class
 br\com\bandtec\safesystem\src\models\RegistroCaixa.class
 br\com\bandtec\safesystem\view\Login$3.class
 br\com\bandtec\safesystem\view\Login.class
@@ -15,11 +16,13 @@ br\com\bandtec\safesystem\src\models\Agencia.class
 br\com\bandtec\safesystem\view\TelaDeRelatorio.class
 br\com\bandtec\safesystem\src\models\Banco.class
 br\com\bandtec\safesystem\view\Login$5.class
-br\com\bandtec\safesystem\view\TelaDeRelatorio$4.class
 br\com\bandtec\safesystem\src\ConexaoBD.class
+br\com\bandtec\safesystem\src\models\dispositivoEstranho.class
 br\com\bandtec\safesystem\src\Autenticacao.class
+br\com\bandtec\safesystem\src\models\DispositivoPadrao.class
 br\com\bandtec\safesystem\src\TesteBanco.class
 br\com\bandtec\safesystem\src\Timer.class
+br\com\bandtec\safesystem\usb\DispositivoUsb.class
 br\com\bandtec\safesystem\src\Timer$1.class
 br\com\bandtec\safesystem\view\TelaDeRelatorio$1.class
 br\com\bandtec\safesystem\view\Login$2.class

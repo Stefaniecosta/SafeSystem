@@ -34,8 +34,8 @@ public class EnviaDados {
 
         Float discoTotal = LongParaFloat(looca.getGrupoDeDiscos().getDiscos().get(0).getTamanho());
 
-        con.update("INSERT INTO registroMaquina(totalRam, usoRam, totalDisco, dispositivoEstranho, dataHora, nomeCPU, usoCPU,fkMaquina) "
-                + "VALUES (?, ?, ?, ?, GETDATE(), ?, ?, ?);", ramTotal, ramUso, discoTotal, 0,cpuNome, cpuUso, idCaixa);
+        con.update("INSERT INTO registroMaquina( usoRam, dataHora, nomeCPU, usoCPU,fkMaquina) "
+                + "VALUES ( ?, GETDATE(), ?, ?, ?);", ramUso, 0,cpuNome, cpuUso, idCaixa);
              
     }
 
