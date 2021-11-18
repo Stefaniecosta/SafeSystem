@@ -1,7 +1,7 @@
 package br.com.bandtec.safesystem.src.models;
 
 
-public class Caixa {
+public class Maquina {
     private Integer idMaquina;
     private String patrimonio;
     private Integer fkAgencia;
