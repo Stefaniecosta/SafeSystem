@@ -66,8 +66,9 @@ public final class Relatorio {
         } catch (Exception e) {
             System.out.println("Falha ao conectar com o banco de dados");
             System.out.println(e.getMessage());
+            
         }
-        
+
         List<RegistroMaquina> listaDeRegistros = con.query(""
                 + "SELECT * FROM registroMaquina trm "
                 + "JOIN maquina tm ON trm.fkMaquina = tm.idMaquina "
