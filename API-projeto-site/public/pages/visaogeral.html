@@ -173,7 +173,6 @@
             </div>
         </div>
     </div>
-   
 
     <footer></footer>
 
@@ -305,24 +304,39 @@
     }
 
     
+    setTimeout(() => {
+        obterDadosPorIdCaixa()
+    }, 900);
+
+    setTimeout(() => {
+        estudarRegistros()
+    }, 1100);
+
+    setTimeout(() => {
+        setInterval(() => {
+           obterDadosPorIdCaixa(); 
+        }, 4000);
+    }, 2100);
+
+
 
     function obterDadosPorIdCaixa()
     {
         registros = [];
         for (let index = 0; index < idDasMaquinas.length; index++) {
-           obterDados(idDasMaquinas[index])
+           obterDados(idDasMaquinas[index]);
             
         }
+        estudarRegistros();
+        console.log('atualizando dados');
         
     }
 
 
 
-    setTimeout(() => {
-       estudarRegistros(); 
-    }, 1000);
 
-    let registrosTratados = []
+
+    
 
     let msg = '';
 
@@ -331,7 +345,7 @@
         msg = '';
 
         for (let index = 0; index < registros.length; index++) {
-            if (registros[index].usoRAM >= 7 || registros[index].usoCPU > 80) {
+            if (registros[index][0].usoRAM >= 7.0 || registros[index][0].usoCPU > 80.0) {
                 msg =
                 `
                 <div id="caixa" class="box">
@@ -348,7 +362,7 @@
                                 Status:
                                 <i class="fas fa-exclamation-triangle"></i> <b class="alerta"> ALERTA</b>
                             </div>
-                            <p style="color: rgba(244, 219, 87, 0.8);"> MUITOS COMPONENTES <br> LENTOS</p>
+                            <p style="color: rgba(244, 219, 87, 0.8);"> COMPONENTES <br> LENTOS</p>
                         </div>
                     </div>
                 </div>
@@ -375,21 +389,16 @@
                 </div>
                 `
             }
-            registrosTratados.push(msg)
             
-        }
-        plotarInfo()
-    }
-
-    function plotarInfo()
-    {
-        for (let index = 0; index < registrosTratados.length; index++) {
             boxDasCaixas.innerHTML += msg;
             
         }
+        
     }
 
-    obterDadosPorIdCaixa();
+
+
+    
 
 
 
