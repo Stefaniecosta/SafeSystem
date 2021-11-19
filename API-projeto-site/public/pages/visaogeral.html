@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <div id="content">
         <img id="logoName" src="../assets/img/logoss.svg" alt="">
 
@@ -31,7 +30,7 @@
                 <a href="visaogeral.html"> VISÃO GERAL </a>
             </div>
 
-            
+
 
 
         </div>
@@ -60,7 +59,7 @@
             </div>
             <button id="repError">REPORTAR ERRO</button>
         </header>
-        
+
         <div class="container-boxes">
             <div id="boxDasCaixas" class="aux-container-boxes">
                 <!-- <div id="caixa" class="box">
@@ -181,30 +180,26 @@
 </html>
 
 <script>
-
-    function armazenarIdCaixa(numero)
-    {
+    function armazenarIdCaixa(numero) {
         sessionStorage.setItem('idCaixaArmazenado', numero);
     }
-    
+
     let quantidadeDeCaixas = 0;
 
     let idDasMaquinas = [];
 
-    async function caixaAChamar(idMaquinaARodar)
-    {
+    async function caixaAChamar(idMaquinaARodar) {
         await sessionStorage.setItem('idMaquina', idMaquinaARodar);
         window.location = 'dashboard.html';
     }
 
     pegarQuantidadeCaixas()
 
-    function plotarCaixasNaTela()
-    {
+    function plotarCaixasNaTela() {
         options.innerHTML += `<hr>`;
         for (let index = 0; index < quantidadeDeCaixas; index++) {
             options.innerHTML +=
-            `
+                `
 
             
             <div class="item" <button onclick="caixaAChamar(${idDasMaquinas[index]}), armazenarIdCaixa(${index+1})">
@@ -219,7 +214,7 @@
             `;
         }
         options.innerHTML +=
-        `
+            `
         <div class="item item_color">
                 <span>
                     Agência
@@ -235,75 +230,73 @@
 
 
 
-    function pegarQuantidadeCaixas() 
-    {
+    function pegarQuantidadeCaixas() {
 
         const idAgencia = sessionStorage.getItem('idAgencia');
-        
-            fetch(`/agencias/obterQuantidadeDeCaixas/${idAgencia}`, {
-                method: "post",
-            }).then(resposta => {
-    
-                if (resposta.ok) {
-    
-                    resposta.json().then(json => {
 
-                        console.log(`Quantidade de caixas: ${json.length}`);
-                        quantidadeDeCaixas = json.length;
+        fetch(`/agencias/obterQuantidadeDeCaixas/${idAgencia}`, {
+            method: "post",
+        }).then(resposta => {
 
-                        for (let index = 0; index < json.length; index++) {
-                            idDasMaquinas.push(json[index].idMaquina);
-                        }
+            if (resposta.ok) {
 
-                        plotarCaixasNaTela();
-                    });
-    
-                } else {
-    
-                    console.log('Erro de login!');
-    
-                    resposta.text().then(texto => {
-                        console.error(texto);
-                        alert(texto);
-                    });
-                }
-            });
-            return false;
-       
+                resposta.json().then(json => {
+
+                    console.log(`Quantidade de caixas: ${json.length}`);
+                    quantidadeDeCaixas = json.length;
+
+                    for (let index = 0; index < json.length; index++) {
+                        idDasMaquinas.push(json[index].idMaquina);
+                    }
+
+                    plotarCaixasNaTela();
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    alert(texto);
+                });
+            }
+        });
+        return false;
+
     }
 
     let registros = [];
 
-    function obterDados(idMaquina) 
-    {
-        
-            fetch(`/agencias/obterRegistrosDasMaquinas/${idMaquina}`, {
-                method: "post",
-            }).then(resposta => {
-    
-                if (resposta.ok) {
-    
-                    resposta.json().then(json => {
+    function obterDados(idMaquina) {
 
-                        console.log(json);
-                        registros.push(json)
+        fetch(`/agencias/obterRegistrosDasMaquinas/${idMaquina}`, {
+            method: "post",
+        }).then(resposta => {
 
-                    });
-    
-                } else {
-    
-                    console.log('Erro ao obter registro do caixa ' + idMaquina);
-    
-                    resposta.text().then(texto => {
-                        alert(`Erro ao obter registro do caixa ${idMaquina}`)
-                    });
-                }
-            });
-            return false;
-       
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    console.log(json);
+                    registros.push(json)
+
+                });
+
+            } else {
+
+                console.log('Erro ao obter registro do caixa ' + idMaquina);
+
+                resposta.text().then(texto => {
+                    alert(`Erro ao obter registro do caixa ${idMaquina}`)
+                });
+            }
+        });
+        return false;
+
     }
 
-    
+
     setTimeout(() => {
         obterDadosPorIdCaixa()
     }, 900);
@@ -314,40 +307,38 @@
 
     setTimeout(() => {
         setInterval(() => {
-           obterDadosPorIdCaixa(); 
+            obterDadosPorIdCaixa();
         }, 4000);
     }, 2100);
 
 
 
-    function obterDadosPorIdCaixa()
-    {
+    function obterDadosPorIdCaixa() {
         registros = [];
         for (let index = 0; index < idDasMaquinas.length; index++) {
-           obterDados(idDasMaquinas[index]);
-            
+            obterDados(idDasMaquinas[index]);
+
         }
         estudarRegistros();
         console.log('atualizando dados');
-        
+
     }
 
 
 
 
 
-    
+
 
     let msg = '';
 
-    function estudarRegistros()
-    {
+    function estudarRegistros() {
         msg = '';
 
         for (let index = 0; index < registros.length; index++) {
             if (registros[index][0].usoRAM >= 7.0 || registros[index][0].usoCPU > 80.0) {
                 msg =
-                `
+                    `
                 <div id="caixa" class="box">
                     <div class="boxContent">
                         <div class="info_caixas">
@@ -368,8 +359,8 @@
                 </div>
                 `
             } else {
-                msg = 
-                `
+                msg =
+                    `
                 <div id="caixa" class="box">
                     <div class="boxContent">
                         <div class="info_caixas">
@@ -389,17 +380,10 @@
                 </div>
                 `
             }
-            
+
             boxDasCaixas.innerHTML += msg;
-            
+
         }
-        
+
     }
-
-
-
-    
-
-
-
 </script>

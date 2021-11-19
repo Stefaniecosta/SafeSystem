@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de agência</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="../styles/agenciaCadastro.css">
+</head>
+
+<body>
+    <section>
+        <section class="cover_side">
+        </section>
+
+        <section class="form_side">
+            <div class="container">
+                <div class="brand">
+                    <h4 class="titulos"> Safe System </h4>
+                </div>
+                <div id="message">Cadastre a agência</div>
+
+                <div class="inputs_group">
+                    <input type="text" id="nome_usuario" placeholder="Nome de usuário">
+                    <input type="text" id="email" placeholder="E-mail de usuário">
+                    <input type="number" id="cod_agencia" placeholder="Código da agência">
+                    <input type="number" id="id_agencia" placeholder="ID da agência">
+                    <input type="password" id="password" placeholder="Senha">
+                </div>
+
+                <button class="btSave" id="btSave" onclick="save()">Salvar</button>
+                <div class="loading_screen">
+                    <p id="loading_message"><span>Cadastrando</span>agência</p>
+                    <img id="loading_gif" src="https://1.bp.blogspot.com/-uZmhTwOaRc4/XnlNu9_rvYI/AAAAAAAAXNk/8LtRh85SMNA3awhyJaOu6IiTFhCLbQ9WgCLcBGAsYHQ/s640/Dinheiro-1.gif">
+                </div>
+            </div>
+        </section>
+    </section>
+
+</body>
+
+</html>
+<script src="../scripts/agenciaCadastro.js"></script>
