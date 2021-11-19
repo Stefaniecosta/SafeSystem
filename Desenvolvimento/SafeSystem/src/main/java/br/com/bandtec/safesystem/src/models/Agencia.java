@@ -12,7 +12,7 @@ public class Agencia {
     private String localizacaoAgencia;
     private String codigoAgencia;
     private Integer fkBanco;
-    private String senha;
+    private String slackWebHook;
 
     public Integer getIdAgencia() {
         return idAgencia;
@@ -54,20 +54,21 @@ public class Agencia {
         this.fkBanco = fkBanco;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getSlackWebHook() {
+        return slackWebHook;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setSlackWebHook(String slackWebHook) {
+        this.slackWebHook = slackWebHook;
     }
-
-
 
     @Override
     public String toString() {
-        return "AGENCIA {" + "\n ID: "+idAgencia+"\n Nome: "+nomeAgencia+"\n Localização: "+localizacaoAgencia+"\n CodAgencia: "+codigoAgencia+"\n fkBanco: "+fkBanco+"\n senha"+senha; 
+        return "Agencia{" + "idAgencia=" + idAgencia + ", nomeAgencia=" + nomeAgencia + ", localizacaoAgencia=" + localizacaoAgencia + ", codigoAgencia=" + codigoAgencia + ", fkBanco=" + fkBanco + ", slackWebHook=" + slackWebHook + '}';
     }
+
+
+
     
     
     

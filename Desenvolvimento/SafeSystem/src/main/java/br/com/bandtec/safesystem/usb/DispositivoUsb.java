@@ -21,7 +21,7 @@ public class DispositivoUsb {
     public List<UsbDevice> dispUsb;
     
     
-    //METODSO QUE ACESSAM OS DEICES
+    //METODSO QUE ACESSAM OS DEVICES
 
     public DispositivoUsb() {
         //PEGANDO TODA A ARVORE DE DISPOSITIVOS DO WINDOWS

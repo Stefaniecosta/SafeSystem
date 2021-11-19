@@ -29,13 +29,16 @@ public class EnviaDados {
         Float ramTotal = LongParaFloat(ram.getTotal());
         Float ramUso = LongParaFloat(ram.getEmUso());
 
-        String cpuNome = cpu.getNome();
+        Float frequenciaCpu = LongParaFloat(cpu.getFrequencia());
         Integer cpuUso = cpu.getUso().intValue();
 
-        Float discoTotal = LongParaFloat(looca.getGrupoDeDiscos().getDiscos().get(0).getTamanho());
+        Float discoTotal = LongParaFloat(looca.getGrupoDeDiscos().getVolumes().get(0).getTotal());
+        Float discoLivre = LongParaFloat(looca.getGrupoDeDiscos().getVolumes().get(0).getDisponivel());
+        
+        Float discoUso = discoTotal - discoLivre;
 
-        con.update("INSERT INTO registroMaquina( usoRam, dataHora, nomeCPU, usoCPU,fkMaquina) "
-                + "VALUES ( ?, GETDATE(), ?, ?, ?);", ramUso, 0,cpuNome, cpuUso, idCaixa);
+        con.update("INSERT INTO registroMaquina(dataHora, usoRam, usoCpu, frequenciaCPU, usoDisco, fkMaquina) "
+                + "VALUES (GETDATE(), ?, ?, ?, ?, ?);", ramUso, cpuUso ,frequenciaCpu, discoUso, idCaixa);
              
     }
 

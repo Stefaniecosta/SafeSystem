@@ -25,6 +25,13 @@ public final class Log {
         this.errorMessage = errorMessage;
         this.errorException = errorException;
         this.GerarLog();
+
+    }
+
+    public Log(String errorMessage) {
+        this.errorMessage = errorMessage;
+        this.errorException = "";
+        this.GerarLog();
     }
 
     public void GerarLog() {
@@ -35,26 +42,26 @@ public final class Log {
 
             System.out.println("Gerando log de erro...");
 
-            File diretorio = new File("/home/gustavo/logs/");
+            File diretorio = new File("//C://logs_safesystem//");
 
             try {
-                
+
                 if (!diretorio.exists()) {
-                    
+
                     if (diretorio.mkdir()) {
-                        
+
                         System.out.println("Diretório criado");
-                        
+
                     } else {
-                        
+
                         System.out.println("Erro ao criar diretório");
                     }
                 }
             } catch (Exception e) {
                 e.getMessage();
             }
-            
-            File arquivo = new File("/home/gustavo/logs/" + datetime + ".txt");
+
+            File arquivo = new File("//C://logs_safesystem//" + datetime + ".txt");
             FileWriter fileWriter = new FileWriter(arquivo, true);
             PrintWriter gravarArq = new PrintWriter(fileWriter);
             gravarArq.println(dataDeHoje + " " + errorMessage + ": " + errorException + "\n");

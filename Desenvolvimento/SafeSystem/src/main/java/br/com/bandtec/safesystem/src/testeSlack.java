@@ -6,6 +6,8 @@
 package br.com.bandtec.safesystem.src;
 
 import java.io.IOException;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import org.json.JSONObject;
 
 
@@ -15,8 +17,14 @@ import org.json.JSONObject;
  */
 public class testeSlack {
 
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws IOException, InterruptedException, Exception {
 
-        Slack.enviarRelatorio(101);
+        Slack s = new Slack(100);
+        
+        Timestamp dataDeHoje = new Timestamp(System.currentTimeMillis());
+        String datetime = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(dataDeHoje.getTime());
+        
+        //s.alertaDispositivo(1, datetime);
+        s.alertaMapeamento(1, 1, datetime);
     }
 }

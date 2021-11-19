@@ -8,6 +8,7 @@ package br.com.bandtec.safesystem.src.models;
 public class Usuario {
     
     private Integer idUsuario;
+    private String nome;
     private String email;
     private String senha;
     private Integer fkAgencia;
@@ -20,6 +21,14 @@ public class Usuario {
         this.idUsuario = idUsuario;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
     public String getEmail() {
         return email;
     }
@@ -44,12 +53,9 @@ public class Usuario {
         this.fkAgencia = fkAgencia;
     }
 
-
-    
-
     @Override
     public String toString() {
-        return String.format("\nID: %d\nEMAIL: %s\nSENHA: %s\n",
-                this.idUsuario, this.email, this.senha);
+        return "Usuario{" + "idUsuario=" + idUsuario + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", fkAgencia=" + fkAgencia + '}';
     }
+    
 }
