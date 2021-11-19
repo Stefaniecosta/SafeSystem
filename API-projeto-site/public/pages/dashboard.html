@@ -84,7 +84,7 @@
                       <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">
                   </div>
                   <div id="TextdispEstranhos" class="text-box3Conexao text-redBox3">
-                      <a>3 Estranhos</a>
+                      <a id="temEstranho"></a>
                       <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">
 
                   </div>
@@ -180,7 +180,6 @@
                     </div>
                 </div>
             </div>
-
             <footer></footer>
 </body>
 
@@ -315,6 +314,7 @@ function obterTotalRamENomeProcessador(idMaquina)
                         console.log(`resultado: ${json[0].totalRam}, ${json[0].processador}`);
                         totalRam = json[0].totalRam;
                         nomeCpu = json[0].processador;
+                        totalDisco = json[0].espacoTotal;
                                               
                     });
     
@@ -375,7 +375,7 @@ function chamarGraf(idMaquina)
     zerarGraficoDisco();
     zerarInfos();
     obterTotalRamENomeProcessador(idMaquina);
-    obterEspacoTotal(idMaquina);
+    //obterEspacoTotal(idMaquina);
     
     clearInterval(timer);
     timer = setInterval(() => {
@@ -422,6 +422,38 @@ function chamarGraf(idMaquina)
     
 }
 
+function obterDispositivoEstranho(idMaquina)
+{
+  fetch(`/agencias/obterDispositivoEstranho/${idMaquina}`, {
+                method: "post",
+            }).then(resposta => {
+    
+                if (resposta.ok) {
+    
+                    resposta.json().then(json => {
+                      console.log('chegando dispositivos estranhos!')
+                      if (json.length > 0) {
+                        temEstranho.style.color = 'white';
+                        temEstranho.innerHTML = 'Sem dispositivos estranhos conectados!';
+                      } else {
+                        temEstranho.style.color = 'red';
+                        temEstranho.innerHTML = 'ATENÇÃO, DISPOSITIVO ESTRANHO DETECTADO'
+                      }                       
+                                              
+                    });
+    
+                } else {
+    
+                    console.log('Erro ao obter processador e total de ram!');
+    
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        alert(texto);
+                    });
+                }
+            });
+            return false;
+}
 
 
 let idMaquinaPrimeiraVez = sessionStorage.getItem('idMaquina');
@@ -586,6 +618,7 @@ am4core.ready(function () {
 function plotarGraficoDisco()
 {
 
+quantidadeDisco.innerHTML = `${totalDisco} GB`
 
 
 am4core.ready(function () {

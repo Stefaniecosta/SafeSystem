@@ -260,4 +260,35 @@ router.post('/obterEspacoTotal/:idMaquina', function(req, res, next) {
 	
 });
 
+// obter dispositivos estranhos
+
+router.post('/obterDispositivoEstranho/:idMaquina', function(req, res, next) {
+
+	let idMaquina = req.params.idMaquina;
+	
+	console.log(`Checando dispositivos estranhos do caixa de id ${idMaquina}`);
+
+	let instrucaoSql = `select * from dispositivoEstranho where dataHora >= DATEADD(minute, 0.5, GETDATE()) and fkMaquina = ${idMaquina}`;
+
+	console.log(instrucaoSql);
+	
+	sequelize.query(instrucaoSql, {
+		type: sequelize.QueryTypes.SELECT
+	}).then(resultado => {
+		console.log(`Resultado encontrado: ${resultado}`);
+
+			if (resultado.length > 0) {
+				res.json(resultado);
+			} else {
+				res.status(403).send(`Erro ao obter dispositivos estranhos do caixa de id ${idMaquina}!`);
+			}
+		
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+  	});
+	
+	
+});
+
 module.exports = router;
