@@ -15,7 +15,7 @@ public class TesteLog {
 
         try {
             //Tentativa de conexão com o BD
-            System.out.println("");
+            System.out.println(";
 
         
 

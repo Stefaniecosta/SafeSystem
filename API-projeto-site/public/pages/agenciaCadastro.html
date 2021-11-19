@@ -8,9 +8,36 @@
     <title>Cadastro de agência</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="../styles/agenciaCadastro.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal" onLoad>
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close"></span>
+                <h2 style="font-size: 19px; font-family:'Poppins';">Acesso restrito</h2>
+            </div>
+            <div class="modal-body">
+                <p>Se identifique antes de acessar esta página</p>
+                <p>Acesso restrito aos coolaboradores Safe System...</p>
+
+                <div class="formulario-cadastro">
+                    <input type="text" class="input-modal" placeholder="E-mail"><br>
+                    <input type="text" class="input-modal" placeholder="Senha"> <br>
+                    <button class="close button-confirm" type="submit">Confirme</button>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
+            </div>
+        </div>
+    </div>
+
     <section>
         <section class="cover_side">
         </section>
@@ -23,11 +50,11 @@
                 <div id="message">Cadastre a agência</div>
 
                 <div class="inputs_group">
-                    <input type="text" id="nome_usuario" placeholder="Nome de usuário">
-                    <input type="text" id="email" placeholder="E-mail de usuário">
+                    <input type="text" id="nome_agencia" placeholder="Nome da agência">
+                    <input type="text" id="email" placeholder="Endereço">
                     <input type="number" id="cod_agencia" placeholder="Código da agência">
-                    <input type="number" id="id_agencia" placeholder="ID da agência">
-                    <input type="password" id="password" placeholder="Senha">
+                    <input type="number" id="cnpj_agencia" placeholder="CNPJ da agência">
+                    <input type="text" id="password" placeholder="URL slack">
                 </div>
 
                 <button class="btSave" id="btSave" onclick="save()">Salvar</button>
@@ -40,6 +67,20 @@
     </section>
 
 </body>
+
+<script>
+    $('.close').click(function(event) {
+        $('#myModal').fadeOut();
+        event.preventDefault();
+    });
+    $(document).ready(function() {
+        $('#myModal').modal('show');
+    })
+
+    $('#myModal').on('shown.bs.modal', function() {
+        localStorage.setItem("modal", false);
+    });
+</script>
 
 </html>
 <script src="../scripts/agenciaCadastro.js"></script>
