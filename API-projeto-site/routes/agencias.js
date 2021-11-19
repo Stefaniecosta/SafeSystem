@@ -199,4 +199,65 @@ router.get('/', function(req, res, next) {
   	});
 });
 
+// obter dados do nome do processador e total da ram
+router.post('/obterProcessadorERam/:idMaquina', function(req, res, next) {
+
+	let idMaquina = req.params.idMaquina;
+	
+	console.log(`Obendo nome do processador e total de ram da maquina de id ${idMaquina}`);
+
+	let instrucaoSql = `select totalRam, processador from [dbo].[maquina] where idMaquina = ${idMaquina}`;
+
+	console.log(instrucaoSql);
+	
+	sequelize.query(instrucaoSql, {
+		type: sequelize.QueryTypes.SELECT
+	}).then(resultado => {
+		console.log(`Resultado encontrado: ${resultado}`);
+
+			if (resultado.length > 0) {
+				res.json(resultado);
+			} else {
+				res.status(403).send('Erro ao obter nome da cpu e/ou total de ram!');
+			}
+		
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+  	});
+	
+	
+});
+
+// obter total do disco
+
+router.post('/obterEspacoTotal/:idMaquina', function(req, res, next) {
+
+	let idMaquina = req.params.idMaquina;
+	
+	console.log(`Obendo total de disco do caixa de id ${idMaquina}`);
+
+	let instrucaoSql = `select espacoTotal from [dbo].[disco] where fkMaquina = ${idMaquina}`;
+
+	console.log(instrucaoSql);
+	
+	sequelize.query(instrucaoSql, {
+		type: sequelize.QueryTypes.SELECT
+	}).then(resultado => {
+		console.log(`Resultado encontrado: ${resultado}`);
+
+			if (resultado.length > 0) {
+				res.json(resultado);
+			} else {
+				res.status(403).send(`Erro ao obter o total de memória no disco do caixa de id ${idMaquina}!`);
+			}
+		
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+  	});
+	
+	
+});
+
 module.exports = router;

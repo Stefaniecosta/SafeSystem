@@ -71,6 +71,34 @@
                     <b>Caixa: <span id="numeroDoCaixa">01</span></b>
                 </div>
             </div>
+
+            <div id="box3Conexao" class="box">
+              <div class="boxContent">
+                  <strong>
+                      <img id="iconesBox" src="../assets/img/dashboard-img/conexao-icone.png" alt="">
+
+                      Dispositivos conectados
+                  </strong>
+                  <div id="TextdispConect" class="text-box3Conexao">
+                      <a>5 Conectados</a>
+                      <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">
+                  </div>
+                  <div id="TextdispEstranhos" class="text-box3Conexao text-redBox3">
+                      <a>3 Estranhos</a>
+                      <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">
+
+                  </div>
+              </div>
+          </div>
+
+          <div id="box5Visaogeral" class="box2">
+              <div class="boxContent">
+                  <div> </div>
+                  <img id="atmVisaogeral" src="../assets/img/dashboard-img/seta-caixa.png" alt="">
+              </div>
+          </div>
+
+
             <div id="box1ram" class="box">
                 <div class="boxContent">
                     <strong>
@@ -90,7 +118,7 @@
                     <div class="BoxTextdisco">
                         <div id="textoDisco">
                             
-                            <a href="">500 GB</a>
+                            <a href="" id="quantidadeDisco"></a>
                             <a href="" style="font-size: 17px; color: white;">Armazenamento total</a>
 
                         </div>
@@ -101,31 +129,6 @@
                 </div>
             </div>
 
-            <div id="box3Conexao" class="box">
-                <div class="boxContent">
-                    <strong>
-                        <img id="iconesBox" src="../assets/img/dashboard-img/conexao-icone.png" alt="">
-
-                        Dispositivos conectados
-                    </strong>
-                    <div id="TextdispConect" class="text-box3Conexao">
-                        <a>5 Conectados</a>
-                        <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">
-                    </div>
-                    <div id="TextdispEstranhos" class="text-box3Conexao text-redBox3">
-                        <a>3 Estranhos</a>
-                        <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">
-
-                    </div>
-                </div>
-            </div>
-
-            <div id="box5Visaogeral" class="box2">
-                <div class="boxContent">
-                    <div> </div>
-                    <img id="atmVisaogeral" src="../assets/img/dashboard-img/seta-caixa.png" alt="">
-                </div>
-            </div>
 
             <div id="box6CPU" class="box">
                 <div class="boxContent">
@@ -147,7 +150,7 @@
                                     <a>Utilização atual da cpu:</a>
                                 </div>
                                 <div id="mudarInfo1">
-                                    <a id="usoDaCpu">37%</a>
+                                    <a id="usoDaCpu"></a>
                                     
                                 </div>
                             </div>
@@ -155,22 +158,22 @@
                                 <div class="tittleinfosCPU">
                                     <a>Velocidade:</a>
                                 </div>
-                                <a id="velocidadeDaCpu">2.66 GHz</a>
+                                <a id="velocidadeDaCpu"></a>
                             </div>
-                            <div class="textCPU">
+                            <!-- <div class="textCPU">
                                 <div class="tittleinfosCPU">
                                     <a>Threads:</a>
                                 </div>
                                 <div id="mudarInfo3">
                                     <a id="quantidadeDeThreads">1200</a>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="textCPU">
                                 <div class="tittleinfosCPU">
                                     <a>Processador:</a>
                                 </div>
                                 <div id="mudarInfo4">
-                                    <a id="nomeProcessador">Ryzen i5 2500</a>
+                                    <a id="nomeProcessador"></a>
                                 </div>
                             </div>
                         </div>
@@ -289,18 +292,90 @@
 
   
     let totalRam;
-let usoRam;
-let totalDisco;
-let dispositivoEstranho;
-let nomeCpu;
-let usoCpu;
+    let usoRam;
+    let totalDisco;
+    let usoDisco;
+    let dispositivoEstranho;
+    let usoCpu;
+    let nomeCpu;
+    let frequenciaCPU;
 
+let teste;
+
+function obterTotalRamENomeProcessador(idMaquina)
+{
+  fetch(`/agencias/obterProcessadorERam/${idMaquina}`, {
+                method: "post",
+            }).then(resposta => {
+    
+                if (resposta.ok) {
+    
+                    resposta.json().then(json => {
+
+                        console.log(`resultado: ${json[0].totalRam}, ${json[0].processador}`);
+                        totalRam = json[0].totalRam;
+                        nomeCpu = json[0].processador;
+                                              
+                    });
+    
+                } else {
+    
+                    console.log('Erro ao obter processador e total de ram!');
+    
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        alert(texto);
+                    });
+                }
+            });
+            return false;
+}
+
+function obterEspacoTotal(idMaquina)
+{
+  fetch(`/agencias/obterEspacoTotal/${idMaquina}`, {
+                method: "post",
+            }).then(resposta => {
+    
+                if (resposta.ok) {
+    
+                    resposta.json().then(json => {
+
+                        console.log(`resultado: ${json[0].espacoTotal}`);
+                        totalDisco = json[0].espacoTotal;
+                        quantidadeDisco.innerHTML = `${totalDisco} GB`
+                                              
+                    });
+    
+                } else {
+    
+                    console.log(`Erro ao obter o espaço total do caixa de id ${idMaquina}!`);
+    
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        alert(texto);
+                    });
+                }
+            });
+            return false;
+}
+
+function zerarInfos()
+{
+  usoDaCpu.innerHTML = '';
+  velocidadeDaCpu.innerHTML = '';
+  nomeProcessador.innerHTML = '';
+  quantidadeDisco.innerHTML = '';
+}
 
 function chamarGraf(idMaquina)
 {
     zerarGraficoCpu();
     zerarGraficoRam();
     zerarGraficoDisco();
+    zerarInfos();
+    obterTotalRamENomeProcessador(idMaquina);
+    obterEspacoTotal(idMaquina);
     
     clearInterval(timer);
     timer = setInterval(() => {
@@ -312,16 +387,13 @@ function chamarGraf(idMaquina)
     
               resposta.json().then(json => {
     
-                    totalRam = json[0].totalRam;
-                    usoRam = json[0].usoRam;
-                    totalDisco = json[0].totalDisco;
-                    dispositivoEstranho = json[0].dispositivoEstranho;
-                    nomeCpu = json[0].nomeCPU;
+                    usoRam = json[0].usoRAM;
                     usoCpu = json[0].usoCPU;
+                    usoDisco = json[0].usoDisco.toFixed(0);
+                    frequenciaCPU = json[0].frequenciaCPU;
 
                     usoDaCpu.innerHTML = usoCpu;
-                    velocidadeDaCpu.innerHTML = "A definir";
-                    quantidadeDeThreads.innerHTML = "A definir";
+                    velocidadeDaCpu.innerHTML = `${frequenciaCPU.toFixed(2)} GHz`;
                     nomeProcessador.innerHTML = nomeCpu;
 
                     plotarGraficoRam(); 
@@ -448,7 +520,7 @@ am4core.ready(function () {
         // }]
     }, {
         type: "Disponivel",
-        percent: totalRam,
+        percent: totalRam - usoRam,
         color: chart.colors.getIndex(1),
         // subs: [{
         //     type: "Hydro",
@@ -535,8 +607,8 @@ am4core.ready(function () {
     chart.data = [
         {
             "country": "Livre",
-            "litres": 100,
-            "bottles": 100
+            "litres": totalDisco - usoDisco,
+            "bottles": totalDisco - usoDisco
         },
 
         //   {  "country": "Ireland",
@@ -549,8 +621,8 @@ am4core.ready(function () {
         // 
         {
             "country": "Em uso",
-            "litres": 400,
-            "bottles": 400
+            "litres": usoDisco,
+            "bottles": usoDisco
         }
         // , {
         //     "country": "Austria",
