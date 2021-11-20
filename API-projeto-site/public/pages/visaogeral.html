@@ -317,11 +317,49 @@
         registros = [];
         for (let index = 0; index < idDasMaquinas.length; index++) {
             obterDados(idDasMaquinas[index]);
+            obterDispositivosEstranhosVisaoGeral(idDasMaquinas[index])
 
         }
+        console.log(registros)
         estudarRegistros();
         console.log('atualizando dados');
 
+    }
+
+    function obterDispositivosEstranhosVisaoGeral(idMaquina)
+    {
+        temEstranho = []
+
+        fetch(`/agencias/obterDispositivoEstranho/${idMaquina}`, {
+                method: "post",
+            }).then(resposta => {
+    
+                if (resposta.ok) {
+    
+                    resposta.json().then(json => {
+                      console.log('chegando dispositivos estranhos!')
+                      console.log("alertando length de json: " + json.length)
+                      console.log(json[0])
+                      if (json == 0) {
+                          temEstranho.push(false)
+                      } else {
+                          temEstranho.push(true)
+                      }                       
+                                              
+                    });
+    
+                } else {
+    
+                    console.log('Erro ao obter dispositivos estranhos!');
+    
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        alert(texto);
+                    });
+                }
+            });
+
+            return false
     }
 
 
@@ -329,14 +367,43 @@
 
 
 
-
+    
     let msg = '';
+    
+    let temEstranho = [];
 
     function estudarRegistros() {
         msg = '';
 
+
+
         for (let index = 0; index < registros.length; index++) {
-            if (registros[index][0].usoRAM >= 7.0 || registros[index][0].usoCPU > 80.0) {
+
+            
+            if(temEstranho[index]) {
+                msg = 
+                `
+                <div id="caixa" class="box">
+                    <div class="boxContent">
+                        <div class="info_caixas">
+                            <div class="bottom">
+
+                                <strong>
+                                    <img class="item-img" src="../assets/img/caixaIcon.png" alt="">
+                                    Caixa 1
+                                </strong>
+                            </div>
+                            <br>
+                            <div class="icone">
+                                Status:
+                                <i class="fas fa-skull"></i> <b class="critico"> CRÍTICO</b>
+                            </div>
+                            <p style="color: rgba(255, 126, 120, 0.8);">DISPOSITIVO <br> ESTRANHO</p>
+                        </div>
+                    </div>
+                </div>
+                `
+            }else if (registros[index][0].usoRAM >= 7.0 || registros[index][0].usoCPU > 80.0) {
                 msg =
                     `
                 <div id="caixa" class="box">
@@ -382,8 +449,9 @@
             }
 
             boxDasCaixas.innerHTML += msg;
-
+            
         }
 
     }
 </script>
+

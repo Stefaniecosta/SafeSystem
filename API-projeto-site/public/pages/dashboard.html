@@ -95,9 +95,9 @@
                   Dispositivos Estranhos
               </strong>
 
-                <div id="TextdispEstranhos" class="text-box3Conexao text-redBox3">
-                  <a id="temEstranho"></a>
-                  <img id="caveira" class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">
+                <div id="TextdispEstranhos" style="display: flex;" class="text-box3Conexao text-redBox3">
+                  <a id="temEstranho"></a><img id="caveira"  class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">
+                  
 
               </div>
               </div>
@@ -383,7 +383,7 @@ function chamarGraf(idMaquina)
     zerarInfos();
     obterTotalRamENomeProcessador(idMaquina);
     obterDispositivoEstranho(idMaquina);
-    obterDispositivosCadastrados(idMaquina)
+    obterDispositivosCadastrados(idMaquina);
     //obterEspacoTotal(idMaquina);
     
     clearInterval(timer);
@@ -408,6 +408,8 @@ function chamarGraf(idMaquina)
                     plotarGraficoRam(); 
                     plotarGraficoDisco();
                     plotarGraficoCpu();
+                    obterDispositivoEstranho(idMaquina);
+                    obterDispositivosCadastrados(idMaquina);
 
                     console.log(json[0]);
 
@@ -449,7 +451,7 @@ function obterDispositivoEstranho(idMaquina)
                         caveira.style.display = 'none';
                       } else {
                         temEstranho.style.color = 'red';
-                        temEstranho.innerHTML = 'ATENÇÃO, DISPOSITIVO ESTRANHO DETECTADO'
+                        temEstranho.innerHTML = 'ATENÇÃO, dispositivo estranho detectado!'
                         caveira.style.display = 'block';
                       }                       
                                               

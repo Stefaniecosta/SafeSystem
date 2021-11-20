@@ -270,7 +270,7 @@ router.post('/obterDispositivoEstranho/:idMaquina', function(req, res, next) {
 	
 	console.log(`Checando dispositivos estranhos do caixa de id ${idMaquina}`);
 
-	let instrucaoSql = `select * from dispositivoEstranho where dataHora >= DATEADD(minute, 0.5, GETDATE()) and fkMaquina = ${idMaquina}`;
+	let instrucaoSql = `select * from dispositivoEstranho where dataHora >= DATEADD(minute, -1, GETDATE()) and fkMaquina = ${idMaquina}`;
 
 	console.log(instrucaoSql);
 	
