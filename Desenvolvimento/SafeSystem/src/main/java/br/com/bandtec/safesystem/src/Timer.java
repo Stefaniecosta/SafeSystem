@@ -30,12 +30,12 @@ public class Timer {
                 DispositivoUsb dis = new DispositivoUsb();
                 dis.verificarUSB();
                 if(dis.getDispUsb().size() == 0){
-                    System.out.println("NENHUM DISPOSITIVO ENCONTRADO");
+                    System.out.println("NENHUM DISPOSITIVO CONECTADO");
                 }else{
                     dis.verificarDispositivoEstranho(idCaixa);
                     }
             }
-        }, 0, 100);
+        }, 0, 1000);
         
     }
 

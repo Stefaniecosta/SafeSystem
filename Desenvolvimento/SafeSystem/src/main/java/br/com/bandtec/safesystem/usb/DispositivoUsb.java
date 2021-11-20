@@ -19,28 +19,44 @@ public class DispositivoUsb {
 
     public List<UsbDevice> devices;
     private List<UsbDevice> dispUsb;
+    Sistema sistema = new Sistema();
 
     //METODSO QUE ACESSAM OS DEVICES
     public DispositivoUsb() {
-        //PEGANDO TODA A ARVORE DE DISPOSITIVOS DO WINDOWS
-        this.devices = WindowsUsbDevice.getUsbDevices(false);
+        //VERIFICAÇÃO DO TIPO DE SISTEMA OPERACIONAL
+        if(sistema.getSistemaOperacional().equalsIgnoreCase("Windows")){
+            this.devices = WindowsUsbDevice.getUsbDevices(false);
+        }else if(sistema.getSistemaOperacional().equalsIgnoreCase("Linux")){
+            this.devices = LinuxUsbDevice.getUsbDevices(false);
+        }
+        
         //CRIANDO UMA LISTA SÓ PARA OS DISPOSITIVOS USB
         this.dispUsb = new ArrayList<>();
     }
 
     public void verificarUSB() {
-        for (UsbDevice device : devices) {
-            String unique = device.getUniqueDeviceId();
-            String usb = "USBSTOR\\DISK&VEN";
-            String mouse = "HID\\VID";
-            String teclado = " ACPI";
-            //  System.out.println("NOME: " + device.getName() + " UNIQUE: " + device.getUniqueDeviceId() +" VENDOR: "+ device.getVendor());
-            if (unique.contains(usb.substring(0, 15)) || unique.contains(mouse.substring(0, 5)) || unique.contains(teclado.substring(0, 4))) {
-                this.dispUsb.add(device);
-//          System.out.println("NOME: " + device.getName() + " UNIQUE: " + device.getUniqueDeviceId() +" SERIAL: "+ device.getVendor());
-
+        if(sistema.getSistemaOperacional().equalsIgnoreCase("Windows")){
+            for (UsbDevice device : devices) {
+               String unique = device.getUniqueDeviceId();
+               String usb = "USBSTOR\\DISK&VEN";
+               String mouse = "HID\\VID";
+               String teclado = " ACPI";
+               //  System.out.println("NOME: " + device.getName() + " UNIQUE: " + device.getUniqueDeviceId() +" VENDOR: "+ device.getVendor());
+               if (unique.contains(usb.substring(0, 15)) || unique.contains(mouse.substring(0, 5)) || unique.contains(teclado.substring(0, 4))) {
+                   this.dispUsb.add(device);
+   //          System.out.println("NOME: " + device.getName() + " UNIQUE: " + device.getUniqueDeviceId() +" SERIAL: "+ device.getVendor());
+               }
+           }           
+        }else if(sistema.getSistemaOperacional().equalsIgnoreCase("Linux")){
+            for (UsbDevice device : devices) {
+               String unique = device.getUniqueDeviceId();
+               String usb = "/sys/devices";
+               if (unique.contains(usb.substring(0, 9))){
+                   this.dispUsb.add(device);
+               }
             }
         }
+
     }
 
     public void retornarListaUsb() {
@@ -124,6 +140,12 @@ public class DispositivoUsb {
     public List<UsbDevice> getDispUsb() {
         return dispUsb;
     }
+    
+//    public static void main(String[] args) {
+//        Sistema sistema = new Sistema();
+//        System.out.println(sistema.getSistemaOperacional());
+//                
+//    }
     
 
 }
