@@ -18,7 +18,7 @@ import oshi.hardware.platform.linux.LinuxUsbDevice;
 public class DispositivoUsb {
 
     public List<UsbDevice> devices;
-    public List<UsbDevice> dispUsb;
+    private List<UsbDevice> dispUsb;
 
     //METODSO QUE ACESSAM OS DEVICES
     public DispositivoUsb() {
@@ -92,18 +92,18 @@ public class DispositivoUsb {
         }
     }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {;
 //           DispositivoUsb usb = new DispositivoUsb();
-//            usb.InsereUsbTabelaPadrao();
-        Sistema sistema = new Sistema();
-
-        System.out.println(sistema.getSistemaOperacional());
-
-        List<UsbDevice> devices;
-        devices = LinuxUsbDevice.getUsbDevices(false);
-        for (UsbDevice device : devices) {
-            System.out.println("NOME: " + device.getName() + " UNIQUE :" + device.getUniqueDeviceId() + " ID: " + device.getProductId());
-        }
+////            usb.InsereUsbTabelaPadrao();
+//        Sistema sistema = new Sistema();
+//
+//        System.out.println(sistema.getSistemaOperacional());
+//
+//        List<UsbDevice> devices;
+//        devices = LinuxUsbDevice.getUsbDevices(false);
+//        for (UsbDevice device : devices) {
+//            System.out.println("NOME: " + device.getName() + " UNIQUE :" + device.getUniqueDeviceId() + " ID: " + device.getProductId());
+//        }
 //O LINUX DEVOLVE ISTO
 //            Ubuntu
 //xHCI Host Controller/sys/devices/pci0000:00/0000:00:14.0/usb1
@@ -118,7 +118,12 @@ public class DispositivoUsb {
 //NOME: Integrated_Webcam_HD UNIQUE :/sys/devices/pci0000:00/0000:00:14.0/usb1/1-6
 //NOME: USB Optical Mouse UNIQUE :/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1
 //NOME: xHCI Host Controller UNIQUE :/sys/devices/pci0000:00/0000:00:14.0/usb2
+//
+//    }
 
+    public List<UsbDevice> getDispUsb() {
+        return dispUsb;
     }
+    
 
 }

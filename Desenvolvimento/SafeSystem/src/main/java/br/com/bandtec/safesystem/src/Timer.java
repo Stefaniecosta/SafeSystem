@@ -12,7 +12,6 @@ import java.util.TimerTask;
 public class Timer {
 
     EnviaDados env = new EnviaDados();
-    DispositivoUsb dis = new DispositivoUsb();
 
     public void repeticao(Integer idCaixa) {
 
@@ -25,11 +24,22 @@ public class Timer {
     }
     
     public void repeticaoUsb(Integer idCaixa){
-        new java.util.Timer().scheduleAtFixedRate(new TimerTask() {
+       new java.util.Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
             public void run() {
-               dis.verificarDispositivoEstranho(idCaixa);
+                DispositivoUsb dis = new DispositivoUsb();
+                dis.verificarUSB();
+                if(dis.getDispUsb().size() == 0){
+                    System.out.println("NENHUM DISPOSITIVO ENCONTRADO");
+                }else{
+                    dis.verificarDispositivoEstranho(idCaixa);
+                    }
             }
-        }, 0, 10000);
+        }, 0, 100);
+        
+    }
+
+    public void scheduleAtFixedRate(TimerTask timerTask, int delay, int interval) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

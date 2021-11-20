@@ -1,26 +1,24 @@
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/models/Agencia.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/loocaapi/TesteLooca.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/Autenticacao.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/TesteLogin.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/models/RegistroMaquina.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/TesteBanco.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/Slack.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/view/TelaDeRelatorio.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/models/Maquina.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/testeLooca.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/models/Usuario.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/Relatorio.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/models/DispositivoPadrao.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/view/Login.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/models/RegistroRelatorio.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/EnviaDados.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/models/dispositivoEstranho.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/Timer.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/ConexaoBD.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/usb/DispositivoUsb.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/view/Home.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/TesteAzure.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/models/Banco.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/Log.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/TesteLog.java
-/home/gustavo/Área de Trabalho/Bandtec/2° SEMESTRE/Pesquisa & Inovação/SafeSystem/Desenvolvimento/SafeSystem/src/main/java/br/com/bandtec/safesystem/src/testeSlack.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\Relatorio.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\view\Login.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\models\Usuario.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\models\DispositivoPadrao.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\EnviaDados.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\usb\DispositivoUsb.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\models\Banco.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\testeLooca.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\TesteAzure.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\view\TelaDeRelatorio.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\Autenticacao.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\Log.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\models\RegistroRelatorio.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\models\RegistroMaquina.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\TesteBanco.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\models\Agencia.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\Slack.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\Timer.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\ConexaoBD.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\loocaapi\TesteLooca.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\models\dispositivoEstranho.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\models\Maquina.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\TesteLogin.java
+C:\Users\paulo.santos\Documents\SafeSystem\GitHub\SafeSystem\Desenvolvimento\SafeSystem\src\main\java\br\com\bandtec\safesystem\src\testeSlack.java
