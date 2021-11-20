@@ -80,21 +80,26 @@
                       Dispositivos conectados
                   </strong>
                   <div id="TextdispConect" class="text-box3Conexao">
-                      <a>5 Conectados</a>
-                      <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">
+                      <a id="temCadastrado"></a>
+                      <img  class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">
                   </div>
-                  <div id="TextdispEstranhos" class="text-box3Conexao text-redBox3">
-                      <a id="temEstranho"></a>
-                      <img class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">
 
-                  </div>
               </div>
           </div>
 
           <div id="box5Visaogeral" class="box2">
               <div class="boxContent">
-                  <div> </div>
-                  <img id="atmVisaogeral" src="../assets/img/dashboard-img/seta-caixa.png" alt="">
+                <strong>
+                  <img id="iconesBox" src="../assets/img/dashboard-img/conexao-icone.png" alt="">
+
+                  Dispositivos Estranhos
+              </strong>
+
+                <div id="TextdispEstranhos" class="text-box3Conexao text-redBox3">
+                  <a id="temEstranho"></a>
+                  <img id="caveira" class="iconeBox3Conex" src="../assets/img/dashboard-img/IconeConectDash.svg" alt="">
+
+              </div>
               </div>
           </div>
 
@@ -366,6 +371,8 @@ function zerarInfos()
   velocidadeDaCpu.innerHTML = '';
   nomeProcessador.innerHTML = '';
   quantidadeDisco.innerHTML = '';
+  temEstranho.innerHTML = '';
+  temCadastrado.innerHTML = '';
 }
 
 function chamarGraf(idMaquina)
@@ -375,6 +382,8 @@ function chamarGraf(idMaquina)
     zerarGraficoDisco();
     zerarInfos();
     obterTotalRamENomeProcessador(idMaquina);
+    obterDispositivoEstranho(idMaquina);
+    obterDispositivosCadastrados(idMaquina)
     //obterEspacoTotal(idMaquina);
     
     clearInterval(timer);
@@ -432,19 +441,23 @@ function obterDispositivoEstranho(idMaquina)
     
                     resposta.json().then(json => {
                       console.log('chegando dispositivos estranhos!')
-                      if (json.length > 0) {
+                      console.log("alertando length de json: " + json.length)
+                      console.log(json[0])
+                      if (json == 0) {
                         temEstranho.style.color = 'white';
-                        temEstranho.innerHTML = 'Sem dispositivos estranhos conectados!';
+                        temEstranho.innerHTML = 'Sem dispositivos estranhos detectados!';
+                        caveira.style.display = 'none';
                       } else {
                         temEstranho.style.color = 'red';
                         temEstranho.innerHTML = 'ATENÇÃO, DISPOSITIVO ESTRANHO DETECTADO'
+                        caveira.style.display = 'block';
                       }                       
                                               
                     });
     
                 } else {
     
-                    console.log('Erro ao obter processador e total de ram!');
+                    console.log('Erro ao obter dispositivos estranhos!');
     
                     resposta.text().then(texto => {
                         console.error(texto);
@@ -455,6 +468,39 @@ function obterDispositivoEstranho(idMaquina)
             return false;
 }
 
+function obterDispositivosCadastrados(idMaquina)
+{
+  fetch(`/agencias/obterDispositivosCadastrados/${idMaquina}`, {
+                method: "post",
+            }).then(resposta => {
+    
+                if (resposta.ok) {
+    
+                    resposta.json().then(json => {
+                      console.log('chegando dispositivos cadastrados!')
+                      console.log("alertando quantidade de dispositivos cadastrados: " + json.length)
+                      if (json == 0) {
+                        temCadastrado.innerHTML = 'Este caixa não possui dispositivos conectados!';
+                      } else if (json == 1){
+                        temCadastrado.innerHTML = `${json.length} Cadastrado`;
+                      } else {
+                        temCadastrado.innerHTML = `${json.length} Cadastrados`;
+                      }                              
+                                              
+                    });
+    
+                } else {
+    
+                    console.log('Erro ao obter dispositivos estranhos!');
+    
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        alert(texto);
+                    });
+                }
+            });
+            return false;
+}
 
 let idMaquinaPrimeiraVez = sessionStorage.getItem('idMaquina');
 

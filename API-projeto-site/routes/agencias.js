@@ -265,6 +265,8 @@ router.post('/obterEspacoTotal/:idMaquina', function(req, res, next) {
 router.post('/obterDispositivoEstranho/:idMaquina', function(req, res, next) {
 
 	let idMaquina = req.params.idMaquina;
+
+	console.log(idMaquina + "teste oi")
 	
 	console.log(`Checando dispositivos estranhos do caixa de id ${idMaquina}`);
 
@@ -277,7 +279,7 @@ router.post('/obterDispositivoEstranho/:idMaquina', function(req, res, next) {
 	}).then(resultado => {
 		console.log(`Resultado encontrado: ${resultado}`);
 
-			if (resultado.length > 0) {
+			if (resultado.length >= 0) {
 				res.json(resultado);
 			} else {
 				res.status(403).send(`Erro ao obter dispositivos estranhos do caixa de id ${idMaquina}!`);
@@ -291,4 +293,39 @@ router.post('/obterDispositivoEstranho/:idMaquina', function(req, res, next) {
 	
 });
 
+// obtendo quantidade de dispositivos conectados
+
+router.post('/obterDispositivosCadastrados/:idMaquina', function(req, res, next) {
+
+	let idMaquina = req.params.idMaquina;
+
+	console.log(idMaquina + "teste oi")
+	
+	console.log(`Checando dispositivos cadastrados do caixa de id ${idMaquina}`);
+
+	let instrucaoSql = `select * from [dbo].[dispositivoPadrao] where fkMaquina = ${idMaquina}`;
+
+	console.log(instrucaoSql);
+	
+	sequelize.query(instrucaoSql, {
+		type: sequelize.QueryTypes.SELECT
+	}).then(resultado => {
+		console.log(`Resultado encontrado: ${resultado}`);
+
+			if (resultado.length >= 0) {
+				res.json(resultado);
+			} else {
+				res.status(403).send(`Erro ao obter dispositivos conectados do caixa de id ${idMaquina}!`);
+			}
+		
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+  	});
+	
+	
+});
+
 module.exports = router;
+
+
