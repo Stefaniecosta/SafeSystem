@@ -63,24 +63,27 @@ public class DispositivoUsb {
         this.verificarUSB();
     }
 
-    public void InsereUsbTabelaPadrao() {
+    public Integer InsereUsbTabelaPadrao() {
 
         this.verificarUSB();
         ConexaoBD config = new ConexaoBD();
         JdbcTemplate con = new JdbcTemplate(config.getBancoDeDados());
+        Integer retorno =0;
 
         for (UsbDevice usbDevice : dispUsb) {
             List<DispositivoPadrao> disp = con.query("select * from dispositivoPadrao where uniqueDevice = ?", new BeanPropertyRowMapper(DispositivoUsb.class), usbDevice.getUniqueDeviceId());
 //            System.out.println(disp.size());
             if (disp.size() >= 1) {
                 System.out.println(usbDevice.getName() + " JÁ ESTA CADASTRADO!");
+                retorno = 1;
             } else {
                 con.update("INSERT INTO dispositivoPadrao (productid, uniqueDevice, nome)"
                         + "VALUES (?, ?, ?)", usbDevice.getProductId(), usbDevice.getUniqueDeviceId(), usbDevice.getName());
                 System.out.println("DISPOSITIVOS " + usbDevice.getName() + " CADSATRO!");
+                retorno = 2;
             }
         }
-
+        return retorno;
     }
 
     public void verificarDispositivoEstranho(Integer idCaixa) {
@@ -141,11 +144,5 @@ public class DispositivoUsb {
         return dispUsb;
     }
     
-//    public static void main(String[] args) {
-//        Sistema sistema = new Sistema();
-//        System.out.println(sistema.getSistemaOperacional());
-//                
-//    }
     
-
 }
