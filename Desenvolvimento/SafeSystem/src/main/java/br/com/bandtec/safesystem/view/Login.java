@@ -126,19 +126,18 @@ public class Login extends javax.swing.JFrame {
                 .addContainerGap(239, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(lblresultado2, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addGap(117, 117, 117))
-                        .addComponent(PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(LoginField, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(CodeField, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblResultado, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(117, 117, 117))
+                    .addComponent(PasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LoginField, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CodeField, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblResultado, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE))
                 .addGap(233, 233, 233))
         );
         layout.setVerticalGroup(
@@ -182,7 +181,8 @@ public class Login extends javax.swing.JFrame {
         List resultadoAutenticacao = autenticacao.AutenticaUsuario();
         if (!resultadoAutenticacao.isEmpty()) {
             lblResultado.setText("CONECTADO!");   
-            TelaDeRelatorio home = new TelaDeRelatorio(resultadoAutenticacao);
+            Integer idCaixa = Integer.parseInt(caixa);
+            TelaDeRelatorio home = new TelaDeRelatorio(resultadoAutenticacao, idCaixa);
             home.setVisible(true);
             setVisible(false);
         } else {
@@ -214,13 +214,12 @@ public class Login extends javax.swing.JFrame {
             DispositivoUsb usb = new DispositivoUsb();
             Integer inserir = usb.InsereUsbTabelaPadrao();
             if(inserir == 1){
-                lblResultado.setText("JÁ EXISTE USB MAPEADOS"
-                        );
+                lblResultado.setText("JÁ EXISTEM USB MAPEADOS");
                 lblresultado2.setText("Ente em contato conosco para mapear outra vez");
             }else if(inserir == 2){
                 lblResultado.setText("OS USB FORAM MAPEADOS");
             }else{
-                lblResultado.setText("SEM USB CONECTADO");
+                lblResultado.setText("SEM NENHUM USB CONECTADO");
             }
             
         }else{

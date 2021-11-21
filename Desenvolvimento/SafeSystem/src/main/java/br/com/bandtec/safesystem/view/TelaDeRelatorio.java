@@ -5,78 +5,41 @@
  */
 package br.com.bandtec.safesystem.view;
 
+import br.com.bandtec.safesystem.src.EnviaDados;
 import br.com.bandtec.safesystem.src.Timer;
 import br.com.bandtec.safesystem.src.models.Usuario;
 import br.com.bandtec.safesystem.usb.DispositivoUsb;
 import com.github.britooo.looca.api.core.Looca;
-import com.github.britooo.looca.api.util.Conversor;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.TimerTask;
 
 public class TelaDeRelatorio extends javax.swing.JFrame {
 
     Looca looca = new Looca();
     Timer timer = new Timer();
     DispositivoUsb dis = new DispositivoUsb();
-    List<Usuario> listaInfos = new ArrayList();
-
+    private final List<Usuario> listaInfos = new ArrayList();
+    private final Integer idCaixa;
     /**
      * Creates new form TelaDeRelatorio
+     *
      * @param lista
+     * @param idCaixa
      */
-    public TelaDeRelatorio(List<Usuario> lista) {
+    public TelaDeRelatorio(List<Usuario> lista, Integer idCaixa) {
         initComponents();
         
+        this.idCaixa = idCaixa;
+        
         listaInfos.add(lista.get(0));
-        
+
         System.out.println(listaInfos.get(0).getEmail());
-        
-        // Inicia o looping de enviar dados
-        
+
+        // Inicia o looping de enviar dados    
         timer.repeticao(listaInfos.get(0).getIdUsuario());
-        plot();
-        
+
+        // Inicia o looping de captura de dispositivos    
         timer.repeticaoUsb(listaInfos.get(0).getIdUsuario());
-        plot();
-
-
-       
-        
-  
-
-    }
-
-    public final void plot() {
-//        new java.util.Timer().scheduleAtFixedRate(new TimerTask() {
-//            @Override
-//            public void run() {
-//                String ramTaotal = Conversor.formatarBytes(looca.getMemoria().getTotal());
-//                lblRamTotal.setText(ramTaotal);
-//                String ramUso = Conversor.formatarBytes(looca.getMemoria().getEmUso());
-//                lblRamUso.setText(ramUso);
-//                lblProcessador.setText(looca.getProcessador().getNome());
-//                String hdTrunc = Conversor.formatarBytes(looca.getGrupoDeDiscos().getTamanhoTotal());
-//                lblHd.setText(String.format(hdTrunc));
-//                lblCpuFisica.setText(looca.getProcessador().getNumeroCpusFisicas().toString());
-//                lblCpuLogica.setText(looca.getProcessador().getNumeroCpusLogicas().toString());
-//                String frequencia = Conversor.formatarBytes(looca.getProcessador().getFrequencia());
-//                String auxFrequencia = frequencia.replace("GiB", "GHz");
-//                String strFrequencia = String.format("%s", auxFrequencia);
-//                lblFrequencia.setText(strFrequencia);
-//                String so = looca.getSistema().getSistemaOperacional();
-//                Integer arq = looca.getSistema().getArquitetura();
-//                String fabricante = looca.getSistema().getFabricante();
-//                lblSistemaOperacional.setText(String.format("%s %s %d bits", fabricante, so, arq));
-//
-//                //DADOS DE UTILIZAÇÃO
-//                Double usoTrunc = (looca.getProcessador().getUso());
-//                lblPorcentagemDeUso.setText(String.format("%.2f%%", usoTrunc));
-//                lblNumeroProcessos.setText(looca.getGrupoDeProcessos().getTotalProcessos().toString());
-//                lblThreads.setText(looca.getGrupoDeProcessos().getTotalProcessos().toString());
-//            }
-//        }, 0, 2000);
-        //DADOS DA MÁQUINA
 
     }
 
@@ -90,65 +53,100 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnSair = new javax.swing.JButton();
-        lblTitulo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        btnAtualizarComponentes = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("SafeSystem");
         setAutoRequestFocus(false);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1500, 2000));
-        setPreferredSize(new java.awt.Dimension(1200, 800));
+        setPreferredSize(new java.awt.Dimension(700, 400));
 
-        jPanel1.setBackground(new java.awt.Color(0, 13, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 29, 0));
 
-        btnSair.setBackground(new java.awt.Color(214, 69, 80));
-        btnSair.setFont(new java.awt.Font("Mukti Narrow", 1, 24)); // NOI18N
-        btnSair.setForeground(new java.awt.Color(255, 255, 255));
-        btnSair.setText("Sair");
-        btnSair.setBorderPainted(false);
-        btnSair.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnSair.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(175, 255, 195));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Bem Vindos!");
+
+        btnAtualizarComponentes.setBackground(new java.awt.Color(153, 255, 153));
+        btnAtualizarComponentes.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        btnAtualizarComponentes.setForeground(new java.awt.Color(0, 0, 0));
+        btnAtualizarComponentes.setText("Atualizar");
+        btnAtualizarComponentes.setBorderPainted(false);
+        btnAtualizarComponentes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnAtualizarComponentes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                btnSairMouseEntered(evt);
+                btnAtualizarComponentesMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                btnSairMouseExited(evt);
+                btnAtualizarComponentesMouseExited(evt);
             }
         });
-        btnSair.addActionListener(new java.awt.event.ActionListener() {
+        btnAtualizarComponentes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSairActionPerformed(evt);
+                btnAtualizarComponentesActionPerformed(evt);
             }
         });
 
-        lblTitulo.setFont(new java.awt.Font("Yrsa Light", 1, 18)); // NOI18N
-        lblTitulo.setForeground(new java.awt.Color(175, 255, 195));
-        lblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitulo.setText("Os dados estão sendo capturados");
-        lblTitulo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(175, 255, 195));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Os dados do caixa estão sendo conectados.");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(175, 255, 195));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Atualizar componentes do caixa");
+
+        jLabel4.setForeground(new java.awt.Color(175, 255, 195));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        jButton1.setText("Sair");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 595, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(273, 273, 273)
-                        .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 317, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnAtualizarComponentes)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(lblTitulo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
-                .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(203, 203, 203))
+                .addGap(7, 7, 7)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addGap(101, 101, 101)
+                .addComponent(jLabel2)
+                .addGap(12, 12, 12)
+                .addComponent(btnAtualizarComponentes)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -159,37 +157,47 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-    }//GEN-LAST:event_btnSairActionPerformed
+    private void btnAtualizarComponentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtualizarComponentesActionPerformed
+        String env = new EnviaDados().atualizarComponentesNoBanco(idCaixa);
+        
+        jLabel4.setText(env);
+    }//GEN-LAST:event_btnAtualizarComponentesActionPerformed
 
-    private void btnSairMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSairMouseExited
+    private void btnAtualizarComponentesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAtualizarComponentesMouseExited
         // TODO add your handling code here:
         //btnSair.setBackground(new Color(214, 69, 80));
         //btnSair.setForeground(new Color(235, 235, 235));
-    }//GEN-LAST:event_btnSairMouseExited
+    }//GEN-LAST:event_btnAtualizarComponentesMouseExited
 
-    private void btnSairMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSairMouseEntered
+    private void btnAtualizarComponentesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAtualizarComponentesMouseEntered
         // TODO add your handling code here:
         //btnSair.setBackground(new Color(235, 235, 235));
         //btnSair.setForeground(new Color(214, 69, 80));
-    }//GEN-LAST:event_btnSairMouseEntered
+    }//GEN-LAST:event_btnAtualizarComponentesMouseEntered
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSair;
+    private javax.swing.JButton btnAtualizarComponentes;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblTitulo;
     // End of variables declaration//GEN-END:variables
 }

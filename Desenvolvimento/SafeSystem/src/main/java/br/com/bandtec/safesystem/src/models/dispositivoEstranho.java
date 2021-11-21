@@ -1,7 +1,7 @@
 
 package br.com.bandtec.safesystem.src.models;
 
-public class dispositivoEstranho {
+public class DispositivoEstranho {
     private Integer idDispositivo;
     private String productId;
     private String uniqueDevice;

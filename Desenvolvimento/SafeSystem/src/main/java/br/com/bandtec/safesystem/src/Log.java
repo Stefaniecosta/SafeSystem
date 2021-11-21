@@ -38,11 +38,11 @@ public final class Log {
 
         try {
             Timestamp dataDeHoje = new Timestamp(System.currentTimeMillis());
-            String datetime = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").format(dataDeHoje.getTime());
+            String datetime = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss").format(dataDeHoje.getTime());
 
             System.out.println("Gerando log de erro...");
 
-            File diretorio = new File("//C://logs_safesystem//");
+            File diretorio = new File("//C://logs safesystem//");
 
             try {
 
@@ -61,7 +61,7 @@ public final class Log {
                 e.getMessage();
             }
 
-            File arquivo = new File("//C://logs_safesystem//" + datetime + ".txt");
+            File arquivo = new File("//C://logs safesystem//" + datetime + ".txt");
             FileWriter fileWriter = new FileWriter(arquivo, true);
             PrintWriter gravarArq = new PrintWriter(fileWriter);
             gravarArq.println(dataDeHoje + " " + errorMessage + ": " + errorException + "\n");

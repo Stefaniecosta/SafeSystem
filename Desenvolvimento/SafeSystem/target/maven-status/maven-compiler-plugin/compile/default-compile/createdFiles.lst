@@ -2,7 +2,6 @@ br\com\bandtec\safesystem\src\Relatorio.class
 br\com\bandtec\safesystem\view\Login$4.class
 br\com\bandtec\safesystem\src\testeSlack.class
 br\com\bandtec\safesystem\src\models\Maquina.class
-br\com\bandtec\safesystem\view\TelaDeRelatorio$3.class
 br\com\bandtec\safesystem\view\Login$1.class
 br\com\bandtec\safesystem\src\EnviaDados.class
 br\com\bandtec\safesystem\src\TesteAzure.class
@@ -12,6 +11,7 @@ br\com\bandtec\safesystem\loocaapi\TesteLooca.class
 br\com\bandtec\safesystem\src\TesteLogin.class
 br\com\bandtec\safesystem\src\Timer$2.class
 br\com\bandtec\safesystem\view\Login$3.class
+br\com\bandtec\safesystem\view\Login$6.class
 br\com\bandtec\safesystem\src\models\RegistroRelatorio.class
 br\com\bandtec\safesystem\src\testeLooca.class
 br\com\bandtec\safesystem\src\models\RegistroMaquina.class
@@ -28,6 +28,7 @@ br\com\bandtec\safesystem\src\models\DispositivoPadrao.class
 br\com\bandtec\safesystem\src\TesteBanco.class
 br\com\bandtec\safesystem\src\Timer.class
 br\com\bandtec\safesystem\src\Slack.class
+br\com\bandtec\safesystem\src\TesteLog.class
 br\com\bandtec\safesystem\usb\DispositivoUsb.class
 br\com\bandtec\safesystem\src\Timer$1.class
 br\com\bandtec\safesystem\view\TelaDeRelatorio$1.class

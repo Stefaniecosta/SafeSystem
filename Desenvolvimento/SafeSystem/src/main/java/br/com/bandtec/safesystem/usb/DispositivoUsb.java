@@ -77,8 +77,9 @@ public class DispositivoUsb {
                 System.out.println(usbDevice.getName() + " JÁ ESTA CADASTRADO!");
                 retorno = 1;
             } else {
+                System.out.println(usbDevice.getName());
                 con.update("INSERT INTO dispositivoPadrao (productid, uniqueDevice, nome)"
-                        + "VALUES (?, ?, ?)", usbDevice.getProductId(), usbDevice.getUniqueDeviceId(), usbDevice.getName());
+                        + " VALUES (?, ?, ?)", usbDevice.getProductId(), usbDevice.getUniqueDeviceId(), usbDevice.getName());
                 System.out.println("DISPOSITIVOS " + usbDevice.getName() + " CADSATRO!");
                 retorno = 2;
             }
