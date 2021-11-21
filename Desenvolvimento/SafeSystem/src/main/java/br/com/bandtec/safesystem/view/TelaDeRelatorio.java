@@ -76,7 +76,6 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
 
         btnAtualizarComponentes.setBackground(new java.awt.Color(153, 255, 153));
         btnAtualizarComponentes.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        btnAtualizarComponentes.setForeground(new java.awt.Color(0, 0, 0));
         btnAtualizarComponentes.setText("Atualizar");
         btnAtualizarComponentes.setBorderPainted(false);
         btnAtualizarComponentes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
