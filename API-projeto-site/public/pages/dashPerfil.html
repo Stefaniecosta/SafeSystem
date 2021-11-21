@@ -15,9 +15,9 @@
 
     <body id="body-pd">
         <header class="header" id="header">
-            <div class="header__toggle">
+            <!-- <div class="header__toggle">
                 <i class='bx bx-menu' id="header-toggle"></i>
-            </div>
+            </div> -->
 
         <div id="header-profile-button">
             <div class="dropdown">
@@ -36,8 +36,83 @@
 
         </header>
 
+    
+         <div id="content">
+        <img id="logoName" src="../assets/img/logoss.svg" alt="">
+
+        <div id="options">
+            <div class="item">
+                <strong class="font_tamanho">
+                    
+                </strong>
+            </div>
+
+            <hr>
+
+            <div class="item">
+                <div>
+                    <img src="../assets/img/visaoGeralImg.png" alt="">
+                </div>
+                <a href="visaogeral.html"> Meu perfil </a>
+            </div>
+
+            <hr>
+
+            <!-- CAIXA 1 -->
+            <div class="item">
+                <img src="../assets/img/caixaIcon.png" alt="">
+                <button >
+                    <span style="cursor: pointer;">Visão Geral</span>
+                </button>
+            </div>
+
+            <hr>
+
+            <!-- CAIXA 2 -->
+            <div class="item">
+                <img src="../assets/img/caixaIcon.png" alt="">
+                <button >
+                    <span style="cursor: pointer;">Mudar senha</span>
+                </button>
+            </div>
+
+            <hr>
+
+            <!-- CAIXA 3 -->
+            <div class="item">
+                <img src="../assets/img/caixaIcon.png" alt="">
+                <button >
+                    <span style="cursor: pointer;">Dashboard</span>
+                </button>
+            </div>
+<hr>
+
+            <div class="item item_color">
+                <span>
+                    Agência
+                </span>
+                <br>
+                <strong>
+                    0222
+                </strong>
+            </div>
+            <hr>
+        </div>
+
+
+       
+        <!-- Ícone de SAIR da dashboard -->
+        <div id="logout" >
+            <a href="/Site/index.html">
+                <img id="logoutIcon" src="../assets/img/logoutIcon.png" alt="Ícone para sair da Dashboard">
+            </a>
+        </div>
+    </div>
+
+
+
         <!-- Código do menu hamburguer -->
-        <div class="l-navbar" id="nav-bar">
+        <!-- <div class="l-navbar" id="nav-bar">
             <nav class="nav">
                 <div>
                     <a href="/index.html" class="nav__logo">
@@ -74,7 +149,7 @@
                     <span class="nav__name">Voltar para home</span>
                 </a>
             </nav>
-        </div>
+        </div> -->
     <!-- Fim do hamburguer -->
 
 
@@ -90,7 +165,7 @@
 
             <h2>Foto do perfil</h2>
             <img class="section-img profile" src="../assets/img/Ellipse 55.svg" />
-            <p>O administrador escolhido é o único responsável pelo perfil da empresa.</p>
+            <p>O administrador escolhido é o único responsável pelo perfil da agencia.</p>
             <a href="#" class="info-link">Leia mais sobre nossa politica...</a>
         </div>
 
@@ -126,11 +201,11 @@
          <!-- Script que deixa o card do perfil animado -->
         <script type="text/javascript" src="/scripts/vanilla-tilt.js"></script>
 
-        <script>
+        <!-- <script>
             VanillaTilt.init(document.querySelectorAll(".caixa-card"), {
             max: 25,
             speed: 400
         }); 
-        </script>
+        </script> -->
     </body>
 </html>
