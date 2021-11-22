@@ -61,9 +61,10 @@ public class EnviaDados {
             return erroMsg;
         }
 
-        String mensagem = String.format("Componentes Atualizados! "
-                + "Processador: %s\n Sistema Operacional: %s, Memoria: %.2f, Disco: %.2f",
-                cpuNome, so, ramTotal, discoTotal);
+        String mensagem = String.format("<html> Componentes Atualizados! <br>"
+                + "Processador: %s<br> Sistema Operacional: %s<br>Memoria: %.2f<br>Disco: %.2f</html>",
+                cpuNome, so, ramTotal, discoTotal
+        );
         return mensagem;
 
     }

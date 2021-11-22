@@ -5,12 +5,14 @@
  */
 package br.com.bandtec.safesystem.src;
 
+import com.github.britooo.looca.api.core.Looca;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import com.github.britooo.looca.api.group.sistema.Sistema;
 
 /**
  *
@@ -21,9 +23,16 @@ public final class Log {
     private final String errorMessage;
     private final String errorException;
 
+    //Para recuperar o sistema operacionl via Looca
+    private Sistema sistemaLooca;
+
+    //Guarda o caminho do log
+    private String caminho;
+
     public Log(String errorMessage, String errorException) {
         this.errorMessage = errorMessage;
         this.errorException = errorException;
+        this.verificarSO();
         this.GerarLog();
 
     }
@@ -31,10 +40,29 @@ public final class Log {
     public Log(String errorMessage) {
         this.errorMessage = errorMessage;
         this.errorException = "";
+        this.verificarSO();
         this.GerarLog();
     }
 
-    public void GerarLog() {
+    private void verificarSO() {
+        Looca looca = new Looca();
+        String sistema = looca.getSistema().getSistemaOperacional();
+        
+        System.out.println();
+
+        if (sistema.equalsIgnoreCase("Windows")) {
+            this.caminho = "//C://logs safesystem//";
+        }
+
+        if (sistema.equalsIgnoreCase("Linux")
+                || sistema.equalsIgnoreCase("Ubuntu")) {
+            this.caminho = "/logs_safesystem/";
+
+        }
+        System.out.println(caminho);
+    }
+
+    private void GerarLog() {
 
         try {
             Timestamp dataDeHoje = new Timestamp(System.currentTimeMillis());
@@ -42,7 +70,7 @@ public final class Log {
 
             System.out.println("Gerando log de erro...");
 
-            File diretorio = new File("//C://logs safesystem//");
+            File diretorio = new File(caminho);
 
             try {
 
@@ -61,7 +89,7 @@ public final class Log {
                 e.getMessage();
             }
 
-            File arquivo = new File("//C://logs safesystem//" + datetime + ".txt");
+            File arquivo = new File(caminho + datetime + ".txt");
             FileWriter fileWriter = new FileWriter(arquivo, true);
             PrintWriter gravarArq = new PrintWriter(fileWriter);
             gravarArq.println(dataDeHoje + " " + errorMessage + ": " + errorException + "\n");

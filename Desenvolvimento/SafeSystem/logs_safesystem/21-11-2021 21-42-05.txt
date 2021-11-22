@@ -1,0 +1,2 @@
+2021-11-21 21:42:05.281 Uncompilable source code - Erroneous tree type: a: Falha ao enviar alerta de mapeamento de dispositivos ao Slack
+

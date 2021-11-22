@@ -28,7 +28,7 @@ public class DispositivoUsb {
         //VERIFICAÇÃO DO TIPO DE SISTEMA OPERACIONAL
         if(sistema.getSistemaOperacional().equalsIgnoreCase("Windows")){
             this.devices = WindowsUsbDevice.getUsbDevices(false);
-        }else if(sistema.getSistemaOperacional().equalsIgnoreCase("Linux")){
+        }else if(sistema.getSistemaOperacional().equalsIgnoreCase("Linux") || sistema.getSistemaOperacional().equalsIgnoreCase("Ubuntu")){
             this.devices = LinuxUsbDevice.getUsbDevices(false);
         }
         
@@ -49,7 +49,7 @@ public class DispositivoUsb {
    //          System.out.println("NOME: " + device.getName() + " UNIQUE: " + device.getUniqueDeviceId() +" SERIAL: "+ device.getVendor());
                }
            }           
-        }else if(sistema.getSistemaOperacional().equalsIgnoreCase("Linux")){
+        }else if(sistema.getSistemaOperacional().equalsIgnoreCase("Linux") || sistema.getSistemaOperacional().equalsIgnoreCase("Ubuntu")){
             for (UsbDevice device : devices) {
                String unique = device.getUniqueDeviceId();
                String usb = "/sys/devices";
