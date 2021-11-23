@@ -308,20 +308,76 @@
     setTimeout(() => {
         setInterval(() => {
             obterDadosPorIdCaixa();
-        }, 4000);
+            setTimeout(() => {
+                boxDasCaixas.innerHTML = '';
+                estudarRegistros();
+            }, 200);
+        }, 3800);
     }, 2100);
 
 
 
-    function obterDadosPorIdCaixa() {
+    async function obterDadosPorIdCaixa() {
         registros = [];
+        temEstranho = []
         for (let index = 0; index < idDasMaquinas.length; index++) {
-            obterDados(idDasMaquinas[index]);
-            obterDispositivosEstranhosVisaoGeral(idDasMaquinas[index])
+            //obterDados(idDasMaquinas[index]);
+            let idMaquina = idDasMaquinas[index];
+            await fetch(`/agencias/obterRegistrosDasMaquinas/${idMaquina}`, {
+            method: "post",
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    console.log(json);
+                    registros.push(json)
+
+                });
+
+            } else {
+
+                console.log('Erro ao obter registro do caixa ' + idMaquina);
+
+                resposta.text().then(texto => {
+                    alert(`Erro ao obter registro do caixa ${idMaquina}`)
+                });
+            }
+        });
+            //obterDispositivosEstranhosVisaoGeral(idDasMaquinas[index])
+            await fetch(`/agencias/obterDispositivoEstranho/${idMaquina}`, {
+                method: "post",
+            }).then(resposta => {
+    
+                if (resposta.ok) {
+    
+                    resposta.json().then(json => {
+                      console.log('chegando dispositivos estranhos!')
+                      console.log("alertando length de json: " + json.length)
+                      console.log(json[0])
+                      if (json == 0) {
+                          temEstranho.push(false)
+                      } else {
+                          temEstranho.push(true)
+                      }                       
+                                              
+                    });
+    
+                } else {
+    
+                    console.log('Erro ao obter dispositivos estranhos!');
+    
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                        alert(texto);
+                    });
+                }
+            });
 
         }
         console.log(registros)
-        estudarRegistros();
+        //estudarRegistros();
         console.log('atualizando dados');
 
     }
@@ -390,7 +446,7 @@
 
                                 <strong>
                                     <img class="item-img" src="../assets/img/caixaIcon.png" alt="">
-                                    Caixa 1
+                                    Caixa ${index + 1}
                                 </strong>
                             </div>
                             <br>
