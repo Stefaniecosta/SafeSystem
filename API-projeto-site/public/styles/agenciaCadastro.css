@@ -7,6 +7,7 @@
         background-image: url('../assets/img/blur.svg');
         font-family: 'Poppins, sans-serif';
         box-sizing: border-box;
+        align-items: center;
     }
     
     .modal {
@@ -32,7 +33,6 @@
         background-color: rgba(0, 0, 0, 0.4);
         /* Black w/ opacity */
     }
-    /* Conteúdo do modal */
     
     .modal-content {
         position: relative;
@@ -99,7 +99,8 @@
         margin-top: 5px;
         display: flex;
         width: 300px;
-        text-align: center;
+        right: 24%;
+        position: relative;
         justify-content: center;
     }
     
@@ -111,10 +112,9 @@
     }
     
     .modal-header {
-        padding: 2px 16px;
-        background-color: #5cb85c;
+        padding: 1px 0px;
         color: white;
-        border-radius: 20px;
+        border-radius: 75px;
     }
     
     .modal-body {
@@ -122,15 +122,25 @@
         text-align: center;
         font-size: 18px;
         font-family: 'Poppins';
+        height: 410px;
+        background: radial-gradient(112.52% 123.86% at 12.55% 86.48%, rgba(172, 255, 195, 0.26) 8.23%, rgba(172, 255, 195, 0) 76.21%, rgba(255, 255, 255, 0.05) 100%);
         color: white;
+        border-radius: 66px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 60px;
+        -webkit-box-shadow: inset 0 0 20px #000;
+        -moz-box-shadow: inset 0 0 20px #000;
+        -ms-box-shadow: inset 0 0 20px #000;
+        box-shadow: inset 0 0 20px #000;
     }
-    
-    .modal-footer {
-        padding: 2px 16px;
+    /* .modal-footer {
+        padding: 10px 16px;
         background-color: #5cb85c;
         color: white;
         border-radius: 20px;
-    }
+    } */
     
     .titulos {
         color: rgb(172, 255, 195);
@@ -167,18 +177,20 @@
         flex-direction: row;
     }
     
-    section.cover_side {
-        width: 70vw;
+    section.cover_side_pic {
+        width: 5vw;
         height: 100vh;
-        background-image: url(../assets/img/agenciaATM.jpg);
+        background-image: url(../assets/img/framecaixaform);
         -webkit-filter: grayscale(50%);
         background-size: cover;
         background-repeat: no-repeat;
     }
     
     section.form_side {
+        width: 100%;
         display: flex;
-        width: 35vw;
+        margin-top: 30px;
+        height: 100vh;
         justify-content: center;
         align-items: center;
         overflow: auto;
@@ -186,7 +198,6 @@
     
     section.form_side .container {
         display: flex;
-        width: 50%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -333,22 +344,6 @@
         color: var(--yellow);
     }
     /* MEDIA QUERYS */
-    
-    @media(max-width: 1400px) {
-        body {
-            font-size: 80%;
-        }
-        section.form_side {
-            width: 80vw;
-        }
-        section.form_side .container .inputs_group input {
-            height: 30px;
-        }
-        section.form_side .container .btSave {
-            height: 55px;
-            border-radius: 100px;
-        }
-    }
     
     @media(max-width: 1000px) {
         .form_side {

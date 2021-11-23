@@ -15,7 +15,7 @@ function loading_screen() {
     hide_components();
     loading_msg.innerHTML = "<span>Cadastrando </span> agência";
     setTimeout(() => {
-        loading.style = "display: flex; position: absolute; background-color: #057321; border-radius: 20px; width: 400px; height: 300px; font-family: 'Poppins';"
+        loading.style = "display: flex; position: absolute; background-color: #1A271E; border-radius: 20px; width: 400px; height: 300px; font-family: 'Poppins'; border: 1px white; border-style: solid;"
     }, 990);
 }
 
@@ -53,7 +53,7 @@ function success() {
 
     setTimeout(() => {
         loading_msg.style = "animation: fade_in 800ms";
-        loading_msg.innerHTML = "Agência cadastrada com sucesso.";
+        loading_msg.innerHTML = "Agência cadastrada com sucesso. <br> <a>Agora cadastre os caixas</a>";
         loading_gif.style = "display: none;";
     }, 790);
 
@@ -75,4 +75,15 @@ function update_failed() {
     setTimeout(() => {
         window.location.reload('index.html');
     }, 5000);
+
+
+    function validaEmail(email) {
+        const emailRegex = /^([a-zA-Z][^<>\"!@[\]#$%¨&*()~^:;ç,\-´`=+{}º\|/\\?]{1,})@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        return emailRegex.test(String(email).toLowerCase())
+    }
+
+    function validaSenha(senha) {
+        const senhaRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,20}$/
+        return senhaRegex.test(String(senha))
+    }
 }
