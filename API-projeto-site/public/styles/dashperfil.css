@@ -3,7 +3,7 @@
 
 /*===== VARIABLES CSS =====*/
 :root{
-  --header-height: 3rem;
+  --header-height: 0rem;
   --nav-width: 68px;
 
   /*===== Colors =====*/
@@ -20,6 +20,11 @@
   --z-fixed: 100;
 }
 
+a {
+  text-decoration: none !important;
+  color: aliceblue;
+}
+
 /*===== BASE =====*/
 *,::before,::after{
   box-sizing: border-box;
@@ -28,10 +33,12 @@
 body{
   position: relative;
   margin: var(--header-height) 0 0 0;
-  padding: 0 1rem;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   transition: .5s;
+  background-image: url(../assets/img/blur.svg);
+  background-size: cover;
+
 }
 
 a{
@@ -46,6 +53,7 @@ a{
 .header{
   width: 100%;
   height: var(--header-height);
+  margin-top: 25px;
   position: fixed;
   top: 0;
   left: 0;
@@ -53,7 +61,7 @@ a{
   align-items: center;
   justify-content: flex-start;
   padding: 0 1rem;
-  background-color: #5fc951a9;
+  /* background-color: #4a814346; */
   z-index: var(--z-fixed);
   transition: .5s;
 }
@@ -77,8 +85,104 @@ a{
   width: 40px;
 }
 
+
+/* barra de rolagem, scroll */
+
+::-webkit-scrollbar {
+  background-color: #e1666600;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(250, 250, 250, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ACFFC3;
+}
+
+
+
+
+
+
+#content {
+    height: 100vh;
+    width: 12%;
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid #A8D5A7;
+    float: left;
+    background-color: black;
+    /* background: linear-gradient(180deg, #ACFFC3 0%, rgba(131, 187, 144, 0.38) 0.01%, rgba(22, 9, 9, 0) 100%),linear-gradient(0deg, #000000, #000000); */
+    position: fixed;
+}
+
+#options {
+    overflow: auto;
+    height: 80vh;
+}
+
+#logoName {
+    width: 30%;
+    padding: 20px 0px 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.font_tamanho {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.item {
+    padding: 15px 0 16px 0px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: auto;
+    align-items: stretch;
+    color: white;
+}
+
+.item_color {
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.8));
+}
+
+hr {
+    border: none;
+    background-color: #A8D5A7;
+    height: 2px;
+    width: 100%;
+}
+
+.item img {
+    width: 20px;
+}
+
+#logout {
+    text-align: center;
+}
+
+#logout img {
+    padding: 10px 0 10px 0;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+button {
+  background-color: transparent;
+  color: aliceblue;
+  font-size: 0.99rem;
+  pointer-events: visible;
+  border: none;
+  cursor: pointer;
+}
+
 /*===== NAV =====*/
-.l-navbar{
+/* .l-navbar{
   position: fixed;
   top: 0;
   left: -30%;
@@ -133,7 +237,7 @@ a{
 
 .nav__icon{
   font-size: 1.25rem;
-}
+} */
 
 /*Show navbar movil*/
 .show{
@@ -162,8 +266,8 @@ a{
 /* ===== MEDIA QUERIES=====*/
 @media screen and (min-width: 768px){
   body{
-    margin: calc(var(--header-height) + 1rem) 0 0 0;
-    padding-left: calc(var(--nav-width) + 2rem);
+    /* margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem); */
   }
 
   .header{
@@ -305,6 +409,8 @@ a{
 
 }
 
+
+
 /*************** fim responsividade *****************/
 
 
@@ -319,9 +425,9 @@ a{
 }
 
 .container-perfil {
-  height: 90vh;
-  margin: 0;
-  max-width: 94%;
+  height: 100vh;
+  margin: 0px 0px 0 100px;
+  max-width: 100%;
   border-bottom-color: 50px solid black;
   display: flex;
   color: #fff;
@@ -404,7 +510,7 @@ a{
   text-align: center;
   border: 2px solid #5FC951;
   padding: 14px 10px;
-  width: 300px;
+  width: 200px;
   font-size: 17px;
   font-weight: bold;
   color: rgb(0, 0, 0);
@@ -527,7 +633,7 @@ p {
   }
 }
 
-@media (max-width: 100% - 100px) {
+@media (max-width: 100%) {
   .caixa-card {
       position: relative;
       left: 500px;
@@ -536,13 +642,29 @@ p {
 
   @media (max-width:800px){
       .profile{
-       width: 80%;
+       width: 100%;
       }
+
+      .caixa-card {
+        width: 400px;
+        border-radius: 10px;
+        padding: 20px;
+        position: relative;
+        left: 40px; 
+      }
+
+      .caixa-input {
+        height: 64vh;
+        width: 200px;
+        float: right;
+        position: relative;
+        color: #fff;
+    }
   }    
 
   @media (max-width:900px){
     .container-perfil{
-     display: block;
+     display: flex;
      margin: 0 auto;
      width: 100%;
     }
@@ -555,7 +677,7 @@ p {
     }
     
     #repError{
-      left: 30px;
+      left: 100px;
     }
 
     #user-informations {
@@ -565,5 +687,21 @@ p {
     #ipt_nome {
       width: 400px;
     }
+
+    .caixa-card {
+      width: 400px;
+      border-radius: 10px;
+      padding: 20px;
+      position: relative;
+      left: 40px; 
+    }
+
+    .caixa-input {
+      height: 64vh;
+      width: 200px;
+      float: right;
+      position: relative;
+      color: #fff;
+  }
 
 }   

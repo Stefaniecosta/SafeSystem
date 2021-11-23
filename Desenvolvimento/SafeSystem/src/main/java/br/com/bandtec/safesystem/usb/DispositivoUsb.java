@@ -14,6 +14,8 @@ import java.time.format.DateTimeFormatter;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import oshi.hardware.platform.linux.LinuxUsbDevice;
+import br.com.bandtec.safesystem.src.Slack;
+import br.com.bandtec.safesystem.src.models.Maquina;
 
 public class DispositivoUsb {
 
@@ -26,7 +28,7 @@ public class DispositivoUsb {
         //VERIFICAÇÃO DO TIPO DE SISTEMA OPERACIONAL
         if(sistema.getSistemaOperacional().equalsIgnoreCase("Windows")){
             this.devices = WindowsUsbDevice.getUsbDevices(false);
-        }else if(sistema.getSistemaOperacional().equalsIgnoreCase("Linux")){
+        }else if(sistema.getSistemaOperacional().equalsIgnoreCase("Linux") || sistema.getSistemaOperacional().equalsIgnoreCase("Ubuntu")){
             this.devices = LinuxUsbDevice.getUsbDevices(false);
         }
         
@@ -47,7 +49,7 @@ public class DispositivoUsb {
    //          System.out.println("NOME: " + device.getName() + " UNIQUE: " + device.getUniqueDeviceId() +" SERIAL: "+ device.getVendor());
                }
            }           
-        }else if(sistema.getSistemaOperacional().equalsIgnoreCase("Linux")){
+        }else if(sistema.getSistemaOperacional().equalsIgnoreCase("Linux") || sistema.getSistemaOperacional().equalsIgnoreCase("Ubuntu")){
             for (UsbDevice device : devices) {
                String unique = device.getUniqueDeviceId();
                String usb = "/sys/devices";
@@ -82,6 +84,8 @@ public class DispositivoUsb {
                         + " VALUES (?, ?, ?)", usbDevice.getProductId(), usbDevice.getUniqueDeviceId(), usbDevice.getName());
                 System.out.println("DISPOSITIVOS " + usbDevice.getName() + " CADSATRO!");
                 retorno = 2;
+                
+                
             }
         }
         return retorno;
@@ -103,7 +107,14 @@ public class DispositivoUsb {
                 System.out.println("DISPOSITIVO ESTRANHO ENCONTRADO");
                 DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
                 String horaAtual = dtf.format(LocalDateTime.now());
-
+                List<Maquina> maquinas = con.query("SELECT * FROM maquina WHERE idMaquina = ?", new BeanPropertyRowMapper(Maquina.class), idCaixa);
+                Integer fkAgencia = 0;
+                for (Maquina maquina : maquinas) {
+                   fkAgencia = maquina.getFkAgencia();
+                    break;
+                };
+               Slack slack = new Slack(fkAgencia);
+               slack.alertaDispositivo(idCaixa, horaAtual);
                 con.update("INSERT INTO dispositivoEstranho (productId, "
                         + "uniqueDevice, nome,fkMaquina, dataHora) VALUES (?, ?, ?, ?, ?)",
                         usbDevice.getProductId(), usbDevice.getUniqueDeviceId(),

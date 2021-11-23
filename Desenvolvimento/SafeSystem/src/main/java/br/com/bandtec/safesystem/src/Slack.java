@@ -70,6 +70,10 @@ public class Slack {
         Slack.sendMessage(json);
     }
 
+    public Slack() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public void alertaDispositivo(Integer idCaixa, String hora) {
 
         try {
