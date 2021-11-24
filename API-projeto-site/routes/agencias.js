@@ -237,7 +237,7 @@ router.post('/obterEspacoTotal/:idMaquina', function(req, res, next) {
 	
 	console.log(`Obendo total de disco do caixa de id ${idMaquina}`);
 
-	let instrucaoSql = `select espacoTotal from [dbo].[disco] where fkMaquina = ${idMaquina}`;
+	let instrucaoSql = `select totalDisco from maquina where idMaquina = ${idMaquina}`;
 
 	console.log(instrucaoSql);
 	
@@ -266,7 +266,7 @@ router.post('/obterDispositivoEstranho/:idMaquina', function(req, res, next) {
 
 	let idMaquina = req.params.idMaquina;
 
-	console.log(idMaquina + "teste oi")
+	// console.log(idMaquina)
 	
 	console.log(`Checando dispositivos estranhos do caixa de id ${idMaquina}`);
 

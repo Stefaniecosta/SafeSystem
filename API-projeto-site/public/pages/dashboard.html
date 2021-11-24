@@ -123,8 +123,8 @@
                     <div class="BoxTextdisco">
                         <div id="textoDisco">
                             
-                            <a href="" id="quantidadeDisco"></a>
-                            <a href="" style="font-size: 17px; color: white;">Armazenamento total</a>
+                            <a  id="quantidadeDisco"></a>
+                            <a style="font-size: 17px; color: white;">Armazenamento total</a>
 
                         </div>
                     </div>
@@ -346,8 +346,10 @@ function obterEspacoTotal(idMaquina)
     
                     resposta.json().then(json => {
 
-                        console.log(`resultado: ${json[0].espacoTotal}`);
-                        totalDisco = json[0].espacoTotal;
+                        console.log(`resultado: ${json[0].totalDisco}`);
+                        
+                        
+                        totalDisco = json[0].totalDisco.toFixed(0);
                         quantidadeDisco.innerHTML = `${totalDisco} GB`
                                               
                     });
@@ -384,7 +386,7 @@ function chamarGraf(idMaquina)
     obterTotalRamENomeProcessador(idMaquina);
     obterDispositivoEstranho(idMaquina);
     obterDispositivosCadastrados(idMaquina);
-    //obterEspacoTotal(idMaquina);
+    obterEspacoTotal(idMaquina);
     
     clearInterval(timer);
     timer = setInterval(() => {
