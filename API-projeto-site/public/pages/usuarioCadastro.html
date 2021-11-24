@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/usuarioCadastro.css">
     <script src="../scripts/validacaoCadastro.js"></script>
+    <script src="../scripts/cadastroUsuario.js"></script>
     <title>Cadastro</title>
 </head>
 <a href="/API-projeto-site/public/index.html"></a>
@@ -19,23 +20,23 @@
 
             <div class="formulario-cadastro">
 
-                <form action="">
+                <form id="form_cadastro" method="post" onsubmit="cadastrar()">
                     <h1 class="titulos">Cadastro</h1>
                     <div class="social-container">
                     </div>
-                    <input type="text" placeholder="Nome de usuário*" name="nome" id="idNome" onkeyup="ValidarNome()" />
+                    <input type="text" placeholder="Nome de usuário*" name="nome" onkeyup="ValidarNome()" />
                     <div id="validacao_nome" class="msgErro-cadastro">Insira seu nome completo</div>
 
-                    <input type="text" placeholder="E-mail*" onblur="validarCNPJ(this)" onkeypress="mascaraCnpj()" id="idCnpj" maxlength="18" />
+                    <input type="email" placeholder="E-mail*" name="email" maxlength="18" />
                     <div id="validacao_CNPJ" class="msgErro-cadastro">E-mail inválido!</div>
 
-                    <input type="number" placeholder="Código da agência*" onkeyup="compara()" id="comparaEmail" />
+                    <input type="number" placeholder="Código da agência*" name="codigoAgencia" />
                     <div id="validacao_comparaEmail" class="msgErro-cadastro">O código não confere!</div>
 
-                    <input type="number" placeholder="ID da agência*" />
+                    <input type="number" placeholder="ID da agência*" name="idAgencia" />
                     <div id="validacao_telefone" class="msgErro-cadastro">ID inválido!</div>
 
-                    <input type="password" placeholder="Senha *" id="senha" onblur="validarEmail()" />
+                    <input type="password" placeholder="Senha *" name="senha" />
                     <div id="div_msg1" class="msgErro-cadastro">Senha inválido!</div>
 
 

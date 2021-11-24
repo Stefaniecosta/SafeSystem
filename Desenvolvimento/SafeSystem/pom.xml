@@ -22,7 +22,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>br.com.bandtec.safesystem.view.Login</mainClass>
+                            <mainClass>View.Login</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
