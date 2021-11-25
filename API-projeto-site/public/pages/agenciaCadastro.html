@@ -49,21 +49,23 @@
                     <h4 class="titulos"> Safe System </h4>
                 </div>
                 <div id="message">Cadastre seus caixas</div>
+                <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                    <div class="inputs_group">
+                        <input type="text" id="nome_agencia" name="idAgencia" placeholder="ID da agência">
+                        <input type="text" id="codigo_agencia" name="codCaixa" placeholder="Código da Caixa">
+                    </div>
+                    <button class="btSave" id="btSave" type="submit" onclick="cadastrar()">Salvar</button>
+                </form>
 
-                <div class="inputs_group">
-                    <input type="text" id="nome_agencia" placeholder="Nome da agência">
-                    <input type="text" id="adress" placeholder="Endereço">
-                </div>
-
-                <button class="btSave" id="btSave" onclick="save()">Salvar</button>
-                <p> Se você não tiver sua agência cadastrada..
-                    <a href="../pages/formCadastroAg.html">Cadastrar agência</a>
+                <p> Para Cadastrar um agencia
+                    <a href="../pages/formCadastroAg.html">clique aqui!</a>
                 </p>
                 <div class="loading_screen">
                     <p id="loading_message"><span>Cadastrando</span>agência</p>
 
                     </a>
-                    <img id="loading_gif" src="https://1.bp.blogspot.com/-uZmhTwOaRc4/XnlNu9_rvYI/AAAAAAAAXNk/8LtRh85SMNA3awhyJaOu6IiTFhCLbQ9WgCLcBGAsYHQ/s640/Dinheiro-1.gif">
+                    <img id="loading_gif"
+                        src="https://1.bp.blogspot.com/-uZmhTwOaRc4/XnlNu9_rvYI/AAAAAAAAXNk/8LtRh85SMNA3awhyJaOu6IiTFhCLbQ9WgCLcBGAsYHQ/s640/Dinheiro-1.gif">
                 </div>
             </div>
         </section>
@@ -73,18 +75,18 @@
 </body>
 
 <script>
-    $('.close').click(function(event) {
+    $('.close').click(function (event) {
         $('#myModal').fadeOut();
         event.preventDefault();
     });
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#myModal').modal('show');
     })
 
-    $('#myModal').on('shown.bs.modal', function() {
+    $('#myModal').on('shown.bs.modal', function () {
         localStorage.setItem("modal", false);
     });
 </script>
 
 </html>
-<script src="../scripts/agenciaCadastro.js"></script>
+<script src="../scripts/cadastroCaixa.js"></script>

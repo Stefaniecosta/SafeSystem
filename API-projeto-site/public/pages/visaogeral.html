@@ -435,77 +435,78 @@
 
         for (let index = 0; index < registros.length; index++) {
 
-            
-            if(temEstranho[index]) {
-                msg = 
-                `
-                <div id="caixa" class="box">
-                    <div class="boxContent">
-                        <div class="info_caixas">
-                            <div class="bottom">
-
-                                <strong>
+            if (registros.length == idDasMaquinas.length) {
+                if(temEstranho[index]) {
+                    msg = 
+                    `
+                    <div id="caixa" class="box">
+                        <div class="boxContent">
+                            <div class="info_caixas">
+                                <div class="bottom">
+    
+                                    <strong>
+                                        <img class="item-img" src="../assets/img/caixaIcon.png" alt="">
+                                        Caixa ${index + 1}
+                                    </strong>
+                                </div>
+                                <br>
+                                <div class="icone">
+                                    Status:
+                                    <i class="fas fa-skull"></i> <b class="critico"> CRÍTICO</b>
+                                </div>
+                                <p style="color: rgba(255, 126, 120, 0.8);">DISPOSITIVO <br> ESTRANHO</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                }else if (registros[index][0].usoRAM >= 7.0 || registros[index][0].usoCPU > 80.0) {
+                    msg =
+                        `
+                    <div id="caixa" class="box">
+                        <div class="boxContent">
+                            <div class="info_caixas">
+                                <div class="bottom">
                                     <img class="item-img" src="../assets/img/caixaIcon.png" alt="">
-                                    Caixa ${index + 1}
-                                </strong>
+                                    <strong>
+                                        Caixa ${index+1}
+                                    </strong>
+                                </div>
+                                <br>
+                                <div id="iconeTwo" class="icone">
+                                    Status:
+                                    <i class="fas fa-exclamation-triangle"></i> <b class="alerta"> ALERTA</b>
+                                </div>
+                                <p style="color: rgba(244, 219, 87, 0.8);"> COMPONENTES <br> LENTOS</p>
                             </div>
-                            <br>
-                            <div class="icone">
-                                Status:
-                                <i class="fas fa-skull"></i> <b class="critico"> CRÍTICO</b>
-                            </div>
-                            <p style="color: rgba(255, 126, 120, 0.8);">DISPOSITIVO <br> ESTRANHO</p>
                         </div>
                     </div>
-                </div>
-                `
-            }else if (registros[index][0].usoRAM >= 7.0 || registros[index][0].usoCPU > 80.0) {
-                msg =
                     `
-                <div id="caixa" class="box">
-                    <div class="boxContent">
-                        <div class="info_caixas">
-                            <div class="bottom">
-                                <img class="item-img" src="../assets/img/caixaIcon.png" alt="">
-                                <strong>
-                                    Caixa ${index+1}
-                                </strong>
+                } else {
+                    msg =
+                        `
+                    <div id="caixa" class="box">
+                        <div class="boxContent">
+                            <div class="info_caixas">
+                                <div class="bottom">
+                                    <img class="item-img" src="../assets/img/caixaIcon.png" alt="">
+                                    <strong>
+                                        Caixa ${index+1}
+                                    </strong>
+                                </div>
+                                <br>
+                                <div class="icone">
+                                    Status: <b class="ok"> OK</b>
+                                </div>
+                                <p style="color: rgba(107, 226, 190, 0.8);">ESTÁ TUDO CERTO</p>
                             </div>
-                            <br>
-                            <div id="iconeTwo" class="icone">
-                                Status:
-                                <i class="fas fa-exclamation-triangle"></i> <b class="alerta"> ALERTA</b>
-                            </div>
-                            <p style="color: rgba(244, 219, 87, 0.8);"> COMPONENTES <br> LENTOS</p>
                         </div>
                     </div>
-                </div>
-                `
-            } else {
-                msg =
                     `
-                <div id="caixa" class="box">
-                    <div class="boxContent">
-                        <div class="info_caixas">
-                            <div class="bottom">
-                                <img class="item-img" src="../assets/img/caixaIcon.png" alt="">
-                                <strong>
-                                    Caixa ${index+1}
-                                </strong>
-                            </div>
-                            <br>
-                            <div class="icone">
-                                Status: <b class="ok"> OK</b>
-                            </div>
-                            <p style="color: rgba(107, 226, 190, 0.8);">ESTÁ TUDO CERTO</p>
-                        </div>
-                    </div>
-                </div>
-                `
+                }
+    
+                boxDasCaixas.innerHTML += msg;
+                
             }
-
-            boxDasCaixas.innerHTML += msg;
-            
         }
 
     }

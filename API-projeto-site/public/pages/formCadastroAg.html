@@ -18,17 +18,15 @@
                 <h4 class="titulos"> Safe System </h4>
             </div>
             <div id="message">Cadastre a agência</div>
-
-            <div class="inputs_group">
-                <input type="text" id="nome_agencia" placeholder="Nome da agência">
-                <input type="text" id="adress" placeholder="Endereço">
-                <input type="number" id="cod_agencia" placeholder="Código da agência">
-                <input type="number" id="cnpj_agencia" placeholder="CNPJ da agência">
-                <input type="text" id="password" placeholder="URL slack">
-            </div>
-
-            <button class="btSave" id="btSave" onclick="save()">Salvar</button>
-
+            <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                <div class="inputs_group">
+                    <input type="text" id="nome_agencia" name="nome" placeholder="Nome da agência">
+                    <input type="text" id="adress" name="endereco" placeholder="Endereço">
+                    <input type="text" id="cod_agencia" name="codAgencia" placeholder="Código da agência">
+                    <input type="text" id="password" name="slack" placeholder="URL slack">
+                </div>
+                <button class="btSave" id="btSave" onclick="cadastrar()">Cadastrar</button>
+            </form>
             <p> Se você não tiver caixas cadastrados..
                 <a href="../pages/agenciaCadastro.html">Cadastrar caixas</a>
             </p>
@@ -37,11 +35,12 @@
                 <p id="loading_message"><span>Cadastrando</span>agência</p>
 
                 </a>
-                <img id="loading_gif" src="https://1.bp.blogspot.com/-uZmhTwOaRc4/XnlNu9_rvYI/AAAAAAAAXNk/8LtRh85SMNA3awhyJaOu6IiTFhCLbQ9WgCLcBGAsYHQ/s640/Dinheiro-1.gif">
+                <img id="loading_gif"
+                    src="https://1.bp.blogspot.com/-uZmhTwOaRc4/XnlNu9_rvYI/AAAAAAAAXNk/8LtRh85SMNA3awhyJaOu6IiTFhCLbQ9WgCLcBGAsYHQ/s640/Dinheiro-1.gif">
             </div>
         </div>
     </section>
 </body>
-<script src="../scripts/agenciaCadastro.js"></script>
+<script src="../scripts/cadastroAgencia.js"></script>
 
 </html>
