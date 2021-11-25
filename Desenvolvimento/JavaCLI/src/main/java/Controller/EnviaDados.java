@@ -59,7 +59,6 @@ public class EnviaDados {
                 + "}", ramUso, cpuUso, frequenciaCpu, discoUso);
 
         System.out.println(dadosCapturados);
-
     }
 
     public String atualizarComponentesNoBanco(Integer idCaixa) {
@@ -88,13 +87,12 @@ public class EnviaDados {
                 cpuNome, so, ramTotal, discoTotal
         );
         return mensagem;
-
     }
 
     public double LongParaDouble(Long valorLong) {
         String valorConvertido = Conversor.formatarBytes(valorLong);
         String valorString = valorConvertido.replace(",", ".");
-        valorString = valorString.replace("GiB", "");
+        valorString = valorString.replace("MiB", "");
         double valorDouble = Double.parseDouble(valorString);
 
         return valorDouble;
@@ -112,7 +110,7 @@ public class EnviaDados {
     public Float LongParaFloat(Long valorLong) {
         String valorConvertido = Conversor.formatarBytes(valorLong);
         String valorString = valorConvertido.replace(",", ".");
-        valorString = valorString.replace("GiB", "");
+        valorString = valorString.replace("MiB", "");
         Float valorFloat = Float.parseFloat(valorString);
 
         return valorFloat;
