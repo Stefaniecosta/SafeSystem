@@ -14,7 +14,7 @@ public class Timer {
             public void run() {
                 env.insereDados(idCaixa);
             }
-        }, 0, 10000);
+        }, 0, 5000);
     }
     
     DispositivoUsb dis = new DispositivoUsb();
@@ -24,12 +24,12 @@ public class Timer {
             public void run() {
                 dis.verificarUSB();
                 if (dis.getDispUsb().isEmpty()) {
-                    System.out.println("NENHUM DISPOSITIVO CONECTADO");
+                    //System.out.println("NENHUM DISPOSITIVO CONECTADO");
                 } else {
                     dis.verificarDispositivoEstranho(idCaixa);
                 }
             }
-        }, 0, 1000);
+        }, 0, 2000);
 
     }
 

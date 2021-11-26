@@ -13,6 +13,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import oshi.hardware.platform.linux.LinuxUsbDevice;
 import java.sql.Timestamp;
+import org.springframework.dao.DataAccessException;
 
 public class DispositivoUsb {
 
@@ -143,7 +144,7 @@ public class DispositivoUsb {
                             usbDevice.getName(), idCaixa, horaAtual);
                 }
             }
-        } catch (Exception e) {
+        } catch (DataAccessException e) {
             System.out.println("Falha verificação de Dispositivo");
             System.out.println(e.getMessage());
             Log log = new Log(e.getMessage(), "Falha verificação de Dispositivo");

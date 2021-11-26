@@ -14,7 +14,7 @@ public class Timer {
             public void run() {
                 env.insereDados(idCaixa);
             }
-        }, 0, 10000);
+        }, 0, 5000);
     }
     
     DispositivoUsb dis = new DispositivoUsb();

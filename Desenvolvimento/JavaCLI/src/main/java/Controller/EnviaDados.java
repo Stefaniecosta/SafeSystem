@@ -28,7 +28,7 @@ public class EnviaDados {
         ConexaoBD config = new ConexaoBD();
         JdbcTemplate con = new JdbcTemplate(config.getBancoDeDados());
 
-        Float ramUso = LongParaFloat(ram.getEmUso());
+        Double ramUso = LongParaDouble(ram.getEmUso());
 
         Float frequenciaCpu = LongParaFloat(cpu.getFrequencia());
         Integer cpuUso = cpu.getUso().intValue();
@@ -92,8 +92,8 @@ public class EnviaDados {
     public double LongParaDouble(Long valorLong) {
         String valorConvertido = Conversor.formatarBytes(valorLong);
         String valorString = valorConvertido.replace(",", ".");
-        valorString = valorString.replace("MiB", "");
-        double valorDouble = Double.parseDouble(valorString);
+        valorString = valorString.replace(" MiB", "");
+        Double valorDouble = Double.parseDouble(valorString);
 
         return valorDouble;
     }
@@ -110,7 +110,7 @@ public class EnviaDados {
     public Float LongParaFloat(Long valorLong) {
         String valorConvertido = Conversor.formatarBytes(valorLong);
         String valorString = valorConvertido.replace(",", ".");
-        valorString = valorString.replace("MiB", "");
+        valorString = valorString.replace("GiB", "");
         Float valorFloat = Float.parseFloat(valorString);
 
         return valorFloat;

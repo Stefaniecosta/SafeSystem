@@ -22,7 +22,7 @@ public class ConexaoBD {
             this.bancoDeDados.setPassword("Senh@forte06");
 
         } catch (Exception e) {
-            System.out.println(e.getMessage() + "papa");
+            System.out.println(e.getMessage());
         }
 //        this.bancoDeDados = new BasicDataSource();
 //        this.bancoDeDados.setDriverClassName("org.h2.Driver");
