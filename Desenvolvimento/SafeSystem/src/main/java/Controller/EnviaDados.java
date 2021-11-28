@@ -56,7 +56,8 @@ public class EnviaDados {
                 + " Uso CPU: %d%%\n"
                 + " Frequencia CPU: %.2f\n"
                 + " Uso Disco: %.2f\n"
-                + "}", ramUso, cpuUso, frequenciaCpu, discoUso);
+                + " Caixa: %d"
+                + "}", ramUso, cpuUso, frequenciaCpu, discoUso, idCaixa);
 
         System.out.println(dadosCapturados);
 

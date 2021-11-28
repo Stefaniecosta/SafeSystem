@@ -23,19 +23,19 @@
                     <h1 class="titulos">Cadastro</h1>
                     <div class="social-container">
                     </div>
-                    <input type="text" placeholder="Nome de usuário*" name="nome" />
+                    <input type="text" placeholder="Nome de usuário*" name="nome" required/>
                     <div id="validacao_nome" class="msgErro-cadastro">Insira seu nome completo</div>
 
-                    <input type="email" placeholder="E-mail*" name="email" />
+                    <input type="email" placeholder="E-mail*" name="email" required/>
                     <div id="validacao_CNPJ" class="msgErro-cadastro">E-mail inválido!</div>
 
 <!--                     <input type="number" placeholder="Código da agência*" name="codigoAgencia" />
                     <div id="validacao_comparaEmail" class="msgErro-cadastro">O código não confere!</div> -->
 
-                    <input type="number" placeholder="ID da agência*" />
+                    <input type="number" placeholder="ID da agência*" required/>
                     <div id="validacao_telefone" class="msgErro-cadastro">ID inválido!</div>
 
-                    <input type="password" placeholder="Senha *" id="senha" onblur="validarEmail()" />
+                    <input type="password" placeholder="Senha *" id="senha" onblur="validarEmail()" required/>
                     <div id="div_msg1" class="msgErro-cadastro">Senha inválido!</div>
 
 

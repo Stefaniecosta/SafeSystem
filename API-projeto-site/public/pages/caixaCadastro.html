@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de agência</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="../styles/agenciaCadastro.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal" onLoad>
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="modal-header">
+                    <span class="close"></span>
+                    <h2 style="font-size: 19px; font-family:'Poppins';">Acesso restrito</h2>
+                </div>
+                <p>Se identifique antes de acessar esta página</p>
+                <p>Acesso restrito aos coolaboradores Safe System...</p>
+
+                <div class="formulario-cadastro">
+                    <input type="text" id="email" placeholder="E-mail"><br>
+                    <input type="text" id="senha" placeholder="Senha"> <br>
+                    <button class="close button-confirm" type="submit">Confirme</button>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section>
+
+        <!-- Cadastro de caixas eletrônicos (LADO ESQUERDO)-->
+        <!-- Cadastro de agências (LADO DIREITO)-->
+        <section class="form_side">
+            <div class="container">
+                <div class="brand">
+                    <h4 class="titulos"> Safe System </h4>
+                </div>
+                <div id="message">Cadastre seus caixas</div>
+                <form id="form_cadastro" method="post" onsubmit="return cadastrar()">
+                    <div class="inputs_group">
+                        <input type="text" id="nome_agencia" name="idAgencia" placeholder="ID da agência">
+                        <input type="text" id="codigo_agencia" name="codCaixa" placeholder="Código da Caixa">
+                    </div>
+                    <button class="btSave" id="btSave" type="submit" onclick="cadastrar()">Salvar</button>
+                </form>
+
+                <p> Para Cadastrar um agencia
+                    <a href="../pages/agenciaCadastro.html">clique aqui!</a>
+                </p>
+                <div class="loading_screen">
+                    <p id="loading_message"><span>Cadastrando</span>agência</p>
+
+                    </a>
+                    <img id="loading_gif"
+                        src="https://1.bp.blogspot.com/-uZmhTwOaRc4/XnlNu9_rvYI/AAAAAAAAXNk/8LtRh85SMNA3awhyJaOu6IiTFhCLbQ9WgCLcBGAsYHQ/s640/Dinheiro-1.gif">
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+</body>
+
+<script>
+    $('.close').click(function (event) {
+        $('#myModal').fadeOut();
+        event.preventDefault();
+    });
+    $(document).ready(function () {
+        $('#myModal').modal('show');
+    })
+
+    $('#myModal').on('shown.bs.modal', function () {
+        localStorage.setItem("modal", false);
+    });
+</script>
+
+</html>
+<script src="../scripts/cadastroCaixa.js"></script>
