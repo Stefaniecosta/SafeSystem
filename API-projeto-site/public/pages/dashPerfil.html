@@ -103,7 +103,7 @@
        
         <!-- Ícone de SAIR da dashboard -->
         <div id="logout" >
-            <a href="/Site/index.html">
+            <a href="index.html">
                 <img id="logoutIcon" src="../assets/img/logoutIcon.png" alt="Ícone para sair da Dashboard">
             </a>
         </div>
@@ -177,14 +177,13 @@
             </h2>
             
 
-            <form id="user-informations">
+            <form id="form_edt_usuario" method="post" onsubmit="return editar()">
                 <p>Nome do usuario responsável:</p>
                 <input id="ipt_nome" class="inp" type="text" class="input" name="nome" placeholder="John dee">
                 <p>Email de acesso:</p>
-                <input id="ipt_email" class="inp" type="text" class="input" name="email"
-                    placeholder="johndee@safesystem.com">
-                <p>Agencia cadastrada:</p>
-                <input id="ipt_foto" name="fotoPerfil" class="inp" type="text" class="input" placeholder="0222">
+                <input id="ipt_email" class="inp" type="email" class="input" name="email" placeholder="johndee@safesystem.com">
+                <p>Senha:</p>
+                <input id="ipt_foto" name="fotoPerfil" class="inp" type="password" class="input" placeholder="0222">
                 <input style="display: none;" id="ipt_idUsuario" name="idUsuario" class="inp" type="text"
                     class="input">
             </form>

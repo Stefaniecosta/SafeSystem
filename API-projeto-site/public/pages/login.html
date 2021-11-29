@@ -76,7 +76,8 @@
                     resposta.json().then(json => {
     
                         sessionStorage.setItem("idAgencia", json.fkAgencia);
-
+                        sessionStorage.setItem("idUsuario", json.idUsuario);
+                        
                         window.location.href = 'visaogeral.html';
                     });
     

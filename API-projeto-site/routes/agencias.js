@@ -132,57 +132,72 @@ router.post('/obterRegistrosDasMaquinas/:idMaquina', function (req, res, next) {
 router.post('/cadastrarCaixa', function (req, res, next) {
 	console.log('Criando um caixa');
 
-		Caixa.create({
-			idAgencia: req.body.idAgencia,
-			codCaixa: req.body.codCaixa
+	Caixa.create({
+		idAgencia: req.body.idAgencia,
+		codCaixa: req.body.codCaixa
 
-		}).then(resultado => {
-			console.log(`Registro criado: ${resultado}`)
-			res.send(resultado);
-		}).catch(erro => {
-			console.error(erro);
-			res.status(500).send(erro.message);
-		});
+	}).then(resultado => {
+		console.log(`Registro criado: ${resultado}`)
+		res.send(resultado);
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
 	});
+});
 
-	/* Cadastrar agencia */
+/* Cadastrar agencia */
 router.post('/cadastrarAgencia', function (req, res, next) {
 	console.log('Criando uma agência');
 
-		Agencia.create({
-			nome: req.body.nome,
-			endereco: req.body.endereco,
-			codAgencia: req.body.codAgencia,
-			slack: req.body.slack
+	Agencia.create({
+		nome: req.body.nome,
+		endereco: req.body.endereco,
+		codAgencia: req.body.codAgencia,
+		slack: req.body.slack
 
-		}).then(resultado => {
-			console.log(`Registro criado: ${resultado}`)
-			res.send(resultado);
-		}).catch(erro => {
-			console.error(erro);
-			res.status(500).send(erro.message);
-		});
+	}).then(resultado => {
+		console.log(`Registro criado: ${resultado}`)
+		res.send(resultado);
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
 	});
+});
 
 /* Cadastrar usuário */
 router.post('/cadastrarUsuario', function (req, res, next) {
 	console.log('Criando um usuário');
 
-		Usuario.create({
-			nome: req.body.nome,
-			email: req.body.email,
-			senha: req.body.senha,
-			idAgencia: req.body.idAgencia
+	Usuario.create({
+		nome: req.body.nome,
+		email: req.body.email,
+		senha: req.body.senha,
+		idAgencia: req.body.idAgencia
 
-		}).then(resultado => {
-			console.log(`Registro criado: ${resultado}`)
-			res.send(resultado);
-		}).catch(erro => {
-			console.error(erro);
-			res.status(500).send(erro.message);
-		});
+	}).then(resultado => {
+		console.log(`Registro criado: ${resultado}`)
+		res.send(resultado);
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
 	});
+});
 
+/* Edita nome de usuário */
+router.post('/editarNomeDeUsuario/:idUsuario', function (req, res, next) {
+	console.log('Alterando nome de usuário');
+
+	let idUsuario = req.body.idUsuario;
+
+	let instrucaoSql = "update table usuario set nome = ";
+
+	}).then(resultado => {
+		console.log(`Registro criado: ${resultado}`)
+		res.send(resultado);
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+	});
 
 /* Verificação de usuário */
 router.get('/sessao/:login', function (req, res, next) {
