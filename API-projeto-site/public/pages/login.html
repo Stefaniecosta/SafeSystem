@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="../styles/login.css">
     <script src="../scripts/validacaoCadastro.js"></script>
 
@@ -18,7 +18,7 @@
     </header> -->
     <div id="containerGeral_login">
         <div id="subcontainer01_login">
-            
+
             <!-- <img src="../assets/img/image 15.svg" alt="" class="imagemPrincipal_login"> -->
             <a href="../index.html">
                 <img src="../assets/img/logo-contato.png" id="logo" alt="">
@@ -31,14 +31,14 @@
 
             <div id="div_formulario">
 
-                
+
                 <form id="form_login" method="post" onsubmit="return entrar()">
 
                     <h1 class="titulos">Login</h1>
 
-                    <input type="text" placeholder="Email" name="login"/>
+                    <input type="text" placeholder="Email" name="login" />
 
-                    <input type="password" placeholder="Senha*" name="senha"/>
+                    <input type="password" placeholder="Senha*" name="senha" />
 
                     <p id="Click_esqueceu"><a href="esqueciSenha.html">Esqueceu a senha?</a></p>
 
@@ -49,13 +49,15 @@
                     <div id="div_erro" class="msg_erro">
                     </div>
 
-                    <img src="https://1.bp.blogspot.com/-uZmhTwOaRc4/XnlNu9_rvYI/AAAAAAAAXNk/8LtRh85SMNA3awhyJaOu6IiTFhCLbQ9WgCLcBGAsYHQ/s640/Dinheiro-1.gif" id="img_aguarde"  > <!--style="display: none;"-->
-                    
+                    <img src="https://1.bp.blogspot.com/-uZmhTwOaRc4/XnlNu9_rvYI/AAAAAAAAXNk/8LtRh85SMNA3awhyJaOu6IiTFhCLbQ9WgCLcBGAsYHQ/s640/Dinheiro-1.gif"
+                        id="img_aguarde">
+                    <!--style="display: none;"-->
+
                 </div>
+            </div>
+
+
         </div>
-
-
-    </div>
 </body>
 
 </html>
@@ -65,38 +67,37 @@
 
     function entrar() {
         var formulario = new URLSearchParams(new FormData(form_login));
-        
-            fetch("/agencias/autenticar", {
-                method: "post",
-                body: formulario
-            }).then(resposta => {
-    
-                if (resposta.ok) {
-    
-                    resposta.json().then(json => {
-    
-                        sessionStorage.setItem("idAgencia", json.fkAgencia);
-                        sessionStorage.setItem("idUsuario", json.idUsuario);
-                        
-                        window.location.href = 'visaogeral.html';
-                    });
-    
-                } else {
-    
-                    console.log('Erro de login!');
-    
-                    resposta.text().then(texto => {
-                        console.error(texto);
-                        window.location.href = 'login.html';
-                        alert(texto);
-                    });
-                }
-            });
-            return false;
-       
+
+        fetch("/agencias/autenticar", {
+            method: "post",
+            body: formulario
+        }).then(resposta => {
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+                    sessionStorage.setItem("idAgencia", json.fkAgencia);
+                    sessionStorage.setItem("idUsuario", json.idUsuario);
+                    sessionStorage.setItem("nome", json.nome);
+                    sessionStorage.setItem("email", json.email);
+                    window.location.href = 'visaogeral.html';
+                });
+
+            } else {
+
+                console.log('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    window.location.href = 'login.html';
+                    alert(texto);
+                });
+            }
+        });
+        return false;
+
     }
 
-  
+
 
 </script>
-

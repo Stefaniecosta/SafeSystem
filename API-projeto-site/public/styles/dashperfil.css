@@ -475,6 +475,7 @@ button {
   background-color: transparent;
   border-color: transparent;
   border-bottom-color:  #0fac31;
+  color: rgb(185, 185, 185);
 }
 
 .inp::placeholder {

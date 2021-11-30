@@ -183,21 +183,32 @@ router.post('/cadastrarUsuario', function (req, res, next) {
 	});
 });
 
-/* Edita nome de usuário */
-router.post('/editarNomeDeUsuario/:idUsuario', function (req, res, next) {
-	console.log('Alterando nome de usuário');
+/* Editar nome de usuário */
+router.post('/editarUsuario/:idUsuario', function (req, res, next) {
+	console.log('Alterando dados do usuário');
 
-	let idUsuario = req.body.idUsuario;
+	let nome = req.body.nome;
+	let email = req.body.email;
+	let idUsuario = req.params.idUsuario;
 
-	let instrucaoSql = "update table usuario set nome = ";
+	let instrucaoSql = `UPDATE usuario SET nome ='${nome}', email = '${email}' WHERE idUsuario = ${idUsuario}`;
 
+	sequelize.query(instrucaoSql, {
+		type: sequelize.QueryTypes.UPDATE
 	}).then(resultado => {
-		console.log(`Registro criado: ${resultado}`)
-		res.send(resultado);
+		console.log(`Nome alterado!`);
+
+		if (resultado.length > 0) {
+			res.json(resultado);
+		} else {
+			res.status(403).send('Erro atualizar o nome do usuario!');
+		}
+
 	}).catch(erro => {
 		console.error(erro);
 		res.status(500).send(erro.message);
 	});
+});
 
 /* Verificação de usuário */
 router.get('/sessao/:login', function (req, res, next) {
