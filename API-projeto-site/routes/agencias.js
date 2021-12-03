@@ -45,7 +45,7 @@ router.post('/obterQuantidadeDeCaixas/:idAgencia', function (req, res, next) {
 
 	console.log('Obendo quantidade de caixas da agência logada');
 
-	let instrucaoSql = `select * from maquina where fkAgencia = ${idAgencia}`;
+	let instrucaoSql = `select * from maquina where fkAgencia = ${idAgencia} and status = 'ativo'`;
 
 	console.log(instrucaoSql);
 
@@ -379,6 +379,135 @@ router.post('/obterDispositivosCadastrados/:idMaquina', function (req, res, next
 			res.json(resultado);
 		} else {
 			res.status(403).send(`Erro ao obter dispositivos conectados do caixa de id ${idMaquina}!`);
+		}
+
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+	});
+
+
+});
+
+router.post('/obterDadosGraficoCPU/:idMaquina/:contadorCPU', function (req, res, next) {
+
+	let idMaquina = req.params.idMaquina;
+	let contadorCPU = req.params.contadorCPU;
+
+	
+
+	// console.log(idMaquina)
+
+	// Desejo enviar dois parâmetros na requisição, um seria o id da máquina e o outro
+	// seria o contador (dia)... Entao seria realizado 7 selects, onde realizaria um
+	// push no vetor criando um json ({data: xxxx-xx-xx, media: xx.xx}). Após essas
+	// 7 requisisoes serem completas, o loop for se encerrará e nisso, o gráfico será
+	// plotado na tela.
+
+	console.log(`Obtendo média`);
+
+	let instrucaoSql = `select avg(usoCPU) as 'media', GETDATE() -${contadorCPU} as 'data'
+	from [dbo].[registroMaquina] 
+	where dataHora >= DATEADD(day, -${contadorCPU}, GETDATE()) 
+	and fkMaquina = ${idMaquina}`;
+
+	console.log(instrucaoSql);
+
+	sequelize.query(instrucaoSql, {
+		type: sequelize.QueryTypes.SELECT
+	}).then(resultado => {
+		console.log(`Resultado encontrado: ${resultado}`);
+
+		if (resultado.length >= 0) {
+			res.json(resultado);
+		} else {
+			res.status(403).send(`Não encontrei registros para tirar média do caixa de id!`);
+		}
+
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+	});
+
+
+});
+
+router.post('/obterDadosGraficoMediaRam/:idMaquina/:contadorRAM', function (req, res, next) {
+
+	let idMaquina = req.params.idMaquina;
+	let contadorRAM = req.params.contadorRAM;
+
+	
+
+	// console.log(idMaquina)
+
+	// Desejo enviar dois parâmetros na requisição, um seria o id da máquina e o outro
+	// seria o contador (dia)... Entao seria realizado 7 selects, onde realizaria um
+	// push no vetor criando um json ({data: xxxx-xx-xx, media: xx.xx}). Após essas
+	// 7 requisisoes serem completas, o loop for se encerrará e nisso, o gráfico será
+	// plotado na tela.
+
+	console.log(`Obtendo média de RAM`);
+
+	let instrucaoSql = `select avg(usoRam) as 'media', GETDATE() -${contadorRAM} as 'data'
+	from [dbo].[registroMaquina] 
+	where dataHora >= DATEADD(day, -${contadorRAM}, GETDATE()) 
+	and fkMaquina = ${idMaquina}`;
+
+	console.log(instrucaoSql);
+
+	sequelize.query(instrucaoSql, {
+		type: sequelize.QueryTypes.SELECT
+	}).then(resultado => {
+		console.log(`Resultado encontrado: ${resultado}`);
+
+		if (resultado.length >= 0) {
+			res.json(resultado);
+		} else {
+			res.status(403).send(`Não encontrei registros para tirar média do caixa de id!`);
+		}
+
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+	});
+
+
+});
+
+router.post('/obterDadosGraficoMediaDisco/:idMaquina/:contadorDISCO', function (req, res, next) {
+
+	let idMaquina = req.params.idMaquina;
+	let contadorDISCO = req.params.contadorRAM;
+
+	
+
+	// console.log(idMaquina)
+
+	// Desejo enviar dois parâmetros na requisição, um seria o id da máquina e o outro
+	// seria o contador (dia)... Entao seria realizado 7 selects, onde realizaria um
+	// push no vetor criando um json ({data: xxxx-xx-xx, media: xx.xx}). Após essas
+	// 7 requisisoes serem completas, o loop for se encerrará e nisso, o gráfico será
+	// plotado na tela.
+
+	console.log(`Obtendo média de DISCO`);
+
+	let instrucaoSql = `select avg(usoRam) as 'media', GETDATE() -${contadorDISCO} as 'data'
+	from [dbo].[registroMaquina] 
+	where dataHora >= DATEADD(day, -${contadorDISCO}, GETDATE()) 
+	and fkMaquina = ${idMaquina}`;
+
+	console.log(instrucaoSql);
+
+	sequelize.query(instrucaoSql, {
+		type: sequelize.QueryTypes.SELECT
+	}).then(resultado => {
+		console.log(`Resultado encontrado: ${resultado}`);
+
+		if (resultado.length >= 0) {
+			res.json(resultado);
+		} else {
+			res.status(403).send(`Não encontrei registros para tirar média do caixa de id!`);
 		}
 
 	}).catch(erro => {
