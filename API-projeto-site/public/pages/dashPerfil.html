@@ -31,12 +31,9 @@
                     </div>
                 </button>
             </div>
-
         </div>
-        <button id="repError">REPORTAR ERRO</button>
-
+        <button id="repError">GERENCIAR CAIXAS</button>
     </header>
-
 
     <div id="content">
         <img id="logoName" src="../assets/img/logoss.svg" alt="">
@@ -100,8 +97,6 @@
             <hr>
         </div>
 
-
-
         <!-- Ícone de SAIR da dashboard -->
         <div id="logout">
             <a href="../index.html">
@@ -109,52 +104,6 @@
             </a>
         </div>
     </div>
-
-
-
-    <!-- Código do menu hamburguer -->
-    <!-- <div class="l-navbar" id="nav-bar">
-            <nav class="nav">
-                <div>
-                    <a href="/index.html" class="nav__logo">
-                        <i class='bx bx-layer nav__logo-icon'></i>
-                        <span class="nav__logo-name">Safe System</span>
-                    </a>
-
-                    <div class="nav__list">
-                        <a href="/pages/dashboard.html" class="nav__link active">
-                            <i class='bx bx-bar-chart-alt-2 nav__icon' ></i>
-                            <span class="nav__name">Dashboard</span>
-                        </a>
-
-                        <a href="/pages/dashPerfil.html" class="nav__link">
-                            <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__name">Meu perfil</span>
-                        </a>
-
-                        <a href="/pages/visaogeral.html" class="nav__link">
-                            <i class='bx bxs-error-alt'></i>
-                            <span class="nav__name">Visão geral</span>
-                        </a>
-
-                        <a href="/pages/esqueciSenha.html" class="nav__link">
-                            <i class='bx bxs-lock-alt'></i>
-                            <span class="nav__name">Mudar senha</span>
-                        </a>
-
-                    </div>
-                </div>
-
-                <a href="/index.html" class="nav__link">
-                    <i class='bx bx-log-out nav__icon' ></i>
-                    <span class="nav__name">Voltar para home</span>
-                </a>
-            </nav>
-        </div> -->
-    <!-- Fim do hamburguer -->
-
-
-    <!-- Começa aqui o código do conteúdo-->
 
     <!-------------------------- Container do perfil ---------------------------------->
 
@@ -169,26 +118,20 @@
             <p>O administrador escolhido é o único responsável pelo perfil da agencia.</p>
             <a href="#" class="info-link">Leia mais sobre nossa politica...</a>
         </div>
-
-
+        
         <!-- Container informacoes do cliente -->
         <div class="caixa-input">
             <h2 id="edit-profile">Editar perfil
                 <i class='bx bxs-pencil'> </i>
             </h2>
 
-
             <form id="form_edt_usuario" method="post" onsubmit="return editar()">
                 <p>Nome do usuario responsável:</p>
                 <input id="ipt_nome" class="inp" type="text" class="input" name="nome" required>
                 <p>Email de acesso:</p>
                 <input id="ipt_email" class="inp" type="email" class="input" name="email" required>
-<!--            <p>Senha:</p>
-                <input id="ipt_foto" name="fotoPerfil" class="inp" type="password" class="input" placeholder="0222">
-                <input style="display: none;" id="ipt_idUsuario" name="idUsuario" class="inp" type="text" class="input"> -->
                 <button id="btn_entrar" class="buttonForm-login" type="submit">Confirmar</button>
             </form>
-
         </div>
 
     </div>
@@ -199,13 +142,6 @@
 
     <!-- Script que deixa o card do perfil animado -->
     <script type="text/javascript" src="/scripts/vanilla-tilt.js"></script>
-
-    <!-- <script>
-            VanillaTilt.init(document.querySelectorAll(".caixa-card"), {
-            max: 25,
-            speed: 400
-        }); 
-        </script> -->
 </body>
 
 </html>

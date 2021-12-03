@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de agência</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="../styles/cadastroCaixa.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body onload="obterCaixas()">
+    <!-- The Modal -->
+    <div id="myModal" class="modal" onLoad>
+        <!-- Modal content -->
+        <div class="modal-content">
+
+           
+
+            <div class="modal-body">
+                <div class="modal-header">
+                    <span class="close"></span>
+                    <h2 style="font-size: 19px; font-family:'Poppins';">Cadastrar Caixa</h2>
+    
+                </div>
+
+                <div class="formulario-cadastro">
+                    <form id="form_cadastrar" method="post" onsubmit="return cadastrarCaixa()">
+                        <input type="text" name="sistemaOperacional" placeholder="so">
+                        <input type="text" name="totalRam" placeholder="ram">
+                        <input type="text" name="processador" placeholder="procee">
+                        <input type="text" name="totalDisco" placeholder="disco">
+                        <input type="text" name="codigoCaixa" placeholder="codigo">
+                        <button class="button-confirm" type="submit">Confirme</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <div class="modal-header">
+                    <span class="close"></span>
+                    <h2 style="font-size: 19px; font-family:'Poppins';">Editar Caixa</h2>
+                </div>
+
+                <div class="formulario-cadastro">
+                    <form id="form_atualizar" method="post" onsubmit="return atualizarCaixa()">
+                        <input id="up_codcaixa" type="text" name="codigoCaixa" placeholder="codigo">
+                        <input id="up_so" type="text" name="sistemaOperacional" placeholder="so">
+                        <input id="up_ram" type="text" name="totalRam" placeholder="ram">
+                        <input id="up_proc" type="text" name="totalDisco" placeholder="disco">
+                        <input id="up_disco" type="text" name="processador"  placeholder="processador">
+                        <button class="button-confirm"  type="submit">EDITAR</button>
+            
+                </form>
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section>
+
+        <!-- Cadastro de caixas eletrônicos (LADO ESQUERDO)-->
+        <!-- Cadastro de agências (LADO DIREITO)-->
+        <section class="form_side" id="form_side">
+            <div class="container" id="tela1_table">
+                <div class="brand">
+                    <h4 class="titulos"> Safe System </h4>
+                </div>
+                <img src="../assets/img/imgsCrud/iconCadastrar.png" class="cadastrar" alt="" width="100px" onclick="abrirModal1()">
+                <!-- <div id="message" onclick="abrirModal1()">Cadastre seus caixas</div> -->
+                <div id="tela_total" class="tela_total">
+                    <div id="div_tabela">
+                        <table id="tableMaquinas">
+                            <thead>
+                                <th>ID</th>
+                                <th>COD. CAIXA</th>
+                                <th>SISTEMA</th>
+                                <th>T. RAM</th>
+                                <th>T. DISCO</th>
+                                <th>PROCESSADOR</th>
+                                <th>STATUS</th>
+                                <th>AÇÕES</th>
+                            </thead>
+                            <tbody id="tbody">
+                    
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </section>
+
+    </section>
+
+</body>
+
+<!-- <script src="../scripts/cadastroCaixa.js"></script> -->
+
+</html>
+<script src="../scripts/cadastroCaixa.js"></script>
