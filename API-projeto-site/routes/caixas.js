@@ -83,6 +83,25 @@ router.get('/desativar/:id', function(req, res, next) {
 		res.status(500).send(erro.message);
 	});
 });
+
+//ROTA QUE ATIVA UM CAIXA
+
+router.get('/ativar/:id', function(req, res, next) {
+    var id= req.params.id;
+   
+    instrucaoSql = `update maquina set status = 'ativo' where idMaquina = ${id};`
+	const sql = instrucaoSql;
+
+   
+	sequelize.query(sql,{ type: sequelize.QueryTypes.UPDATE })
+	.then(resultado => {
+		console.log(`Encontrados: ${resultado.length}`);
+		res.json(resultado);
+	}).catch(erro => {
+		console.error(erro);
+		res.status(500).send(erro.message);
+	});
+});
 //ROTA QUE DELETE UM CAIXA E TODAS AS AS TABELAS EM SUA LIGAÇÃO
 
 router.get('/deletar/:id', function(req, res, next) {

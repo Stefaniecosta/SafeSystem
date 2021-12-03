@@ -343,3 +343,47 @@ function atualizarCaixa() {
 
     return false;
 }
+
+function ativar(id){
+
+    for (let i = 0; i < maquinas.length; i++) {
+        if (maquinas[i][0] == id) {
+            var nome = maquinas[i][1];
+            break;
+        }
+    }
+
+    if (confirm(`Deseja realmente ATIVAR o caixa de codigo ${nome.toUpperCase()} `)) {
+        fetch(`/caixas/ativar/${id}`).then(function (response) {
+            console.log('entrou na rota')
+
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                }
+                )
+            } else { console.log("não recebeu os dados") }
+        }
+        )
+
+
+        alert(` Maquina codigo : ${nome.toUpperCase()} deletado com sucesso !`);
+
+
+        var total = maquinas.length
+        for (let i = 0; i < total; i++) {
+            maquinas.pop();
+        }
+
+
+        var tabela = document.getElementById("tbody");
+        while (tabela.firstChild) {
+            tabela.removeChild(tabela.firstChild);
+        }
+
+        console.log(maquinas);
+        obterCaixas();
+
+    }
+}
