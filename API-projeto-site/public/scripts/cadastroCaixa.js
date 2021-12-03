@@ -145,7 +145,7 @@ fetch(`/caixas/${idAgencia}`).then(function (response) {
                     imgEnable.setAttribute("id","idRemove");
 
                     let imgRemove = document.createElement('img');
-                    imgRemove.src = '';
+                    imgRemove.src = '../assets/img/imgsCrud/delete.png';
                     imgRemove.setAttribute("onClick", "deletar(" + this.maquinas[i][0] + ")");
                     imgRemove.setAttribute("id","idRemove");
                     // let el = document.getElementById('idRemove');

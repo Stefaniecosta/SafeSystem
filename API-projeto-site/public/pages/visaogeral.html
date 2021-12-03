@@ -57,7 +57,7 @@
                     </div>
                 </button>
             </div>
-            <button id="repError">REPORTAR ERRO</button>
+            <button id="repError" onclick="mostrarCrud()">GERENCIAR CAIXAS</button>
         </header>
 
         <div class="container-boxes">
@@ -510,5 +510,9 @@
         }
 
     }
+
+    function mostrarCrud(){
+    window.location.href = 'cadastroCaixa.html';
+  }
 </script>
 
