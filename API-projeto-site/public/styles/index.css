@@ -288,20 +288,25 @@ header strong a {
 
 /* Fim de serviços - 2 */ 
 
+/*FAQS RESPOSTAS*/
+
 .container-FAQS {
-    height: 700px;
+    height: 600px;
     width: 100%;
     color: #fff;
+    font-size: medium;
+   
 }
 
 .container-fluid {
     width: 40%;
     margin: 0 auto;
     margin-top: 100px;
+
 }
 
 .container-fluid h2{
-    color: hotpink;
+    color: #acffc3;
     position: relative;
     width: 23rem;
     margin: 30px;
@@ -334,7 +339,7 @@ header strong a {
     margin: 0 10px 0 0;
     width: 30px;
     height: 30px;
-    background: url() no-repeat 8px 7px blue;
+    background-image: url(../assets/img/logo.png) no-repeat 10px 7px;
     border-radius: 50%;
     float: left;
     transition: all .5s ease-in;
@@ -347,7 +352,7 @@ header strong a {
 
 .painel {
     padding: 0 15px;
-    border-left: 1px solid blueviolet;
+    border-left: 1px solid #acffc3;;
     margin-left: 2px;
     font-size: 14px;
     text-align: justify;
@@ -356,15 +361,7 @@ header strong a {
     transition: all .5s ease-in;
 }
 
-
-
-
-/*FAQS RESPOSTAS*/
-
-
-
-
-
+/*/FAQS RESPOSTAS*/
 
 /* Início contato */
 
