@@ -165,14 +165,6 @@
                                 </div>
                                 <a id="velocidadeDaCpu"></a>
                             </div>
-                            <!-- <div class="textCPU">
-                                <div class="tittleinfosCPU">
-                                    <a>Threads:</a>
-                                </div>
-                                <div id="mudarInfo3">
-                                    <a id="quantidadeDeThreads">1200</a>
-                                </div>
-                            </div> -->
                             <div class="textCPU">
                                 <div class="tittleinfosCPU">
                                     <a>Processador:</a>
@@ -498,7 +490,7 @@ function obterDispositivoEstranho(idMaquina)
                         caveira.style.display = 'none';
                       } else {
                         temEstranho.style.color = 'red';
-                        temEstranho.innerHTML = 'ATENÇÃO, dispositivo estranho detectado!'
+                        temEstranho.innerHTML = '<h3>ATENÇÃO<br>dispositivo estranho detectado!</h3>'
                         caveira.style.display = 'block';
                       }                       
                                               
@@ -527,9 +519,9 @@ function obterDispositivosCadastrados(idMaquina)
     
                     resposta.json().then(json => {
                       console.log('chegando dispositivos cadastrados!')
-                      console.log("alertando quantidade de dispositivos cadastrados: " + json.length)
+                      console.log("<h3>alertando quantidade de dispositivos cadastrados: </3>" + json.length)
                       if (json == 0) {
-                        temCadastrado.innerHTML = 'Este caixa não possui dispositivos conectados!';
+                        temCadastrado.innerHTML = 'Este caixa não possui<br> dispositivos conectados!';
                       } else if (json == 1){
                         temCadastrado.innerHTML = `${json.length} Cadastrado`;
                       } else {
