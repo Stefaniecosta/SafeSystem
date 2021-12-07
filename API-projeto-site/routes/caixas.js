@@ -26,7 +26,7 @@ router.post('/cadastrarCaixas/' ,function(req, res){
 
         sistemaOperacional : req.body.sistemaOperacional,
         totalRam : req.body.totalRam,
-        processador : req.body.processador,
+        precessador : req.body.processador,
         totalDisco : req.body.totalDisco,
         codCaixa : req.body.codigoCaixa,
         idAgencia : 100,

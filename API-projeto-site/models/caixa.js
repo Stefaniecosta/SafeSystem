@@ -42,6 +42,11 @@ module.exports = (sequelize, DataTypes) => {
 			field: 'fkAgencia',
 			type: DataTypes.INTEGER,
 			allowNull: false
+		},
+        status: {
+			field: 'status',
+			type: DataTypes.STRING,
+			allowNull: false
 		}
 	}, 
 	{
