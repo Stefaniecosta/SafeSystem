@@ -38,7 +38,7 @@
         <!-- Ícone de SAIR da dashboard -->
         <div id="logout">
             <a href="/Site/index.html">
-                <img id="logoutIcon" src="../assets/img/logoutIcon.png" alt="Ícone para sair da Dashboard">
+                <img id="logoutIcon" placeholder="SAIR" src="../assets/img/logoutIcon.png" alt="Ícone para sair da Dashboard">
             </a>
         </div>
     </div>
@@ -63,8 +63,6 @@
         </header>
 
 
-
-
         <div id="infoBoxes">
             <div id="identCaixas">
                 <div id="textCaixas">
@@ -75,12 +73,12 @@
             <div id="box3Conexao" class="box">
               <div class="boxContent">
                   <strong>
-                      <img id="iconesBox" src="../assets/img/dashboard-img/conexao-icone.png" alt="">
+                      <img id="iconesBox" src="../assets/img/dashboard-img/USB 2.png" alt="" style="width:45px">
 
                       Dispositivos conectados
                   </strong>
                   <div id="TextdispConect" class="text-box3Conexao">
-                      <a id="temCadastrado"></a>
+                      <a id="temCadastrado"></a> <br>
                       <img  class="iconeBox3Conex" src="../assets/img/dashboard-img/IconedispoEstranhoDash.svg" alt="">
                   </div>
 
@@ -523,7 +521,7 @@ function obterDispositivosCadastrados(idMaquina)
                       if (json == 0) {
                         temCadastrado.innerHTML = 'Este caixa não possui<br> dispositivos conectados!';
                       } else if (json == 1){
-                        temCadastrado.innerHTML = `${json.length} Cadastrado`;
+                        temCadastrado.innerHTML = `${json.length} Cadastrado` ;
                       } else {
                         temCadastrado.innerHTML = `${json.length} Cadastrados`;
                       }                              

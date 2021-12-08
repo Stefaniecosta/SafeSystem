@@ -10,7 +10,6 @@
   --first-color: black;
   --first-color-light: rgb(137, 235, 58);
   --white-color: #ecf0ed;
-  background: url(/assets/img/blur.svg) no-repeat ;
   background-color: black;
   /*===== Font and typography =====*/
   --body-font: 'Montserrat', sans-serif;
@@ -100,10 +99,6 @@ a{
 ::-webkit-scrollbar-thumb {
   background-color: #ACFFC3;
 }
-
-
-
-
 
 
 #content {
@@ -432,7 +427,7 @@ button {
   display: flex;
   color: #fff;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .container-perfil h2 {
@@ -456,7 +451,7 @@ button {
 
 /*campos do input*/
 .caixa-input {
-  height: 64vh;
+  height: 46vh;
   width: 300px;
   float: right;
   position: relative;
@@ -487,17 +482,13 @@ button {
   width: 400px;
   border-radius: 10px;
   padding: 20px;
-  border: radial-gradient(98% 49.86% at 100.03% 100%, #33A36D 0%, rgba(51, 163, 109, 0.05) 100%),
-  radial-gradient(24.21% 39.21% at 0% 0%, rgba(255, 255, 255, 0.81) 0%, rgba(255, 255, 255, 0.19) 100%),
-  radial-gradient(21.19% 40.1% at 100.03% 0%, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-  overflow: hidden;
+  border: 2px solid #ACFFC3;
+  background: linear-gradient(105.87deg, rgba(255, 255, 255, 0.28) 3.04%, rgba(255, 255, 255, 0) 96.05%);
   opacity: 1;
   float: right;
   transform: translateY(10px);
   transition: 0.5s;
-  background: linear-gradient(105.87deg, rgba(15, 170, 75, 0.4) 3.04%, rgba(255, 255, 255, 0) 96.05%);
   backdrop-filter: blur(80px);
-  box-shadow: inset 0px 31.1443px 44.72px -28.7486px rgba(3, 31, 10, 0.5), inset 0px 5.59px 8.78429px -3.19429px rgb(178, 255, 158), inset 0px -65.4829px 54.3029px -51.1086px rgba(96, 68, 145, 0.3), inset 0px 78.26px 79.8571px -38.3314px rgba(202, 172, 255, 0.3), inset 0px 3.19429px 14.3743px rgba(154, 146, 210, 0.3), inset 0px 0.798571px 31.9429px rgba(227, 222, 255, 0.2);
   color: rgb(255, 255, 255);
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
