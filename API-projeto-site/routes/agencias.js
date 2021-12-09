@@ -478,7 +478,7 @@ router.post('/obterDadosGraficoMediaRam/:idMaquina/:contadorRAM', function (req,
 router.post('/obterDadosGraficoMediaDisco/:idMaquina/:contadorDISCO', function (req, res, next) {
 
 	let idMaquina = req.params.idMaquina;
-	let contadorDISCO = req.params.contadorRAM;
+	let contadorDISCO = req.params.contadorDISCO;
 
 	
 
@@ -492,7 +492,7 @@ router.post('/obterDadosGraficoMediaDisco/:idMaquina/:contadorDISCO', function (
 
 	console.log(`Obtendo média de DISCO`);
 
-	let instrucaoSql = `select avg(usoRam) as 'media', GETDATE() -${contadorDISCO} as 'data'
+	let instrucaoSql = `select avg(usoDisco) as 'media', GETDATE() -${contadorDISCO} as 'data'
 	from [dbo].[registroMaquina] 
 	where dataHora >= DATEADD(day, -${contadorDISCO}, GETDATE()) 
 	and fkMaquina = ${idMaquina}`;
