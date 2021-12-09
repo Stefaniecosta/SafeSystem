@@ -20,7 +20,3 @@ Grupo 06
 - @guscaxile
 - @paulosantos071
 - @Stefaniecosta
-
-## Estatísticas do repositório:
-
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?repository=SafeSystem)](https://github.com/Stefaniecosta/SafeSystem/github-readme-stats)
