@@ -23,4 +23,4 @@ Grupo 06
 
 ## Estatísticas do repositório:
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Stefaniecosta)](https://github.com/Stefaniecosta/SafeSystem/github-readme-stats)
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Stefaniecosta/SafeSystem)](https://github.com/Stefaniecosta/SafeSystem/github-readme-stats)
