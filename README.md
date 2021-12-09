@@ -20,3 +20,7 @@ Grupo 06
 - @guscaxile
 - @paulosantos071
 - @Stefaniecosta
+
+## Estatísticas do repositório:
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Stefaniecosta)](https://github.com/Stefaniecosta/github-readme-stats)
