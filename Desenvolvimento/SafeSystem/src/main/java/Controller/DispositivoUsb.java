@@ -151,7 +151,7 @@ public class DispositivoUsb {
         try {
             Timestamp hotaAtual = new Timestamp(System.currentTimeMillis());
 
-            if (hotaAtual.getTime() - ultimoAlertaSlack.getTime() >= 60000) {
+            if (hotaAtual.getTime() - ultimoAlertaSlack.getTime() >= 30000) {
                 Slack slack = new Slack(fkAgencia);
                 slack.alertaDispositivo(idCaixa, dataHoraDeteccao);
                 this.ultimoAlertaSlack = new Timestamp(System.currentTimeMillis());

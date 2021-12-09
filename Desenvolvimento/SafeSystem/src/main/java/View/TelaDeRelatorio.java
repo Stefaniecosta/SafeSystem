@@ -63,7 +63,6 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("SafeSystem");
-        setAutoRequestFocus(false);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMaximumSize(new java.awt.Dimension(1500, 2000));
         setPreferredSize(new java.awt.Dimension(700, 400));
@@ -97,7 +96,7 @@ public class TelaDeRelatorio extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(175, 255, 195));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("Os dados do caixa estão sendo conectados.");
+        jLabel3.setText("Os dados do caixa estão sendo capturados.");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(175, 255, 195));

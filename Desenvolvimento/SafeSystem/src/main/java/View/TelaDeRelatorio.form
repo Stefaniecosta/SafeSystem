@@ -4,7 +4,6 @@
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="0"/>
     <Property name="title" type="java.lang.String" value="SafeSystem"/>
-    <Property name="autoRequestFocus" type="boolean" value="false"/>
     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
       <Color id="Default Cursor"/>
     </Property>
@@ -132,7 +131,7 @@
               <Color blue="c3" green="ff" red="af" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Os dados do caixa est&#xe3;o sendo conectados."/>
+            <Property name="text" type="java.lang.String" value="Os dados do caixa est&#xe3;o sendo capturados."/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
