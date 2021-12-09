@@ -1,5 +1,7 @@
 # ![Alt text](/API-projeto-site/public/assets/img/logoVerde.png?raw=true "Logotipo SafeSystem")    ![Alt text](/API-projeto-site/public/assets/img/SafeSystem.png?raw=true "Logotipo SafeSystem")
 
+## Olá a todos :wave:
+
 Repositório destinado ao grupo de Pesquisa & Inovação - 2ADSB <br>
 Grupo 06
 
