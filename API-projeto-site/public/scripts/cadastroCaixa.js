@@ -274,8 +274,8 @@ if (confirm(`Deseja EDITAR os dados do caixa de codigo: ${dados[1]} `)) {
     // document.getElementById('id').value = dados[0];
     document.getElementById('up_codcaixa').value = dados[1];
     document.getElementById('up_so').value = dados[2];
-    document.getElementById('up_ram').value = dados[4];
-    document.getElementById('up_proc').value = dados[3];
+    document.getElementById('up_ram').value = dados[3];
+    document.getElementById('up_proc').value = dados[4];
     document.getElementById('up_disco').value = dados[5];
 
     update_id = parseInt(dados[0]);
