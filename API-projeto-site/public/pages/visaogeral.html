@@ -453,14 +453,38 @@
                                 <br>
                                 <div class="icone">
                                     Status:
-                                    <i class="fas fa-skull"></i> <b class="critico"> CRÍTICO</b>
+                                    <i class="fas fa-skull"></i> <b class="critico"> CRÍTICO++</b>
                                 </div>
                                 <p style="color: rgba(255, 126, 120, 0.8);">DISPOSITIVO <br> ESTRANHO</p>
                             </div>
                         </div>
                     </div>
                     `
-                }else if (registros[index][0].usoRAM >= 7.0 || registros[index][0].usoCPU > 80.0) {
+            } else if (registros[index][0].usoRam > 7 || registros[index][0].usoCPU >= 85.0) {
+                    msg =
+                        `
+                        <div id="caixa" class="box">
+                        <div class="boxContent">
+                            <div class="info_caixas">
+                                <div class="bottom">
+    
+                                    <strong>
+                                        <img class="item-img" src="../assets/img/caixaIcon.png" alt="">
+                                        Caixa ${index + 1}
+                                    </strong>
+                                </div>
+                                <br>
+                                <div class="icone">
+                                    Status:
+                                    <i class="fas fa-skull"></i> <b class="critico"> CRÍTICO</b>
+                                </div>
+                                <p style="color: rgba(255, 126, 120, 0.8);">COMPONENTES <br> MUITO LENTOS</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                
+                }else if (registros[index][0].usoRam >= 6.0 || registros[index][0].usoCPU >= 65.0) {
                     msg =
                         `
                     <div id="caixa" class="box">
