@@ -54,11 +54,11 @@ public class Autenticacao {
 
     private Boolean VerificaCaixa(Integer idAgencia) {
 
-        List<Maquina> caixaConsultaAgencia = con.query("SELECT * FROM maquina m WHERE m.idMaquina = ?", new BeanPropertyRowMapper(Maquina.class), this.codigoRecebido);
+        List<Maquina> caixaConsultaAgencia = con.query("SELECT * FROM maquina m WHERE m.idMaquina = ? AND m.status = 'ativo'", new BeanPropertyRowMapper(Maquina.class), this.codigoRecebido);
 
         // se a query retornar vazia, o acesso é negado (EX: se o caixa não existe no banco)
         if (caixaConsultaAgencia.isEmpty()) {
-            System.out.println("caixa não existe");
+            System.out.println("caixa inativo ou inesistente");
             return false;
         }
 

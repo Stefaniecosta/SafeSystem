@@ -96,8 +96,8 @@ public class DispositivoUsb {
                 retorno = 1;
             } else {
                 System.out.println(usbDevice.getName());
-                con.update("INSERT INTO dispositivoPadrao (productid, uniqueDevice, nome)"
-                        + " VALUES (?, ?, ?)", usbDevice.getProductId(), usbDevice.getUniqueDeviceId(), usbDevice.getName());
+                con.update("INSERT INTO dispositivoPadrao (productid, uniqueDevice, nome, fkMaquina)"
+                        + " VALUES (?, ?, ?, ?)", usbDevice.getProductId(), usbDevice.getUniqueDeviceId(), usbDevice.getName(), idCaixa);
                 System.out.println("DISPOSITIVOS " + usbDevice.getName() + " CADSATRO!");
                 retorno = 2;
 

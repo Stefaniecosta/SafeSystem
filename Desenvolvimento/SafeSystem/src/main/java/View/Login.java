@@ -208,6 +208,8 @@ public class Login extends javax.swing.JFrame {
         String login = LoginField.getText();
         String senha = PasswordField.getText();
         String caixa = CodeField.getText();
+        this.idCaixa = Integer.parseInt(caixa);
+        
         Autenticacao autenticacao = new Autenticacao(login, senha, caixa);
         List resultadoAutenticacao = autenticacao.AutenticaUsuario();
 
